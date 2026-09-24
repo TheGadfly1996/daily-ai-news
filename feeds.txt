@@ -1,0 +1,11 @@
+# 财经早餐
+https://rsshub.rssforever.com/jin10/topic/343
+
+# 华尔街见闻
+https://你的华尔街见闻RSS地址
+
+# News Minimalist
+https://你的NewsMinimalist-RSS
+
+# 其他来源
+https://example.com/feed.xml
