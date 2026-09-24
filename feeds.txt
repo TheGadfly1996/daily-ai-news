@@ -1,11 +1,46 @@
-# 财经早餐
-https://rsshub.rssforever.com/jin10/topic/343
+# 格式：栏目 | 来源名称 | RSS 地址
+# 国际重大新闻
+国际重大新闻 | iDaily · 每日环球视野 | https://rsshub.app/idaily/today
+国际重大新闻 | 联合早报 · 国际即时 | https://rsshub.app/zaobao/realtime/world
+国际重大新闻 | 谷歌全球新闻 | https://googlenews.buzzing.cc/feed.xml
+国际重大新闻 | 美联社 | https://feedx.net/rss/ap.xml
+国际重大新闻 | 路透社 | https://reutersnew.buzzing.cc/feed.xml
+国际重大新闻 | 竹新社 | https://rsshub.app/telegram/channel/tnews365
+国际重大新闻 | 法广 | https://plink.anyfeeder.com/rfi/cn
+国际重大新闻 | 彭博社 | https://bbg.buzzing.cc/feed.json
+国际重大新闻 | 华尔街日报 | https://cn.wsj.com/rss-news-and-feeds/zh-hans
+国际重大新闻 | 华盛顿邮报 | https://rss.app/feeds/_nwwHjsai0bM8aAE3.xml
 
-# 华尔街见闻
-https://你的华尔街见闻RSS地址
+# 国内新闻
+国内新闻 | 中国新闻网 | https://rsshub.app/chinanews
+国内新闻 | 中国政府网 · 国务院信息 | https://rsshub.app/gov/cn/news/gwy
+国内新闻 | 新华社新闻 | https://plink.anyfeeder.com/newscn/whxw
+国内新闻 | 联合早报 · 中港台即时 | https://rsshub.app/zaobao/realtime/china
 
-# News Minimalist
-https://你的NewsMinimalist-RSS
+# AI每日总结
+AI每日总结 | AI资讯日报 | https://justlovemaki.github.io/CloudFlare-AI-Insight-Daily/rss.xml
+AI每日总结 | AI新闻资讯 | https://rsshub.app/aibase/news
+AI每日总结 | Last Week in AI | https://lastweekin.ai/feed
+AI每日总结 | AI日报 | https://rsshub.app/aibase/daily
 
-# 其他来源
-https://example.com/feed.xml
+# 贸易财经
+贸易财经 | 金融时报 | https://ft.buzzing.cc/feed.xml
+贸易财经 | 经济学人 | https://economistnew.buzzing.cc/feed.xml
+贸易财经 | 华尔街见闻 | https://rsshub.app/wallstreetcn/news
+贸易财经 | 金十数据 | https://rsshub.app/jin10
+
+# 科技前沿
+科技前沿 | 爱范儿 | https://www.ifanr.com/feed
+科技前沿 | 奇客 Solidot | https://www.solidot.org/index.rss
+科技前沿 | IT之家 · 24小时最热 | https://rsshub.app/ithome/ranking/24h
+科技前沿 | 量子位 · 资讯 | https://rsshub.app/qbitai/category/%E8%B5%84%E8%AE%AF
+科技前沿 | 36氪 · 24小时热榜 | https://rsshub.app/36kr/hot-list/24
+科技前沿 | TechCrunch | https://techcrunch.com/feed/
+科技前沿 | WIRED | https://www.wired.com/feed/rss
+科技前沿 | The Verge | https://www.theverge.com/rss/index.xml
+科技前沿 | Science | https://feeds.science.org/rss/science.xml
+
+# 自然科学
+自然科学 | Nature · Latest Research | https://rsshub.app/nature/research/nature
+自然科学 | National Geographic · Latest Stories | https://rsshub.app/nationalgeographic/latest-stories
+自然科学 | 科学网 · 精选博文 | https://rsshub.app/sciencenet/blog

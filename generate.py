@@ -3,6 +3,10 @@ import re
 import json
 import html
 import calendar
+import time
+from concurrent.futures import ThreadPoolExecutor
+from types import SimpleNamespace
+from urllib.request import Request, urlopen
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -21,6 +25,7 @@ FEEDS_FILE = ROOT / "feeds.txt"
 
 LOOKBACK_HOURS = int(os.getenv("LOOKBACK_HOURS", "24"))
 MAX_ARTICLES = int(os.getenv("MAX_ARTICLES", "80"))
+FEED_TIMEOUT = int(os.getenv("FEED_TIMEOUT", "15"))
 
 API_KEY = os.environ["OPENROUTER_API_KEY"]
 MODEL = os.getenv("OPENROUTER_MODEL") or "deepseek/deepseek-v4.1-flash"
@@ -34,18 +39,23 @@ SITE_URL = os.getenv(
 ).rstrip("/")
 
 
-def load_feed_urls():
-    urls = []
+CATEGORIES = (
+    "国际重大新闻", "国内新闻", "AI每日总结", "贸易财经", "科技前沿", "自然科学",
+)
 
-    for line in FEEDS_FILE.read_text(encoding="utf-8").splitlines():
+
+def load_feeds():
+    feeds = []
+    for line_number, line in enumerate(FEEDS_FILE.read_text(encoding="utf-8").splitlines(), 1):
         line = line.strip()
-
         if not line or line.startswith("#"):
             continue
-
-        urls.append(line)
-
-    return urls
+        parts = [part.strip() for part in line.split("|", 2)]
+        if len(parts) != 3 or parts[0] not in CATEGORIES or not parts[1] or not parts[2].startswith(("https://", "http://")):
+            raise ValueError(f"feeds.txt 第 {line_number} 行格式错误")
+        category, name, url = parts
+        feeds.append({"category": category, "name": name, "url": url})
+    return feeds
 
 
 def clean_text(value):
@@ -71,7 +81,7 @@ def entry_datetime(entry):
                 tz=timezone.utc,
             )
 
-    return datetime.now(timezone.utc)
+    return None
 
 
 def normalize_title(title):
@@ -82,155 +92,136 @@ def normalize_title(title):
     return title
 
 
+def fetch_feed(feed_config):
+    url = feed_config["url"]
+    try:
+        request = Request(url, headers={"User-Agent": "Mozilla/5.0 Daily-AI-News-RSS/1.0"})
+        with urlopen(request, timeout=FEED_TIMEOUT) as response:
+            payload = response.read(5_000_000)
+            content_type = response.headers.get("Content-Type", "")
+        if "json" in content_type or url.endswith(".json"):
+            data = json.loads(payload)
+            entries = []
+            for item in data.get("items", []):
+                date = item.get("date_published") or item.get("date_modified")
+                if not date:
+                    continue
+                try:
+                    published = datetime.fromisoformat(date.replace("Z", "+00:00"))
+                    if published.tzinfo is None:
+                        published = published.replace(tzinfo=timezone.utc)
+                except ValueError:
+                    continue
+                entries.append({
+                    "title": item.get("title", ""),
+                    "link": item.get("url") or item.get("external_url") or "",
+                    "summary": item.get("summary") or item.get("content_text") or item.get("content_html") or "",
+                    "published_parsed": time.gmtime(published.timestamp()),
+                })
+            return SimpleNamespace(entries=entries, bozo=False)
+        return feedparser.parse(payload)
+    except Exception as exc:
+        print(f"Feed failed: {url}: {exc}")
+        return SimpleNamespace(entries=[], bozo=False)
+
+
+def select_articles(articles):
+    """Reserve space for each category before filling remaining slots by recency."""
+    if MAX_ARTICLES <= 0:
+        return []
+    ordered = sorted(articles, key=lambda item: item["published"], reverse=True)
+    selected = []
+    selected_ids = set()
+    quota = MAX_ARTICLES // len(CATEGORIES)
+    for category in CATEGORIES:
+        matches = [item for item in ordered if item["category"] == category]
+        for item in matches[:quota]:
+            selected.append(item)
+            selected_ids.add(id(item))
+    for item in ordered:
+        if len(selected) >= MAX_ARTICLES:
+            break
+        if id(item) not in selected_ids:
+            selected.append(item)
+    return selected
+
+
 def collect_articles():
     now = datetime.now(timezone.utc)
     cutoff = now - timedelta(hours=LOOKBACK_HOURS)
-
     articles = []
     seen_links = set()
     seen_titles = set()
 
-    for url in load_feed_urls():
-
-        print(f"Reading: {url}")
-
-        feed = feedparser.parse(
-            url,
-            agent="Mozilla/5.0 Daily-AI-News-RSS/1.0"
-        )
-
-        source_name = feed.feed.get("title", url)
-
-        for entry in feed.entries:
-
-            published = entry_datetime(entry)
-
-            if published < cutoff:
+    feed_configs = load_feeds()
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        fetched = pool.map(fetch_feed, feed_configs)
+        for feed_config, feed in zip(feed_configs, fetched):
+            url = feed_config["url"]
+            category = feed_config["category"]
+            print(f"Read [{category}]: {url} ({len(feed.entries)} entries)")
+            if feed.bozo and not feed.entries:
+                print(f"Feed failed: {url}: {feed.bozo_exception}")
                 continue
 
-            title = clean_text(entry.get("title", ""))
+            for entry in feed.entries:
+                published = entry_datetime(entry)
+                if published is None or published < cutoff:
+                    continue
+                title = clean_text(entry.get("title", ""))
+                link = entry.get("link") or entry.get("guid") or ""
+                if not title:
+                    continue
+                normalized = normalize_title(title)
+                key_link = (category, link)
+                key_title = (category, normalized)
+                if (link and key_link in seen_links) or key_title in seen_titles:
+                    continue
+                if link:
+                    seen_links.add(key_link)
+                seen_titles.add(key_title)
 
-            link = (
-                entry.get("link")
-                or entry.get("guid")
-                or ""
-            )
-
-            if not title:
-                continue
-
-            normalized = normalize_title(title)
-
-            # 基础去重
-            if link and link in seen_links:
-                continue
-
-            if normalized in seen_titles:
-                continue
-
-            if link:
-                seen_links.add(link)
-
-            seen_titles.add(normalized)
-
-            raw_summary = (
-                entry.get("summary")
-                or entry.get("description")
-                or entry.get("content", [{}])[0].get("value", "")
-                if entry.get("content")
-                else ""
-            )
-
-            summary = clean_text(raw_summary)
-
-            # 防止把全文全部发给模型
-            summary = summary[:1200]
-
-            articles.append({
-                "title": title,
-                "source": source_name,
-                "link": link,
-                "published": published.isoformat(),
-                "summary": summary,
-            })
-
-    articles.sort(
-        key=lambda x: x["published"],
-        reverse=True,
-    )
-
-    return articles[:MAX_ARTICLES]
+                content = entry.get("content") or []
+                raw_summary = (
+                    entry.get("summary")
+                    or entry.get("description")
+                    or (content[0].get("value", "") if content else "")
+                )
+                articles.append({
+                    "category": category,
+                    "title": title,
+                    "source": feed_config["name"],
+                    "link": link,
+                    "published": published.isoformat(),
+                    "summary": clean_text(raw_summary)[:1200],
+                })
+    return select_articles(articles)
 
 
 def build_prompt(articles):
-    article_text = json.dumps(
-        articles,
-        ensure_ascii=False,
-        indent=2,
-    )
-
+    grouped = {category: [] for category in CATEGORIES}
+    for article in articles:
+        grouped[article["category"]].append({
+            key: value for key, value in article.items() if key != "category"
+        })
+    article_text = json.dumps(grouped, ensure_ascii=False, indent=2)
     return f"""
-以下是过去 {LOOKBACK_HOURS} 小时来自多个 RSS 新闻源的新闻。
-
-你是一名专业、克制、中立的全球新闻编辑。
-
-你的任务不是逐篇摘要，而是把这些文章整理成一份
-“每日全球新闻早报”。
+以下是过去 {LOOKBACK_HOURS} 小时的 RSS 新闻，已按栏目分组。
+你是一名准确、克制、中立的中文新闻编辑。请生成“每日新闻总结”。
 
 要求：
+1. 仅依据对应栏目下的文章写该栏目，不跨栏目挪用；同一事件的多篇报道合并。
+2. 严格按以下顺序输出六个 h2 栏目：{', '.join(CATEGORIES)}。
+3. 每栏选择真正重要的事件，优先概括事实、背景及影响；内容稀少时少写，空栏写“过去{LOOKBACK_HOURS}小时暂无可核实的新内容”。
+4. AI 栏重点总结模型、产品、研究和行业动态；贸易财经栏重点总结贸易、宏观经济和市场动态。
+5. 不把报道数量当作重要性，不添加输入中没有的事实，不做无依据预测。涉及争议时写清不同说法。
+6. 每个事件用 h3 标题和 p 摘要，并在另一个 p 中用原文链接标明来源。没有链接时仅写来源名称。
+7. 使用简体中文。只输出 HTML fragment，不输出 Markdown 或代码块。
+8. 只使用 h1、h2、h3、p、ul、li、strong、em、a、blockquote 标签。
 
-1. 识别多个媒体报道的同一新闻事件，将它们合并。
-2. 不要因为某个事件报道数量多，就认为它一定更重要。
-3. 从全部新闻中选出真正重要的 10～15 个事件。
-4. 宁缺毋滥，不需要为了凑数量加入娱乐八卦或价值很低的消息。
-5. 优先考虑：
-   - 全球重大事件
-   - 国际关系与地缘政治
-   - 中国、美国、欧洲和主要经济体
-   - 宏观经济和央行政策
-   - 金融市场
-   - 科技
-   - 人工智能
-   - 具有长期影响的重要社会事件
-6. 对存在争议或不同说法的事件，不要擅自判断哪一方正确。
-7. 不要补充输入资料里不存在的具体事实。
-8. 每个事件都尽量保留原始新闻链接。
-9. 使用简体中文。
-10. 不要输出 Markdown。
-11. 只输出 HTML fragment，不要输出 ```html。
-12. 只允许使用：
-    h1 h2 h3 p ul li strong em a blockquote
+输出结构：<h1>每日新闻总结</h1><p>今日概览</p>，然后依次输出六个栏目。
 
-建议结构：
-
-<h1>今日全球新闻早报</h1>
-
-<p>150～250字概括今天整体新闻脉络。</p>
-
-<h2>全球要闻</h2>
-
-<h3>1. 标题</h3>
-<p>发生了什么，以及为什么值得关注。</p>
-<p>来源：<a href="原文URL">媒体名称</a></p>
-
-<h2>财经与市场</h2>
-
-...
-
-<h2>科技与 AI</h2>
-
-...
-
-<h2>未来24～72小时值得关注</h2>
-
-<ul>
-<li>...</li>
-</ul>
-
-不得进行没有信息依据的预测。
-
-RSS 新闻数据如下：
-
+RSS 新闻数据：
 {article_text}
 """
 
@@ -238,7 +229,7 @@ RSS 新闻数据如下：
 def generate_digest(articles):
 
     if not articles:
-        raise RuntimeError("过去24小时没有抓到任何文章")
+        raise RuntimeError(f"过去{LOOKBACK_HOURS}小时没有抓到任何文章")
 
     client = OpenAI(
         api_key=API_KEY,
@@ -250,7 +241,7 @@ def generate_digest(articles):
         messages=[
             {
                 "role": "system",
-                "content": "你是一名中立、准确、重视信息密度的全球新闻编辑。",
+                "content": "你是一名中立、准确、重视信息密度的中文新闻编辑。",
             },
             {"role": "user", "content": build_prompt(articles)},
         ],
@@ -362,12 +353,12 @@ def build_rss(history):
 <rss version="2.0">
 <channel>
 
-<title>我的每日全球新闻早报</title>
+<title>我的每日新闻总结</title>
 
 <link>{SITE_URL}</link>
 
 <description>
-由多个RSS新闻源和AI自动生成的每日全球新闻摘要
+由六类RSS新闻源和AI自动生成的每日新闻总结
 </description>
 
 <language>zh-CN</language>
@@ -459,12 +450,12 @@ a {{
 
 <head>
 <meta charset="utf-8">
-<title>每日全球新闻早报</title>
+<title>每日新闻总结</title>
 </head>
 
 <body>
 
-<h1>每日全球新闻早报</h1>
+<h1>每日新闻总结</h1>
 
 <p>
 <a href="feed.xml">RSS订阅地址</a>
@@ -506,7 +497,7 @@ def main():
 
     new_item = {
         "date": today,
-        "title": f"每日全球新闻早报 | {today}",
+        "title": f"每日新闻总结 | {today}",
         "guid": f"daily-news-{today}",
         "created_at": now.isoformat(),
         "content": digest,
