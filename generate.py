@@ -5,6 +5,8 @@ import html
 import calendar
 import time
 from concurrent.futures import ThreadPoolExecutor
+from collections import Counter
+from html.parser import HTMLParser
 from types import SimpleNamespace
 from urllib.request import Request, urlopen
 from datetime import datetime, timezone, timedelta
@@ -25,6 +27,8 @@ FEEDS_FILE = ROOT / "feeds.txt"
 
 LOOKBACK_HOURS = int(os.getenv("LOOKBACK_HOURS", "24"))
 MAX_ARTICLES = int(os.getenv("MAX_ARTICLES", "80"))
+MAX_PER_SOURCE = int(os.getenv("MAX_PER_SOURCE", "10"))
+MIN_ITEMS_PER_CATEGORY = int(os.getenv("MIN_ITEMS_PER_CATEGORY", "10"))
 FEED_TIMEOUT = int(os.getenv("FEED_TIMEOUT", "15"))
 
 API_KEY = os.environ["OPENROUTER_API_KEY"]
@@ -126,23 +130,41 @@ def fetch_feed(feed_config):
 
 
 def select_articles(articles):
-    """Reserve space for each category before filling remaining slots by recency."""
-    if MAX_ARTICLES <= 0:
+    """Give each category and source room before filling by recency."""
+    if MAX_ARTICLES <= 0 or MAX_PER_SOURCE <= 0:
         return []
     ordered = sorted(articles, key=lambda item: item["published"], reverse=True)
     selected = []
     selected_ids = set()
+    source_counts = {}
     quota = MAX_ARTICLES // len(CATEGORIES)
+
+    def add(item):
+        key = (item["category"], item["source"])
+        if id(item) in selected_ids or source_counts.get(key, 0) >= MAX_PER_SOURCE:
+            return False
+        selected.append(item)
+        selected_ids.add(id(item))
+        source_counts[key] = source_counts.get(key, 0) + 1
+        return True
+
     for category in CATEGORIES:
         matches = [item for item in ordered if item["category"] == category]
-        for item in matches[:quota]:
-            selected.append(item)
-            selected_ids.add(id(item))
+        sources = list(dict.fromkeys(item["source"] for item in matches))
+        while len([item for item in selected if item["category"] == category]) < quota:
+            added = False
+            for source in sources:
+                match = next((item for item in matches if item["source"] == source and id(item) not in selected_ids), None)
+                if match and add(match):
+                    added = True
+                if len([item for item in selected if item["category"] == category]) >= quota:
+                    break
+            if not added:
+                break
     for item in ordered:
         if len(selected) >= MAX_ARTICLES:
             break
-        if id(item) not in selected_ids:
-            selected.append(item)
+        add(item)
     return selected
 
 
@@ -159,15 +181,21 @@ def collect_articles():
         for feed_config, feed in zip(feed_configs, fetched):
             url = feed_config["url"]
             category = feed_config["category"]
-            print(f"Read [{category}]: {url} ({len(feed.entries)} entries)")
             if feed.bozo and not feed.entries:
                 print(f"Feed failed: {url}: {feed.bozo_exception}")
                 continue
 
+            recent_count = 0
+            missing_date_count = 0
+
             for entry in feed.entries:
                 published = entry_datetime(entry)
-                if published is None or published < cutoff:
+                if published is None:
+                    missing_date_count += 1
                     continue
+                if published < cutoff or published > now + timedelta(minutes=10):
+                    continue
+                recent_count += 1
                 title = clean_text(entry.get("title", ""))
                 link = entry.get("link") or entry.get("guid") or ""
                 if not title:
@@ -195,6 +223,11 @@ def collect_articles():
                     "published": published.isoformat(),
                     "summary": clean_text(raw_summary)[:1200],
                 })
+            print(
+                f"Read [{category}] {feed_config['name']}: "
+                f"{len(feed.entries)} entries, {recent_count} recent, "
+                f"{missing_date_count} without date"
+            )
     return select_articles(articles)
 
 
@@ -212,7 +245,7 @@ def build_prompt(articles):
 要求：
 1. 仅依据对应栏目下的文章写该栏目，不跨栏目挪用；同一事件的多篇报道合并。
 2. 严格按以下顺序输出六个 h2 栏目：{', '.join(CATEGORIES)}。
-3. 每栏选择真正重要的事件，优先概括事实、背景及影响；内容稀少时少写，空栏写“过去{LOOKBACK_HOURS}小时暂无可核实的新内容”。
+3. 六个栏目每栏至少写 {MIN_ITEMS_PER_CATEGORY} 条彼此不同的事件，每条都有独立的 h3 标题、p 摘要和来源。优先概括事实、背景及影响；不得用重复事件或空泛段落凑数。
 4. AI 栏重点总结模型、产品、研究和行业动态；贸易财经栏重点总结贸易、宏观经济和市场动态。
 5. 不把报道数量当作重要性，不添加输入中没有的事实，不做无依据预测。涉及争议时写清不同说法。
 6. 每个事件用 h3 标题和 p 摘要，并在另一个 p 中用原文链接标明来源。没有链接时仅写来源名称。
@@ -226,6 +259,76 @@ RSS 新闻数据：
 """
 
 
+class DigestSectionCounter(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.sections = []
+        self.counts = Counter()
+        self.current = None
+        self.in_h2 = False
+        self.h2_text = []
+        self.in_h3 = False
+        self.h3_text = []
+        self.in_p = False
+        self.p_text = []
+        self.item = None
+
+    def finish_item(self):
+        if self.item:
+            paragraphs = self.item["paragraphs"]
+            has_summary = any(text and not text.startswith("来源：") for text in paragraphs)
+            has_source = any(text.startswith("来源：") and len(text) > 3 for text in paragraphs)
+            if self.item["title"] and has_summary and has_source:
+                self.counts[self.item["category"]] += 1
+        self.item = None
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "h2":
+            self.finish_item()
+            self.in_h2 = True
+            self.h2_text = []
+        elif tag == "h3" and self.current:
+            self.finish_item()
+            self.in_h3 = True
+            self.h3_text = []
+        elif tag == "p":
+            self.in_p = True
+            self.p_text = []
+
+    def handle_data(self, data):
+        if self.in_h2:
+            self.h2_text.append(data)
+        if self.in_h3:
+            self.h3_text.append(data)
+        if self.in_p:
+            self.p_text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "h2":
+            self.current = "".join(self.h2_text).strip()
+            self.sections.append(self.current)
+            self.in_h2 = False
+        elif tag == "h3" and self.in_h3:
+            self.item = {"category": self.current, "title": "".join(self.h3_text).strip(), "paragraphs": []}
+            self.in_h3 = False
+        elif tag == "p" and self.in_p:
+            if self.item:
+                self.item["paragraphs"].append("".join(self.p_text).strip())
+            self.in_p = False
+
+
+def validate_digest_sections(content):
+    counter = DigestSectionCounter()
+    counter.feed(content)
+    counter.finish_item()
+    if counter.sections != list(CATEGORIES):
+        raise ValueError(f"栏目不完整或顺序错误：{counter.sections}")
+    short = {category: counter.counts[category] for category in CATEGORIES
+             if counter.counts[category] < MIN_ITEMS_PER_CATEGORY}
+    if short:
+        raise ValueError(f"栏目条目不足：{short}")
+
+
 def generate_digest(articles):
 
     if not articles:
@@ -234,29 +337,6 @@ def generate_digest(articles):
     client = OpenAI(
         api_key=API_KEY,
         base_url="https://openrouter.ai/api/v1",
-    )
-
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": "你是一名中立、准确、重视信息密度的中文新闻编辑。",
-            },
-            {"role": "user", "content": build_prompt(articles)},
-        ],
-    )
-
-    result = (response.choices[0].message.content or "").strip()
-    if not result:
-        raise RuntimeError("OpenRouter 未返回新闻摘要内容")
-
-    # 防止模型偶尔加入代码块
-    result = re.sub(
-        r"^```(?:html)?\s*|\s*```$",
-        "",
-        result,
-        flags=re.I,
     )
 
     allowed_tags = [
@@ -272,15 +352,38 @@ def generate_digest(articles):
         "a": ["href"],
     }
 
-    result = bleach.clean(
-        result,
-        tags=allowed_tags,
-        attributes=allowed_attributes,
-        protocols=["http", "https"],
-        strip=True,
-    )
+    feedback = ""
+    for attempt in range(2):
+        response = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {
+                    "role": "system",
+                    "content": "你是一名中立、准确、重视信息密度的中文新闻编辑。",
+                },
+                {"role": "user", "content": build_prompt(articles) + feedback},
+            ],
+        )
 
-    return result
+        result = (response.choices[0].message.content or "").strip()
+        if not result:
+            feedback = "\n上次响应为空。请完整输出六个栏目。"
+            continue
+
+        result = re.sub(r"^```(?:html)?\s*|\s*```$", "", result, flags=re.I)
+        result = bleach.clean(
+            result,
+            tags=allowed_tags,
+            attributes=allowed_attributes,
+            protocols=["http", "https"],
+            strip=True,
+        )
+        try:
+            validate_digest_sections(result)
+            return result
+        except ValueError as exc:
+            feedback = f"\n上次输出未通过校验：{exc}。请重新完整生成。"
+    raise RuntimeError("OpenRouter 两次输出均未满足每栏最低条数要求")
 
 
 def load_history():
@@ -485,6 +588,13 @@ def main():
     print(
         f"Collected {len(articles)} articles"
     )
+    counts = Counter(article["category"] for article in articles)
+    short = {category: counts[category] for category in CATEGORIES
+             if counts[category] < MIN_ITEMS_PER_CATEGORY}
+    if short:
+        raise RuntimeError(
+            f"过去{LOOKBACK_HOURS}小时栏目素材不足，未生成摘要：{short}"
+        )
 
     print("Calling AI...")
     digest = generate_digest(articles)

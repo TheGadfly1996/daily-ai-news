@@ -1,0 +1,370 @@
+{
+  "checked_at": "2026-10-10T09:46:56.369983+00:00",
+  "window_hours": 24,
+  "total_feeds": 45,
+  "readable_feeds": 38,
+  "feeds_with_recent_items": 31,
+  "feeds": [
+    {
+      "category": "国际重大新闻",
+      "source": "联合早报 · 国际即时",
+      "url": "https://rsshub.rssforever.com/zaobao/realtime/world",
+      "entries": 0,
+      "recent": 0,
+      "status": "timeout"
+    },
+    {
+      "category": "国际重大新闻",
+      "source": "谷歌全球新闻",
+      "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "entries": 30,
+      "recent": 28,
+      "status": "ok"
+    },
+    {
+      "category": "国际重大新闻",
+      "source": "美联社 AP",
+      "url": "https://news.google.com/rss/search?q=site:apnews.com&hl=en-US&gl=US&ceid=US:en",
+      "entries": 100,
+      "recent": 18,
+      "status": "ok"
+    },
+    {
+      "category": "国际重大新闻",
+      "source": "路透社 Reuters",
+      "url": "https://news.google.com/rss/search?q=site:reuters.com&hl=en-US&gl=US&ceid=US:en",
+      "entries": 100,
+      "recent": 79,
+      "status": "ok"
+    },
+    {
+      "category": "国际重大新闻",
+      "source": "法广 RFI 中文",
+      "url": "https://www.rfi.fr/cn/rss",
+      "entries": 30,
+      "recent": 28,
+      "status": "ok"
+    },
+    {
+      "category": "国际重大新闻",
+      "source": "华尔街日报 WSJ 中文",
+      "url": "https://cn.wsj.com/rss-news-and-feeds/zh-hans",
+      "entries": 0,
+      "recent": 0,
+      "status": "HTTP 401"
+    },
+    {
+      "category": "国际重大新闻",
+      "source": "BBC World",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "entries": 38,
+      "recent": 29,
+      "status": "ok"
+    },
+    {
+      "category": "国际重大新闻",
+      "source": "卫报 The Guardian World",
+      "url": "https://www.theguardian.com/world/rss",
+      "entries": 45,
+      "recent": 27,
+      "status": "ok"
+    },
+    {
+      "category": "国际重大新闻",
+      "source": "半岛电视台 Al Jazeera",
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "entries": 25,
+      "recent": 25,
+      "status": "ok"
+    },
+    {
+      "category": "国内新闻",
+      "source": "中国新闻网",
+      "url": "https://www.chinanews.com.cn/rss/china.xml",
+      "entries": 30,
+      "recent": 30,
+      "status": "ok"
+    },
+    {
+      "category": "国内新闻",
+      "source": "中国政府网 · 国务院信息",
+      "url": "https://www.gov.cn/rss/zhengce.xml",
+      "entries": 0,
+      "recent": 0,
+      "status": "HTTP 404"
+    },
+    {
+      "category": "国内新闻",
+      "source": "新华社新闻",
+      "url": "https://plink.anyfeeder.com/newscn/whxw",
+      "entries": 100,
+      "recent": 100,
+      "status": "ok"
+    },
+    {
+      "category": "国内新闻",
+      "source": "财新网",
+      "url": "https://www.caixin.com/rss/",
+      "entries": 0,
+      "recent": 0,
+      "status": "feed parse error"
+    },
+    {
+      "category": "AI每日总结",
+      "source": "AI资讯日报",
+      "url": "https://justlovemaki.github.io/CloudFlare-AI-Insight-Daily/rss.xml",
+      "entries": 6,
+      "recent": 1,
+      "status": "ok"
+    },
+    {
+      "category": "AI每日总结",
+      "source": "AI新闻资讯",
+      "url": "https://rsshub.rssforever.com/aibase/news",
+      "entries": 0,
+      "recent": 0,
+      "status": "timeout"
+    },
+    {
+      "category": "AI每日总结",
+      "source": "TechCrunch · AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "entries": 20,
+      "recent": 9,
+      "status": "ok"
+    },
+    {
+      "category": "AI每日总结",
+      "source": "The Verge · AI",
+      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "entries": 10,
+      "recent": 6,
+      "status": "ok"
+    },
+    {
+      "category": "AI每日总结",
+      "source": "Last Week in AI",
+      "url": "https://lastweekin.ai/feed",
+      "entries": 20,
+      "recent": 0,
+      "status": "no recent items"
+    },
+    {
+      "category": "AI每日总结",
+      "source": "MIT Technology Review · AI",
+      "url": "https://www.technologyreview.com/feed/topic/artificial-intelligence/",
+      "entries": 0,
+      "recent": 0,
+      "status": "HTTP 404"
+    },
+    {
+      "category": "AI每日总结",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/news/rss.xml",
+      "entries": 1287,
+      "recent": 0,
+      "status": "no recent items"
+    },
+    {
+      "category": "AI每日总结",
+      "source": "Google DeepMind Blog",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "entries": 100,
+      "recent": 0,
+      "status": "no recent items"
+    },
+    {
+      "category": "贸易财经",
+      "source": "金融时报 Financial Times",
+      "url": "https://www.ft.com/?format=rss",
+      "entries": 12,
+      "recent": 12,
+      "status": "ok"
+    },
+    {
+      "category": "贸易财经",
+      "source": "经济学人 The Economist",
+      "url": "https://www.economist.com/finance-and-economics/rss.xml",
+      "entries": 300,
+      "recent": 0,
+      "status": "no recent items"
+    },
+    {
+      "category": "贸易财经",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/search?q=site:wallstreetcn.com&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "entries": 100,
+      "recent": 18,
+      "status": "ok"
+    },
+    {
+      "category": "贸易财经",
+      "source": "金十数据",
+      "url": "https://rsshub.rssforever.com/jin10",
+      "entries": 21,
+      "recent": 21,
+      "status": "ok"
+    },
+    {
+      "category": "贸易财经",
+      "source": "CNBC Finance",
+      "url": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
+      "entries": 30,
+      "recent": 1,
+      "status": "ok"
+    },
+    {
+      "category": "贸易财经",
+      "source": "Bloomberg Markets",
+      "url": "https://news.google.com/rss/search?q=site:bloomberg.com+markets&hl=en-US&gl=US&ceid=US:en",
+      "entries": 100,
+      "recent": 19,
+      "status": "ok"
+    },
+    {
+      "category": "贸易财经",
+      "source": "MarketWatch",
+      "url": "https://feeds.marketwatch.com/marketwatch/topstories/",
+      "entries": 10,
+      "recent": 10,
+      "status": "ok"
+    },
+    {
+      "category": "贸易财经",
+      "source": "彭博社 Bloomberg",
+      "url": "https://news.google.com/rss/search?q=site:bloomberg.com&hl=en-US&gl=US&ceid=US:en",
+      "entries": 100,
+      "recent": 56,
+      "status": "ok"
+    },
+    {
+      "category": "科技前沿",
+      "source": "爱范儿",
+      "url": "https://www.ifanr.com/feed",
+      "entries": 20,
+      "recent": 9,
+      "status": "ok"
+    },
+    {
+      "category": "科技前沿",
+      "source": "奇客 Solidot",
+      "url": "https://www.solidot.org/index.rss",
+      "entries": 20,
+      "recent": 9,
+      "status": "ok"
+    },
+    {
+      "category": "科技前沿",
+      "source": "量子位 · 资讯",
+      "url": "https://rsshub.rssforever.com/qbitai/category/%E8%B5%84%E8%AE%AF",
+      "entries": 10,
+      "recent": 3,
+      "status": "ok"
+    },
+    {
+      "category": "科技前沿",
+      "source": "36氪 · 24小时热榜",
+      "url": "https://rsshub.rssforever.com/36kr/hot-list/24",
+      "entries": 0,
+      "recent": 0,
+      "status": "timeout"
+    },
+    {
+      "category": "科技前沿",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "entries": 20,
+      "recent": 19,
+      "status": "ok"
+    },
+    {
+      "category": "科技前沿",
+      "source": "WIRED",
+      "url": "https://www.wired.com/feed/rss",
+      "entries": 50,
+      "recent": 17,
+      "status": "ok"
+    },
+    {
+      "category": "科技前沿",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "entries": 10,
+      "recent": 10,
+      "status": "ok"
+    },
+    {
+      "category": "科技前沿",
+      "source": "Science",
+      "url": "https://feeds.science.org/rss/science.xml",
+      "entries": 30,
+      "recent": 0,
+      "status": "no recent items"
+    },
+    {
+      "category": "科技前沿",
+      "source": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/index",
+      "entries": 20,
+      "recent": 14,
+      "status": "ok"
+    },
+    {
+      "category": "科技前沿",
+      "source": "Hacker News",
+      "url": "https://hnrss.org/frontpage",
+      "entries": 20,
+      "recent": 20,
+      "status": "ok"
+    },
+    {
+      "category": "自然科学",
+      "source": "Nature · Latest Research",
+      "url": "https://www.nature.com/nature.rss",
+      "entries": 75,
+      "recent": 0,
+      "status": "no recent items"
+    },
+    {
+      "category": "自然科学",
+      "source": "Nature",
+      "url": "https://www.nature.com/nature.rss",
+      "entries": 75,
+      "recent": 0,
+      "status": "no recent items",
+      "duplicate_of": "Nature · Latest Research"
+    },
+    {
+      "category": "自然科学",
+      "source": "ScienceDaily · 科学",
+      "url": "https://www.sciencedaily.com/rss/top/science.xml",
+      "entries": 60,
+      "recent": 2,
+      "status": "ok"
+    },
+    {
+      "category": "自然科学",
+      "source": "Phys.org",
+      "url": "https://phys.org/rss-feed/",
+      "entries": 30,
+      "recent": 30,
+      "status": "ok"
+    },
+    {
+      "category": "自然科学",
+      "source": "NASA · 新闻",
+      "url": "https://www.nasa.gov/news-release/feed/",
+      "entries": 10,
+      "recent": 4,
+      "status": "ok"
+    },
+    {
+      "category": "自然科学",
+      "source": "New Scientist",
+      "url": "https://www.newscientist.com/feed/home/",
+      "entries": 10,
+      "recent": 6,
+      "status": "ok"
+    }
+  ]
+}
