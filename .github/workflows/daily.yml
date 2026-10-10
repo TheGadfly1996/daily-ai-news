@@ -28,6 +28,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+
 
       - name: Setup Python
         uses: actions/setup-python@v7
@@ -51,20 +59,42 @@ jobs:
           python generate.py
 
       - name: Save digest history
+        shell: bash
         run: |
+          set -euo pipefail
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          # Stage generated files
           git add data public
 
+          # Skip if nothing changed
           if git diff --cached --quiet; then
-            echo "No changes"
-          else
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          # Commit before rebasing
+          git commit -m "Update daily news $(TZ=Asia/Shanghai date +%F)"
+
+          # Synchronize and push
+          for attempt in 1 2 3; do
+            echo "Push attempt $attempt"
+
             git fetch origin main
             git rebase origin/main
-            git commit -m "Update daily news $(date -u +'%Y-%m-%d')"
-            git push
-          fi
+
+            if git push origin HEAD:main; then
+              echo "Push successful"
+              exit 0
+            fi
+
+            sleep 3
+          done
+
+          echo "Push failed after 3 attempts"
+          exit 1
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
