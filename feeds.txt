@@ -5,7 +5,7 @@
 国际重大新闻 | 美联社 AP | https://news.google.com/rss/search?q=site:apnews.com&hl=en-US&gl=US&ceid=US:en
 国际重大新闻 | 路透社 Reuters | https://news.google.com/rss/search?q=site:reuters.com&hl=en-US&gl=US&ceid=US:en
 国际重大新闻 | 法广 RFI 中文 | https://www.rfi.fr/cn/rss
-国际重大新闻 | 华尔街日报 WSJ 中文 | https://cn.wsj.com/rss-news-and-feeds/zh-hans
+国际重大新闻 | 华尔街日报 WSJ 中文 | https://news.google.com/rss/search?q=site%3Acn.wsj.com&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans
 国际重大新闻 | BBC World | https://feeds.bbci.co.uk/news/world/rss.xml
 国际重大新闻 | 卫报 The Guardian World | https://www.theguardian.com/world/rss
 国际重大新闻 | 半岛电视台 Al Jazeera | https://www.aljazeera.com/xml/rss/all.xml
@@ -14,9 +14,9 @@
 # 国内新闻
 
 国内新闻 | 中国新闻网 | https://www.chinanews.com.cn/rss/china.xml
-国内新闻 | 中国政府网 · 国务院信息 | https://www.gov.cn/rss/zhengce.xml
+国内新闻 | 中国政府网 · 政策信息 | https://news.google.com/rss/search?q=site%3Agov.cn%2Fzhengce&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans
 国内新闻 | 新华社新闻 | https://plink.anyfeeder.com/newscn/whxw
-国内新闻 | 财新网 | https://www.caixin.com/rss/
+国内新闻 | 财新网 | https://news.google.com/rss/search?q=site%3Acaixin.com&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans
 
 
 # AI每日总结
@@ -26,7 +26,7 @@ AI每日总结 | AI新闻资讯 | https://rsshub.rssforever.com/aibase/news
 AI每日总结 | TechCrunch · AI | https://techcrunch.com/category/artificial-intelligence/feed/
 AI每日总结 | The Verge · AI | https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
 AI每日总结 | Last Week in AI | https://lastweekin.ai/feed
-AI每日总结 | MIT Technology Review · AI | https://www.technologyreview.com/feed/topic/artificial-intelligence/
+AI每日总结 | MIT Technology Review · AI | https://www.technologyreview.com/topic/artificial-intelligence/feed/
 AI每日总结 | OpenAI Blog | https://openai.com/news/rss.xml
 AI每日总结 | Google DeepMind Blog | https://deepmind.google/blog/rss.xml
 

@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '17 8 * * *'
-      timezone: 'Asia/Shanghai'
+    - cron: "17 8 * * *"
+      timezone: "Asia/Shanghai"
 
 permissions:
   contents: write
@@ -32,8 +32,8 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v7
         with:
-          python-version: '3.13'
-          cache: 'pip'
+          python-version: "3.13"
+          cache: "pip"
 
       - name: Install dependencies
         run: |
@@ -43,6 +43,10 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+          MIN_ITEMS_PER_CATEGORY: "3"
+          MAX_ARTICLES: "80"
+          MAX_PER_SOURCE: "10"
+          FEED_TIMEOUT: "20"
         run: |
           python generate.py
 

@@ -419,8 +419,15 @@ def generate_digest(articles):
             validate_digest_sections(result, articles)
             return result
         except ValueError as exc:
-            feedback = f"\n上次输出未通过校验：{exc}。请重新完整生成。"
-    raise RuntimeError("OpenRouter 两次输出均未满足每栏最低条数要求")
+            print(
+                f"AI Validation attempt={attempt + 1}, "
+                f"chars={len(result)}, "
+                f"finish_reason={response.choices[0].finish_reason}, "
+                f"error={exc}",
+                flush=True,
+            )
+        feedback = f"\n上次输出未通过校验：{exc}。请重新完整生成。"
+    raise RuntimeError(f"OpenRouter 两次输出未通过校验：{feedback}")
 
 
 def load_history():
