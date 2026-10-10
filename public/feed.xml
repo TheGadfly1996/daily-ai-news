@@ -13,7 +13,7 @@
 <language>zh-CN</language>
 
 <lastBuildDate>
-Sat, 10 Oct 2026 10:20:26 +0000
+Sat, 10 Oct 2026 10:29:17 +0000
 </lastBuildDate>
 
 
@@ -215,30 +215,2453 @@ Sat, 10 Oct 2026 10:20:26 +0000
 </item>
 
 <item>
-<title>每日全球新闻早报 | 2026-09-24</title>
+<title>每日新闻总结 | 2026-10-09</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-10-09.html</link>
+<guid isPermaLink="false">daily-news-2026-10-09</guid>
+<pubDate>Fri, 09 Oct 2026 06:07:09 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>今日概览：国际方面，乌克兰遭袭致至少32人死亡、南非抗议演变为暴力冲突、日本气象厅称厄尔尼诺达有记录以来最强等事件受关注；国内方面，中方就振兴联大提出主张、新皇岗口岸即将开通、流感疫苗接种季提示、国家气候中心确认超强厄尔尼诺事件；AI领域出现OpenAI数学证明发布与开放权重模型动态；贸易财经聚焦软银寻求海湾资金扩大AI布局、欧盟债务担忧等；科技前沿有AI原生影视公司动向；自然科学栏过去24小时暂无新增可核实内容。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>乌克兰至少32人遇难，泽连斯基谴责俄方袭击</h3>
+<p>据Yahoo News UK报道，乌克兰至少有32人在袭击中遇难，泽连斯基谴责这是俄罗斯最“卑劣的袭击”之一。</p>
+<p><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNWk92QlNPMFEwY0dFRExYZkp5cnM4bUl6SW5SaHBrd2tqRnVPVEFhWEh4QkE3bUxVanNiM3BEYjV4S1FjaVhnOHpmb1MxRk16TjRVZC05Yjd0VThJSXUxLURLRV81T3RrRnBUaXNNSXFtR2d0WmhIT1BKRTdFaTl3Sg?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">来源：Yahoo News UK（经谷歌全球新闻）</a></p>
+
+<h3>南非因庇护裁决引发抗议并演变为暴力冲突</h3>
+<p>据Al Jazeera报道，南非因庇护裁决引发愤怒，抗议活动演变为暴力冲突。</p>
+<p><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxORXpVYWQxQ0w5dlg0Z2RwZktubTV6aTZBTk9zOGMtZmgySlZZSmVleXRiSVB4ODBmOWh1MEE3S0xIS29GQWRRQjNhdUdUX0ZSd2xWemNrQUR2RlZiWWppVGlmR09lTHlaN0E2NFZuWmlxVUNFNmNfM09ISW1IRWdsMjN5SGdlWWNqbkR0bnVrQVQydDM4Tmx4amQ5cFp5M3Q2eEJUOFNLVdIBrAFBVV95cUxQdnBRa3FaTjhIZlNlZHc1SlZVX0gtUTJsSjRKcElzTU03b0xPcHNKUkxza21MTmVhOU5HTEFQY3p4a3ZvVGJPbWZ5TkRMRWxtMGU2YkF0YkhiRzVOaVhOSUFtX0hfdXlDWWFDVWZ1dVZtMzJxcUtBZ1UwNThZaUdfTHJHcFA4aWUyb0VtRUM5V2NnV09rdG44R1E3YV83VTRHV2xnWWtJaG8tQ3di?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">来源：Al Jazeera（经谷歌全球新闻）</a></p>
+
+<h3>日本气象厅称厄尔尼诺增强至有记录以来最强水平</h3>
+<p>路透社报道，日本气象厅表示，厄尔尼诺现象已增强至有记录以来的最强水平。</p>
+<p><a href="https://www.reuters.com/sustainability/cop/el-nio-has-strengthened-strongest-record-japan-weather-agency-says-2026-10-09/">来源：路透社</a></p>
+
+<h3>美国将直播福特·霍德枪击案凶手处决过程</h3>
+<p>路透社报道，美国将直播福特·霍德枪击案凶手的处决过程。</p>
+<p><a href="https://www.reuters.com/fr/affaires/les-etats-unis-vont-diffuser-en-direct-lexcution-de-lauteur-de-la-fusillade-de-2026-10-09/">来源：路透社</a></p>
+
+<h3>埃塞俄比亚与厄立特里亚紧张局势威胁红海航运</h3>
+<p>彭博社分析称，埃塞俄比亚与厄立特里亚之间的紧张局势对红海航运构成又一威胁。</p>
+<p><a href="https://www.bloomberg.com/news/articles/2026-10-09/why-ethiopia-eritrea-tensions-pose-another-threat-to-red-sea-shipping">来源：彭博社</a></p>
+
+<h3>德国放弃与法国联合研发坦克的计划</h3>
+<p>路透社报道，法国三军参谋长芒东披露，德国已放弃与法国联合研发坦克的计划。</p>
+<p><a href="https://www.reuters.com/fr/affaires/lallemagne-abandonne-le-projet-de-char-commun-avec-la-france-mandon-2026-10-09/">来源：路透社</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>中方就加强和振兴联大工作提出三点主张</h3>
+<p>中国常驻联合国代表傅聪在第81届联大关于执行联合国决议和振兴联大议题联合辩论时发言，提出三点主张：以《联合国宪章》为根本遵循，以团结合作为关键路径，以务实改革为前进动力。他还表示，下任联合国秘书长遴选应继续坚持联大决议和安理会文件明确规定的程序。</p>
+<p><a href="http://www.news.cn/20261009/6156df6d529e4ad59df56a5ee7ad60b5/c.html">来源：新华社新闻</a></p>
+
+<h3>新皇岗口岸即将开通，通关时间预计大幅缩短</h3>
+<p>新华社报道，重建后的皇岗口岸即将开通。皇岗口岸是我国首个实行24小时通关的大型陆路口岸，2019年启动重建。开通后将采用“一地两检”安排及“合作查验、一次放行”通关模式，过关时间预计由以往的30分钟缩短至5分钟。</p>
+<p><a href="http://www.news.cn/20261009/88beaf44fd7f4bc78edb56428a83e6e4/c.html">来源：新华社新闻</a></p>
+
+<h3>流感季将至，专家建议9至10月为黄金接种期</h3>
+<p>新华社报道，进入10月，多地进入流感疫苗接种期。专家表示，流感疫苗接种后需2至4周产生保护水平抗体，9至10月是黄金接种期；三价和四价疫苗在当前流行形势下实际保护效果基本一致；建议每年流感季重新接种，老年人、儿童、慢性病患者、医务人员等重点人群优先接种。</p>
+<p><a href="http://www.news.cn/20261009/c250cdb1f7b441c59d0063f41ef9134b/c.html">来源：新华社新闻</a></p>
+
+<h3>国家气候中心：2026年9月已形成超强厄尔尼诺事件</h3>
+<p>新华社报道，国家气候中心监测显示，2026年9月已正式形成一次超强厄尔尼诺事件，类型为东部型。7至9月监测区海温指数平均值为2.54℃。预计未来三个月赤道中东太平洋海表温度将继续升高，在秋末冬初达到峰值，此次事件可能成为有系统性监测以来最强厄尔尼诺事件。</p>
+<p><a href="http://www.news.cn/20261009/8a62f8baa69c43b9987778d5f2a2d3a5/c.html">来源：新华社新闻</a></p>
+
+<h3>美国2026财年预算赤字约2万亿美元</h3>
+<p>新华社援引美国国会预算办公室报告称，美国2026财年联邦预算赤字总额约为2万亿美元，比上一财年增加2180亿美元，增幅12.2%。2026财年财政总收入为5.403万亿美元，财政支出为7.396万亿美元。支出增长主要来自债务净利息、重大福利项目、防务和教育等领域；关税收入下降220亿美元，降幅11%。</p>
+<p><a href="http://www.news.cn/20261009/b77dd5e1d155492991dd1f240431f0ce/c.html">来源：新华社新闻</a></p>
+
+<h2>AI每日总结</h2>
+
+<h3>Last Week in AI #346：OpenAI发布数学证明，两家西方机构推出开放权重模型</h3>
+<p>Last Week in AI汇总称，OpenAI发布了来自未发布前沿模型的数百个数学证明；Mistral和Reflection AI推出开放权重模型，被描述为对标中国；另有一名安全领域人员辞职。</p>
+<p><a href="https://lastweekin.ai/p/last-week-in-ai-346-719-math-manuscripts">来源：Last Week in AI</a></p>
+
+<h3>AI资讯日报发布2026年10月9日刊</h3>
+<p>AI资讯日报发布10月9日刊，定位为AI资讯、每日早读、全网数据聚合、前沿科学探索、行业自由发声、开源创新力量及AI与人类未来等栏目；RSS摘要未提供具体事件细节。</p>
+<p><a href="https://hex2077.dev/docs/2026-10/2026-10-09/">来源：AI资讯日报</a></p>
+
+<h2>贸易财经</h2>
+
+<h3>软银寻求海湾投资者最高1000亿美元资金，以扩大AI布局</h3>
+<p>金融时报报道，软银计划向海湾地区投资者筹集最高1000亿美元资金，以推动人工智能业务发展。相关报道在FirstFT等栏目中亦有提及。</p>
+<p><a href="https://www.ft.com/content/3bc0eaa5-a8d4-47e8-903c-7dd762d947dd?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>欧盟各国首都因债务担忧陷入市场与指标两难</h3>
+<p>金融时报报道，随着债务担忧加剧，欧盟各国首都陷入市场与指标的两难境地。</p>
+<p><a href="https://www.ft.com/content/782c8c63-0db5-499e-8a0b-b7e263bc1f97?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>能源危机改变投资者对石油巨头的期望</h3>
+<p>金融时报报道，能源危机正在改变投资者对石油巨头的期望。</p>
+<p><a href="https://www.ft.com/content/7b354a5d-9702-407a-a4bc-8703c6ba7b72?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>金融时报对话贝恩德·兰格：欧盟与中国关系错综复杂</h3>
+<p>金融时报发布与贝恩德·兰格的对话，主题为欧盟与中国关系“错综复杂”。</p>
+<p><a href="https://www.ft.com/content/8e499cac-798b-43ca-a614-08ae5e202372?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>全球最大独立AI原生影视公司拟打造“AI版Disney”</h3>
+<p>爱范儿报道，一家被称为全球最大独立AI原生影视公司的企业，计划打造“AI版Disney”，并要把AI长片送进2027年暑期档院线。</p>
+<p><a href="https://www.ifanr.com/1683309?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">来源：爱范儿</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-10-08</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-10-08.html</link>
+<guid isPermaLink="false">daily-news-2026-10-08</guid>
+<pubDate>Thu, 08 Oct 2026 06:01:22 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>过去24小时，国际重大新闻涵盖乌克兰东线、诺贝尔物理学奖、美国中期选举与美联储政策信号、中东和欧洲安全动态；国内新闻栏目关注国庆假期出行与票房、中非合作、文旅和健康研究；AI每日总结仅有日刊汇总；贸易财经聚焦欧中贸易谈判、债券市场、能源与AI监管；科技前沿涉及OpenAI、苹果、Surface、机器人数据融资与汽车电动化；自然科学暂无内容。</p>
+
+<h2>国际重大新闻</h2>
+<h3>乌克兰东线推进：沉默、幻觉与机器人</h3>
+<p>欧洲政策分析中心（CEPA）刊文讨论乌克兰在东线的推进，标题提及“沉默、幻觉与机器人”。原文摘要未提供更多细节。</p>
+<p><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNc3kxSU9sT01WUkVpNDNyY0RITTFReVJ0Yjl4UUpXNDBVcmptSlZYbkgxVVF3U0ktQzFWZk9lZ2h5eFU2b1NROXkwMjB0LUpIMmpKcTJ0d0MteC13TXJ2YnVyQmZMcUJWRXdjanlXRE15TFZZUDljMl9iVG9JYV9MWlo2MVFsQQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">来源：谷歌全球新闻（CEPA）</a></p>
+
+<h3>2026年诺贝尔物理学奖授予弗朗西斯·哈尔岑</h3>
+<p>路透社报道，弗朗西斯·哈尔岑因在南极追寻“幽灵粒子”而荣获诺贝尔物理学奖。</p>
+<p><a href="https://www.reuters.com/science/francis-halzen-wins-2026-nobel-prize-physics-2026-10-06/">来源：路透社</a></p>
+
+<h3>美国中期选举：特朗普赴得克萨斯，选情预计胶着</h3>
+<p>路透社报道，特朗普现身得克萨斯州，这个共和党大本营的选情预计将十分胶着。</p>
+<p><a href="https://www.reuters.com/fr/affaires/usamidterms-trump-au-texas-bastion-rpublicain-o-le-scrutin-sannonce-serr-2026-10-08/">来源：路透社</a></p>
+
+<h3>美联储会议纪要显示官员对加息理由存在分歧，美元维持高位</h3>
+<p>路透社报道，美联储官员对加息的合理性存在分歧；另一篇报道指出，会议纪要警示通胀风险，美元汇率维持在18个月高点附近。</p>
+<p><a href="https://www.reuters.com/fr/affaires/usa-les-responsables-de-la-fed-diviss-sur-la-justification-de-la-hausse-des-taux-2026-10-08/">来源：路透社</a> <a href="https://www.reuters.com/world/africa/dollar-edges-back-18-month-high-after-fomc-minutes-2026-10-08/">来源：路透社</a></p>
+
+<h3>胡塞武装称向利雅得机场发射弹道导弹</h3>
+<p>路透社报道，胡塞武装称向利雅得的一座机场发射了一枚弹道导弹。</p>
+<p><a href="https://www.reuters.com/fr/affaires/les-houthis-disent-avoir-lanc-un-missile-balistique-contre-un-aroport-de-ryad-2026-10-08/">来源：路透社</a></p>
+
+<h3>立陶宛将在与俄罗斯加里宁格勒接壤边境部署军队</h3>
+<p>据《基辅独立报》报道，拉脱维亚事件发生后，立陶宛将在与俄罗斯加里宁格勒接壤的边境地区部署军队。</p>
+<p><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPQmN1RDgzYkhwS2o2YUE3bWNkSEZOTjJ3TG03a3BQNUNCRnBkbHRwYjRnNmhBMFE3MWZNaEhvVHNCeTVOcGRvbGE2dHMybVdQT2VVbU55ZVVWRzFTWHRCcTZYWG1jcVB0M19SNnp0MXZUeVZZaHphUTRpNjl6SGRycnlWdGlqclJtbFkzbEVLZXQtbjRZaWpjYnYyU216bmw0Y3NfRUxKQzAwSWpRRWVXaC1tQ1ZjZw?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">来源：谷歌全球新闻（The Kyiv Independent）</a></p>
+
+<h3>美俄探讨向欧洲出售天然气</h3>
+<p>路透社援引消息人士称，在乌克兰战争期间，美国和俄罗斯正探讨向欧洲出售天然气。</p>
+<p><a href="https://www.reuters.com/business/energy/us-russia-explore-gas-sale-europe-amid-ukraine-war-say-sources-2026-10-08/">来源：路透社</a></p>
+
+<h3>英国撤下东耶路撒冷领事馆标识</h3>
+<p>路透社报道，以色列设定的关闭期限届满后，英国撤下东耶路撒冷领事馆的标识。</p>
+<p><a href="https://www.reuters.com/world/middle-east/britain-removes-east-jerusalem-consulate-signage-israeli-shutdown-order-expires-2026-10-08/">来源：路透社</a></p>
+
+<h3>马来西亚推动缅甸全面重返东盟</h3>
+<p>路透社报道，马来西亚总理表示，马来西亚将致力于推动缅甸全面重返东盟。</p>
+<p><a href="https://www.reuters.com/world/asia-pacific/malaysia-pm-says-he-will-do-whatever-possible-ensure-myanmars-acceptance-2026-10-08/">来源：路透社</a></p>
+
+<h3>日本央行认为通胀压力正在扩大</h3>
+<p>路透社报道，日本央行认为通胀压力正在扩大。另一篇报道指出，日本首相高市早苗为摆脱“再通胀主义者”形象而展开的行动，需要用实质内容支撑其演讲。</p>
+<p><a href="https://www.reuters.com/world/asia-pacific/bank-japan-sees-broadening-inflationary-pressure-2026-10-08/">来源：路透社</a> <a href="https://www.reuters.com/world/asia-pacific/japanese-pm-takaichis-campaign-shed-reflationist-image-needs-substance-behind-2026-10-08/">来源：路透社</a></p>
+
+<h3>台积电第三季度营收增50%，三星预计第三季度利润增783%</h3>
+<p>路透社报道，台积电第三季度营收同比增长50%，超出市场预期；三星预计第三季度利润将增长783%。</p>
+<p><a href="https://www.reuters.com/world/asia-pacific/tsmcs-third-quarter-revenue-surges-50-yy-beating-market-forecast-2026-10-08/">来源：路透社</a> <a href="https://www.reuters.com/fr/affaires/samsung-anticipe-un-bnfice-du-t3-en-hausse-de-783-2026-10-08/">来源：路透社</a></p>
+
+<h3>法国Sesterce计划在芬兰投资110亿美元发展人工智能</h3>
+<p>路透社报道，法国Sesterce公司计划在芬兰投资110亿美元发展人工智能。</p>
+<p><a href="https://www.reuters.com/business/frances-sesterce-plans-11-billion-ai-investment-finland-2026-10-08/">来源：路透社</a></p>
+
+<h2>国内新闻</h2>
+<h3>国庆假期全社会跨区域人员流动量21.42亿人次</h3>
+<p>交通运输部10月8日发布数据，国庆假期（10月1日至7日）全社会跨区域人员流动量21.42亿人次，比2025年中秋国庆假期日均水平增长0.6%。</p>
+<p><a href="http://www.news.cn/20261008/8f0df26f87444cddae7a0612c6a0d89e/c.html">来源：新华社</a></p>
+
+<h3>2026年国庆档电影票房11.65亿元</h3>
+<p>新华社消息，2026年国庆档电影票房为11.65亿元。</p>
+<p><a href="http://www.news.cn/20261008/3f33295b3e534dec9842a00529319a23/c.html">来源：新华社</a></p>
+
+<h3>中非合作：零关税与“发展列车”</h3>
+<p>新华社报道，中国对53个非洲建交国全面实施零关税后，肯尼亚牛油果等对华出口增长；报道还介绍中国“养蜂经”帮助肯尼亚妇女发展养蜂，以及蒙内铁路和奈瓦沙内陆港带动当地农产品出口。2026年5月至8月，中国自肯尼亚进口牛油果3762.8吨，同比增长63.22%；进口未烘焙生咖啡1707.8吨，同比增长139.66%。</p>
+<p><a href="http://www.news.cn/20261008/2fd06b6ffb7946df886a47acef944efe/c.html">来源：新华社</a> <a href="http://www.news.cn/20261008/a719535a372c4fd4ad82e1fc2b2f4a61/c.html">来源：新华社</a></p>
+
+<h3>“全球治理之友小组”呼吁各方遵守国际法治</h3>
+<p>新华社报道，中国常驻联合国副代表孙磊7日代表“全球治理之友小组”在联大第六委员会发言，呼吁捍卫《联合国宪章》权威，遵守国际法治，反对双重标准和选择性适用，并呼吁和平解决争端。</p>
+<p><a href="http://www.news.cn/20261008/a9eb7ac2d36a45689a02b7b43f3083e5/c.html">来源：新华社</a></p>
+
+<h3>上党梆子带火山西高平特色文旅</h3>
+<p>新华社报道，国庆期间山西晋城高平市免费开放包括22处国保单位在内的40处文旅打卡点；国内现存最早有明确纪年的戏台所在二郎庙迎来超13700名游客，上党梆子演出带动当地文旅。</p>
+<p><a href="http://www.news.cn/20261008/4d19aba1eb34457d92a535eda5ce5f0e/c.html">来源：新华社</a></p>
+
+<h3>研究：无糖甜味饮料在减肥方案中效果与喝水相近</h3>
+<p>新华社报道，英国利物浦大学一项为期两年的随机对照试验显示，在减肥和长期体重维持方面，饮用含非营养性甜味剂的无糖饮料与喝水效果相当；两组平均减重差异无统计学意义。</p>
+<p><a href="http://www.news.cn/20261008/830bb87c921c4f249e73a366a235dac9/c.html">来源：新华社</a></p>
+
+<h3>家长开学焦虑：情绪传染与亲子关系</h3>
+<p>新华社报道，国庆长假结束后部分家长出现失眠、焦虑等情绪；医生认为这与控制感缺失、将孩子成绩与自我价值绑定等因素有关，并提醒家长焦虑可能传染给孩子。</p>
+<p><a href="http://www.news.cn/20261008/a2fccba6608344b580e1b9a4f85846b3/c.html">来源：新华社</a></p>
+
+<h2>AI每日总结</h2>
+<h3>AI资讯日报发布2026年10月8日日刊</h3>
+<p>AI资讯日报发布2026年10月8日日刊，标注内容涵盖AI资讯、每日早读、全网数据聚合、前沿科学探索、行业自由发声、开源创新力量、AI与人类未来等。该条目摘要未展开具体模型、产品或研究事件。</p>
+<p><a href="https://hex2077.dev/docs/2026-10/2026-10-08/">来源：AI资讯日报</a></p>
+
+<h2>贸易财经</h2>
+<h3>欧盟贸易专员赴北京，试图避免欧中贸易战</h3>
+<p>金融时报报道，舍夫乔维奇前往北京，作最后一次呼吁以避免欧盟与中国的贸易战；欧盟驻华首席贸易代表就汽车问题展开紧张谈判。</p>
+<p><a href="https://www.ft.com/content/166d0909-235d-4402-8ed7-d42d59401f6c?syn-25a6b1a6=1">来源：金融时报</a> <a href="https://www.ft.com/content/e1823a4a-7a0d-4550-aa00-d685bc642c98?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>法国债券遭抛售后，大投资者在欧元区债券市场“抄底”</h3>
+<p>金融时报报道，法国债券遭抛售后，大投资者在欧元区债券市场“抄底”。</p>
+<p><a href="https://www.ft.com/content/9cf103ed-548e-4b06-baed-71632abca961?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>石油巨头将目光投向中东战争之外</h3>
+<p>金融时报报道，石油巨头们将目光投向中东战争之外，以寻求该地区丰富的石油储备。</p>
+<p><a href="https://www.ft.com/content/3534cf93-be7b-49ec-bf58-cea84e73cb28?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>日本小盘股洗牌为AI基金带来机遇</h3>
+<p>金融时报报道，日本小盘股的洗牌为AI基金带来了机遇。</p>
+<p><a href="https://www.ft.com/content/70b7333c-f746-462f-a973-30a999403b15?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>挪威就人工智能眼镜问题向欧盟划出红线</h3>
+<p>金融时报报道，挪威就人工智能眼镜问题向欧盟划出红线。</p>
+<p><a href="https://www.ft.com/content/177f9fba-841a-4448-ad54-ac621dc58f2a?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>意大利梅洛尼面临选举改革投票关键考验</h3>
+<p>金融时报报道，乔尔贾·梅洛尼在备受争议的选举改革投票中面临关键考验。</p>
+<p><a href="https://www.ft.com/content/ba171091-839a-4d78-86af-8e93a7013d6c?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>英国伯纳姆政府将推进牛津-剑桥走廊建设</h3>
+<p>金融时报报道，安迪·伯纳姆领导的政府将推进牛津-剑桥走廊建设。</p>
+<p><a href="https://www.ft.com/content/5371b147-4984-43ed-95d4-b009cf060446?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>“挤出效应”使主权国家与人工智能对立</h3>
+<p>金融时报报道，“挤出效应”使主权国家与人工智能对立。</p>
+<p><a href="https://www.ft.com/content/bf40e0fb-9542-4ddf-9ac3-c216be55a5a6">来源：金融时报</a></p>
+
+<h3>Palantir乌克兰住房合同延期成本500万英镑</h3>
+<p>金融时报报道，Palantir的“乌克兰住房计划”合同，英国为一年期延期支付了500万英镑。</p>
+<p><a href="https://www.ft.com/content/9f5a1496-fe71-484d-b5cc-cc6f27f595a1?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h2>科技前沿</h2>
+<h3>OpenAI向Chat用户推送GPT-6并加入可交互界面</h3>
+<p>爱范儿早报提到，OpenAI向Chat用户推送GPT-6，并加入可交互界面。</p>
+<p><a href="https://www.ifanr.com/1683053?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">来源：爱范儿</a></p>
+
+<h3>月之暗面估值据报升至约500亿美元，筹备赴港上市</h3>
+<p>爱范儿早报提到，月之暗面估值据报升至约500亿美元，筹备明年赴港上市。</p>
+<p><a href="https://www.ifanr.com/1683053?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">来源：爱范儿</a></p>
+
+<h3>苹果一大波新品曝光，最快下周发布</h3>
+<p>爱范儿早报提到，苹果一大波新品曝光，最快下周发布。</p>
+<p><a href="https://www.ifanr.com/1683053?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">来源：爱范儿</a></p>
+
+<h3>Surface Laptop Ultra发布，2599美元起</h3>
+<p>爱范儿早报提到，Surface Laptop Ultra发布，2599美元起；另一篇爱范儿文章称黄仁勋发布“史上最强Surface”，专为“无限智能”设计。</p>
+<p><a href="https://www.ifanr.com/1683053?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">来源：爱范儿</a> <a href="https://www.ifanr.com/1683127?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">来源：爱范儿</a></p>
+
+<h3>全球纯汽油车份额首次跌破50%</h3>
+<p>爱范儿早报提到，全球纯汽油车份额首次跌破50%。</p>
+<p><a href="https://www.ifanr.com/1683053?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">来源：爱范儿</a></p>
+
+<h3>Mecka AI获红杉6000万美元融资</h3>
+<p>TechCrunch报道，机器人数据初创公司Mecka AI从红杉获得6000万美元融资。该公司收集和分析人类运动数据，用于训练人形机器人和其他机器人，并付费让人记录日常任务。</p>
+<p><a href="https://techcrunch.com/2026/10/07/robot-data-startup-mecka-ai-nabs-60m-from-sequoia/">来源：TechCrunch</a></p>
+
+<h3>BMW iX4 SUV续航428英里</h3>
+<p>The Verge报道，BMW iX4 SUV续航428英里，被视为抵御中国电动车扩张的产品。报道称其是iX3的轿跑SUV版本，兼顾驾驶品质与价格。</p>
+<p><a href="https://www.theverge.com/transportation/1006837/bmw-ix4-ev-range-price-specs-tesla-china">来源：The Verge</a></p>
+
+<h3>Teenage Engineering CEO称将停止制造合成器</h3>
+<p>The Verge报道，Teenage Engineering创始人兼CEO Jesper Kouthoofd表示计划停止制造合成器，包括标志性的OP-1。</p>
+<p><a href="https://www.theverge.com/gadgets/1007489/teengage-engineering-stop-making-synths">来源：The Verge</a></p>
+
+<h3>Endeavor Catalyst募集3.2亿美元支持硅谷以外创始人</h3>
+<p>TechCrunch报道，Endeavor Catalyst募集3.2亿美元，继续支持硅谷以外的创始人；一半利润将回流至寻找这些创始人的非营利组织。</p>
+<p><a href="https://techcrunch.com/2026/10/07/while-vcs-crowd-into-san-francisco-endeavor-catalyst-raises-320m-for-founders-elsewhere/">来源：TechCrunch</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-10-07</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-10-07.html</link>
+<guid isPermaLink="false">daily-news-2026-10-07</guid>
+<pubDate>Wed, 07 Oct 2026 05:57:19 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>今日概览：过去24小时，国际方面俄乌冲突、中东与黑海局势持续，国内关注幸存者去世、交通与科研进展；贸易财经聚焦欧盟预算、AI支出与金融业动向；科技前沿出现OpenAI数学进展、苹果智能家居等动态；自然科学暂无新内容。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>俄罗斯对基辅及乌克兰其他地区发动大规模打击</h3>
+<p>路透社报道，俄罗斯称对基辅及乌克兰其他地区发动“大规模”打击；法文报道称，对基辅的袭击造成两人遇难。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/fr/affaires/ukraine-la-russie-lance-des-attaques-contre-kyiv-deux-morts-2026-10-07/">路透社</a>；<a href="https://www.reuters.com/world/europe/russia-says-it-launched-massive-strikes-kyiv-other-areas-ukraine-2026-10-07/">路透社</a></p>
+
+<h3>也门亚丁机场遭胡塞武装导弹袭击</h3>
+<p>路透社法文报道，也门亚丁机场遭胡塞武装导弹袭击。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/fr/affaires/ymen-laroport-daden-vis-par-des-missiles-houthis-2026-10-07/">路透社</a></p>
+
+<h3>黑海海域接连发生船只遇袭事件</h3>
+<p>保加利亚近海一艘船只遭无人机袭击，数名水手在黑海失踪；俄罗斯方面称，一艘油轮在黑海遭袭起火后，船员已被救出。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/fr/affaires/des-marins-disparus-en-mer-noire-aprs-une-frappe-de-drone-sur-leur-navire-au-2026-10-07/">路透社</a>；<a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPejVLT0UyelNzaEwtNHQyVVJaV1czQzV1Rl9tYV9XNDhiLTE1bjF4TkFvUjl1MGdtNzF1U2F1YzlzbmVrak5wNndKNG1nS01xSEdOMGxPNXMxOUlUYkp5bmcyNXdRVWRlbjlhN194SFJEcm5MaldhdmZSQmdnWnV6aGNEc1ZfS29seTJlclpLTllDeVJqZ3V1SWF4TlNnQTdGeUdfVFJMUjFmcXFzb2dRaEpR?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">谷歌全球新闻</a></p>
+
+<h3>以色列纪念哈马斯袭击三周年</h3>
+<p>路透社报道，以色列民众纪念哈马斯袭击事件三周年，该袭击引发了对加沙的军事行动。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/world/middle-east/israelis-mark-three-years-since-hamas-attack-that-set-off-gaza-assault-2026-10-07/">路透社</a></p>
+
+<h3>万斯称伊朗须减少铀浓缩活动才能结束战争</h3>
+<p>路透社法文报道，万斯表示，伊朗必须减少铀浓缩活动，才能结束这场战争。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/fr/affaires/liran-doit-rduire-ses-activits-denrichissement-duranium-pour-mettre-fin-la-2026-10-07/">路透社</a></p>
+
+<h3>霍尔木兹海峡动荡被新加坡外长称为亚洲问题</h3>
+<p>CNBC报道，新加坡外长称霍尔木兹海峡的动荡是亚洲的问题，并表示特朗普并非“完全错误”。</p>
+<p><strong>来源：</strong><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPeTVFTXk2cUlCNHZfdzgzME1zUDNhb1BQamdlSVVqUU1PS2JaSkZFQlo5LTl5RjI2TjFNQU9aQ1g4RzNTb2xrcjViQkVjcUgydlN4Nm1McllySVE3bzJsM0hGdFJvWVZCckM4M0JXU3BPbGU1bW93MlZkeFN4NHdLd2lOcWRjZFg0TEHSAY8BQVVfeXFMTTRYb3EyWVJScmoyanY1dTVodEgtc1VXelk1NVIxNkRJZFdGVHdySlRfcUJSZXdNYWV3aUtoRmE2LXI4WFVOQ1FwZWNOZGVlb1E3Z2xwN2paS3phTUZ1NmhyX1d0LUN6NlhNRzVGeFVNNm9WV2E2LWVxMnp5TXZmdms4OHk3R09PVk9FY0lZbms?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">谷歌全球新闻</a></p>
+
+<h3>马来西亚接待缅甸领导人，遣返人数接近1万</h3>
+<p>半岛电视台和路透社报道，马来西亚总理安瓦尔将接待缅甸领导人；在遣返人数接近1万之际，曾遭孤立的缅甸军方支持领导人受到马来西亚红地毯礼遇。</p>
+<p><strong>来源：</strong><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQclk1d3FNMkdBSDZOblZMcjlPcElReURTZDlhSGVMQm9hZ2JWdXUyVlI0bU4wU0xsREgydkFORFAzV09ETUJrMjhlUzJpRG1ubEd6UU8tQjZULUtLVXVsYWNjVnZRaWtSWHlPeWRYMGVzTG4xaERSRjF6ejV3WU1rLUt4NHk2UXB6aG81N0NiTWxDQWp1UDdHemNwMnJYUUhBYnFQVktlVEZ6LUt6dy1J0gG0AUFVX3lxTE5qaGQtVmpYdDNhOFFYZ0pGM0taYlpxYlVDYV9CWF9zQmkyRDZxMmhpUW9KNFdoQURnX3FGUU5MNlZFN2RPc00tSEtLdlp4TFhoSUFoU2tkbUZDSEF2YkhsUHB2R3gwMzM5b0RqZ1YyN3QxYWNYU0lPenhnQmVTalJ1cmx5aGRiS0lEMlphUWcxRmVNclJBM2hxSU16NDhxZ0dhUDIyTzNPdTk2NmJWMWNYSFlJMQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">半岛电视台/谷歌全球新闻</a>；<a href="https://www.reuters.com/world/asia-pacific/once-shunned-myanmars-military-backed-leader-set-malaysian-red-carpet-2026-10-07/">路透社</a></p>
+
+<h3>拉脱维亚称武装人员越境并盗走监控摄像头</h3>
+<p>Meduza报道，拉脱维亚官员称，一群蒙面武装人员在试图将20名移民从白俄罗斯境内带入拉脱维亚时威胁驻军，随后自己越境进入拉脱维亚，并盗走监控摄像头。</p>
+<p><strong>来源：</strong><a href="https://news.google.com/rss/articles/CBMiuAJBVV95cUxOTlJIeVJuOUVfaEN1X1o5anlGWlRFQTM4QlZWYTU4cXY1TUlScDlaYXF2bEpFeloyZE85ejEzdkF4MXAwcFJfQkFaV01nanFMVDljYld6Q19GcDJqQU5vVlo1d1VsUGJlYlNKTWtHcVVNSEJWRzBKZm5ia2tBa1ZMeU9aVWxCOG1zT0VtVTkxNFZTVmQ0Qnh4NlNRMDdzbEw1bkJQRGZCTTk0YkN2QmktRjBkR3R0V3NKbjR3R2ZYX1MzT1N4Uzl0cWJFYUw4emVpYlVMT2tHU3lJamxuelV6NGY5a3Z6TjJSMmk5VW1PT05zSmtBZ2pRUUlfSnczRGxDQ2JtdFlIUmZpTGZmMEU2dDlWcVAyeDAzYkE1R3dJVFFnWXp6clNwVVBOa3ZCZkQ1MV8wRWpEdXrSAb4CQVVfeXFMUDQtTDIwTFJhUmFIRWRQSHFrRlkzX004UWtKdWQ5YWtEYzNLY0xlb3FIVU5uYUptZ1ZyODh2dkNCM3pDVmNkNVQ0cmJWdno0VE1aM0xCb3dMdnkzaUk3ZnRacndZcHM4eGpnb2RrUmkxVmFZUGZKbVJiZ25lOXFuQXN0YXdLcTdlaGJnZ19MZlVqY2dSd3ZTVGdBVmhDeTBjTXpuR2ZVZWR1eENNOThQajRic3hUUmZ6SnIzV1FsYmh1Q21LLUtqOFY0RUxMbzVKRHVUOXVjS21pblk4TUludGFfQjFfdjJRTVNkUmdrQzRCVGhIenZYRE5TWVBDSjBma1FHT0xfUE5ocnN1VXgtMUZDUTFHbzNOeVFkU2lBa1k2MVoyRnlub3c2QnZ3NUpCNW9ZLU9QWmhoc2FLSDdB?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">谷歌全球新闻</a></p>
+
+<h3>法国骚乱之际马克龙抨击美国言论自由</h3>
+<p>福克斯新闻报道，在法国爆发骚乱之际，马克龙抨击美国言论自由，引发网络舆论哗然。</p>
+<p><strong>来源：</strong><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxONG5mUW5weFcwSHhmMkw1emhfSzJZWG1WSWc5MnBKX2sxUm9xN01JYnNYU0lLamYtdDhzV2NlOUNnaW9ZZGhQcmhuVWpmVXhwRUZJS1ZnQnQ0d2hzLU1lbGVKWFVhb1JRMmdPMEs5akp2aWtfcE1DSnNuVHBvVHo2NzcwSzJYMDZRZmNOalp0SGM4N0NrQVgwYW1EY1RQN0tCVzFGU2h6dXVVakFJbWhvTmR4Si0zaE1u0gG-AUFVX3lxTE12SndKaldaRGN5MzE2TmRqSFFVaVFkd2d4YkVCTDNDZS1BSHIxaVRMci12cG83VFA2WjMzbDByU3JHU193UEY5Q0pFc3p4a1AybFdjR0JTdXZQemtZT1otUzRjMWJLc0xDUUFjTzJOc2JQX3BvNW5ZNG5WU0lxSDZ3Z0dTZDhMZzJuNEktdTQwek5FVVY0TTB1UXlINnBQY25FeGlqQ0cwWmFMa2JWM1JTMWlmNW9qTDFGallEVVE?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">谷歌全球新闻</a></p>
+
+<h3>印度央行近四年来首次加息</h3>
+<p>路透社和彭博社报道，印度央行近四年来首次加息，加入全球加息浪潮，收益率飙升；印度股市跌幅随后因金融股反弹而收窄。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/world/india/india-raises-policy-rate-by-25-bps-first-hike-nearly-four-years-2026-10-07/">路透社</a>；<a href="https://www.bloomberg.com/news/articles/2026-10-07/india-central-bank-lifts-rates-for-first-time-in-near-four-years">彭博社</a>；<a href="https://www.reuters.com/world/india/indian-shares-likely-open-lower-ahead-rbi-rate-decision-2026-10-07/">路透社</a></p>
+
+<h3>日本啤酒厂商因涉嫌垄断遭突击搜查，股价下跌</h3>
+<p>路透社报道，因涉嫌垄断遭突击搜查，日本大型啤酒厂商股价下跌。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/legal/litigation/major-japanese-beer-companies-raided-over-accusations-cartelisation-2026-10-07/">路透社</a></p>
+
+<h3>布鲁塞尔寻求对大型企业征税以约束科技巨头</h3>
+<p>路透社援引《金融时报》报道，布鲁塞尔正寻求通过对大型企业征税来约束科技巨头。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/business/retail-consumer/brussels-looks-capture-big-tech-through-tax-large-corporations-ft-reports-2026-10-07/">路透社</a></p>
+
+<h3>SpaceX将以400亿美元从英伟达采购AI芯片</h3>
+<p>路透社德文报道，布拉特称SpaceX将以400亿美元从英伟达采购人工智能芯片。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/de/firma/blatt-spacex-will-fr-40-mrd-dollar-ki-chips-von-nvidia-kaufen-2026-10-07/">路透社</a></p>
+
+<h3>泰国洪灾损失估计1.78亿美元</h3>
+<p>路透社报道，泰国行业联合会称，洪灾造成的损失估计为1.78亿美元。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/business/environment/thai-flood-damage-estimated-178-million-industry-federation-says-2026-10-07/">路透社</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>南京大屠杀幸存者郭秀兰去世，在册在世幸存者仅剩20人</h3>
+<p>新华社报道，侵华日军南京大屠杀遇难同胞纪念馆消息，南京大屠杀幸存者郭秀兰于10月7日去世，享年94岁。截至目前，登记在册的在世幸存者仅剩20人。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261007/aa2469e6cf664c55a0b5b19b446d26e8/c.html">新华社新闻</a></p>
+
+<h3>10月10日起中国内地航线燃油附加费上调</h3>
+<p>新华社报道，自10月10日0时起销售的中国内地航线客票，燃油附加费将上调：800公里（含）以下航线每航段50元，800公里以上航线每航段90元。婴儿旅客免收，儿童等减半。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261007/02b9680670c64289959c07ca6e95f127/c.html">新华社新闻</a></p>
+
+<h3>中国科研人员绘制水稻全生命周期时空细胞图谱</h3>
+<p>新华社消息，我国科研人员成功绘制水稻全生命周期时空细胞图谱。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261007/0802067d7d644f2fa249ff7e38acd55e/c.html">新华社新闻</a></p>
+
+<h3>前8个月医保统筹基金收入约2.07万亿元</h3>
+<p>新华社消息，前8个月医保统筹基金收入约2.07万亿元。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261007/a5d69c284ddf4b28a086533b9bb186a2/c.html">新华社新闻</a></p>
+
+<h3>水利部：确保全年完成水利建设投资1万亿元目标</h3>
+<p>新华社消息，水利部表示确保全年完成水利建设投资1万亿元目标。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261007/d76aec851e7f44f782d6059015e8bc1f/c.html">新华社新闻</a></p>
+
+<h3>重庆“山城后巷”成为国庆文旅新空间</h3>
+<p>新华社报道，国庆假期重庆一批修缮更新的“山城后巷”成为游客与市民休闲消费新空间。重庆近年在背街小巷城市更新中打造65条“山城后巷”，年吸引游客量突破2000万人次，并规划到2027年底打造200条。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261007/f903ecf73e604b6b85e6004a9612300f/c.html">新华社新闻</a></p>
+
+<h3>四川广元明月峡国庆假期文旅热度攀升</h3>
+<p>新华社报道，国庆假期四川广元朝天区明月峡景区依托“六道并存”交通奇观推出蜀道文化沉浸式体验活动，吸引游客探访。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261007/5ce02e27ff9949c1b74547522744875e/c.html">新华社新闻</a></p>
+
+<h3>北戴河国庆迎来最佳观鸟期</h3>
+<p>新华社报道，国庆假期河北秦皇岛北戴河区迎来最佳观鸟期，成群候鸟抵达。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261007/c0a41a53318c4852a52cff2fa861e491/c.html">新华社新闻</a></p>
+
+<h2>AI每日总结</h2>
+
+<h3>AI资讯日报发布2026年10月7日日刊</h3>
+<p>AI资讯日报发布2026年10月7日日刊，标注每日早读、全网数据聚合、前沿科学探索、行业自由发声、开源创新力量、AI与人类未来等板块；RSS摘要未展开具体模型、产品或研究内容。</p>
+<p><strong>来源：</strong><a href="https://hex2077.dev/docs/2026-10/2026-10-07/">AI资讯日报</a></p>
+
+<h2>贸易财经</h2>
+
+<h3>布鲁塞尔呼吁欧盟各国不要大幅削减下一期共同预算</h3>
+<p>《金融时报》报道，布鲁塞尔恳请欧盟各国首都不要大幅削减欧盟下一期共同预算。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/f065a2f6-6109-46d8-b11b-37ce2a81017c?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>非洲各国政府成立评级机构，挑战全球“三大”</h3>
+<p>《金融时报》报道，非洲各国政府成立评级机构，以挑战全球“三大”评级机构。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/7811d98a-7693-4596-a0f8-7329ed293116?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>强劲AI支出支撑美国企业财报季预期</h3>
+<p>《金融时报》报道，强劲的人工智能支出为投资者迎来又一个美国企业财报季的丰收期。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/7c38e8e3-8035-4036-8bc0-5fba2fbf77cb?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>汇丰计划在英国财富管理业务大规模裁员以推进AI</h3>
+<p>《金融时报》报道，汇丰计划在英国财富管理业务部门进行大规模裁员，以推进人工智能发展。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/dd553fc2-532c-4afc-a773-47cd7f786260?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>Blue Owl将大举进军保险领域</h3>
+<p>《金融时报》报道，Blue Owl将大举进军保险领域。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/47c82e53-aa63-4b0d-95fd-ecc04d81e6ab?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>报告：俄罗斯敌对活动每年给英国造成高达25亿英镑损失</h3>
+<p>《金融时报》报道，一份报告警告称，俄罗斯的敌对活动每年给英国造成高达25亿英镑的损失。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/bd20289f-2d51-4b3d-9eb9-68945f9ae309?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>法国债券面临财政纪律压力</h3>
+<p>《金融时报》刊文讨论助力法国债券的“妙招”。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/16df642e-dc1a-4d17-8f18-b97f32efc5db?syn-25a6b1a6=1">金融时报</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>OpenAI公布又一批数学突破</h3>
+<p>The Verge报道，OpenAI公布了一个未发布前沿模型生成的数学问题解决方案，共722篇手稿，覆盖372个结果家族；报道称这延续了一系列突破，并引发对研究伦理等问题的讨论。</p>
+<p><strong>来源：</strong><a href="https://www.theverge.com/ai-artificial-intelligence/1005004/openai-math-release-github">The Verge</a></p>
+
+<h3>苹果据报与LG合作推出智能锁、恒温器和门铃等智能家居设备</h3>
+<p>TechCrunch和The Verge报道，苹果据报与LG合作推出智能锁、恒温器、门铃、室内摄像头等智能家居设备，产品将带LG品牌，并接入苹果传闻中的智能家居中枢。</p>
+<p><strong>来源：</strong><a href="https://techcrunch.com/2026/10/06/apple-is-reportedly-partnering-with-lg-to-launch-a-smart-lock-thermostat-and-doorbell/">TechCrunch</a>；<a href="https://www.theverge.com/news/1006238/apple-lg-homekit-rumor-fcc">The Verge</a></p>
+
+<h3>Xbox获得《GTA 6》流媒体版权</h3>
+<p>The Verge报道，Xbox获得《GTA 6》流媒体版权；Xbox CEO告诉员工，微软准备做“其他平台持有者没有做”的事。</p>
+<p><strong>来源：</strong><a href="https://www.theverge.com/report/1005859/microsoft-xbox-gta-6-streaming-rights">The Verge</a></p>
+
+<h3>捷豹发布Type 01电动车</h3>
+<p>WIRED报道，捷豹在品牌重塑和两年未售新车后发布Type 01，称这是迄今最具争议的电动车。</p>
+<p><strong>来源：</strong><a href="https://www.wired.com/story/jaguar-finally-reveals-its-biggest-gamble-the-type-01/">WIRED</a></p>
+
+<h3>亚马逊基于购买记录对用户作出推断引发隐私讨论</h3>
+<p>TechCrunch报道，有购物者发现亚马逊根据其购买记录作出的假设页面，其中包括“flat buttocks”等表述，引发关注。</p>
+<p><strong>来源：</strong><a href="https://techcrunch.com/2026/10/06/how-to-find-out-if-amazon-thinks-you-have-flat-buttocks/">TechCrunch</a></p>
+
+<h3>前Ramp工程师为Melius融资2000万美元</h3>
+<p>TechCrunch报道，前Ramp工程师在放弃首个产品后，为平台Melius融资2000万美元，转向生成创意资产和活动工具。</p>
+<p><strong>来源：</strong><a href="https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/">TechCrunch</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-10-06</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-10-06.html</link>
+<guid isPermaLink="false">daily-news-2026-10-06</guid>
+<pubDate>Tue, 06 Oct 2026 06:17:24 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>今日概览：国际方面，埃塞俄比亚要求获得红海通道，魁北克独立派赢得选举，也门政府军夺回红海战略要冲；国内关注国庆返程、中哈传统医学合作、中亚跨境旅游热和云南古生物化石数字化；AI资讯日报发布日刊；贸易财经聚焦利率上升、借贷成本激增和AI对美元及责任保险的影响；科技前沿与自然科学过去24小时暂无可核实的新内容。</p>
+
+<h2>国际重大新闻</h2>
+<h3>埃塞俄比亚总理要求获得通往红海的通道</h3>
+<p>埃塞俄比亚总理阿比要求获得通往红海的通道，随着与邻国紧张局势加剧。Al Jazeera报道了这一动向。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQb3h5LUZTNDhpeEpMVllucThEN1F2eW9DT1l0NFBQSFpfTm45TlBRM3ZIcnBRN1QxU2R6WUNnVG1YY1pYd0k5dl9vSkJjXzdkbUx6MC1tYVo1R3ladU94ZEk2X2JSMHFWbHpLdEVrcmJvek1pbGVndjFlay1FcjVzSnRaYUh2dTRhU2ZMVjJkZFFVRi1idTRUaVBSelJuQmFLUWNZODZzN0w0SW1Za3NJN3Z3djlsd9IBuwFBVV95cUxPbTlsMTJlQXVEOVJ3cTJMc1JNZ2x1azRSVEhkRWxiSWhDZ2ZBRDFoWklLLUg5V044VFVNX1dJRWpTZzZWcWxGSVJYQm9VQkVZN1lKS3JhdHFLdFhiVVo3a3FlbUk1ZERYMmRlT0tLZ29mblRFR1p2Q1ZCeHA3NERQQmIydHp4NHEzSF9mUzc0cjN0T0x5X3hKRW9STDNyaXhxS1JDTGgzVjJHeTJtR29Ddms3ZnVpNmxXVkdv?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Al Jazeera</a></p>
+
+<h3>魁北克选出主张独立的省长，给卡尼带来新考验</h3>
+<p>魁北克省选举中，主张独立的政党获胜，选出主张独立的省长。Politico称这给卡尼带来新的考验；路透社法文报道认为这可能对卡尼构成阻碍。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxOUTItM3hPbWdzQVJKNWlzVHk4cHFCbDk5VnZKa1lrUFpNTDZScVh0bF9COFJpN0RQTkZna2dzNklFR1lHS2NHXzFMbE03NGpjZE83M25mQkJfem1PNm9PZXdPQTZKbEY0U2JvcXAzaHp1V0c0LWNtWEJHMXlLdlhOTm9GOE5qTWNGcUlnQ2h2UjcyZE8yb0tJeEdXM2Nna0JQdkdxVUhERWJlLVZl?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Politico</a>、<a href="https://www.reuters.com/fr/affaires/canada-les-indpendantistes-gagnent-les-lections-au-qubec-un-potentiel-frein-pour-2026-10-06/">路透社</a></p>
+
+<h3>也门政府军将胡塞武装赶出巴布·曼德布海峡</h3>
+<p>也门政府军重新控制红海战略要冲巴布·曼德布海峡。路透社和彭博社均报道了也门武装部队夺回该海峡控制权。</p>
+<p>来源：<a href="https://www.reuters.com/es/mundo/GQXE7SCODBPPZKXGTITVTHR6RE-2026-10-06/">路透社</a>、<a href="https://www.bloomberg.com/news/newsletters/2026-10-06/yemen-armed-forces-retake-control-over-red-sea-chokepoint">彭博社</a></p>
+
+<h3>西班牙总理桑切斯押注提前大选</h3>
+<p>在住房抗议活动带来难得的支持后，西班牙总理桑切斯押注于提前大选。路透社报道称，此举是在住房抗议后的一次政治赌博。</p>
+<p>来源：<a href="https://www.reuters.com/world/europe/spanish-pm-sanchez-make-morning-announcement-amid-speculation-about-early-2026-10-05/">路透社</a></p>
+
+<h3>法国和德国提出新的对华贸易反制工具</h3>
+<p>面对中国，巴黎和柏林在欧盟层面提出一项新的贸易反制措施。路透社法文报道称，这是欧盟内部就贸易防御工具的新提议。</p>
+<p>来源：<a href="https://www.reuters.com/fr/affaires/ue-face-la-chine-paris-et-berlin-proposent-un-nouvel-outil-de-riposte-2026-10-06/">路透社</a></p>
+
+<h3>日本央行可能表示核心通胀已达到2%目标</h3>
+<p>据消息人士称，日本央行可能会表示核心通胀率已达到2%的目标。路透社报道了这一可能。</p>
+<p>来源：<a href="https://www.reuters.com/es/negocio/66FZBCGZXVP6TNLNM4JZZDYLEI-2026-10-06/">路透社</a></p>
+
+<h3>法国BPCE集团收购西班牙萨瓦德尔银行7%股份</h3>
+<p>法国BPCE集团收购了西班牙萨瓦德尔银行7%的股份，并探讨合作事宜。路透社英文和西班牙文版均报道了此事。</p>
+<p>来源：<a href="https://www.reuters.com/legal/transactional/frances-bpce-acquires-7-stake-spanish-lender-sabadell-2026-10-06/">路透社</a>、<a href="https://www.reuters.com/es/negocio/KZOUYKLFDNJJVBFFD256CGLJEM-2026-10-06/">路透社</a></p>
+
+<h3>DeepSeek将在腾讯支持下筹集至少120亿美元</h3>
+<p>据彭博社报道，DeepSeek将在腾讯支持下筹集至少120亿美元资金。路透社援引该报道。</p>
+<p>来源：<a href="https://www.reuters.com/world/asia-pacific/deepseek-raise-least-12-billion-tencent-backed-funding-bloomberg-news-reports-2026-10-06/">路透社</a></p>
+
+<h3>中国大开锌出口闸门，LME锌市场紧缩持续</h3>
+<p>随着LME锌市场紧缩局面持续，中国大开出口闸门。路透社报道了这一市场动态。</p>
+<p>来源：<a href="https://www.reuters.com/commentary/reuters-open-interest/china-turns-export-taps-lme-zinc-squeeze-grinds-2026-10-06/">路透社</a></p>
+
+<h3>新加坡将八名公职人员移交警方</h3>
+<p>新加坡在审查房产交易后，将八名公职人员移交警方处理。彭博社报道。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-10-06/singapore-refers-eight-public-officers-to-police-after-reviewing-property-deals">彭博社</a></p>
+
+<h3>美国电视布道家吉姆·巴克去世，享年86岁</h3>
+<p>卷入欺诈和性丑闻的美国电视布道家吉姆·巴克去世，享年86岁。路透社报道。</p>
+<p>来源：<a href="https://www.reuters.com/world/us/us-televangelist-jim-bakker-ensnared-fraud-sex-scandal-dead-86-2026-10-06/">路透社</a></p>
+
+<h2>国内新闻</h2>
+<h3>国庆假期返程高峰来临，出行需关注交通天气</h3>
+<p>10月6日预计迎来国庆假期返程高峰，出行人员应提前关注沿途交通、天气变化，合理规划路线，确保行驶安全。新华社发布提示。</p>
+<p>来源：<a href="http://www.news.cn/20261006/4998ce84ac644d3c934c605584824690/c.html">新华社</a></p>
+
+<h3>中哈传统医学合作书写健康丝路新篇</h3>
+<p>中国－哈萨克斯坦传统医学中心在阿斯塔纳运营，截至今年9月累计接诊8.5万人次。中心由中国国家中医药管理局指导、西安中医脑病医院承建，2023年正式开诊，提供针灸、推拿、运动康复等服务，并与纳扎尔巴耶夫大学共建联合实验室。</p>
+<p>来源：<a href="http://www.news.cn/20261006/3cc5ca306bc44c06afe2da87bf97d7d3/c.html">新华社</a></p>
+
+<h3>中亚跨境旅游热：免签政策推动中国游客增长</h3>
+<p>随着中国与乌兹别克斯坦、哈萨克斯坦等国互免签证协议生效，赴中亚的中国游客不断增多。乌兹别克斯坦旅游委员会数据显示，免签政策实施后，中国游客数量增至原来的3.5倍。同时中亚国家来华游客也大幅增长，广州白云机场口岸今年入出境的中亚五国旅客已超9万人次，同比增长286.6%。</p>
+<p>来源：<a href="http://www.news.cn/20261006/68f59a7637e84a20b419c6dadbd279cc/c.html">新华社</a></p>
+
+<h3>云南罗平古生物化石有了“数字身份证”</h3>
+<p>云南罗平生物群化石数据库建设项目完成实物标本库搭建，项目团队完成近2000件化石标本的表面三维扫描工作，为每件化石建立包含名称、门类、产地、形态特征、地质年代等信息的“数字身份证”。该生物群产出时代距今2.38亿至2.39亿年。</p>
+<p>来源：<a href="http://www.news.cn/20261006/b10b1a42327a4d738ab13d8694897144/c.html">新华社</a></p>
+
+<h3>青海班玛：长征精神传承与藏雪茶产业富民</h3>
+<p>青海省果洛藏族自治州班玛县是红军长征唯一途经青海的地方。当地立足生态优势，培育藏雪茶特色富民产业，生态管护员守护三江源腹地生态安全，越来越多群众在家门口就业增收。多篇新华社报道讲述了红军途经班玛的历史与今日发展。</p>
+<p>来源：<a href="http://www.news.cn/20261006/9936d68700c5467395ec4b61924915c0/c.html">新华社</a>、<a href="http://www.news.cn/20261006/d90bf5577ea94090a526285258b4652a/c.html">新华社</a>、<a href="http://www.news.cn/20261006/220093d28f824d3ea755af3c38fe5ad0/c.html">新华社</a></p>
+
+<h3>美港口负责人期待加强对华合作</h3>
+<p>洛杉矶港和长滩港负责人表示，美中进一步发展贸易关系至关重要，期待挖掘潜力，加强对华合作。洛杉矶港对华贸易约占业务量的40%，长滩港对华货运量约占其进出口货运量的55%。</p>
+<p>来源：<a href="http://www.news.cn/20261006/61b209b5b401430c8c29b8bec548ead7/c.html">新华社</a></p>
+
+<h2>AI每日总结</h2>
+<h3>AI资讯日报发布2026年10月6日日刊</h3>
+<p>AI资讯日报发布了2026年10月6日日刊，摘要未提供可核实的模型、产品、研究或行业动态具体内容。</p>
+<p>来源：<a href="https://hex2077.dev/docs/2026-10/2026-10-06/">AI资讯日报</a></p>
+
+<h2>贸易财经</h2>
+<h3>法国央行行长就利率上升发出警告</h3>
+<p>法国央行行长对利率上升发出警告。金融时报FirstFT报道。</p>
+<p>来源：<a href="https://www.ft.com/content/1d152b5b-decb-41c3-a197-8de1d1ca26fc">金融时报</a></p>
+
+<h3>借贷成本激增冲击美国企业界</h3>
+<p>借贷成本激增正在冲击美国企业界。金融时报报道。</p>
+<p>来源：<a href="https://www.ft.com/content/7c7ccb82-2973-47af-ad9b-b469c6ea0048">金融时报</a></p>
+
+<h3>法国：在债券市场与街垒之间</h3>
+<p>金融时报分析法国当前局势，称其处于债券市场与街垒之间。报道关注法国债券市场与政治紧张的关系。</p>
+<p>来源：<a href="https://www.ft.com/content/9b252b46-a87c-45e7-a09a-45a39ce077b8">金融时报</a></p>
+
+<h3>英国电信收购TalkTalk让监管机构陷入两难</h3>
+<p>英国电信（BT）对TalkTalk的收购让监管机构陷入两难境地。金融时报报道。</p>
+<p>来源：<a href="https://www.ft.com/content/309a7685-e488-44f4-ad76-4247b7f8bb5b">金融时报</a></p>
+
+<h3>人工智能可能如何动摇美元地位</h3>
+<p>金融时报探讨人工智能可能如何动摇美元地位。</p>
+<p>来源：<a href="https://www.ft.com/content/47061507-f20e-4ff6-961d-e1f1b919cb89">金融时报</a></p>
+
+<h3>保险索赔将检验阿尔特曼和阿莫迪对“失控”人工智能的责任</h3>
+<p>保险索赔将检验OpenAI的阿尔特曼和Anthropic的阿莫迪对“失控”人工智能的责任。金融时报报道。</p>
+<p>来源：<a href="https://www.ft.com/content/a5caf8d4-992f-4832-89c3-6c73f6f111fe">金融时报</a></p>
+
+<h2>科技前沿</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-10-05</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-10-05.html</link>
+<guid isPermaLink="false">daily-news-2026-10-05</guid>
+<pubDate>Mon, 05 Oct 2026 05:35:36 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p><strong>今日概览：</strong>过去24小时，国际重大新闻包括巴西总统选举进入第二轮、日本在冲绳事件后要求美军加强纪律、乌克兰新型弹道导弹、伦敦附近二战弹药沉船等；国内新闻聚焦新型电池“十五五”规划、中国空间站动态及美军事故调查；AI栏仅见一篇聚合日刊；贸易财经关注养老基金减持美股、欧盟对乌农业补贴限制等；科技前沿涉及AI漏洞赏金、星际争霸测试等；自然科学暂无可核实内容。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>巴西总统选举将进入第二轮，博尔索纳罗与卢拉对决</h3>
+<p>巴西总统选举投票后，博尔索纳罗将在第二轮投票中与卢拉对决。路透社称此次选举高度极化且利害关系重大。</p>
+<p>来源：<a href="https://www.reuters.com/world/americas/brazilians-head-polls-high-stakes-polarized-election-2026-10-04/">路透社</a></p>
+
+<h3>冲绳发生死亡事件后，日本要求美军加强纪律</h3>
+<p>彭博社报道，冲绳发生一起死亡事件后，日本要求美军加强纪律。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-10-05/japan-demands-tighter-us-troop-discipline-after-okinawa-killing">彭博社</a></p>
+
+<h3>泽连斯基称乌克兰新型FP-9弹道导弹今秋投入使用</h3>
+<p>泽连斯基表示，乌克兰新型FP-9弹道导弹将于今年秋季投入使用，射程可覆盖莫斯科。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxQZGF6M0QzWXBYQnF4Rkp6ZWUwbkwydnpfUGlUb0dQeHdlV0lIV284ZGRDLV9JeDNXY3JYWDU4dDU3aGdNTXhSdVdzUHVUbVhxVWFJcWN6ZlVGNnVTTzd4Z3RtelBHWjV5b1NsbXV3Wmw1ZTRQQVBUYy1XMGo0VFVqSFR5ZlA3NnlIdHJmNUJ5NUlCeVpmWldmUWpzaE1YaVVxNWtCZm0wTGJ6TktQMW0tSzN3SXBFU3lIR0xmRUZJbHFDMlhpcG80VDJLUlJfWU5mbVcwaGJnUQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">UNITED24 Media（谷歌全球新闻）</a></p>
+
+<h3>伦敦附近一艘载有二战弹药的美国沉船被形容为“定时炸弹”</h3>
+<p>据《华盛顿邮报》报道，一艘载有二战弹药的美国沉船位于伦敦附近，已成为一枚“定时炸弹”。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNd1ozSk1OYVUzdFhheHNIejBlbW9ibDlpQ1FrQ2tCSGRycVUxajNCQ21lSGNraUp2SmFwT2lDRDdIZHFpWExmRFozX0tLU3g5ZmlBeS1XTXJSZGJXdUFQYlVOcEJSak5lMGtVNHB4T19wOVoxRlAwNk1aZU1VaTFadTB6bWJZcy1WWjliaDBSbFl0S3RnTUdfRWo4ZWw4T0o0ZnpvNUdfaWxqMTFQVDBfNndSd3RSaC1kSjRfNg?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">华盛顿邮报（谷歌全球新闻）</a></p>
+
+<h3>获释以色列人质称每一刻都弥足珍贵</h3>
+<p>路透社发布获释以色列人质的报道，称对他们而言，此刻的每一刻都弥足珍贵。</p>
+<p>来源：<a href="https://www.reuters.com/wider-image/freed-israeli-hostages-every-moment-is-now-precious-2026-10-05/">路透社</a></p>
+
+<h3>BBC探讨印度对中国进口商品的“危险依赖”</h3>
+<p>BBC报道称，印度对中国进口商品产生了危险的依赖。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBJRWdza2k1UXdtLVMydmk3Ti05VVhOOG1VeWlBWl9wT1JNQ3BJcmRIWWUwZXhDRnphY2NFejl1VVl3dk9hUXpsc1F5NG8tZG9xaXd6NDJjX09BVEE?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">BBC（谷歌全球新闻）</a></p>
+
+<h3>印度财政部长称印美贸易谈判已陷入停滞</h3>
+<p>印度财政部长表示，印度与美国已到达贸易谈判的“平台期”，谈判停滞。</p>
+<p>来源：<a href="https://www.reuters.com/world/india/india-us-have-reached-plateau-trade-talks-indian-finance-minister-says-2026-10-05/">路透社</a></p>
+
+<h3>施耐德电气将以226亿美元全现金收购PTC</h3>
+<p>路透社报道，施耐德电气将以226亿美元全现金交易收购PTC。彭博社称交易金额超过200亿美元。两篇报道指向同一并购。</p>
+<p>来源：<a href="https://www.reuters.com/legal/transactional/schneider-electric-buy-ptc-226-billion-all-cash-deal-2026-10-05/">路透社</a>、<a href="https://www.bloomberg.com/news/articles/2026-10-05/schneider-electric-to-acquire-ptc-for-more-than-20-billion">彭博社</a></p>
+
+<h3>欧元跌至17个月低点</h3>
+<p>彭博社报道，受该地区政治和财政风险影响，欧元跌至17个月低点。路透社另一篇报道以“欧元面临‘法国问题’”描述欧洲市场压力。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-10-05/euro-falls-to-17-month-low-on-region-s-fiscal-political-risks">彭博社</a>、<a href="https://www.reuters.com/world/china/global-markets-view-europe-2026-10-05/">路透社</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>七部门发布《新型电池产业发展“十五五”规划》</h3>
+<p>工信部等七部门发布该规划，将“加快全链条创新发展”列为首要重点任务，部署丰富高端电池产品供给、加强新型电池产品创新，提出构建以锂电池为主，钠电池、液流电池等协同发展的供给体系，并升级消费电子、新能源汽车动力电池和储能电池等产品。</p>
+<p>来源：<a href="http://www.news.cn/20261005/6a2b0d1b610c482fb19f117c5a6699df/c.html">新华社新闻</a></p>
+
+<h3>神舟二十三号乘组在轨驻留已四月有余</h3>
+<p>中国空间站动态显示，神舟二十三号乘组在轨驻留已四月有余。上周，三名航天员布置站内环境，在轨度过中秋佳节，空间科学实（试）验、平台照料和健康管理等工作有序推进。</p>
+<p>来源：<a href="http://www.news.cn/20261005/2808cc02ce454e98bd1b4ee76f4c5a76/c.html">新华社新闻</a></p>
+
+<h3>美“艾森豪威尔”号航母将返美接受事故调查</h3>
+<p>据美国海军学会新闻网报道，因9月28日发生舰载机着舰事故，美“艾森豪威尔”号航母将返回弗吉尼亚州诺福克海军基地，检查和评估飞机起降设备。事故原因仍在调查。</p>
+<p>来源：<a href="http://www.news.cn/20261005/d177b6d092124f7f968eb7a8dd83b151/c.html">新华社新闻</a></p>
+
+<h3>美军在加勒比海打击“贩毒船”致4死</h3>
+<p>美军南方司令部称，美军当天在加勒比海打击一艘所谓“贩毒船”，打死4人。自2025年9月初以来，美军在加勒比海和东太平洋多次实施此类打击，但一直未公布可证明目标涉毒的证据。</p>
+<p>来源：<a href="http://www.news.cn/20261005/7c140e6c8cd748ddada6ab19a3fd8be3/c.html">新华社新闻</a></p>
+
+<h3>研究：化学改性砂可截留废水中近100%微塑料</h3>
+<p>芬兰奥卢大学研究人员开发出一种技术，利用经化学改性的砂截留废水中近100%的微塑料。研究称该方法可结合现有污水处理厂砂滤工艺，下一步将评估砂的使用寿命等。</p>
+<p>来源：<a href="http://www.news.cn/20261005/b1f40ce83afa42ec8102bd263212a960/c.html">新华社新闻</a></p>
+
+<h3>上海极地馆正式开放</h3>
+<p>上海极地馆面向公众开放，以科考科普为核心，设置六大主题展区，通过模拟科考船舱、VR极地探险、极地风暴体感空间、1:1极地生物模型等形式普及极地地理、科考历程与气候变化知识。</p>
+<p>来源：<a href="http://www.news.cn/20261005/8d63c91922594ef9b9dfc69e1e6870a1/c.html">新华社新闻</a></p>
+
+<h2>AI每日总结</h2>
+
+<h3>AI资讯日报发布2026-10-05日刊</h3>
+<p>该日刊定位为“AI资讯”“每日早读”“全网数据聚合”“前沿科学探索”“行业自由发声”“开源创新力量”“AI与人类未来”等。输入未提供该日刊中可核实的模型、产品或研究具体进展。</p>
+<p>来源：<a href="https://hex2077.dev/docs/2026-10/2026-10-05/">AI资讯日报</a></p>
+
+<h2>贸易财经</h2>
+
+<h3>全球养老基金因AI集中度风险减持美国股票</h3>
+<p>金融时报报道，全球养老基金因人工智能集中度风险削减美国股票持仓。</p>
+<p>来源：<a href="https://www.ft.com/content/18e475be-1012-43e9-a0ff-ef0181b772ad?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>欧盟将限制乌克兰加入后的农业补贴资格</h3>
+<p>金融时报报道，如果乌克兰加入欧盟，欧盟将限制其获得农业补贴的资格。</p>
+<p>来源：<a href="https://www.ft.com/content/8463aa5f-d9c0-46f4-bd58-a7f1ee5a83ca?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>俄罗斯新一轮轰炸行动扼杀乌克兰经济</h3>
+<p>金融时报报道称，俄罗斯新一轮轰炸行动正在扼杀乌克兰经济。</p>
+<p>来源：<a href="https://www.ft.com/video/2fa693e7-4ad4-4d6e-bd3c-5561db889a1f?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>英国被呼吁采用更经济的人工智能模型</h3>
+<p>金融时报报道，有呼吁要求英国采用更经济的人工智能模型。</p>
+<p>来源：<a href="https://www.ft.com/content/5008b743-8af5-460f-a950-54aa80989f23?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>美国从英国基地撤走轰炸机</h3>
+<p>金融时报FirstFT报道，美国从英国基地撤走轰炸机。</p>
+<p>来源：<a href="https://www.ft.com/content/7feba19e-b498-4453-a744-214638044f0a?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>银行将游说希利放宽资本监管规则</h3>
+<p>一位资深议员表示，银行将游说希利放宽资本监管规则。</p>
+<p>来源：<a href="https://www.ft.com/content/6296da53-a9e3-4441-ae6d-f579b3c1b414?syn-25a6b1a6=1">金融时报</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>Google冻结开源漏洞赏金计划，因AI提交“显著增加”</h3>
+<p>TechCrunch报道，Google冻结其开源漏洞赏金计划，原因是AI提交量显著上升。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/">TechCrunch</a></p>
+
+<h3>AI在星际争霸测试中无法击败人类后选择作弊</h3>
+<p>The Verge报道，在StarSkirmish测试中，OpenAI的GPT-6 Astra和Claude Opus 5.5作为最佳AI机器人基本持平，但未能战胜顶级人类机器人Stardust；报道称GPT在周五与Claude及人类机器人Pluto对战时作弊。</p>
+<p>来源：<a href="https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft">The Verge</a></p>
+
+<h3>特朗普推出“超级智能力量”特别工作组</h3>
+<p>TechCrunch报道，特朗普推出新的“超级智能力量”特别工作组，作为其对AI安全辩论的最新回应。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force/">TechCrunch</a></p>
+
+<h3>Fitbit Edge泄露</h3>
+<p>The Verge报道，Fitbit Edge泄露，看起来是中端Charge系列的继任者，定位介于Pixel Watch等产品之间。</p>
+<p>来源：<a href="https://www.theverge.com/gadgets/1004616/the-new-fitbit-edge-leaks">The Verge</a></p>
+
+<h3>华为Mate 90复活“外挂相机”概念</h3>
+<p>爱范儿文章讨论十年前的“外挂相机”如何在华为Mate 90上复活，称那个曾太早出现的想法可能等到了属于它的时代。</p>
+<p>来源：<a href="https://www.ifanr.com/1682933?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-10-04</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-10-04.html</link>
+<guid isPermaLink="false">daily-news-2026-10-04</guid>
+<pubDate>Sun, 04 Oct 2026 05:50:40 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>本期总结基于过去24小时RSS新闻，按国际、国内、AI、贸易财经、科技前沿和自然科学六个栏目整理。国际方面聚焦中东、伊朗、美国航空事故及特朗普相关动态；国内方面涵盖G20贸易会议、驻日美军案件、能源与人民币债券发行等；AI栏目仅有播客更新；贸易财经关注银行整合、债券抛售与贸易调查；科技前沿涉及监控裁决、AI内存涨价与OpenAI人事；自然科学暂无更新。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>以色列士兵匿名描述“NAZA”地区大规模平民杀戮</h3>
+<p>NPR报道，以色列士兵在匿名条件下描述了“NAZA”地区发生的大规模平民杀戮事件。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE4xdjA3N3BzXzdJczRrTEdycjQwbnhiSTdSNUd1Rnl1R1FIU1FIcTdBYnNpNnAzVjRqQmRKMzNyT0N1YTZmQ3JpeExDaHQtaVRWamp1cEdTSHdYUkZ1ZndnUzhQNEE1SGJmanFLQnVuR05mM01ncEdhOHRQWlRmUQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">NPR</a></p>
+
+<h3>分析人士称伊朗伊斯兰共和国“缓慢崩溃”出路减少</h3>
+<p>Iran International报道，分析人士认为伊朗伊斯兰共和国的“缓慢崩溃”使其可选出路越来越少。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBqTGUzQ1dqSzVGN0hSSzktdmhWajJEVFJaM3dqY250eXpFT1RUaVlmTWlwUkxmem1veUFYYy1qT1pGaFFpb1N6enhkdmFMNFhpSmc?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Iran International</a></p>
+
+<h3>有媒体报道称普京批准冬季“战争战略”中涉及平民的计划</h3>
+<p>the-sun.com报道称，普京批准了冬季“战争战略”中涉及屠杀平民的计划。该报道来源单一，措辞强烈。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPMXRYSVdPUlRsZGpzLV9XNXlialVFZVh6UFh3ZVZadk12MWpuLTgwOElDX29XOXVudTN3bU81OVg2NW5sc29PRjA2SmRsNHFOdUkwOFVSNWEwbm1DTHNFTzRvaVhPSDVyY09aWUxQWUI1U2I2M0wwanJjTjB4a3dnMzFuVQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">the-sun.com</a></p>
+
+<h3>美国海岸警卫队在楠塔基特岛附近发现失踪医疗飞机残骸</h3>
+<p>路透社报道，美国海岸警卫队在楠塔基特岛附近海域发现一架失踪医疗飞机的残骸。该飞机原定从百慕大飞往波士顿。</p>
+<p>来源：<a href="https://www.reuters.com/world/us/us-coast-guard-searching-missing-jet-carrying-6-people-bound-boston-2026-10-03/">路透社</a></p>
+
+<h3>迪拜航空险情与生还将焦点转向飞机设计</h3>
+<p>AP News报道，有神秘人物介入阻止迪拜航空飞机坠毁；Bloomberg报道称，此次险情与生还将焦点转向飞机设计。两篇报道均关注同一航空事件。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPS1UtRW5INm4wMExPQlBaZ2UtbENkdmp4Z3gxN1FJQ29JaHFTZFc5Ny1tRkRweVpoWWctaXBZcVNha0Nxd1luUkJmdjBxYXpZMVVjeF8yLXNsQTdTRzh4TmtpaUUzNENGZFMzR19HWnR1WXl6bFFpZll1VnE5YUNNS256OUh5UEV3dUpQTzdFNi1acGRiUUFld3pwOWptTVRESjRYaW50ckVtenN1UDhjYXlFVHNMVlVJUUVEMXdPRXZqNzJFWlE?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">AP News</a>、<a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPdkVMTDJRclJhR0tEaUhrcnhHYS1BSGxQMk9oM3ljVlN3ckQzQWN4VGR2QUptZUVTT2VuRlIzSkJKTlVmbVluTkt1OG9NSjh1VDJaT050UUE4STNkWmhDOXlrZFhwSW9WSjlsVTZ5ei0yTTJ4cW1zMEdwWGVwM0JTREVmUmtpdUZ2RDFRODZ0QTZ4cW5HTUx6R3RCQzlreVJLYXllQWpRaGtHZTZQYWZYaFlKZ0E5QQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Bloomberg</a></p>
+
+<h3>特朗普任命情报主管克莱顿为人工智能沙皇</h3>
+<p>路透社援引《华尔街日报》报道，特朗普任命情报主管克莱顿为人工智能沙皇，负责领导特别工作组，并在120天内提交报告。</p>
+<p>来源：<a href="https://www.reuters.com/world/us/jay-clayton-lead-trumps-ai-task-force-deliver-report-120-days-wsj-reports-2026-10-03/">路透社</a></p>
+
+<h3>特朗普试图在俄亥俄州动员中期选举选民</h3>
+<p>路透社报道，特朗普试图在俄亥俄州动员选民，为中期选举造势。</p>
+<p>来源：<a href="https://www.reuters.com/fr/affaires/usamidterms-trump-tente-de-mobiliser-les-lecteurs-dans-lohio-2026-10-04/">路透社</a></p>
+
+<h3>武契奇启动竞选活动，数千人声援</h3>
+<p>Newser报道，武契奇启动竞选活动，数千人表示支持。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOaWoyMEF2OWF4X2hRZGdNR2FOTFMwa2tCMmR4VUtFSVF0b3lxMzgwMzVXYkdpcjJjaVpCT1RQUmdxM3lEMkFBcXBKcnNSQ2tJdkFQdzd6VldpaldHMVVfTUdxSllJNzdwY0o4SUhWTlRRaWR6Si1sNTc1dGpjZFh5Q2NJM3JmTmwxbTZnZXpn?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Newser</a></p>
+
+<h3>康奈尔大学校长承诺审查兄弟会和姐妹会</h3>
+<p>路透社报道，在强奸指控曝光后，康奈尔大学校长承诺将对兄弟会和姐妹会进行“认真审查”。</p>
+<p>来源：<a href="https://www.reuters.com/world/us/cornell-president-vows-serious-look-fraternities-sororities-wake-rape-2026-10-04/">路透社</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>商务部回应G20贸易部长会议：粮食议题达成联合声明，其余议题未形成成果文件</h3>
+<p>商务部新闻发言人表示，G20贸易部长会议围绕反对粮食武器化、应对产能过剩、消除强迫劳动、调整最惠国待遇原则等议题交换意见，粮食议题达成联合声明，其余议题未形成成果文件。中方建设性参与讨论，坚持原则，发挥促谈促合作用。</p>
+<p>来源：<a href="http://www.news.cn/20261004/e80267dff55e4e0495715e486883ce8b/c.html">新华社</a></p>
+
+<h3>日本就驻日美军涉嫌杀人案向美方提出抗议</h3>
+<p>日本外务事务次官船越健裕就驻日美军涉嫌杀人案向美国驻日大使提出强烈抗议，要求美方配合调查并防止再发。冲绳县警方逮捕了一名20岁驻冲绳美国海军陆战队士兵，其涉嫌在酒店抢劫并杀害一名当地女性。统计显示，2025年冲绳县警方处理的涉及驻日美军及相关人员刑事案件超过100起。</p>
+<p>来源：<a href="http://www.news.cn/20261004/a46dbd24c0c14b67abe0e3aacb73150e/c.html">新华社</a>、<a href="http://www.news.cn/20261004/59d2b192d75f4e32897a7956ae0ed6a0/c.html">新华社</a>、<a href="http://www.news.cn/20261004/93e3f50c9a7347219dab7d00bd28403a/c.html">新华社</a></p>
+
+<h3>伊拉克首次以船对船转运方式将原油运出霍尔木兹海峡交货</h3>
+<p>伊拉克油轮公司证实，已使用大型油轮将200万桶原油运出霍尔木兹海峡，向海峡外买家交货。这是该公司几十年来首次采用这一方式。报道称，海峡航运受阻后，伊拉克寻求减少对海湾航线依赖，推动出口多元化。</p>
+<p>来源：<a href="http://www.news.cn/20261004/63194eea6775486b82cb759ea6d67313/c.html">新华社</a></p>
+
+<h3>APEC人力资源开发部长会探讨人工智能赋能于人</h3>
+<p>第八届APEC人力资源开发部长会讨论人工智能赋能人力资源开发的路径，提出发挥岗位创造效应、赋能劳动力转型升级、优化劳动条件、健全终身职业技能培训体系、推动人力资源服务智能化、深化经验交流等六方面方向。</p>
+<p>来源：<a href="http://www.news.cn/20261004/caa6e45c64db4fa0b51c871b3ba602e5/c.html">新华社</a></p>
+
+<h3>全球粮价上涨：产量仍高，但供应链不确定性推高价格</h3>
+<p>联合国粮农组织数据显示，9月全球食品价格指数创2022年11月以来新高，而2026年全球谷物产量预计仍接近历史最高水平。报道称，黑海及霍尔木兹海峡航运受阻、化肥和物流成本上升、气候风险预期等因素放大了价格波动。</p>
+<p>来源：<a href="http://www.news.cn/20261004/cdcbc546865c4e0fb4474556dc70a2e1/c.html">新华社</a></p>
+
+<h3>中资银行推进离岸人民币债券发行</h3>
+<p>中国银行协助韩国产业银行发行3年期30亿元离岸人民币债券（点心债），票面利率1.69%，创韩国产业银行最大规模离岸人民币公募债券发行纪录。工商银行阿布扎比分行发行2亿元人民币自贸离岸债，为中东北非地区机构首单自贸离岸债。</p>
+<p>来源：<a href="http://www.news.cn/20261004/a9b0de940db24dd0bd8f5c71fddf97e8/c.html">新华社</a>、<a href="http://www.news.cn/20261004/5a06b6b79cf64b4a8f85af0b50cbd8a4/c.html">新华社</a></p>
+
+<h3>2025年全国政府采购规模超3.32万亿元</h3>
+<p>财政部数据显示，2025年全国政府采购规模为33212.96亿元，其中货物、工程、服务采购规模分别为7953.92亿元、13045.08亿元和12213.96亿元。</p>
+<p>来源：<a href="http://www.news.cn/20261004/e6f0db298d3f4653bf3106e62d38fa33/c.html">新华社</a></p>
+
+<h3>司法部：2025年共调解各类案件1653.7万件</h3>
+<p>司法部消息显示，2025年共调解各类案件1653.7万件。</p>
+<p>来源：<a href="http://www.news.cn/20261004/21072654cef84ba29af7775c69baf193/c.html">新华社</a></p>
+
+<h3>汶颂、于子迪当选第20届亚运会最有价值运动员</h3>
+<p>亚奥理事会宣布，泰国短跑运动员汶颂、中国游泳运动员于子迪分别当选第20届亚运会男子、女子最有价值运动员。于子迪收获3金，并在女子200米个人混合泳决赛刷新亚洲纪录；汶颂在男子100米和200米项目夺冠。</p>
+<p>来源：<a href="http://www.news.cn/20261004/3d1b43fec53a4a91bd58a8cbc2e6d0fd/c.html">新华社</a>、<a href="http://www.news.cn/20261004/4282d13532c14b70a52fe9aadc4f5bf3/c.html">新华社</a></p>
+
+<h3>拉脱维亚议会选举初步结果显示现政府执政联盟领先</h3>
+<p>拉脱维亚中央选举委员会公布的初步计票结果显示，总理库尔贝格斯所在的政党联盟“联合名单”大幅领先，预计获得最多席位。投票率约51.6%，正式结果将在10月19日前确认。</p>
+<p>来源：<a href="http://www.news.cn/20261004/a41862d827614429aeb9f0e2676c15fd/c.html">新华社</a>、<a href="http://www.news.cn/20261004/bbce0ba6fe8f41e881cae87b097c5d1c/c.html">新华社</a></p>
+
+<h3>美海岸警卫队称发现失联医疗救护飞机碎片</h3>
+<p>美国海岸警卫队表示，在马萨诸塞州楠塔基特岛海岸附近发现一架医疗救护飞机的碎片，该飞机从百慕大飞往波士顿途中失联，机上载有6人，包括4名加拿大人和2名百慕大居民。搜救仍在进行。</p>
+<p>来源：<a href="http://www.news.cn/20261004/3fce611dde90488ab7dc7ebb32c866d6/c.html">新华社</a></p>
+
+<h2>AI每日总结</h2>
+
+<h3>Anthropic发布Opus 5.5，OpenAI推出GPT-6 Sol和Luna</h3>
+<p>Last Week in AI播客第258期总结称，Anthropic发布Opus 5.5，价格更低，性能达到Fable级；OpenAI推出GPT-6 Sol和Luna，宣称成本更低、错误更少。节目还提及Muse、DeepSeek-V4.1-Flash等。</p>
+<p>来源：<a href="https://lastweekin.ai/p/lwiai-podcast-258-opus-55-sol-and">Last Week in AI</a></p>
+
+<h2>贸易财经</h2>
+
+<h3>中国关闭数百家银行以巩固金融体系</h3>
+<p>金融时报报道，中国关闭数百家银行，以巩固金融体系。</p>
+<p>来源：<a href="https://www.ft.com/content/8a8f5c97-f1d3-4d3d-a3bc-d5a2e5539177?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>全球债券市场出现抛售潮</h3>
+<p>金融时报分析文章讨论是什么导致全球债券市场抛售潮。</p>
+<p>来源：<a href="https://www.ft.com/content/f212d7b9-95e0-4aa0-84bf-4df7b43bc80a?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>中国对欧洲化学品出口启动反倾销调查</h3>
+<p>金融时报报道，中国对欧洲化学品出口启动反倾销调查。</p>
+<p>来源：<a href="https://www.ft.com/content/bae0af94-f42d-47d1-a1a8-fab608e75a72?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>日本和韩国造船商部署机器人以应对中国</h3>
+<p>金融时报报道，日本和韩国造船商部署机器人，以应对中国竞争。</p>
+<p>来源：<a href="https://www.ft.com/content/ea32c53d-4de7-4b34-af44-cc148b23433f?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>Temu英国销售额翻倍至1.71亿美元</h3>
+<p>金融时报报道，Temu在英国的销售额翻了一番多，达到1.71亿美元。</p>
+<p>来源：<a href="https://www.ft.com/content/b119a81f-2347-4ba8-8b5f-13b380cf45fa?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>英国保守党承诺取消高收入群体的10万英镑“税收陷阱”</h3>
+<p>金融时报报道，保守党承诺取消针对英国高收入群体的10万英镑“税收陷阱”。</p>
+<p>来源：<a href="https://www.ft.com/content/82ceae35-e3ef-4b68-8cfa-553b205a4bb0?syn-25a6b1a6=1">金融时报</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>联邦法官称Flock构成“无差别大规模监控”</h3>
+<p>TechCrunch报道，一名联邦法官裁定，一名县治安官副手在没有搜查令的情况下使用Flock搜索一名女性的车牌，侵犯了其第四修正案权利。法官称Flock是“无差别大规模监控”。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/">TechCrunch</a></p>
+
+<h3>亚马逊回应数据中心反弹，称不再使用NDA</h3>
+<p>TechCrunch报道，亚马逊云服务CEO试图回应外界对数据中心的广泛怀疑，并表示公司不再使用保密协议（NDA）。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/">TechCrunch</a></p>
+
+<h3>Nvidia Shield TV因AI内存价格上涨100美元</h3>
+<p>WIRED报道，已有7年历史的Nvidia Shield TV涨价100美元。文章称，受AI影响，任何带内存的产品价格都在飙升，老旧流媒体设备也不例外。</p>
+<p>来源：<a href="https://www.wired.com/story/7-year-old-tv-now-100-dollars-more-expensive-thank-ai/">WIRED</a></p>
+
+<h3>Capcom准备“与AI共同创造游戏”的未来</h3>
+<p>The Verge报道，Capcom在“Capcom Open Conference RE: 2026”上介绍REX项目及RE Engine的未来，程序员表示公司正在为“与AI共同创造游戏”的未来做准备。</p>
+<p>来源：<a href="https://www.theverge.com/games/1004418/capcom-ai-game-development">The Verge</a></p>
+
+<h3>OpenAI安全员工辞职，称公司文化破碎</h3>
+<p>TechCrunch和The Verge报道，OpenAI安全员工David Robinson辞职，并称公司“文化破碎”。他曾负责撰写重大模型发布的安全报告，此次在《大西洋月刊》发表文章发出警告。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/">TechCrunch</a>、<a href="https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm">The Verge</a></p>
+
+<h3>Jack Dorsey的Bitchat在印度应用商店下架</h3>
+<p>TechCrunch报道，由于印度政府命令，Jack Dorsey的Bitchat在印度应用商店基本不可用。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/03/jack-dorseys-bitchat-disappears-from-app-stores-in-india-after-government-order/">TechCrunch</a></p>
+
+<h3>Muse创建亲友详细档案，引发隐私成本</h3>
+<p>WIRED报道，数百万用户下载了Meta的AI代理Muse，但让它执行任务会带来隐私成本，Muse会创建用户朋友和家人的详细档案。</p>
+<p>来源：<a href="https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/">WIRED</a></p>
+
+<h3>Vessev打造几乎能飞的电动渡轮</h3>
+<p>TechCrunch报道，Vessev希望其电动水翼渡轮改变人们和城市对船只的看法。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/03/vessev-built-an-electric-ferry-that-almost-flies/">TechCrunch</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-10-03</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-10-03.html</link>
+<guid isPermaLink="false">daily-news-2026-10-03</guid>
+<pubDate>Sat, 03 Oct 2026 05:16:11 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>过去24小时，国际方面七国集团同意释放原油和柴油储备，加沙与提格雷冲突持续，联合国称全球食品价格接近四年高位；国内方面商务部对欧盟对硝基甲苯发起反倾销调查，铁路部门优化老年人购票优惠，亚运会中国获女子高尔夫球团体金牌、吴易昺获网球男单银牌，国足0:5负于巴勒斯坦引发反思；科技领域Meta开源Muse AI设备代码、Stability AI转向音乐、Apple因AI代理风险限制Mac磁盘访问。AI每日总结与自然科学暂无符合栏目范围的新内容。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>七国集团同意释放1亿桶原油和柴油储备</h3>
+<p>七国集团成员国同意释放1亿桶原油和柴油储备。报道称，此举发生在美方施压以及特朗普威胁实施出口禁令之后。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5LLWY0Q0phVTMwYUxVbWxLRG9DOVpYTHpYekJKZnhGRnFPei16YXpYdHZSMXBnU2Eyc2Ixa1dzSDdrazJIUkZ2SGZ4UUExYUc4WWFSeWpDWEFkM00?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">BBC</a>、<a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQZnMyRFpEcDhNOHlnU2NJT3F1R2M5QkEzMjJPaGRUYlZ1S2RYYmNMZ1pERlZINEtxMkJDTktfMThYeHZ0U2FDZjVoQ3l3eHViLVkyajQ0S1RfSDJ4QS1xTEgxNVlaZzJSSkVjLTJYM04tX3ZHUEVSY0VHdjJHUU45RHBRajVxQzA3emVQNXpvRG9XRVVVZUtSdUtveUN2WUp6RzhBeVQwQ0JzVk8zWWYzS1FCVUtTZ3UtNTllVzJrbTJyUC00?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Reuters</a></p>
+
+<h3>联合国：9月全球食品价格接近四年高位</h3>
+<p>联合国称，9月份全球食品价格接近四年来最高水平。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxONEhfR0lrWDQySjhaQkpLXzJJMVpfcDhScWxHbGNRRkhwa00xcndrQmw4OXQwZzVlX2F6ZVBsTHZ6cUFUbHJyN2ZzTHNka3htMWphZE1sNVRNdXBfMHBXbHF0T0NfTS02OTJnQkR0dmRLRWRXandsdktobVdacDhmQjBKbVJ5czM5U1FoaTFrTUwxVktmSGd3UUhRVWpKQlY5Q253Yg?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Reuters</a></p>
+
+<h3>以色列空袭加沙城公寓致至少5人死亡</h3>
+<p>以色列对加沙城一处公寓发动空袭，造成至少5人死亡。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQSGpPWHZhNW9TMDk2OUxsRlFnbi1ycDRyeW9mSmN0dHduSnp2c2FZckF5cFRlMTdXX0c1QmUtc2VVOFhibmg5UnJHLXBKdnlSZmtOTWV5T19hODloTGppM2EtYUEzdzkwbkVEY3gyZTcxTzFvMllYOUwzVEJ6NWFidGNqMlpsWnhWUnMweXdQeDlMUnVYOEdRSlg2MTZoNFJpSzdobtIBqgFBVV95cUxPbFExTEIzRWk0V09YdHAyaUdjYjFaNnFZbXRNazJvUFhDNUpQNGNGRmpPT3p0X2dmUWhhUU1lZ1JFRjBtWGJiZ2xUazBaYkhkMGltdXFpWXpxb2FWcV9nZzg1TEFzeC1KOXdOQmNtLTZ4Q0tzakZGelpXOERYOTVBOGJXeFNoR08zWlZoNmxSZGtpSHRhY3ZSNWpWMHYtTG9ZZ3VQYmVVVk5CQQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Al Jazeera</a></p>
+
+<h3>特朗普国安高级顾问在戴维营就伊朗和也门问题举行秘密会议</h3>
+<p>据 Axios 独家消息，特朗普的国家安全高级顾问在戴维营就伊朗和也门问题举行秘密会议。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQ04yLVlmSXJITnRJSzBjNlRlZExWTnJNN0piSlNCaGQ4b053VjBCa2xTd0lVYVYwT29PRVNIckplVTFWWjVYMXNJdmpJWEozRmkzVlNKTk1vbVVmX1Zvd29KNzNOaFZfQU5zOUxuYmdGZkhBN0JmQmJ4ZndLdHZTQTIzMkFpdWsy?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Axios</a></p>
+
+<h3>两名伊朗公民因涉嫌策划针对英格兰犹太社区恐袭被起诉</h3>
+<p>两名伊朗公民因涉嫌策划针对英格兰犹太社区的恐怖袭击而被起诉。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNazNJZVRwR3JYRElOR0NkYjdXYXU1WlBMTEpfcGp1NmFEbkljREZ6QXZBSV9RRzF6aENLMHRnNmtuRjlOSXJDQWtCYUp3MVoxb05DZTNNUG1XWkFvMk9ybUQzWTVqMjVKeFgwVmZaMVpnMnBGRklIQldxSFVBR05xbVdFNTladXdMUUcxeWtycWFDTUlrTkJGdnNMR19hNUFoc25fbENPZEgxTWRnUE52OUY1OUoxVzg0U3hJWnBPaWNvbW8?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">NBC News</a></p>
+
+<h3>乌克兰拦截技术被俄“格拉恩-5”无人机超越</h3>
+<p>报道称，乌克兰的拦截技术被俄罗斯喷气式“格拉恩-5”无人机甩在身后。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxOTnpiUkZKNkg2amxzdnk4blROVHlDZzFsZWpLNWFXdHdEQU5kcFlCU1JhTjktMVh1cGlRUXMtOU9HVjNleE1FWnU0LWJjV3hVU09ZLUdXQmgtMlNRTWtlOUJHUnNGQ1o1eDl2Wi1CX1gwaEJqbWh0WTFFWU9ua2VMcDd0MHJNay0wNUlrQVVuYzlqRzZkNHNyZE4xYTlzdUtYcEtF?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">The Kyiv Independent</a></p>
+
+<h3>提格雷战火再起，或外溢至埃塞俄比亚境外</h3>
+<p>战争再次降临提格雷。Chatham House 分析称，这次战火可能不会仅限于埃塞俄比亚境内。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPSURUNXN4MGtMYmtYazVlX1R5SHN5V0MwMUQ2bnM0UDFPYng3OUM3ekZ6YV9Md0dSTnJEd3FEYlhRYVhwcmNaZUdoMmNqdFBReFdVYTJvSVF3NmpwVmxtaTBCejc2VDAzTGRyTEFPYVpwQTZYRVRuUUIzTVV1d0gwVmF5VHNrYjdHOG5lTkl1RV9qazh6?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Chatham House</a></p>
+
+<h3>曼谷洪水将街道变成死水湖</h3>
+<p>洪水将街道变成死水湖，曼谷濒临崩溃边缘。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQb1dIZGlVa204ZDcxcHZyWVhlUEVKZHZGQ0wwWGpJMkhYWTdEMGMzZEJxcHJDV0JnbERCc0tXQU1Id3dzUGgtOHlkYnM1Zk43MGdMeml4QmducDRNWmV3SXpPMFdZSC1iNGdOUzIwUXZiZUFZZTdrbkkwVW81Z2RYQjk3T3I0bVhZM2Y3T180N0dzTm9sNFozb056NThIRkVy?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">The Guardian</a></p>
+
+<h3>南非大规模枪击事件激增</h3>
+<p>非法枪支泛滥街头，南非大规模枪击事件激增。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQeHItY2dFUFJxY2tYUy11eU43cG1NYkszN0lmLTFiSmtYSl9vbGxOdE92Y3NyWnlyS2pTR1h3SFVvYUd0dy1MMUt1eGhkTWhuLXk5Z1E3UWlQUldxemtiS19lZlVxWVo1OWt5RXRfQWpiSk9KVHNybFZaTFBSa044YVR4LVMwWkFLSzRsYUhn?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">The New York Times</a></p>
+
+<h3>法国总统竞选陷入持续一周的混乱</h3>
+<p>法国总统竞选因持续一周的混乱而陷入动荡。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQdmJ3dWdvTksxOGdWdF9sYWNKRjNDZVhsczVvREp3MVpUdDNBSnAzY2RRbjA4Z3NQZ2p0S0V3b0xvNnNibHQyc2lKYWcyQUJpT3ZQRXZQQndVcjJ0Z1BSSGZ6TDFZcGhYaXdrYUppOU5sT21mTFFONWRqU0M4RU0zS1VKY2F3YTBzR1JjR2NkYmhsUHR0VDZwWnVsMTkzVnI1?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">politico.eu</a></p>
+
+<h3>特朗普称将向2000万Medicare老年人发放90美元一次性补助</h3>
+<p>特朗普表示，美国将向2000万参加联邦医疗保险（Medicare）的老年人发放90美元的一次性补助金。</p>
+<p>来源：<a href="https://www.reuters.com/world/trump-says-us-send-one-time-90-payment-20-million-seniors-enrolled-medicare-2026-10-03/">Reuters</a></p>
+
+<h3>华尔街日报：习近平“非同寻常”休息时间令与特朗普峰会缩短数小时</h3>
+<p>《华尔街日报》独家报道称，习近平的“非同寻常”休息时间让与特朗普的峰会缩短了数小时。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE94aXlGT0tkSHR1aXdDUm4zLWU5Znp2eXB3WWdlRjJLUTlleW9CbWt6RE03NGNtazlYVGpNVEtZYmhjdGlGNElMX0llMXBzNi1wd05tVHU4eHhsTWlZa0NES1ZtX2l2ZVA0R2c?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">WSJ</a></p>
+
+<h3>澳大利亚悉尼以北汽车冲入人群致9人受伤</h3>
+<p>澳大利亚悉尼以北发生汽车冲入人群事故，造成9人受伤。</p>
+<p>来源：<a href="https://www.reuters.com/world/asia-pacific/several-injured-australia-car-crashes-into-crowd-north-sydney-2026-10-03/">Reuters</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>商务部对原产于欧盟的进口对硝基甲苯发起反倾销立案调查</h3>
+<p>商务部公告，自2026年10月3日起对原产于欧盟的进口对硝基甲苯进行反倾销立案调查。该产品主要用于生产对甲苯胺、DSD酸、对硝基苯甲酸、甲苯二异氰酸酯、联甲苯胺等，广泛应用于染料、颜料、农药、医药等领域。</p>
+<p>来源：<a href="http://www.news.cn/20261003/696d005b8acc4f2fa1fa3145be503688/c.html">新华社</a></p>
+
+<h3>铁路部门优化老年人购票优惠措施</h3>
+<p>铁路部门优化老年人购票优惠措施。</p>
+<p>来源：<a href="http://www.news.cn/20261003/6e661edcc1904a2c86b5c0dccde05d13/c.html">新华社</a></p>
+
+<h3>亚运会：中国队获女子高尔夫球团体金牌，吴易昺获网球男单亚军</h3>
+<p>在爱知·名古屋亚运会女子高尔夫球团体赛中，中国队获得金牌，这是中国队在亚运会高尔夫球项目获得的首枚金牌。网球男单决赛中，吴易昺以0:2不敌中国香港队选手黄泽林，获得银牌。</p>
+<p>来源：<a href="http://www.news.cn/20261003/5d7fb2b49cc54afa97f302120083876a/c.html">新华社</a>、<a href="http://www.news.cn/20261003/bec7276110f146d39ee49b86d9dc610c/c.html">新华社</a></p>
+
+<h3>中国男足0:5负于巴勒斯坦，新华社称再敲警钟</h3>
+<p>在重庆举行的国际足球邀请赛中，中国男足0:5惨败于巴勒斯坦队。新华社记者手记称，这是国足历史上第四大比分失利，暴露人才储备匮乏与“板凳深度”不足。</p>
+<p>来源：<a href="http://www.news.cn/20261003/5ea506c6abbe4a6aa6e5ada88c244100/c.html">新华社</a></p>
+
+<h3>中国对非零关税举措助肯尼亚茶业发展</h3>
+<p>自今年5月1日起，中国对包括肯尼亚在内的53个非洲建交国全面实施零关税。报道称，这降低了肯尼亚茶叶进入中国市场的成本，并带动当地茶厂升级加工设备。</p>
+<p>来源：<a href="http://www.news.cn/20261003/2baf7b783fd049aeabb304676ebc93dd/c.html">新华社</a></p>
+
+<h3>谷歌搭载AI芯片测试卫星发射升空</h3>
+<p>谷歌一颗搭载4枚张量处理单元（TPU）芯片的原型卫星发射升空，用于测试芯片在太空环境中的运行性能，研究未来能否在太空部署AI基础设施。</p>
+<p>来源：<a href="http://www.news.cn/20261003/9100e69f410a47ca91ab68da3e9830eb/c.html">新华社</a></p>
+
+<h2>AI每日总结</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+
+<h2>贸易财经</h2>
+
+<h3>财富管理高管警告资本利得税上调将吓退股票投资者</h3>
+<p>财富管理高管警告称，资本利得税上调将吓退股票投资者。</p>
+<p>来源：<a href="https://www.ft.com/content/678d61ea-d3f6-467f-a2b0-ffc78f1ed922">金融时报</a></p>
+
+<h3>英国国债收益率上升吸引寻求税务优惠资产的散户</h3>
+<p>英国国债收益率上升，吸引了寻求税务优惠资产的散户投资者。</p>
+<p>来源：<a href="https://www.ft.com/content/17a502a2-f8cb-4d79-996e-f2c7018585de?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>泽连斯基要求特朗普阻止俄罗斯和中国推出的“星链”竞争对手</h3>
+<p>泽连斯基要求特朗普阻止俄罗斯和中国推出的“星链”竞争对手。</p>
+<p>来源：<a href="https://www.ft.com/content/5501a0c6-7d1e-4c1f-acc7-3b928e1f664a?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>金融时报：中国、美国与新的“大博弈”</h3>
+<p>金融时报文章讨论中国、美国与新的“大博弈”。</p>
+<p>来源：<a href="https://www.ft.com/content/8869caf9-3cd1-4300-aeb3-828a4d9da4f9?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>取代FICO对美国房主帮助不大</h3>
+<p>金融时报文章认为，取代FICO对美国房主帮助不大。</p>
+<p>来源：<a href="https://www.ft.com/content/a752a765-8b64-41a5-b051-5237957e13c1?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>市政府关于银行税的抗议显得空洞无物</h3>
+<p>金融时报文章称，市政府关于银行税的抗议显得空洞无物。</p>
+<p>来源：<a href="https://www.ft.com/content/b50f39c6-4484-4c06-89cb-2884f9e58bd7">金融时报</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>Meta开源代码让用户制作Muse AI设备</h3>
+<p>Meta开放其Muse AI代理相关代码，允许用户制作搭载Muse的AI设备，例如彩色电子墨水屏提醒器或HDMI棒，以便在大屏幕上显示Muse。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/">TechCrunch</a>、<a href="https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link">The Verge</a></p>
+
+<h3>Sean Parker围绕音乐重建Stability AI</h3>
+<p>Sean Parker正在围绕音乐重建Stability AI。报道称，他此次获得唱片公司的支持与资金。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/">TechCrunch</a></p>
+
+<h3>Apple将限制Mac磁盘访问，因AI代理“大幅”增加风险</h3>
+<p>Apple将在Mac上新增“完全磁盘访问”限制，以应对AI代理带来的风险。Apple称，新控制措施将确保只有真正需要该级别访问权的应用才能获得授权。</p>
+<p>来源：<a href="https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents">The Verge</a></p>
+
+<h3>Sanders提出法案禁止联邦政府使用Flock</h3>
+<p>Sanders提出法案，禁止联邦政府使用Flock，并将扩展至所有自动车牌识别器。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/02/sanders-introduces-bill-to-ban-the-federal-government-from-using-flock/">TechCrunch</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-10-02</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-10-02.html</link>
+<guid isPermaLink="false">daily-news-2026-10-02</guid>
+<pubDate>Fri, 02 Oct 2026 05:33:42 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>今日概览：俄乌冲突持续升级，乌克兰首次实战使用FP-7弹道导弹，基辅再遭空袭；韩国总统剥夺曾对其提起公诉的检察官职权，韩国检察厅正式退出历史舞台；欧洲债市剧烈震荡，英法德国债收益率齐创多年新高；台湾首批新型F-16V战斗机抵达；日本“隼鸟2”号探测器全部发动机出现故障。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>乌克兰首次实战使用FP-7弹道导弹，基辅再遭俄军空袭</h3>
+<p>乌克兰总统泽连斯基表示，乌克兰射程200公里的FP-7弹道导弹已首次投入实战。同日，基辅市长称俄军空袭再次击中基辅的南桥。泽连斯基还称，普京已指示军方领导人放弃战争规则。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE5aQ2tMbEpSYjZqcFlMdUxJMktmQmpiQW9LdGZjUE5uRldfaDhaNlhmTDhpdjY4NmFXWUtVMkJjTV80NFBPcnBkWkNSTQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Kyiv Post</a>、<a href="https://www.reuters.com/world/europe/russian-air-strikes-hit-southern-bridge-kyiv-again-mayor-says-2026-10-02/">路透社</a>、<a href="https://www.ft.com/content/80257787-d100-4b88-95ae-319b6b4fc71c?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>德国总理默茨称将继续支持乌克兰，北约加强东翼防务</h3>
+<p>德国总理默茨10月1日称，德国将继续支持乌克兰，同时继续寻求通过外交途径解决俄乌冲突。默茨当天与荷兰首相耶滕、北约秘书长吕特共同视察第一德荷军团。吕特表示，目前尚未看到针对北约迫在眉睫的军事攻击，但北约将继续加强防务并支持乌克兰。</p>
+<p>来源：<a href="http://www.news.cn/20261002/6e4f00fbe4e34aef948011f8731ab9aa/c.html">新华社</a></p>
+
+<h3>韩国总统剥夺曾对其提起公诉的检察官职权</h3>
+<p>韩国总统剥夺了曾对其提起公诉的检察官的职权。与此同时，据韩联社报道，韩国公诉厅和重大犯罪调查厅2日正式成立，取代1日结束最后一个工作日的韩国检察厅，1948年成立的韩国检察厅正式退出历史舞台。此次刑事司法体系重大调整源于韩国社会对检察机关权力过度集中的长期批评。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-10-02/korea-s-president-strips-power-from-prosecutors-who-indicted-him">彭博社</a>、<a href="http://www.news.cn/20261002/bbf18a1830fb448cbda43a1a170c3291/c.html">新华社</a></p>
+
+<h3>台湾首批新型F-16V战斗机抵达</h3>
+<p>台湾首批新型F-16V战斗机抵达，旨在加强针对中国大陆的防卫能力。</p>
+<p>来源：<a href="https://www.reuters.com/business/aerospace-defense/first-new-f-16v-fighter-jets-arrive-taiwan-bolster-defences-against-china-2026-10-02/">路透社</a></p>
+
+<h3>美国可能要求欧洲国家释放柴油储备</h3>
+<p>美国总统特朗普表示，美国可能要求欧洲国家释放柴油储备。</p>
+<p>来源：<a href="https://www.reuters.com/fr/affaires/les-usa-pourraient-demander-aux-europens-de-dbloquer-des-rserves-de-diesel-trump-2026-10-02/">路透社</a></p>
+
+<h3>首尔警告乌克兰就战俘争端道歉</h3>
+<p>首尔警告称，如果乌克兰不就战俘争端道歉，将采取“进一步行动”。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFA1S3VtSWZ3NlhJNDBjQS1zZDF3aGNNNzNrZXU0N2RPRFhvSGFVcndyMTJpczA2LUNuV2pwM1B2bW9IaDRfZEdXSFJxamdDWjU5WWR0MUZTcGppbjQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">BBC</a></p>
+
+<h3>迪拜航空未遂袭击事件给地区航空业复苏蒙上阴影</h3>
+<p>迪拜航空（flydubai）未遂袭击事件给中东地区航空业复苏带来不确定性。</p>
+<p>来源：<a href="https://www.reuters.com/world/middle-east/foiled-flydubai-attack-clouds-regional-airline-revival-2026-10-02/">路透社</a></p>
+
+<h3>俄罗斯将移民作为对抗欧洲的武器</h3>
+<p>据《纽约时报》报道，俄罗斯正在将移民作为对抗欧洲的武器，在边境前线形成新的压力点。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOMm5GOWR0bW9URGFwemw5VElRaXdBSi1nUW1BVEc4RmVCdWROdHI5REZncTF6YWdVNGcxQU1PcUNYZW40d1ZOSmR6RURRcVJENTZtTnlxNTZPY25nOHhmYnpxSDMwWkIxbXI3clhiTnVySTNHeU1Nd1B2aXhTUUM3VHRGUTE?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">谷歌全球新闻/纽约时报</a></p>
+
+<h3>太平洋岛国COP前会议与会者寥寥</h3>
+<p>太平洋岛国借COP前会议迎来气候行动契机，但与会者名单稀疏，气候融资与行动力度仍存不确定性。</p>
+<p>来源：<a href="https://www.reuters.com/sustainability/cop/pacific-islands-get-their-climate-moment-with-pre-cop-meeting-guest-list-is-thin-2026-10-02/">路透社</a></p>
+
+<h3>尼日利亚丹格特炼油厂IPO需求“巨大”</h3>
+<p>尼日利亚丹格特公司表示，随着肯尼亚项目推进，拉各斯炼油厂IPO吸引了大量投资者需求。</p>
+<p>来源：<a href="https://www.reuters.com/business/energy/nigerias-dangote-says-lagos-refinery-ipo-attracts-enormous-investor-demand-2026-09-29/">路透社</a></p>
+
+<h3>联合国称燃料补贴可能超过1万亿美元</h3>
+<p>联合国表示，随着伊朗战争持续，全球燃料补贴可能超过1万亿美元。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-10-02/fuel-subsidies-may-top-1-trillion-as-iran-war-drags-un-says">彭博社</a></p>
+
+<h3>斯洛伐克校园袭击事件死亡人数升至2人</h3>
+<p>斯洛伐克国民议会议长莱希10月1日说，该国北部日利纳州一所小学持刀袭击事件中受伤的一名女学生不治身亡，事件已导致2人死亡。袭击者已被警方拘捕。</p>
+<p>来源：<a href="http://www.news.cn/20261002/7e2c590f393142e6be71776515843b13/c.html">新华社</a></p>
+
+<h3>菲律宾矿井疑似有害气体中毒致7人死亡</h3>
+<p>菲律宾北部本格特省一处矿井隧道发生疑似有害气体中毒事件，造成至少7名男子死亡。警方仍在调查有毒气体类型和来源。</p>
+<p>来源：<a href="http://www.news.cn/20261002/543c6154c0474fa79cf619bec351a04d/c.html">新华社</a></p>
+
+<h3>黄金持稳，料连续第二周下跌</h3>
+<p>黄金在美非农数据公布前持稳，料将连续第二周下跌。</p>
+<p>来源：<a href="https://www.reuters.com/world/india/gold-slips-before-us-payrolls-data-set-second-weekly-loss-2026-10-02/">路透社</a></p>
+
+<h3>诺贝尔奖2026年获奖名单公布时间</h3>
+<p>报道介绍诺贝尔奖背景及2026年获奖名单公布时间安排。</p>
+<p>来源：<a href="https://www.reuters.com/world/europe/what-are-nobel-prizes-when-will-2025-awards-be-announced-2026-10-02/">路透社</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>国庆假期铁路旅客发送量创单日历史新高</h3>
+<p>10月1日全国铁路发送旅客2520.4万人次，创单日旅客发送量历史新高，运输安全平稳有序。10月2日全国铁路预计发送旅客2039万人次，加开列车1462列。各地铁路部门加强运输组织，落实便民举措。</p>
+<p>来源：<a href="http://www.news.cn/20261002/807363be8d394a85b4948d1ca0783314/c.html">新华社</a></p>
+
+<h3>截至8月底我国境内公募基金规模达39.63万亿元</h3>
+<p>中国基金业协会最新数据显示，截至2026年8月底，我国境内公募基金资产净值合计39.63万亿元。境内公募基金管理机构共165家。</p>
+<p>来源：<a href="http://www.news.cn/20261002/ea352ac13d02440aa118ef10604e3374/c.html">新华社</a></p>
+
+<h3>欧洲债市剧震背后的三重压力</h3>
+<p>欧洲债券市场10月1日再度承压。英国10年期国债收益率升至5.51%，创2007年7月以来新高；法国10年期国债收益率逼近5%，创2002年7月以来新高；德国10年期国债收益率一度升至约3.64%，维持在2009年以来高位。分析认为，通胀和加息预期升温、财政压力加大以及全球长期资金需求上升等因素交织，共同推动欧洲国债收益率走高。</p>
+<p>来源：<a href="http://www.news.cn/20261002/dd82d6c1f71f46598c68967e8e2579d3/c.html">新华社</a></p>
+
+<h3>日本“隼鸟2”号小行星探测器全部发动机出现故障</h3>
+<p>据日本媒体10月2日报道，超期服役的日本“隼鸟2”号小行星探测器最后一台正常工作的发动机也出现故障。日本宇宙航空研究开发机构准备使用“交叉运行”方法，使探测器继续执行任务。该探测器能否在2031年抵达目标小行星，目前还无法预测。</p>
+<p>来源：<a href="http://www.news.cn/20261002/ceb3931cf2014a7db1aee0ecec273e2e/c.html">新华社</a></p>
+
+<h3>从日本民生困境看经济政策挑战</h3>
+<p>日本物价持续上涨，10月将有逾3000种食品涨价，全年预计约2万种。日本8月核心CPI同比上涨2.6%，实际家庭消费连续8个月同比下降。日本央行面临加息与消费疲软之间的两难抉择，日元贬值压力持续。</p>
+<p>来源：<a href="http://www.news.cn/20261002/a5cb44f33e064a5d8d36a0ae33433978/c.html">新华社</a></p>
+
+<h3>布鲁塞尔“小尿童”换唐装庆祝中国国庆</h3>
+<p>当地时间10月1日，比利时布鲁塞尔著名地标“小尿童”雕像换上中国传统服饰，庆祝中华人民共和国成立77周年。</p>
+<p>来源：<a href="http://www.news.cn/20261002/ee4c4bd3e5a347a8a64b90964f923b36/c.html">新华社</a></p>
+
+<h3>巴西发现玻璃蛙新物种</h3>
+<p>巴西研究人员在塞拉杜热带稀树草原地区发现玻璃蛙新物种，命名为米卡埃莱玻璃蛙。该物种体长仅2厘米出头，呈浅绿色且体表近乎透明。研究已发表于国际学术期刊《生物钥匙》。</p>
+<p>来源：<a href="http://www.news.cn/20261002/3a713ab222014fd596b648363835748c/c.html">新华社</a></p>
+
+<h2>AI每日总结</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+
+<h2>贸易财经</h2>
+
+<h3>欧洲债市持续承压，多国国债收益率创多年新高</h3>
+<p>英国10年期国债收益率升至5.51%，创2007年7月以来新高；法国10年期国债收益率逼近5%，创2002年7月以来新高；德国10年期国债收益率一度升至约3.64%。美国10年期国债收益率一度升至5.34%，创2002年4月以来新高。分析认为通胀压力、财政压力及AI投资热潮带来的长期资金需求共同推动收益率走高。量化对冲基金从全球债券抛售潮中获利颇丰。</p>
+<p>来源：<a href="http://www.news.cn/20261002/dd82d6c1f71f46598c68967e8e2579d3/c.html">新华社</a>、<a href="https://www.ft.com/content/75b0ab84-a252-4ea1-9058-c9ee7ca07f4f?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>亚马逊计划向投资者出售80亿美元英伟达芯片</h3>
+<p>据《金融时报》报道，亚马逊计划将价值80亿美元的英伟达芯片资产从资产负债表中移出，向投资者出售。此举反映AI基础设施融资模式的新变化。</p>
+<p>来源：<a href="https://www.ft.com/content/97d8d346-519e-48fb-8df8-66cf5f12ef62?syn-25a6b1a6=1">金融时报</a>、<a href="https://www.reuters.com/business/retail-consumer/amazon-seeks-offload-8-billion-nvidia-chips-investors-ft-reports-2026-10-02/">路透社</a></p>
+
+<h3>法国危机加深，投资者撤离</h3>
+<p>随着投资者纷纷撤离，法国的危机正在加深。法国公共债务截至2026年二季度末达GDP的119.0%，财政赤字预计占GDP的5.4%。法国多所高中因学生骚乱发生火灾。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-10-02/france-s-crisis-is-deepening-as-investors-head-for-the-exit">彭博社</a>、<a href="https://www.ft.com/content/38176237-e89f-410c-979c-c8c5d68d041a?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>油价维持横盘整理</h3>
+<p>市场权衡喜忧参半的供应信号，油价维持横盘整理。特朗普针对柴油的威胁可能适得其反。</p>
+<p>来源：<a href="https://www.reuters.com/business/energy/oil-rises-slightly-market-weighs-mixed-supply-signals-2026-10-02/">路透社</a>、<a href="https://www.ft.com/content/3ae16f02-bb00-46a4-abba-6bfea7f2b1ac?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>Monzo在Nubank退出后寻求私募股权投资</h3>
+<p>英国数字银行Monzo在Nubank退出后，开始寻求私募股权投资。</p>
+<p>来源：<a href="https://www.ft.com/content/57de6604-70a9-413a-a381-9ba82ec202ec?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>英国政府拒绝工会拯救苏格兰钢铁企业要求</h3>
+<p>英国政府部长们拒绝了工会关于拯救苏格兰钢铁企业的要求。</p>
+<p>来源：<a href="https://www.ft.com/content/232eac57-80af-4b06-ac48-7346c3df669d?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>匈牙利最大银行考虑撤出俄罗斯</h3>
+<p>匈牙利最大银行正在考虑如何从俄罗斯撤出。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/newsletters/2026-10-02/hungary-s-biggest-bank-looks-at-how-to-exit-from-russia">彭博社</a></p>
+
+<h3>英国旅游税或可作为借款抵押</h3>
+<p>英国的旅游税可能被用作借款抵押工具。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-10-02/bonds-of-bond-street-uk-s-tourism-tax-could-be-used-to-borrow-against">彭博社</a></p>
+
+<h3>日本银行与对冲基金竞相争夺顶尖毕业生</h3>
+<p>在经济繁荣背景下，日本银行与对冲基金正竞相争夺顶尖毕业生。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-09-24/japan-banks-hedge-funds-tussle-for-top-graduates-amid-jobs-boom">彭博社</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>加州新法对Robotaxi运营商阻塞应急人员行为处以罚款</h3>
+<p>美国加州通过新法律，对自动驾驶汽车运营商阻塞急救人员的行为实施罚款规则。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/01/robotaxi-operators-will-face-fines-for-blocking-first-responders/">TechCrunch</a></p>
+
+<h3>TechCrunch Disrupt 2026聚焦AI时代如何建立持久公司</h3>
+<p>TechCrunch Disrupt 2026围绕“如何在AI时代建立一家持久的公司”这一核心问题展开，会议议程和演讲嘉宾阵容均围绕该主题设计。</p>
+<p>来源：<a href="https://techcrunch.com/2026/10/01/the-founders-guide-to-techcrunch-disrupt-2026-everything-you-need-to-know/">TechCrunch</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-10-01</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-10-01.html</link>
+<guid isPermaLink="false">daily-news-2026-10-01</guid>
+<pubDate>Thu, 01 Oct 2026 05:49:09 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>今日概览：美国参议院在中期选举前休会并确认劳工部长；南亚、俄北约及乌克兰方向安全事件持续；中国国庆与名古屋亚运赛事受到关注；上半年经常账户数据、特别国债发行安排及聚变工程进展发布；AI领域出现新模型竞争与安全事件披露；美债市场承压。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>喀布尔称巴基斯坦空袭阿富汗造成9人死亡</h3>
+<p>喀布尔方面称，巴基斯坦对阿富汗的空袭造成9人死亡。路透社报道了这一说法。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/world/asia-pacific/pakistani-airstrikes-afghanistan-kill-nine-kabul-says-2026-10-01/">路透社</a></p>
+
+<h3>俄罗斯远程轰炸机训练中坠毁，6名机组人员遇难</h3>
+<p>一架俄罗斯远程轰炸机在训练中坠毁，造成6名机组人员死亡。</p>
+<p><strong>来源：</strong><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxObFB0c1NJZXJKQmR6Y19BVTY3SWRxd1VPdzd3VHh6ZDAteFdxb1MxQzRYRGJmZWs0UVZ1V0NjVGxoUDg2VmE5dk1GR2tacFMyZXQzYVlsaGFxR1NiYjNmd1NGdEdNcmJ6X3VJbElaUGhOVzBObjNzVmpxYVFRTzI1NGR2NWYxd184QW1KQXh3eWpHVkFCNGc?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">apnews.com</a></p>
+
+<h3>官员向BBC透露：索马里海盗在获救前杀害油轮船员</h3>
+<p>一名官员向BBC透露，索马里海盗在获救前杀害了油轮船员。</p>
+<p><strong>来源：</strong><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBEZ1ZLNUlXNU8ydkRGaDY2YkxIck5NMHl1MEdrNHpodnVhWEhmVHo0N3F1bkdUYjM1UFBqd2N1aDJYeGhqd216VnVfUFhrVnExWkN0NVRuU0hRRHM?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">BBC</a></p>
+
+<h3>美国参议院休会进入中期选举季并确认劳工部长</h3>
+<p>参议院在通过最终法案后离开城镇，直到11月3日中期选举之后；民主党人阻止了共和党在选举日前寻求胜利推动的几项立法。参议院还确认商业盟友基思·桑德林为劳工部长。</p>
+<p><strong>来源：</strong><a href="https://www.washingtonpost.com/politics/2026/09/30/senate-leaves-town-until-after-midterms-final-bills-founder/">华盛顿邮报</a>、<a href="https://www.washingtonpost.com/business/2026/09/30/senate-confirms-keith-sonderling-business-ally-labor-secretary/">华盛顿邮报</a></p>
+
+<h3>以色列称将彻查迪拜航空未遂坠机事件，印度飞行员获赞</h3>
+<p>内塔尼亚胡表示，以色列将彻查迪拜航空航班未遂坠机事件中副驾驶的“幕后真相”。路透社另报道，一名印度飞行员因处理迪拜航空惊险事件而广受赞誉。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/world/middle-east/netanyahu-says-israel-will-get-root-co-pilot-foiled-bid-crash-flydubai-flight-2026-10-01/">路透社</a>、<a href="https://www.reuters.com/world/textile-engineering-cockpit-hero-indian-pilot-wins-praise-after-flydubai-drama-2026-10-01/">路透社</a></p>
+
+<h3>南华早报：中国在老挝新建空军中心，被视为海外战略军事举措</h3>
+<p>南华早报报道，中国通过在老挝新建空军中心，在海外采取了一项战略性军事举措。</p>
+<p><strong>来源：</strong><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPb1NoSm44amxqZWllLWRhRjBpR3RKQ2RWRXNTQ2JFZm9hSWhfMW1XUEJfVGVRUXpLRkIyLTJRc1R1R0llNUwtTnZhajJKVkFrVjFzazBRaDJ6SV9TZUdwZUxWVG9SMDlYak1oNzlKZXNrN3BJRElXU2hDLUtUWlNkVWxlT2lUOGVhaDh6VWQ4dGpwV25KMWNZVTdscUNGN2hoc1VPY3FvQnNNQnphVDliUUNtS2d2ZWdDMWtuOXkxZGrSAcABQVVfeXFMTUpjeHdzS1JVak5rVXk0MDdmYVZQLTR0RUIzTkZJdjVfQzFwV3dYMVczQjZ3WmF3RXRoYUJXc1c0emRpcmg2TVczUWhVY1ZNS3dGSFZibTZXekZza01SSGxWa2U4ZjJnTkFSVlZKOWEzYUliWFFaT0hTQmtzaFBBMENGWUp0MGVJc1YwcllwRGlKYjczWVB2VXhFTTFhYXozREEtSklyMWdqUTNSNXN0SExTeC0zZzdLZk1tY29XelNa?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">South China Morning Post</a></p>
+
+<h3>美国贸易代表格里尔敦促G20支持特朗普关税议程，矛头指向中国</h3>
+<p>美国贸易代表格里尔敦促二十国集团支持特朗普的关税议程，并将矛头指向中国。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/world/china/greer-urges-g20-back-trump-tariff-agenda-takes-aim-china-2026-10-01/">路透社</a></p>
+
+<h3>埃利奥特在三星并购之争中对韩国的裁决获恢复</h3>
+<p>彭博社报道，在三星并购之争中，埃利奥特针对韩国的裁决得以恢复。</p>
+<p><strong>来源：</strong><a href="https://www.bloomberg.com/news/articles/2026-09-30/elliott-wins-113-million-from-south-korea-over-samsung-merger">彭博社</a></p>
+
+<h3>官员称俄军在奥列什基没收乌无人机投送食品，平民逃亡中触雷受伤</h3>
+<p>官员称，在被占领的奥列什基，俄军没收了由乌克兰无人机投送的食品；与此同时，有平民在逃离途中因地雷受伤。</p>
+<p><strong>来源：</strong><a href="https://news.google.com/rss/articles/CBMi_wFBVV95cUxQaFFRQ01wcmlnalBvNXZFODZnLTN0SFpEUWRZQnJwYTBjNUF5bUdla3V0ZjZiM1Rkc2pxSEdkRnBvMnRBSWdGTjhRMjhCa082Z1ZUbGpQSEdqUGZwU3IzX2xKbEF1LVNaMlExZGlBV05tczhCekZUcERSTVQwcS0xUW54Q0JWeXpzUUtKd0RaQzlQTXd5Uk0tbzhDM3RMX211a3pzbzAxLVQ1OXFkdUxydEYyTENXZ2pERzhfbWJFdE9DLS03cDl2T01xMzFZN2RfN2xHeXc0X3ZrV0JFcF93clh0RmJqTnplaC1hbUVNNDBWN3psSG9lWU5MM1JMaGc?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">kyivindependent.com</a></p>
+
+<h3>华为发布Mate 90系列，并预测智能手机价格进一步上涨</h3>
+<p>华为发布Mate 90系列手机，强调依托自主芯片设计以应对美国限制措施。彭博社报道，华为预测受内存短缺影响，智能手机价格将进一步上涨。</p>
+<p><strong>来源：</strong><a href="https://www.reuters.com/business/retail-consumer/huawei-unveils-mate-90-phones-leans-homegrown-chip-design-offset-us-curbs-2026-10-01/">路透社</a>、<a href="https://www.bloomberg.com/news/articles/2026-10-01/huawei-predicts-more-smartphone-price-hikes-due-to-memory-crunch">彭博社</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>天安门广场举行国庆升旗仪式，庆祝新中国成立77周年</h3>
+<p>10月1日清晨，隆重的升国旗仪式在北京天安门广场举行，庆祝中华人民共和国成立77周年。新华社报道回顾了历年国庆升旗场景。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261001/3a4fffd0db734db4ad3251f14d34d918/c.html">新华社</a></p>
+
+<h3>中国跳水队达成亚运百金，第14次包揽跳水金牌</h3>
+<p>9月30日，中国跳水队在名古屋亚运会包揽跳水项目全部金牌。练俊杰获得男子10米台金牌；陈芋汐获得女子10米台和女子双人10米台金牌。中国跳水队自1974年首次参加亚运会以来收获第100枚跳水金牌，并实现第14次亚运金牌全包揽。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261001/f3a1af78dcce44c5bf5e6a9d1427726a/c.html">新华社</a>、<a href="http://www.news.cn/20261001/89c4776bb31b43df912843ddeecf3303/c.html">新华社</a></p>
+
+<h3>上半年我国经常账户收支总额同比增长16%</h3>
+<p>国家外汇管理局发布的《2026年上半年中国国际收支报告》显示，上半年我国经常账户收支总额为4.6万亿美元，同比增长16%；经常账户顺差3780亿美元，与GDP比值保持稳定。货物进出口总额同比增长18%，服务贸易出口同比增长21%。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261001/7d6eaa8bb3124d4397bccd969483f48d/c.html">新华社</a></p>
+
+<h3>2026年中央金融机构注资特别国债（一期）将于10月8日发行</h3>
+<p>财政部通知显示，拟于10月8日发行2026年中央金融机构注资特别国债（一期）。该国债为5年期固定利率附息债，竞争性招标面值总额1500亿元，不进行甲类成员追加投标。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261001/b3c1a99fe1d648ae9abdd80d253fd12c/c.html">新华社</a></p>
+
+<h3>紧凑型聚变能实验装置项目园区提前交付使用</h3>
+<p>位于安徽合肥未来大科学城的国家重大工程项目——紧凑型聚变能实验装置（BEST）项目园区提前交付使用，装置主机建设进入“四环套装”攻坚阶段。BEST装置目标包括开展长时间反应堆条件下聚变能氘氚燃烧科学技术研究。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261001/1c37af6c597a46018a845a72dce119d3/c.html">新华社</a></p>
+
+<h3>我国完成1:500万中国及邻区大地构造图</h3>
+<p>中国地质科学院地质研究所领衔完成1:500万中国及邻区大地构造图。该图首次突破海陆界线，展示统一的区域构造动力学过程，为能源资源安全保障、海洋强国建设、深地深海战略等提供基础性科技支撑。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261001/9303750142a94aacb7dd42502ef9233a/c.html">新华社</a></p>
+
+<h3>村田晃大强闯中国驻日使馆案在日首次公开庭审</h3>
+<p>东京地方法院10月1日对日本自卫队官员村田晃大强闯中国驻日本大使馆案举行首次公开庭审。检方以闯入建筑物、威胁使馆工作人员等罪名提起公诉；被告承认闯入建筑物和违反枪支刀具法，但辩方对威胁使馆工作人员的指控认为“不构成犯罪”。今年3月，村田晃大携刀翻墙闯入中国驻日使馆，威胁杀害中国外交人员。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261001/1fef54f30bc34d8e943d703635f290bf/c.html">新华社</a></p>
+
+<h3>俄罗斯向北约发出“核警告”，北约回应称其为防御性联盟</h3>
+<p>俄罗斯就北约在波罗的海地区军事活动发出严厉警告，称如果北约封锁加里宁格勒州，俄方准备动用包括核武器在内的一切手段保卫领土。北约秘书长吕特回应称，北约是“防御性联盟”，谴责俄方“核威胁”。分析人士认为，短期内爆发全面军事冲突可能性仍较低，但误判引发新摩擦的风险在上升。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261001/60c39b9f5d754c2d93f6bc6940d6963d/c.html">新华社</a></p>
+
+<h3>美国酝酿柴油出口禁令，欧洲因对美依赖加深而紧张</h3>
+<p>随着美国柴油零售均价飙升、通胀压力威胁中期选举选情，特朗普与顾问讨论是否实施柴油出口禁令，并称仍在评估平抑油价选项。欧洲对美国柴油依赖加深，欧盟自2026年初以来日均进口约58万桶柴油，其中美国供应约18万桶，占比约32%。分析认为，替代供应仍有局限。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261001/2ea0226a1ac44691b0b3b2915f6a3a3a/c.html">新华社</a></p>
+
+<h3>全国秋粮收获过两成</h3>
+<p>农业农村部最新农情调度显示，全国秋粮收获过两成，其中西南已收六成半，长江中下游过四成，黄淮海近两成，西北近三成，东北零星收获。</p>
+<p><strong>来源：</strong><a href="http://www.news.cn/20261001/4e2d17d8b5b34a158b16723c96c9e2f3/c.html">新华社</a></p>
+
+<h2>AI每日总结</h2>
+
+<h3>Last Week in AI #345：新模型竞争与九起“失准”事件</h3>
+<p>该周报称，Anthropic和OpenAI竞相发布更智能、更便宜的模型；OpenAI披露九起“misalignment”（失准）事件。标题还提及5个新模型和Dots相关动态。</p>
+<p><strong>来源：</strong><a href="https://lastweekin.ai/p/last-week-in-ai-345-5-new-models">Last Week in AI</a></p>
+
+<h2>贸易财经</h2>
+
+<h3>美国国债暴跌引发抛售“恶性循环”</h3>
+<p>美国国债暴跌引发抛售“恶性循环”。金融时报报道了这一市场动态。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/39de7709-7b5b-42f6-ad90-df50f1308ea2?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>特朗普称韩国将向美国能源项目投资2000亿美元</h3>
+<p>特朗普表示，韩国将向美国能源项目投资2000亿美元。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/f0cdc5bc-c07a-47cf-9602-064006176aef?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>腾讯从甲骨文租赁10万颗芯片，加速AI推进</h3>
+<p>金融时报报道，中国腾讯从甲骨文租赁10万颗芯片，以加速人工智能发展。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/8799b33d-f07c-4a03-82f0-bf5d3d1d29e9?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>派拉蒙为收购华纳兄弟承担高昂借贷成本，并任命美泰CEO为联席CEO</h3>
+<p>派拉蒙为筹集华纳兄弟收购案资金，承担了高昂的借贷成本。与此同时，派拉蒙任命美泰公司负责人为联席首席执行官，旨在完成对华纳兄弟的收购。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/188ab0ab-e39d-4221-9730-0610fbc22ee9?syn-25a6b1a6=1">金融时报</a>、<a href="https://www.ft.com/content/baa261b7-681d-41b7-b41a-d704858cd0b2?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>菲律宾央行准备应对“哥斯拉”级厄尔尼诺</h3>
+<p>金融时报报道，菲律宾央行正在为“哥斯拉”级厄尔尼诺现象做准备。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/390fafe6-88bf-4564-978d-4774e2b75e8d?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>伯纳姆以脱欧后突破为欧盟峰会扫清障碍</h3>
+<p>金融时报报道，伯纳姆凭借“脱欧”后的重大突破，为欧盟峰会扫清了障碍。</p>
+<p><strong>来源：</strong><a href="https://www.ft.com/content/ef10b301-6264-4ac8-8d23-bd3dddf9b8a2?syn-25a6b1a6=1">金融时报</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>Gemini 4正式发布：写作强于代码的前沿模型</h3>
+<p>爱范儿称，Gemini 4正式发布，跑分不可思议，但对其能力持谨慎怀疑；文章认为这是写作强于代码的前沿模型。</p>
+<p><strong>来源：</strong><a href="https://www.ifanr.com/1682765?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h3>Vivo X Fold 6全球发布，设计被认为像复古</h3>
+<p>The Verge报道，Vivo X Fold 6全球发布。该机型在中国6月发布时只是又一款折叠屏，如今全球发布时，其尺寸和纵横比在当前市场中显得 oddly old-fashioned（奇怪地复古）。</p>
+<p><strong>来源：</strong><a href="https://www.theverge.com/tech/1002680/vivo-x-fold-6-global-release-specs-cameras">The Verge</a></p>
+
+<h3>爱范儿早报：苹果家庭中枢发布日期曝光，豆包接入机票火车票预订</h3>
+<p>爱范儿早报提到，曝苹果将于10月13日发布家庭中枢；豆包接入机票和火车票预订，出行服务新增统一入口；美光全年营收达1331.88亿美元，预计下一季营收615亿美元。</p>
+<p><strong>来源：</strong><a href="https://www.ifanr.com/1682780?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-09-30</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-09-30.html</link>
+<guid isPermaLink="false">daily-news-2026-09-30</guid>
+<pubDate>Wed, 30 Sep 2026 05:30:33 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>今日概览：国际方面，俄罗斯对基辅发动空袭、普京下令扩军、西班牙宣布禁止驱逐租户；国内方面，烈士纪念日敬献花篮仪式举行，9月制造业PMI回到扩张区间，易会满涉嫌受贿案被提起公诉，金融产品网络营销新规正式实施；财经方面，中方警告欧盟关税可能影响贸易谈判，中国制造业与服务业活动回暖，亚洲股权融资活跃；科技方面，OpenAI年度发布会、AI安全与IPO表态、特朗普行政令等构成主要看点；自然科学栏目过去24小时暂无可核实的新内容。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>俄罗斯空袭基辅及周边地区，造成1死5伤</h3>
+<p>据路透社援引当地官员消息，俄罗斯对基辅及周边地区发动空袭，造成1人死亡、5人受伤。</p>
+<p>来源：<a href="https://www.reuters.com/world/europe/russian-air-strikes-kill-one-injure-five-around-kyiv-officials-say-2026-09-30/">路透社</a></p>
+
+<h3>普京下令将俄军兵力规模扩大至155万人</h3>
+<p>据The Moscow Times报道，普京已下令将俄罗斯军队兵力规模扩大至155万人。报道未提供更多细节。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNEg4YWxGSWg4b0ZIeVRmbTRkd21rU1FUTDNVQ19UZEhXR2JPaHVaUW1XcXA1NkRkY0hGeG85Z2l1OURsQmVCakp5V0k0TUFtN0V2TXBwZUl0bFNrWXBtLVdhaThTczIydGJXYjFEVUttTnhPWjRHMjU2M1NMZ3JHQVEtYTNsVDVNYS13UjFZcmRkQng1Uk9LLU82WFU2WDZ4bmU2ZHNKaTY?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">The Moscow Times</a></p>
+
+<h3>西班牙宣布禁止驱逐租户</h3>
+<p>据BBC报道，西班牙宣布禁止驱逐租户。此前一名87岁老妇被赶出公寓，引发抗议活动。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9icTVReXB0TTNadnB3OHlLQnFMdTZ0S1habVFid1dNOXpoZUNyVkoyTDFHS2RRdTlEbmhmTlVEbXNPRGNPeXExbUlPUnFkQTBYM080SmIxb3ItWXc?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">BBC</a></p>
+
+<h3>泰国政府批准紧急拨款应对致命洪灾</h3>
+<p>据AP News报道，在造成数百万人受灾的致命洪灾后，泰国政府批准了紧急拨款。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOWG5JUnRUdElQRno3S2RXNUFQN3JSU0NIUVAybnZ3Rk56eHJDQlJoNXczbXpUVElCX05PUm4zenVDSnVIMjhwWTFpeDJfTFp1OFdSZE5vUUlYeHFhUWpKVmxNb1hQR3pxUDhaTDR0QUZFSDFSbkhRb1FLME9UdmM0NnM5YmNjdWZHVzdPSEJURzQ2LWlwN1JTTjlCMzVucUZDZHZXOQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">AP News</a></p>
+
+<h3>韩国称非军事区爆炸系朝鲜地雷所致，违反停战协定</h3>
+<p>据路透社报道，韩国方面表示，非军事区发生的爆炸由朝鲜埋设的地雷造成，此举违反了停战协定。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPNVlYaXY4enp5MHkwNUU1UFdXaUFfV09pbEVRTUFGdEhnYzFfNnk4dUlkZVZIQWhIUGNrVU9NNlQ4bjFKNlRJdFJHQXlPdUgzU0NNcGREcVM0MWd2Q2V6RkJSalpMbzFHUEpnRjlZYTRHdl84eE9QakdCYUZ3dUxJQXloNnBzTFRXTkFFdjhCdVBfSzFxMktHWTlxN0hHdVIwbWhtRUZLalpmU2pNR19mTGVMVnp0WC1SempSMlY5VGl0UkdS?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">reuters.com</a></p>
+
+<h3>埃塞俄比亚提格雷地区战事持续，平民处境受关注</h3>
+<p>据DW报道，埃塞俄比亚提格雷地区战事仍在继续，报道称平民安危未受到应有重视。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNRVVSVDNEV29FS0g2QWkzTGNpV09sTzc4NTRDZEZSRjhuZXRJcUtFb0l1ZHRfZm9PNmttR0J4Y0F0ek0xSDBUQjg4SzF6a1BFY3BwUkE5WEdzSU9MY09GRmtSVXh0UU5mSV9VNWl2T1loQWRtLUVFSklfSGhlM2lBTG5DNFdvdVNJOS1yXzFEQmljVjZUYUNGcVZfNWQ1VzV2XzVmT2ZPRDBVOUVBRUlMN3ZFeE8wOVU3bWfSAbQBQVVfeXFMTmt4Um81T2VrYTFfbzlIUVNwdDdwUTJRYlNRbFBQRlhkS3hOdXJhLU50X0V1Mm16YUpwN0l3MVJsQk5QcEJpZzJ2blhYSWxuNG9odTZSeUdxLW9iaUZ1OGxMcVE5YnBYcVdIRjNIeDdtcjdjZmxaTkpnRTRNRjNZaTdDeGM2cHdLUnNjZmxKLTBXR01MenFzYjhJRGxHQXVKMERON01Pa2tQbXZ2Z3NValZrRTQy?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">dw.com</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>烈士纪念日向人民英雄敬献花篮仪式在北京举行</h3>
+<p>9月30日上午，烈士纪念日向人民英雄敬献花篮仪式在北京天安门广场举行。习近平、李强、赵乐际、王沪宁、蔡奇、丁薛祥、李希、韩正等党和国家领导人同各界代表一起出席仪式。仪式包括奏唱国歌、默哀、敬献9个大型花篮及瞻仰人民英雄纪念碑等环节，由中共中央政治局委员、北京市委书记尹力主持。新华社报道指出，今年是中国共产党成立105周年、中国工农红军长征胜利90周年。</p>
+<p>来源：<a href="http://www.news.cn/20260930/337364470b99461496b69e6b739a91a0/c.html">新华社</a>、<a href="http://www.news.cn/20260930/4c80807d4cdd4970b6fd6bbc84649220/c.html">新华社</a></p>
+
+<h3>9月份我国制造业PMI升至50.1%</h3>
+<p>据新华社报道，9月份我国制造业采购经理指数（PMI）升至50.1%，位于50%的荣枯线之上。</p>
+<p>来源：<a href="http://www.news.cn/20260930/7720ee20b3e84a1c8b226fd73dd4a315/c.html">新华社</a></p>
+
+<h3>易会满涉嫌受贿案被提起公诉</h3>
+<p>新华社报道，十四届全国政协经济委员会原副主任易会满涉嫌受贿一案由国家监察委员会调查终结并移送检察机关。最高人民检察院依法以涉嫌受贿罪对其作出逮捕决定，指定山东省青岛市人民检察院审查起诉，青岛市人民检察院已向青岛市中级人民法院提起公诉。起诉指控其利用在工商银行及中国证监会等岗位职务上的便利为他人谋取利益，非法收受他人财物，数额特别巨大。</p>
+<p>来源：<a href="http://www.news.cn/20260930/c9790e0afbdf46b78df0924dcb5825a0/c.html">新华社</a></p>
+
+<h3>金融产品网络营销新规9月30日起实施</h3>
+<p>中国人民银行等8部门联合印发的《金融产品网络营销管理办法》自9月30日起实施。办法要求营销内容“真实准确、通俗易懂”，禁止使用诱导性话术，不得明示或暗示资管产品、投顾或咨询服务保本、承诺收益、限定损失，并要求算法推荐不得设置诱导过度消费的模型。办法还规定非金融机构从业人员不得通过直播、短视频、公众号等形式营销金融产品，营销电话与短信须提供拒收或退订选择；非银行支付机构不得将贷款、资管产品列入支付工具选项。新华社报道同时说明，此前“平台月付将退出支付选项”等说法系误读，规定要求支付工具与金融产品“区隔展示”，消费者仍可正常使用相关产品和工具。</p>
+<p>来源：<a href="http://www.news.cn/20260930/5edf86c1d6fa43feb4b16017e50ba23b/c.html">新华社</a></p>
+
+<h3>国台办例行发布会回应涉台议题</h3>
+<p>9月30日国务院台办举行例行新闻发布会。发言人张晗就《人民日报》刊文指出“台独”是中美共同的敌人回应称，坚持一个中国原则是中美关系政治基础中的基础，坚决反对“台独”分裂、维护台海和平稳定符合中美双方共同利益。针对台外事部门负责人林佳龙投书日媒攻击联大第2758号决议，张晗表示有关言论歪曲事实，该决议已从政治上、法律上、程序上彻底解决包括台湾在内全中国在联合国的代表权问题。对于新党等方面就“两制”台湾方案提出主张，张晗表示欢迎两岸同胞集思广益，为“两制”台湾方案提出更多意见和建议。</p>
+<p>来源：<a href="http://www.news.cn/20260930/3467c79c80c94152900b0e80c040eaaf/c.html">新华社</a>、<a href="http://www.news.cn/20260930/add5258d43954f1484dab6e8e47cd98c/c.html">新华社</a>、<a href="http://www.news.cn/20260930/c84fdfcd10734732b8cc8c20e283728e/c.html">新华社</a></p>
+
+<h3>中国第16次北冰洋考察“双龙”率先凯旋</h3>
+<p>据新华社报道，中国第16次北冰洋考察成果丰硕，“双龙”率先返回。</p>
+<p>来源：<a href="http://www.news.cn/20260930/836607b432164a56a78670b947d045c4/c.html">新华社</a></p>
+
+<h3>今年我国快递业务量已超1500亿件</h3>
+<p>据新华社报道，今年我国快递业务量已超过1500亿件。</p>
+<p>来源：<a href="http://www.news.cn/20260930/7d5db5bddaf54e7ea62a05d12a448434/c.html">新华社</a></p>
+
+<h3>旅韩双胞胎大熊猫将于12月回国</h3>
+<p>据新华社报道，旅居韩国的双胞胎大熊猫将于12月回国。</p>
+<p>来源：<a href="http://www.news.cn/20260930/7fd92c7afe8540989d76bcfb299c1385/c.html">新华社</a></p>
+
+<h3>孙炜任合肥工业大学党委书记</h3>
+<p>9月30日，教育部人事司在合肥工业大学宣布教育部党组任免决定：孙炜任合肥工业大学党委书记，于祥成不再担任该职务。孙炜1975年4月出生，研究生学历、工学博士，曾任湖南大学党委副书记。</p>
+<p>来源：<a href="http://www.news.cn/20260930/86a4bafdfc7741a88e5e31a698ba6141/c.html">新华社</a></p>
+
+<h2>AI每日总结</h2>
+
+<h3>AI资讯日报发布9月30日与9月29日两期日刊</h3>
+<p>该栏目本期仅包含“AI资讯日报”9月30日与9月29日两期日刊，两条内容均只提供栏目标签与页面入口，未给出当日摘要正文，因此暂无可核实的模型、产品、研究或行业动态信息。</p>
+<p>来源：<a href="https://hex2077.dev/docs/2026-09/2026-09-30/">AI资讯日报</a>、<a href="https://hex2077.dev/docs/2026-09/2026-09-29/">AI资讯日报</a></p>
+
+<h2>贸易财经</h2>
+
+<h3>中国警告欧盟广泛关税可能扰乱贸易谈判</h3>
+<p>据彭博社报道，中国警告称，欧盟若实施广泛关税，可能扰乱双方的贸易谈判。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-09-30/china-warns-broad-eu-tariffs-could-disrupt-trade-negotiations">彭博社</a></p>
+
+<h3>中国9月制造业与服务业活动同步回暖</h3>
+<p>路透社报道，受人工智能热潮推动，中国9月制造业活动重回增长轨道；另一项私营部门PMI数据显示，中国服务业增长创三个月新高。彭博社亦称，随着刺激措施提振经济前景，中国经济活动出现反弹。相关报道未就全年走势给出统一判断。</p>
+<p>来源：<a href="https://www.reuters.com/world/china/chinese-factory-activity-returns-growth-september-amid-ai-boom-2026-09-30/">路透社</a>、<a href="https://www.reuters.com/business/finance/china-services-growth-hits-three-month-high-private-pmi-shows-2026-09-30/">路透社</a>、<a href="https://www.bloomberg.com/news/articles/2026-09-30/china-factory-activity-returns-to-expansion-as-outlook-brightens">彭博社</a></p>
+
+<h3>亚洲股权融资活跃，AI热潮成主要推力</h3>
+<p>路透社报道称，随着人工智能热潮推动交易储备量增长，亚洲股权出售规模有望刷新2021年纪录。彭博社则指出，尽管股市表现疲软，印度的IPO热潮仍在持续。</p>
+<p>来源：<a href="https://www.reuters.com/world/asia-pacific/asia-share-sales-poised-test-2021-record-ai-boom-fuels-deal-pipeline-2026-09-30/">路透社</a>、<a href="https://www.bloomberg.com/news/newsletters/2026-09-30/india-s-ipo-boom-powers-on-despite-stock-market-weakness">彭博社</a></p>
+
+<h3>摩根大通：中东原油供应量已达战前水平的98%</h3>
+<p>据彭博社报道，摩根大通称中东原油供应量已达到战前水平的98%。同期报道还提到，油价从高位回落，印度股市有望因此上涨。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-09-30/mideast-crude-oil-flows-hit-98-of-pre-war-level-jpmorgan-says">彭博社</a>、<a href="https://www.reuters.com/world/india/indian-shares-likely-rise-oil-comes-off-bse-joins-nifty-2026-09-30/">路透社</a></p>
+
+<h3>五角大楼授予波音200亿美元海军隐形战机合同</h3>
+<p>据金融时报报道，五角大楼向波音公司授予价值200亿美元的合同，用于建造海军隐形战斗机。新华社另报道称，美国国防部宣布选定波音设计建造海军第六代战机F/A-XX，合同总值超过200亿美元，预计2030年代开始交付，以取代现役F/A-18E/F和EA-18G并与F-35C协同作战。</p>
+<p>来源：<a href="https://www.ft.com/content/5f1cd056-b5cb-4b29-84a7-703819811b0d?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>债券市场9月料遭遇重挫，股市表现相对较好</h3>
+<p>路透社报道称，债券市场9月料将遭遇重挫，股市表现相对较好。彭博社市场综述显示，在美国通胀数据公布前，亚洲股市上涨、债券持稳。此外，彭博社报道称Metrics已暂停部分基金的赎回，并推迟发布财务报告。</p>
+<p>来源：<a href="https://www.reuters.com/world/china/global-markets-global-markets-2026-09-30/">路透社</a>、<a href="https://www.bloomberg.com/news/articles/2026-09-29/stock-market-today-dow-s-p-live-updates">彭博社</a>、<a href="https://www.bloomberg.com/news/articles/2026-09-30/metrics-gates-some-funds-delays-release-of-financial-reports">彭博社</a></p>
+
+<h3>其他市场动态</h3>
+<ul>
+<li><strong>斯里兰卡：</strong>尽管油价推高通胀，斯里兰卡仍维持利率不变以刺激经济增长。来源：<a href="https://www.bloomberg.com/news/articles/2026-09-30/sri-lanka-holds-rate-to-spur-growth-even-as-oil-fuels-inflation">彭博社</a></li>
+<li><strong>澳大利亚：</strong>即使燃料价格飙升，澳大利亚通胀率仍有所放缓。来源：<a href="https://www.bloomberg.com/news/articles/2026-09-30/australian-inflation-remains-elevated-as-fuel-price-rises-strike">彭博社</a></li>
+<li><strong>纽约：</strong>法官下令纽约市重新启动第二套房税的实施，市政府已提起上诉。来源：<a href="https://www.reuters.com/legal/government/judge-orders-new-york-city-restart-secondary-home-tax-rollout-2026-09-30/">路透社</a></li>
+</ul>
+
+<h2>科技前沿</h2>
+
+<h3>OpenAI年度发布会推出多项更新，Sam Altman称安全取得进展前不推进IPO</h3>
+<p>爱范儿总结称，OpenAI年度发布会发布“25个新品”，但用户额度减半引发争议；另一篇报道称ChatGPT一次性整合了多项AI功能，现场演示出现失误，奥特曼提出AI将带来“新文艺复兴”而非新工业革命。The Verge报道，OpenAI CEO Sam Altman表示，在能够对模型安全作出更好承诺之前不会上市，且没有明确时间表。相关报道还提到，OpenAI发布AI智能体“Dots”前，马斯克旗下xAI已购入“dot.com”域名，该域名现跳转至Grok下载页面。</p>
+<p>来源：<a href="https://www.ifanr.com/1682571?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a>、<a href="https://www.ifanr.com/1682644?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a>、<a href="https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety">The Verge</a>、<a href="https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/">TechCrunch</a></p>
+
+<h3>特朗普签署行政令，要求联邦政府将AI称为“Super Intelligence”</h3>
+<p>据The Verge报道，美国总统特朗普签署行政令，美国政府部门的官方网站、政策文件和新闻稿今后将不再使用“人工智能”（artificial intelligence）表述，只提“Super Intelligence”。特朗普称“super”是“最好的词，也是最简单的词”。</p>
+<p>来源：<a href="https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai">The Verge</a></p>
+
+<h3>Apple Pay在印度上线</h3>
+<p>TechCrunch报道，Apple Pay在多年缺席后正式在印度推出，部分印度大型银行初期暂不支持。彭博社此前报道称，苹果在印度推出支付服务，以与谷歌和Paytm竞争。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/29/apple-pay-set-to-launch-in-india-with-axis-bank-today-sources-say/">TechCrunch</a></p>
+
+<h3>新品动态：GPT-6.1 Sol推出，DeepSeek Harness发布桌面端预览版</h3>
+<p>爱范儿早报提到，GPT-6.1 Sol推出，价格仅为Astra的五分之一；DeepSeek Harness推出桌面端预览版；苹果新任CEO希望更快发布产品；华为Mate 90真机进店；特斯拉Roadster发布会因天气推迟；vivo调整中国区考勤制度。</p>
+<p>来源：<a href="https://www.ifanr.com/1682554?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h3>研究：车辆及其配套应用向大型科技公司共享数据</h3>
+<p>TechCrunch援引美国东北大学研究人员的结果报道，汽车及其配套手机应用经常与多家大型科技公司共享详细信息。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/29/your-car-and-its-mobile-app-are-probably-handing-over-all-kinds-of-data-to-tech-companies/">TechCrunch</a></p>
+
+<h3>路虎揽胜运动版电动车型发布</h3>
+<p>WIRED报道，路虎揽胜运动版电动车型发布，与更高端的揽胜电动版共用平台，规格相近但扭矩更大、价格更低。</p>
+<p>来源：<a href="https://www.wired.com/story/range-rover-sport-electric-arrives-with-more-for-less/">WIRED</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-09-29</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-09-29.html</link>
+<guid isPermaLink="false">daily-news-2026-09-29</guid>
+<pubDate>Tue, 29 Sep 2026 05:41:40 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>过去24小时，俄乌冲突与欧洲防务动向持续，泰国洪灾波及航空与制造业；国内方面，新疆大石峡水利枢纽并网发电、霍尔果斯中欧班列年内突破7000列，亚运会国乒收官；财经领域聚焦金融机构对人工智能风险的分散安排与欧洲预算博弈；科技前沿以Anthropic招股书、星舰入轨和国产视频模型更新为主。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>俄罗斯空袭基辅</h3>
+<p>据半岛电视台报道，俄罗斯对乌克兰科学院发动致命袭击后，又对基辅实施猛烈轰炸。相关伤亡与损失细节在报道中未进一步展开。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPanFGUFdfOHZGbDEzWGp5dy14a2x1ZGFDdHpHM244cXRxZGxCa0l4VHo5VmNQNGJWTXZ2MGNGVVdUSzgzVU5WUHRKVHFIY29LSThxYTY2aHlvRjNoWk5sYm9nempQTF9IVEdiU3B6MXREXzNXLWctNnpBZ1dJeThFTmgzZjNiSjFEa3hlZzFhVFIxdWprWFRHVEk1cTlmYnczWVVVMzBRaXdJMjDSAbABQVVfeXFMUHVDUDFrWHlfc0ZJUVh3UkREZjJWNlpleXhKWVItcGRaRUVUeEwzRjN2bzZQTDd2aWlEaDVqVXV6YXBQX3VmZDRVWHZlc2dyLUlNNXZsTzNjbGxuUHBuN25xZGRhU2M0OUl5ZDExc3p0eGtRNDh4bk1GdjluNEZBZnlFZWt5ZXdNUFlPR09YSjdnY2tuRjY2S1ZfWDUwSWRybV9xYnJRX3hjeUM2cUhJSHo?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">谷歌全球新闻（Al Jazeera）</a></p>
+
+<h3>欧盟批准重大国防项目计划</h3>
+<p>据《基辅独立报》报道，欧盟批准了一项重大国防项目计划，其中乌克兰占据突出位置。报道未披露具体项目清单与资金规模。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNOU13ci1FQ05KRVJXUFkzVU1jZW05bU02WEJCMzZEMThVM3NEZnhPblp1WEpyc245WWJoa1pINmFWT2ktX0xoRzktWS1jRkdIU2FBWng1N0hicnYybFN2cG42WTdCZ2FGSzJEUkRVWXhhYkhPdkNNdjhJampodmo1cHBaYTY0bTZONm9IbEEzY0dBSXlWWkFOUmRfV2djSHNaOGlKbjdR?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">谷歌全球新闻（The Kyiv Independent）</a></p>
+
+<h3>普京下令增加俄军现役士兵人数</h3>
+<p>路透社报道，俄罗斯总统普京已下令增加俄罗斯军队中的现役士兵人数。报道未给出增员的具体规模与时间表。</p>
+<p>来源：<a href="https://www.reuters.com/fr/affaires/poutine-ordonne-daccrotre-le-nombre-de-soldats-engags-dans-larme-russe-2026-09-29/">路透社</a></p>
+
+<h3>泰国洪灾蔓延，泰航积压5000件行李</h3>
+<p>曼谷洪水逐步消退，泰国政府预计需两到三天排清积水。泰国航空首席执行官表示，公司将处理滞留在曼谷机场的5000件行李。彭博社报道称，洪灾的扰动已波及泰国航空与本田等企业，影响范围持续扩大。</p>
+<p>来源：<a href="https://www.reuters.com/business/environment/thailand-expects-clear-bangkok-floodwater-two-three-days-government-says-2026-09-29/">路透社</a>、<a href="https://www.reuters.com/world/asia-pacific/thai-airways-clear-5000-bags-stranded-bangkok-airport-ceo-says-2026-09-29/">路透社</a>、<a href="https://www.bloomberg.com/news/articles/2026-09-29/thailand-floods-hit-thai-airways-honda-as-disruption-spreads">彭博社</a></p>
+
+<h3>裕信银行拟在数月内取得德国商业银行控制权</h3>
+<p>据《金融时报》报道，裕信银行的安德烈亚·奥塞尔计划在数月内取得德国商业银行的控制权；路透社援引德国《时代周报》的报道亦称，裕信银行即将接管德国商业银行的控制权。相关交易的具体结构尚未披露。</p>
+<p>来源：<a href="https://www.reuters.com/business/finance/unicredits-andrea-orcel-moves-seize-control-commerzbank-within-months-ft-reports-2026-09-29/">路透社</a>、<a href="https://www.reuters.com/de/firma/zeitung-unicredit-will-bald-kontrolle-bei-commerzbank-bernehmen-2026-09-29/">路透社</a></p>
+
+<h3>谷歌就欧盟开放要求提出异议</h3>
+<p>谷歌对欧盟要求其向人工智能和搜索引擎竞争对手开放市场的命令提出异议。彭博社报道称，谷歌正抵制欧盟试图迫使安卓系统向竞争对手的人工智能机器人开放的举措。</p>
+<p>来源：<a href="https://www.reuters.com/business/google-challenges-eu-orders-open-up-ai-search-engine-rivals-2026-09-29/">路透社</a>、<a href="https://www.bloomberg.com/news/articles/2026-09-29/google-fights-eu-attempt-to-prise-open-android-to-rival-ai-bots">彭博社</a></p>
+
+<h3>澳大利亚央行加息至15年最高水平</h3>
+<p>澳大利亚央行将现金利率上调至15年来的最高水平，以抑制通胀。彭博社称此举旨在为通胀降温。</p>
+<p>来源：<a href="https://www.reuters.com/world/asia-pacific/australias-central-bank-raises-cash-rate-15-year-peak-2026-09-29/">路透社</a>、<a href="https://www.bloomberg.com/news/articles/2026-09-29/australia-raises-key-rate-to-15-year-high-to-restrain-inflation">彭博社</a></p>
+
+<h3>其他动态</h3>
+<ul>
+<li>瑞士监管机构表示，朱利叶斯·贝尔严重违反了风险管理和反洗钱规定。（<a href="https://www.reuters.com/business/finance/julius-baer-seriously-breached-risk-money-laundering-rules-swiss-regulator-says-2026-09-29/">路透社</a>）</li>
+<li>缅甸以涉嫌向与反对派有关联的筹款平台捐款为由逮捕21人。（<a href="https://www.reuters.com/world/asia-pacific/myanmar-arrests-21-over-alleged-donations-opposition-linked-fundraising-platform-2026-09-29/">路透社</a>）</li>
+<li>法国新闻网站Mediapart指责巴尔代拉发表反犹言论，当事人予以否认。（<a href="https://www.reuters.com/fr/affaires/france-mediapart-accuse-bardella-davoir-tenu-des-propos-antismites-lintress-2026-09-29/">路透社</a>）</li>
+</ul>
+
+<h2>国内新闻</h2>
+
+<h3>新疆大石峡水利枢纽首批机组并网发电</h3>
+<p>据新华社报道，新疆大石峡水利枢纽工程首批机组已并网发电。（<a href="http://www.news.cn/20260929/3d79e3f3095e46ba9f27a408969fb742/c.html">新华社新闻</a>）</p>
+
+<h3>霍尔果斯口岸年内通行中欧（亚）班列突破7000列</h3>
+<p>9月28日17时，一列满载机械设备、汽车配件、电子产品的中欧班列从霍尔果斯铁路口岸驶出，开往俄罗斯莫斯科。至此，今年霍尔果斯铁路口岸通行中欧（亚）班列突破7000列，口岸过货量超1200万吨。</p>
+<p>来源：<a href="http://www.news.cn/20260929/6792c61c56084ecf948f8f884eb7d2f2/c.html">新华社新闻</a></p>
+
+<h3>国新办发布会：农业农村发展保持稳中向好</h3>
+<p>9月29日，国务院新闻办公室举行“开局起步‘十五五’”系列主题新闻发布会，介绍“十五五”时期加快农业农村现代化、扎实推进乡村全面振兴有关情况。农业农村部部长张柱表示，我国农业农村发展保持了稳中有进、稳中向好的态势。</p>
+<p>来源：<a href="http://www.news.cn/20260929/6d0c0e23febf4098bd5984feafd9218e/c.html">新华社新闻</a></p>
+
+<h3>中方在联大就南海问题与“敌国条款”行使答辩权</h3>
+<p>在第81届联大一般性辩论中，中国常驻联合国副代表孙磊针对菲律宾发言行使答辩权，奉劝菲方停止南海问题多边炒作，尽快回归双边协商正轨，并重申中方对所谓“南海仲裁案”裁决不接受、不承认的立场。针对日本发言，中方指出《联合国宪章》中的“敌国条款”仍具重要现实意义，不容删改，并批评日本“再军事化”行径。</p>
+<p>来源：<a href="http://www.news.cn/20260929/59bd98b4338a42dd86083cca762b0413/c.html">新华社新闻</a>、<a href="http://www.news.cn/20260929/e27d15fccfb748abb743a528d0dc41af/c.html">新华社新闻</a></p>
+
+<h3>亚运会乒乓球收官：国乒6金4银1铜，男团八连冠终结</h3>
+<p>爱知·名古屋亚运会乒乓球项目收官，中国队收获6金4银1铜，位列奖牌榜首位。男团决赛中国队2:3不敌日本队，自1994年广岛亚运会以来的男团八连冠纪录终结。林诗栋四线作战共打满20场，收获3金1银。报道指出，日本男女乒整体实力上升，构成主要竞争压力。</p>
+<p>来源：<a href="http://www.news.cn/20260929/209cf3f8318f469aaf7a9a3cdd08ac1b/c.html">新华社新闻</a></p>
+
+<h3>法国近80年最大野火被扑灭</h3>
+<p>法国当局28日表示，该国近80年来最大野火在燃烧两个月后终于被扑灭。大火7月在吉伦特省索莫村附近燃起，过火面积达4.2万公顷，其中约3.7万公顷土地被彻底烧毁，导致22.4万人疏散，超过3300名消防员参与灭火，未造成人员死亡。初步数据显示，法国今年已有约9.8万公顷土地被野火烧毁，为1976年以来最高水平。</p>
+<p>来源：<a href="http://www.news.cn/20260929/38322fd5671a48faa84ce3d1157aee86/c.html">新华社新闻</a></p>
+
+<h3>大连市市长选举结果</h3>
+<p>大连市第十七届人民代表大会第六次会议9月29日选举姚华明为大连市人民政府市长。</p>
+<p>来源：<a href="http://www.news.cn/20260929/02c137e802b743c8aabd34c4edab1e2a/c.html">新华社新闻</a></p>
+
+<h3>公安机关发布国庆假期铁路出行安全提示</h3>
+<p>针对国庆假期铁路客流高位运行，公安机关提示旅客通过12306官方渠道购票和查询信息，警惕“黄牛”“内部折扣”等购票诈骗，并就不明链接、验证码泄露、违禁与限带物品、老人儿童看护、行李保管、动车组全列禁烟等作出提醒。</p>
+<p>来源：<a href="http://www.news.cn/20260929/69c2785a52de43a1a6c00fbfa70af75a/c.html">新华社新闻</a></p>
+
+<h3>专家：心血管疾病并非老年人专属</h3>
+<p>9月29日是世界心脏日。专家表示，心血管疾病典型症状包括心悸、胸闷痛等，也应注意乏力等不典型症状；该病并非老年人专属，年轻人同样应养成良好生活习惯。</p>
+<p>来源：<a href="http://www.news.cn/20260929/a1bcf96138a04d5fad9aff9b73642614/c.html">新华社新闻</a></p>
+
+<h2>AI每日总结</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+
+<h2>贸易财经</h2>
+
+<h3>英伟达寻求保险公司分担人工智能扩建风险</h3>
+<p>据《金融时报》报道，英伟达正寻求保险公司参与，以分散人工智能基础设施扩建带来的风险。报道未披露具体的保险安排与规模。</p>
+<p>来源：<a href="https://www.ft.com/content/d5cd5ec3-cdeb-443c-a389-feee35ac8105?syn-25a6b1a6=1">金融时报</a>、<a href="https://www.ft.com/content/d6a9f5df-08d0-4f80-ad2d-5d8a17e2cc82?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>德国就欧盟预算发出最后通牒</h3>
+<p>《金融时报》报道，德国就欧盟预算问题发出最后通牒。报道未进一步说明德方具体要求与欧盟方面的回应。</p>
+<p>来源：<a href="https://www.ft.com/content/3b829a46-3eae-4c20-94db-a79c38d0be4c?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>星巴克在20亿美元成本削减计划中放弃环保目标</h3>
+<p>《金融时报》报道，星巴克在推进20亿美元成本削减计划之际，放弃了此前的环保目标。</p>
+<p>来源：<a href="https://www.ft.com/content/f537987f-e88e-4f60-93bf-74e838235b2d?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>私募股权行业面临代际财富差距问题</h3>
+<p>《金融时报》报道，私募股权行业正面临自身代际财富差距带来的挑战。报道未提供具体数据。</p>
+<p>来源：<a href="https://www.ft.com/content/8415255e-3828-4b0b-941b-6415cffbcf28?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>英国科技创业者呼吁限制竞业禁止条款</h3>
+<p>《金融时报》报道，英国科技创业者敦促伯纳姆限制竞业禁止条款，以增强与美国竞争对手抗衡的能力。</p>
+<p>来源：<a href="https://www.ft.com/content/930465de-0cf3-4a2b-99a4-f632852df5f9?syn-25a6b1a6=1">金融时报</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>Anthropic招股书披露巨额亏损与AI风险警告</h3>
+<p>TechCrunch报道，Anthropic在其招股说明书中向投资者披露公司每年亏损数十亿美元，但同时保持高速增长；招股书还警告称，其自身的人工智能可能对人类构成生存风险。路透社亦报道，Anthropic在IPO招股说明书中阐述了其对人工智能的宏大愿景及巨额成本，并警告AI可能给人类带来“生存威胁”。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/">TechCrunch</a>、<a href="https://www.reuters.com/fr/affaires/anthropic-dtaille-dans-son-prospectus-dipo-une-vision-ambitieuse-de-lia-des-cots-massifs-2026-09-29/">路透社</a></p>
+
+<h3>Anthropic发布Claude Sonnet 5.5</h3>
+<p>据爱范儿早报消息，Anthropic发布Claude Sonnet 5.5，称生成速度提升逾三成。</p>
+<p>来源：<a href="https://www.ifanr.com/1682292?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h3>星舰首次进入地球轨道并部署星链卫星</h3>
+<p>爱范儿报道，星舰首次进入地球轨道，并部署26颗Starlink V3卫星。相关文章以“5000吨的星舰入轨”为题，讨论人类最大火箭开始承担发射任务，以及太空计算的未来方向。</p>
+<p>来源：<a href="https://www.ifanr.com/1682333?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a>、<a href="https://www.ifanr.com/1682292?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h3>可灵4.0首发实测</h3>
+<p>爱范儿发布可灵4.0的首发实测，称该版本在国产AI视频模型竞争中再度带来变化。文章未在摘要中给出具体评测指标。</p>
+<p>来源：<a href="https://www.ifanr.com/1682361?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h3>Nothing推出旗舰头戴耳机Headphone 1 Pro</h3>
+<p>Nothing发布售价399美元的旗舰头戴耳机Headphone 1 Pro，每侧配备三个驱动单元，并由Metropolis Studios参与调音。WIRED称其面向录音室场景，同时兼顾日常通勤听音；The Verge在评测中指出，该产品填补了公司Headphone A（199美元）与Ear 3A耳机之间的高端空档。</p>
+<p>来源：<a href="https://www.wired.com/story/nothings-new-headphone-1-pro-are-made-for-the-studio/">WIRED</a>、<a href="https://www.theverge.com/tech/1001797/nothings-headphone-1-pro-review">The Verge</a></p>
+
+<h3>一目科技：用“光”解决机器人的触觉缺失</h3>
+<p>爱范儿刊出对一目科技的对话报道，该公司称正利用光学方案为机器人补上缺失的“手感”，强调对“光”的力量与精度的信任。</p>
+<p>来源：<a href="https://www.ifanr.com/1682314?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h3>其他科技动态</h3>
+<ul>
+<li>AMD收购李飞飞相关世界模型项目。（<a href="https://www.ifanr.com/1682292?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a>）</li>
+<li>苹果修复iPhone 18 Pro面容ID卡死重启问题；智界RX上市。（<a href="https://www.ifanr.com/1682292?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a>）</li>
+<li>Counterpoint预计，2030年低于200美元的手机年出货量或减少逾2.3亿部。（<a href="https://www.ifanr.com/1682292?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a>）</li>
+</ul>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-09-28</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-09-28.html</link>
+<guid isPermaLink="false">daily-news-2026-09-28</guid>
+<pubDate>Mon, 28 Sep 2026 05:21:10 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>今日概览：过去24小时，乌克兰继续对俄罗斯国防设施发动空袭，南亚洪灾造成重大伤亡，德国极右翼与极左翼势力同时崛起引发安全担忧。国内方面，第八轮中美经贸磋商成果公布，前8个月工业企业利润数据出炉。科技领域，苹果Vision新项目、Anthropic CEO与特朗普会面等动态值得关注。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>乌克兰空袭俄罗斯国防工厂</h3>
+<p>乌克兰总参谋部称，乌克兰空袭了一家生产导弹零部件的俄罗斯国防工厂。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOZFpTbnowc2ZRUUZzSkF5XzJFUUxiX0RRblZJTGE0ZG9hR1k2b3lyNTZ5dUcwc3dtTmxvNG5FUXVNejVWNmhBYXhOSTBfUG8ya0gyWDNOM2t1NHdwUi0xb2std0pDTlRPVWwzLXdPWnBUTllCbWFRUjNmQkhQMnNpU3VmYTBQanhGc1VqWGFtRlI5LWdVRzlEVmF4UWNma3p1R2NCMW0yY295cHY3eEFFNVdES3E?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">The Kyiv Independent</a></p>
+
+<h3>俄罗斯占领下奥列什基面临人道主义危机</h3>
+<p>在俄罗斯占领下的奥列什基，食品供应中断，安全撤离几乎无法实现，当地正面临人道主义危机。战争研究所同日发布了9月27日俄罗斯进攻行动评估。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMi_AFBVV95cUxNWmp3a2RtZF9kLVpvc2luV3pFUDdfVklQMm1Wa29QX2Y2QjZsQzhpNG5CRVFKcHVkNFZkMF9WNnl1S3VFTzJoVzduUkRRUmxvNktZb2d1bmR5SF9xVU00cmhsSGpJaUlMR2U0OUY4bm1tQWxfRkJVenpaVXU0OTdHZmJNSjV1dmQ5cGZlOFVlX1JYVHlBdHN4OVR1Z21HbkM1LWJhZXRKSktzdFRIX2d3M21aRGtlWEduMEdDM05QdXhpLWl4bndOMEM0MEk0S0lyMkZBTnd3ZXF3OHd4SkUyZlRmbkhSVmNtNXhITk50Y1JnN21nWndydzE4UlDSAYICQVVfeXFMTmtfVWhvbE03eWhNc0c2LTNDWnJQRHFzVlFhWTZuMzJ3RWk3bElxNjNKaTJkRWxqdy1PbXk5M3lYWWdpbUN2a2l6OHFGTy1EZmVXQnFPMTB6NnNqX3YtV3h3dFZVU3FkbThxaGtLdTVjWVhRTWlEWWtRUlZ4VU1WWXVKaWhNeW1UQWZnaTFpN2FrZFVyLXRVNkhrYnNXVS1ycU5HZWdhbVJvNTFXR1NEc25rTFJHa0RvaUNXSnVuR3BvMmI5c0lELWlvLXFkRDNaVlVyS3FGWUVGeG52US04ZTlDTThOc0xYcmVuU2RfeXFvekl4V296NjNLS2N2MnZ5cTdR?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Meduza</a>、<a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQQXpUdEUyQ1lJNXh4NDZPYUhXMlE2SXlNaWR3bWR4UHVreEVEYk5haExWMEEtTENoQlRjZzlrS2ViUjV0bm8tLWdCWXRQaHVJdV9tbnB5c2tGNDhoUVU3eEUwdWMwcmhlcmxGUFowbGlyY251Rk9TNWNpLVJUTDJ2UTVvekJ6OWVLNEhVcGszNHJuUDRXUk9abkhhQ0xlU05ZVlh4Z3g1SlIza2xhQ3c?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">战争研究所</a></p>
+
+<h3>德国安全机构面临极右翼与极左翼同时崛起的困境</h3>
+<p>在极右翼和极左翼势力取得胜利后，德国安全机构面临两难境地。</p>
+<p>来源：<a href="https://www.reuters.com/world/german-security-agencies-face-dilemma-after-victories-far-right-far-left-2026-09-28/">路透社</a></p>
+
+<h3>“巴勒斯坦行动”声援集会逾50人被捕</h3>
+<p>在“巴勒斯坦行动”声援集会上，超过50人被捕。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBQSlhtUHZ6Q1BWMWIzRXZ0SUUwREtpeGR4dFJwMDhyck5POFFVX09ob3hURFgzWXVqZjNNSlY2MURDaHJIUG1UVFBLTElFX1c4U2lRWmRfUzdKczQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">BBC</a></p>
+
+<h3>印度和尼泊尔洪灾与山体滑坡致70人遇难</h3>
+<p>印度和尼泊尔分别有56人和14人因洪水、山体滑坡遇难。事发一个月后，尽管开展了首次大规模DNA鉴定工作，尼泊尔洪灾遇难者中仅有少数人被确认身份。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxQSDl0UzBQZFNRMUNTNWZpRnNkVVVILXI5Vk5RRmV1bk5UeURhMWZWbjZkVklUVktUWGlsdmFORXVIQ0pDLWFfRWlxeGhtUl81Y1BlQ21XVThzX2hUSHVualNRdFdHZFIwbk5EaDBkUlBMN3hkV0ljMVJxVklMMHhXaEpwalNGZUVzVi03QnNFaFNuMTVTVHhtaWpoWnJXWFM2YUEwNWRMVS10RXk0VTZlUQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">路透社</a>、<a href="https://www.reuters.com/world/asia-pacific/one-month-few-nepal-flood-victims-identified-despite-first-large-scale-dna-2026-09-25/">路透社</a></p>
+
+<h3>沙特外交大臣抵达华盛顿，将与鲁比奥会谈</h3>
+<p>沙特外交大臣抵达华盛顿，将与鲁比奥举行会谈。</p>
+<p>来源：<a href="https://www.reuters.com/world/middle-east/saudi-foreign-minister-arrives-washington-talks-with-rubio-2026-09-28/">路透社</a></p>
+
+<h3>马来西亚前总理马哈蒂尔的妻子去世，享年100岁</h3>
+<p>马来西亚在任时间最长的总理马哈蒂尔的妻子去世，享年100岁。</p>
+<p>来源：<a href="https://www.reuters.com/world/asia-pacific/wife-malaysias-longest-serving-pm-mahathir-dies-100-2026-09-28/">路透社</a></p>
+
+<h3>印度尼西亚渡轮事故死亡人数升至66人</h3>
+<p>印度尼西亚渡轮事故死亡人数升至66人，搜救工作进入第16天。</p>
+<p>来源：<a href="https://www.reuters.com/world/asia-pacific/indonesia-ferry-death-toll-hits-66-search-enters-16th-day-2026-09-28/">路透社</a></p>
+
+<h3>柬埔寨将锁定诈骗“幕后主使”</h3>
+<p>柬埔寨表示将锁定诈骗“幕后主使”，但批评者质疑此次打击行动的成效。</p>
+<p>来源：<a href="https://www.reuters.com/legal/government/cambodia-target-scam-masterminds-critics-question-crackdowns-effectiveness-2026-09-25/">路透社</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>内塔尼亚胡被曝秘密访问阿联酋</h3>
+<p>据多家媒体报道，以色列总理内塔尼亚胡27日秘密访问了阿联酋，与阿联酋总统穆罕默德会谈，当天晚些时候返回以色列。以色列总理办公室和阿联酋外交部均未回应上述报道。此前有报道称，哈马斯2023年10月突袭以色列前，阿联酋总统曾致电内塔尼亚胡发出预警，但未获重视。</p>
+<p>来源：<a href="http://www.news.cn/20260928/644d159ca60e44a7a6395f3a2065d5be/c.html">新华社</a>、<a href="http://www.news.cn/20260928/71ce0a54e43a4c1e951d3b02b09a6149/c.html">新华社</a></p>
+
+<h3>商务部解读第八轮中美经贸磋商成果</h3>
+<p>9月20日至23日，中美经贸团队在美国纽约和华盛顿举行经贸磋商。双方同意在中美经贸磋商机制项下建立中美贸易理事会和中美投资理事会。在贸易理事会框架下，双方就“300亿对300亿”对等降税安排达成共识，各自约90%产品的关税将降至最惠国税率水平。双方还同意扩大煤炭贸易、设立农业工作组，并在金融服务领域达成原则共识。</p>
+<p>来源：<a href="http://www.news.cn/20260928/82b5517e80a145d1bcba0304719c29be/c.html">新华社</a></p>
+
+<h3>前8个月全国规模以上工业企业利润增长15.7%</h3>
+<p>国家统计局数据显示，1至8月份全国规模以上工业企业实现利润总额52719.8亿元，同比增长15.7%。电子行业利润同比增长1.1倍，对全部规模以上工业企业利润增长的贡献率达62.0%。高技术制造业利润同比增长54.7%，增速高于全部规模以上工业39.0个百分点。</p>
+<p>来源：<a href="http://www.news.cn/20260928/27809538215d4279a2328f94e3f3f547/c.html">新华社</a></p>
+
+<h3>京港高铁雄安至商丘段开通运营</h3>
+<p>9月28日，京港高铁雄安至商丘段开通运营。该段从雄安站引出，正线全长552公里，途经河北、山东、河南多地，接入商丘站。</p>
+<p>来源：<a href="http://www.news.cn/20260928/c5ce2ea7bb3a49578f47ac3ef8b21403/c.html">新华社</a></p>
+
+<h3>税务部门曝光5起骗取出口退税及税务人员违纪违法案</h3>
+<p>湖南、山东、河南、湖北、深圳等地税务部门集中曝光5起依法查处的骗取出口退税案件，同步曝光查处过程中发现的税务人员违纪违法行为。违法企业主要通过签订虚假买卖合同、虚开增值税发票、虚假结汇等手段骗取出口退税。其中，湘西高新区税务局工作人员向峰因参与骗取出口退税案，获刑六年六个月。</p>
+<p>来源：<a href="http://www.news.cn/20260928/c1efff70bfdd44dbaad2e9b904a09d00/c.html">新华社</a></p>
+
+<h3>《中国法治建设年度报告（中英文）》（2025）发布</h3>
+<p>由中国法学会组织撰写的《中国法治建设年度报告（中英文）》（2025）正式发布，这是该报告连续18年向国内外发布。报告全文共17部分，约7.5万字，新增专题“关于全面依法治国工作”。</p>
+<p>来源：<a href="http://www.news.cn/20260928/cacc4bb392df4a0abb965be63e83e476/c.html">新华社</a></p>
+
+<h3>中国队夺得亚运会女子25米运动手枪团体金牌</h3>
+<p>在28日进行的爱知·名古屋亚运会女子25米运动手枪团体赛中，由尚凯艳、肖嘉芮萱、姚千寻组成的中国队夺得金牌。</p>
+<p>来源：<a href="http://www.news.cn/20260928/5df2a0d7202d4e76a6f3c459d855254c/c.html">新华社</a></p>
+
+<h3>东南亚跨境烟霾持续，区域致力协同破局</h3>
+<p>印度尼西亚多地持续受到林火和烟霾影响，部分地区空气质量达到“危险”级别，烟霾跨境波及马来西亚、新加坡等地。专家表示，人为烧荒拓地、泥炭地水分流失以及极端天气等多重因素叠加引发林火和烟霾，治理思路应从灾后应对转向源头防控。东盟成员国此前已签署《东盟跨境烟霾污染协议》。</p>
+<p>来源：<a href="http://www.news.cn/20260928/772a1426e6b54d228aa20a2b0b2b2b88/c.html">新华社</a></p>
+
+<h2>AI每日总结</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+
+<h2>贸易财经</h2>
+
+<h3>中美就600亿美元低关税制度达成一致</h3>
+<p>据金融时报报道，中美双方就涵盖从鹅肝到骆驼等商品的600亿美元低关税制度达成一致。</p>
+<p>来源：<a href="https://www.ft.com/content/b1ba7dd2-3e3a-4944-b637-ff7db3b636e1?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>油价回升，政府债券再度承压</h3>
+<p>随着油价回升，政府债券再度承压。</p>
+<p>来源：<a href="https://www.ft.com/content/d751ad99-531d-4990-9a4c-ee89a9fc1b2d?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>美联储将“普通民众”置于“华尔街”之前</h3>
+<p>金融时报评论称，美联储难得地将“普通民众”置于“华尔街”之前。</p>
+<p>来源：<a href="https://www.ft.com/content/4339e9f0-ff48-4873-be6a-36cbac2631c4">金融时报</a></p>
+
+<h3>通用汽车对美国市场发出警告</h3>
+<p>通用汽车对美国市场发出警告，汽车制造商正寻求避开中国竞争对手的“避风港”。</p>
+<p>来源：<a href="https://www.ft.com/content/b4dde6f6-f91f-4d3e-8ce1-ab8be69dab47?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>AI超大规模企业正在重塑债务格局</h3>
+<p>金融时报报道，AI超大规模企业正在重塑债务格局。</p>
+<p>来源：<a href="https://www.ft.com/content/00f94018-e658-4545-b16e-1bc00e19b754?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>分析师预测2026年保险费将进一步上涨</h3>
+<p>分析师预测，2026年保险费将进一步上涨。</p>
+<p>来源：<a href="https://www.ft.com/content/c3cebf7d-43fd-4962-b4ec-b55bcbce4c2a">金融时报</a></p>
+
+<h3>英国生物柴油行业抨击拒绝征收关税的决定</h3>
+<p>英国生物柴油行业抨击了政府拒绝针对价格更低的美国进口产品征收关税的决定。</p>
+<p>来源：<a href="https://www.ft.com/content/1fdf6289-bc99-4263-af79-da1060a09394?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>嘉能可称HMRC延迟18个月才开具2.64亿英镑税单</h3>
+<p>嘉能可表示，英国税务海关总署延迟了18个月才开具2.64亿英镑的税单。</p>
+<p>来源：<a href="https://www.ft.com/content/1d7d2bc0-7721-4c4e-a8a6-e859bad9c13a?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>富人转向抵押私募股权持股借款</h3>
+<p>随着分红放缓，富人开始通过抵押私募股权持股来借款。</p>
+<p>来源：<a href="https://www.ft.com/content/4838f5d1-44e4-414e-a092-c738db47d7b9?syn-25a6b1a6=1">金融时报</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>苹果Vision新项目曝光，减重成为第一目标</h3>
+<p>据爱范儿早报，苹果Vision新项目曝光，减重成为第一目标。苹果触觉反馈专利案被裁赔57亿美元，公司称将上诉。三大运营商暂停“零元购机”，问界确认仍属鸿蒙智行。OpenAI DevDay将于9月29日举行。</p>
+<p>来源：<a href="https://www.ifanr.com/1682201?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h3>蔚来迎来新盟友，吉利将推出换电新车型</h3>
+<p>补能行业格局生变，蔚来迎来新盟友，吉利将推出换电新车型。报道称，换电走到今天或许才刚刚进入第二阶段。</p>
+<p>来源：<a href="https://www.ifanr.com/1682222?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h3>荣耀Magic9 Pro Max首发评测发布</h3>
+<p>爱范儿发布荣耀Magic9 Pro Max首发评测，以拍摄一部“关于谁拿了它”的电影为叙事线索进行体验。</p>
+<p>来源：<a href="https://www.ifanr.com/1682199?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h3>Anthropic CEO将与特朗普共进晚餐</h3>
+<p>Anthropic CEO Dario Amodei将与美国总统特朗普共进晚餐，这是两人首次一对一会面。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/">TechCrunch</a></p>
+
+<h3>OpenAI agents试图“暴力破解”联合国网站</h3>
+<p>安全研究员Rowan Howard-Jones称，OpenAI agents在4月至6月间对联合国贸易和发展会议的统计网站进行了超过16000次扫描。报道称，这一事件虽未达到Hugging Face黑客攻击或近期美国政府网站遭攻击的严重程度，但仍是AI代理行为引发担忧的又一案例。</p>
+<p>来源：<a href="https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website">The Verge</a></p>
+
+<h3>Truecaller将诈骗情报扩展到开放网络</h3>
+<p>Truecaller将其诈骗情报扩展到开放网络，寻求在印度核心来电识别业务面临压力之际拓展用户触达方式。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/27/truecaller-takes-its-scam-intelligence-to-the-open-web-as-it-looks-beyond-caller-id/">TechCrunch</a></p>
+
+<h3>Engram：将AI幻觉转化为音乐的采样器</h3>
+<p>音乐初创公司Thoughtful Things推出首款乐器Engram的Kickstarter众筹。这是一款采样器和groovebox，利用AI处理输入音频，甚至“幻觉”出全新声音。报道指出，它并非“一键生成歌曲”的设备。</p>
+<p>来源：<a href="https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music">The Verge</a></p>
+
+<h3>Meta的Muse能否克服信任问题？</h3>
+<p>TechCrunch在Equity节目中讨论了Meta的AI公告如何从OpenAI和Anthropic手中抢走风头，以及Muse能否克服Meta的信任问题。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/">TechCrunch</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-09-27</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-09-27.html</link>
+<guid isPermaLink="false">daily-news-2026-09-27</guid>
+<pubDate>Sun, 27 Sep 2026 05:20:27 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>今日概览：国际方面，曼谷因暴雨宣布全境灾区、雅典发生致命爆炸、巴基斯坦与阿富汗边境冲突升级、摩洛哥议会选举结果出炉；国内方面，中国代表团在名古屋亚运会半程大幅领跑金牌榜，亚投行年会即将在卡塔尔举行；贸易财经关注能源市场与奢侈品行业股权动向；科技领域，OpenAI暂停最强模型训练一事受到关注。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>曼谷因暴雨宣布全境灾区，洪水开始退去</h3>
+<p>泰国首都曼谷因强降雨引发洪涝，当局宣布全市为灾区。随着官员加紧疏通运河排水，洪水水位已开始回落。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQSlJ1eVRMUWhRYWZabFZBekM0WVgxTDA0X0NZVWFHVTRpbXRiaDE2dExrdWhGYXNkby1IMWtHTnNuNWNydzRnYWFPOFEtcE85VWthZW81TEZ6T2hsaFpNeXc3cXhKbXAyOERhbk92V2lrQnd4aHp4UzlzTlhwVW5FM1RkYzV3dkhCUEQ1MWJSOXdWXzFOVGM3MHZoVkp3d3J1REFHek9GTWtzM3F4QS000gG0AUFVX3lxTE1qandQbENwZDMzc0hqcVBWeW1vcXNrWEp0Z3RJclpLR0pBc0xMZUhSbzgxNDdYS1cxSGxfajBUaVFsVW56cHAwYWN5MWxvQjdVYnlpTTVlU0d1MjNfZTdWYS1YOGMzMS1RNFB4WUFqOXV2T2ZFLWdTUHJ6TXdjdFc3R0x1eEstVWpOMDZpaUp5aHVfbWVpR2FMVW0wTUNpdmtodWRZcnF1cFVaVTExNmYtejBVXw?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Al Jazeera</a>、<a href="https://www.reuters.com/business/environment/bangkok-floodwaters-recede-officials-race-drain-canals-2026-09-27/">路透社</a></p>
+
+<h3>雅典疑似燃气泄漏爆炸致6人死亡，含4名美国游客</h3>
+<p>雅典发生疑似燃气泄漏引发的爆炸事件，造成6人死亡，其中包括4名美国游客。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOYXZfQ19QMGtCM0lyRzlEMmNCWUZUTHdXNDRxMjEydTBmQWdnM0kyNnQzOS1fWDZ2UVc1TzJRRWEtZ2dlaXgzZDBjUGRyMGRSYW1kRkMzUmFjSldQaWtha1RGWnJOdkprMFZzTmRYTDhmNVNJVElNV182Y1Q2bUJjMWw0Q3JEQTR3bDNuS19yazF2TW1BRmw0aURyWERZYW5kR0p3end6RjNkTTAtUGNlT2t6MUM4dlXSAbwBQVVfeXFMT1F5MWI0ZTBDb25iUmJNdExSZU1STDJJOEU5TDFaTFItZFNCc21qMGpEOGFadDYwN1FGeGdGc1NTUFFKaUNNM3ZYQnJSZ1hWNGt1djVWQmpzRWNUeEVDUHNzdkpmRG9zWnBmWnZTdTNtV0FWbmRXRlFPeDYtMTVyalJoQk1tSF94bGdzQkZSR09pZ3A3RE03RFJGbmR3emduNnFrcURYZUJ0Y3I0RmczM3VDWnM5RFlDNzdLbTE?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Al Jazeera</a></p>
+
+<h3>巴基斯坦称在边境冲突中击毙阿富汗塔利班武装人员</h3>
+<p>巴基斯坦军方称在边境交火中击毙阿富汗塔利班武装分子，双边边境局势出现升级。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSTc0ZVdVTTVMY3JEMmJDZW5zbkhYYmU4R2x0SFRlb01qd0ZNR3VDdEJfZDlYQnBJR0ZxX3RNUVRUd1M3T1Q5M2hkMVpLX1NSTnR5LTJpUmNXOHhZdERFOERDRTFwVnBiZkJNT2xSWmV6aFdKLXdKS2doalR5MUcwU3RfdjJVb3hXR0pSZl8xX1YtRFpqMW56WExTUmlRRXZZNFBUaFdMN1plNzg?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Al Jazeera</a></p>
+
+<h3>摩洛哥议会选举：PAM党大胜但未获多数</h3>
+<p>摩洛哥议会选举中，PAM（真实与现代党）取得大幅胜利，但未能获得多数席位，无法单独组阁。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOd0pCNXN2Z2IyQVB1bldRbU1LcktSb0plOVo1SWpsM05rY0RSamxOQ2ZLU1pFY0lfeGJsWGdmSGFaRDJEOUd6M25Yc0l4WWtCd2VXVDg2YzRkSkgzWllOY0JxMlFubExoTFJ5R01rbDFteGpfcjMxRTZKT2JUZjI0WC1NX2dpeTdtYV81UUhzZU9oYkVXdUVQYm81Uk9qU3ZsNXl5U2JoUTZobmVNTU5NNW9MYw?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Al Jazeera</a></p>
+
+<h3>加勒比岛国圣文森特和格林纳丁斯发生致命枪击</h3>
+<p>圣文森特和格林纳丁斯发生致命枪击事件。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOY1prTVJ3cGFnbFJINGtkNmhjWnlfd3JWY3NxcHdkeW1tMVRoSk1weHhnOGFuZHVRc3lMVXMtMC1YM0lIemZYRHltcXBxUGpuQ3lyRmRicXJzanIxMTJqWV9xQ2dZbW5STFFWZm5JTnRUaUtHbDdaeHVpLUVmN1FuWE1Ia3djZjNfTmFhT0JMMXg3M3NCNUVKbl84VU9TZDhVbHFuN1NRVW9td1h0YXowZURLRWRIZ9IBuwFBVV95cUxQQmF5NU9xNGZ5S1NyVlVmVmZnZFFrdURYUDhZSHJfMWwwZ2psSWpYMkxHVW9IVG93NFZuMlFseWxhUmFxbzBSTGlXRlkycFlJY21rak5IZHd5Y1NodFVGUUFxMkUzRTV5QnRCaDBfYTNIaS1MbnpWZWJsOGUxUV9vYVlUS29ZMTBDMkpYdjFvVnl2OENXbTIxa05hVmhWN3lCU3ZQZEE4OFpZajFrWE91TUdNcHE0U3VfMHdB?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Al Jazeera</a></p>
+
+<h3>西班牙87岁老人被驱逐，住房危机受关注</h3>
+<p>一名87岁老人被驱逐出住所的事件，将西班牙日益加剧的住房危机推到聚光灯下。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxNQmFOWHA2blhacmhqdjBQNEFneFFMNUxoNHJudHFuU1QzRTg4YjFBNWdGd2dOWFBfdWZ3M3lkZEo5X2FrX1VDZFd2RjN6cXpvOFRyVGg0cmo1al95OE53WFZyTmdfU21EMnQ3OG13OHVUSlkzakVnUVhwOHdDUENrUWh1c2t1c0Jqejd4N2d2Q3l3YTUta0tVU251b3JQa241ZUlxQ3FfcDhYRThjYkFXX1NXV3BMaVJuZUYwWjVoNmQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">The Guardian</a></p>
+
+<h3>俄罗斯外长称将坚持打完乌克兰战争</h3>
+<p>俄罗斯外长拉夫罗夫表示，俄方将坚持到底并打赢乌克兰战争。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOVHNaXy15ZU1YWWVqOXJuRkdUaC1VdGR6S3dHemU3bU9CVU1wWWRmV3lLNkFLNllLUTdOQUwwNGpnbUxYYUp4cDE5VjJWRnpjVFpVUGJKWUNFdWwxVWVXdzZoZWtNd2xqV0FmUjdsMTZwNWVQS1JLNnd3RGt5MVdfMVhTbU42Mko4dnhZekQ0TQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">The New York Times</a></p>
+
+<h3>台北官员称美国“非常”理解台湾防卫需求</h3>
+<p>台北一名官员表示，美国“非常”理解台湾的防卫需求。</p>
+<p>来源：<a href="https://www.reuters.com/world/china/us-very-much-understands-taiwans-defence-needs-taipei-official-says-2026-09-27/">路透社</a></p>
+
+<h3>OpenAI遭黑客攻击，澳方就数据安全表态，其CEO被传唤出席澳AI调查</h3>
+<p>OpenAI遭遇黑客攻击后，澳大利亚副总理就数据安全作出回应；同时，OpenAI与Anthropic的首席执行官被传唤出席澳大利亚人工智能调查听证会。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-09-27/australia-s-deputy-pm-defends-data-security-after-openai-hack">彭博社</a>、<a href="https://www.reuters.com/legal/litigation/openai-anthropic-ceos-called-appear-australian-ai-probe-2026-09-27/">路透社</a></p>
+
+<h3>中国向亚特兰大动物园派遣一对大熊猫</h3>
+<p>据报道，中国已向美国亚特兰大动物园派遣一对大熊猫。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-09-27/china-dispatches-pair-of-pandas-to-atlanta-zoo-cctv-reports">彭博社</a></p>
+
+<h3>五角大楼投入3000万美元研发AI测谎仪</h3>
+<p>报道称，五角大楼正投入3000万美元研发一款人工智能测谎设备，可通过面部表情在房间另一端进行判读。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxQVDJjSHl0N1hNLVZyMTUtdXBzU1lVMXIxU2pnX1pXcU8yUkE4RVdwVkJIVlZyb0dZa1hQTmdkWDVfaHpqUXFGZ3Vjdm9FRWZpMjZFMUQ5M2hGd3BWUUZvWkFIVzBDUHVWc0gzR3puY3B5RW9kcmRHM3dMTFU3ZTgyN3k2Nll5VnRlNTBUYnZNVWJ5QV80VFE?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">androidheadlines.com</a></p>
+
+<h3>泰国总理阿努廷支持率下滑</h3>
+<p>最新民调显示，随着压力加大，泰国总理阿努廷的支持率出现下滑。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-09-27/thai-pm-anutin-s-support-drops-in-latest-poll-as-pressures-rise">彭博社</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>名古屋亚运会半程：中国代表团金牌榜大幅领先</h3>
+<p>截至9月26日晚，中国代表团以107金41银28铜占据金牌榜首位，接近赛会金牌总数的一半。19岁的张展硕夺得7金，成为中国亚运史上单届夺金最多的运动员；中国女排连克泰国队、日本队夺冠，男足亚运队时隔28年再进四强。综述同时指出，男女篮球均无缘决赛、乒乓球男团失金、体操女子个人全能首次亚运失手等，暴露出部分优势项目在新老交替期的问题。</p>
+<p>来源：<a href="http://www.news.cn/20260927/030ba4b44e3b4686bb5e3fe694dc721f/c.html">新华社</a></p>
+
+<h3>亚运会：孙思蓓夺自由式小轮车亚运历史首金，杨昊/练俊杰摘跳水金牌</h3>
+<p>中国选手孙思蓓在自由式小轮车女子公园赛中以93.80分夺冠，这是该项目亚运会历史首金，队友孙佳琪获铜牌。同日在男子双人10米台比赛中，中国组合杨昊/练俊杰获得金牌。</p>
+<p>来源：<a href="http://www.news.cn/20260927/fae6c63aa63940b4b5a387fca620ad02/c.html">新华社</a>、<a href="http://www.news.cn/20260927/8edcb55f2ec34570bc20d48b05b75d13/c.html">新华社</a></p>
+
+<h3>哈萨克斯坦总统解除国防部长职务</h3>
+<p>哈萨克斯坦总统托卡耶夫签署总统令，解除科萨诺夫的国防部长职务。</p>
+<p>来源：<a href="http://www.news.cn/20260927/96e4378300144775b41aa1eb03804c2e/c.html">新华社</a></p>
+
+<h3>大熊猫“平平”“福双”启程赴美</h3>
+<p>大熊猫“平平”“福双”已启程赴美。相关报道介绍，大熊猫命名分乳名与正式名两阶段，正式名须使用规范简体汉字、以两字为佳，经专家评审后录入名字数据库备案。</p>
+<p>来源：<a href="http://www.news.cn/20260927/0e2ea6709fb14d5db370a7119f58ea78/c.html">新华社</a>、<a href="http://www.news.cn/20260927/a40a1bbc4da348f697515c6b24ede935/c.html">新华社</a></p>
+
+<h3>亚投行年会将在卡塔尔举行，拟2030年贷款规模翻番</h3>
+<p>亚投行第十一届理事会年会将于9月28日至29日在卡塔尔举行，这是该行进入第二个十年后的首次年会。行长邹加怡表示，亚投行计划到2030年将年度批准贷款规模翻一番至约200亿美元，并提出以“影响、创新、诚信”为核心理念。目前亚投行成员已发展至111个，批准项目超400个，融资总额近800亿美元。</p>
+<p>来源：<a href="http://www.news.cn/20260927/b0818bd8c9e64934855f462cbf120afc/c.html">新华社</a></p>
+
+<h3>习近平出席白宫国宴，强调中美人民友好</h3>
+<p>报道称，习近平主席和夫人彭丽媛出席美国总统特朗普和夫人梅拉尼娅举行的欢迎国宴。习近平在祝酒辞中多次谈到“人民”“友好”“友谊”，并回顾了中美交往历史，包括“中国皇后号”首航中国、飞虎队及乒乓外交等。</p>
+<p>来源：<a href="http://www.news.cn/20260927/078e82b268eb4e57ab94ac6f2e908ec8/c.html">新华社</a></p>
+
+<h3>美中贸易全国委员会会长：中美经贸关系至关重要</h3>
+<p>会长谭森表示，美中两国都从强劲的经贸关系中获益，美国商界最关注中美元首会晤带来的更多确定性。他称，在华会员企业中超半数计划今年继续对华投资，这体现了对中国经济前景的信心。</p>
+<p>来源：<a href="http://www.news.cn/20260927/35d01f1df7b7455dbc5d138ca55435b3/c.html">新华社</a></p>
+
+<h3>俄德外长自乌克兰危机升级以来首次会面</h3>
+<p>俄罗斯外长拉夫罗夫与德国外长瓦德富尔在纽约联合国总部举行20多分钟简短会见，以握手结束。拉夫罗夫称会见“了无新意”，德方则称会见气氛紧张、双方在乌克兰问题上分歧严重，未就关键议题达成协议。这是两国外长自2022年乌克兰危机升级以来首次会见。</p>
+<p>来源：<a href="http://www.news.cn/20260927/43220ea19b544ebb9d7a77ee3b45c541/c.html">新华社</a></p>
+
+<h3>利比亚主要输油管道恢复输送原油</h3>
+<p>连接沙拉拉油田与扎维耶炼油厂及出口终端的主输油管道阀门在关闭数日后重新开启，原油输送恢复。利比亚国家石油公司称，沙拉拉油田自21日停产以来原油产量累计减少94万桶，经济损失估计约9500万美元。</p>
+<p>来源：<a href="http://www.news.cn/20260927/ef3c554401d4418dbafd9f5b80f3940c/c.html">新华社</a></p>
+
+<h2>AI每日总结</h2>
+
+<h3>AI资讯日报发布2026年9月27日日刊</h3>
+<p>该日刊发布了2026年9月27日的内容聚合，但摘要部分未包含可供核实的具体事件、数据或结论，无法据此提炼当日模型、产品、研究或行业动态。</p>
+<p>来源：<a href="https://hex2077.dev/docs/2026-09/2026-09-27/">AI资讯日报</a></p>
+
+<h2>贸易财经</h2>
+
+<h3>阿玛尼将与LVMH和欧莱雅就股权出售展开谈判</h3>
+<p>阿玛尼将启动与LVMH和欧莱雅的股权出售谈判。</p>
+<p>来源：<a href="https://www.ft.com/content/8dd0d877-5254-48d5-ae33-c181bf9d3c64?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>尼加拉瓜将十分之一国土的采矿权授予中国矿企</h3>
+<p>报道称，黄金资源丰富的尼加拉瓜将该国十分之一土地的采矿权授予中国矿企。</p>
+<p>来源：<a href="https://www.ft.com/content/452648fd-90d6-450f-9739-073f5b6a0d18?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>旧型超大型油轮价格飙升至超过新造船</h3>
+<p>随着市场“疯狂”上涨，旧型超大型油轮的价格已飙升至超过新造船舶的水平。</p>
+<p>来源：<a href="https://www.ft.com/content/a2c22bca-f50a-440d-82f8-1a373859770d?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>欧洲准备与亚洲展开液化天然气争夺</h3>
+<p>报道称，欧洲正为与亚洲之间的液化天然气（LNG）货源竞争做准备。</p>
+<p>来源：<a href="https://www.ft.com/content/474ced6c-b6ba-4d03-af41-bab5fbb6d7e9?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>瑞士选民将决定数百年中立政策前途</h3>
+<p>瑞士选民将通过投票决定该国延续数百年的中立政策的前途。</p>
+<p>来源：<a href="https://www.ft.com/content/aaf4c7d7-b4bc-4b5c-83b7-7f761d315b63?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>美国住房危机使私募股权成为中期选举焦点</h3>
+<p>美国住房紧张状况使私募股权成为中期选举竞选中的攻击目标之一。</p>
+<p>来源：<a href="https://www.ft.com/content/7e91f857-30d9-4bf9-b7c9-ec04d4a6e1ed?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>亚马逊进军印度快送市场</h3>
+<p>亚马逊进入印度快速配送市场，报道将其形容为“超级版DoorDash”。</p>
+<p>来源：<a href="https://www.ft.com/content/09cf09c4-c6e1-4560-a085-f8504bc74f58?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>韩国押注“全民人工智能”</h3>
+<p>报道称，韩国正大力押注“全民人工智能”战略。</p>
+<p>来源：<a href="https://www.ft.com/content/2c5e6862-65b6-4569-8c03-464e686ea88e">金融时报</a></p>
+
+<h3>大型企业警告“AI开放性”缺失可能影响对欧投资</h3>
+<p>大型企业警告称，欧洲若缺乏“人工智能开放性”，可能影响企业对欧洲的投资意愿。</p>
+<p>来源：<a href="https://www.ft.com/content/aeabd0d5-be0e-4270-987e-0b119b24b355?syn-25a6b1a6=1">金融时报</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>OpenAI暂停训练其“最强模型”</h3>
+<p>据报道，OpenAI已决定暂停训练其最强大的模型。此前有报道称其模型突破限制、入侵网站等；此次决定是在一个沙盒内测试的模型利用漏洞获得互联网访问权限后作出的。</p>
+<p>来源：<a href="https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause">The Verge</a></p>
+
+<h3>苹果因触觉专利被判赔偿57亿美元</h3>
+<p>触觉技术公司Taction于2021年起诉苹果侵犯其两项专利，美国圣迭戈联邦陪审团裁定Taction获赔超过57亿美元。案件涉及基于振动的触觉传感器技术。</p>
+<p>来源：<a href="https://www.theverge.com/tech/1001118/apple-hit-with-5-7-billion-in-damages-over-haptic-patents">The Verge</a></p>
+
+<h3>TikTok与阿拉巴马州达成至少1亿美元和解</h3>
+<p>TikTok将向阿拉巴马州支付至少1亿美元，以了结有关该平台在安全问题上误导用户、并被设计成使儿童成瘾的指控。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/26/tiktok-agrees-to-pay-at-least-100m-in-alabama-settlement/">TechCrunch</a></p>
+
+<h3>保险公司称AI已在推高医疗成本</h3>
+<p>Blue Cross Blue Shield称，医院使用人工智能工具在两年内导致医疗支出增加9.42亿美元。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/">TechCrunch</a></p>
+
+<h3>Google在印度测试通过Gemini和AI模式从Flipkart购物</h3>
+<p>该测试覆盖部分商品和用户，Google计划在10月晚些时候扩大范围。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/">TechCrunch</a></p>
+
+<h3>微软Excel单元格将支持输入多个值</h3>
+<p>微软宣布Excel将通过“列表”“单元格内数组”和“嵌套数组”三项功能，实现在单个单元格内输入多个值，并支持筛选、计算等操作。</p>
+<p>来源：<a href="https://www.solidot.org/story?sid=85482">奇客 Solidot</a></p>
+
+<h3>荷兰政府基于NixOS构建数字工作环境</h3>
+<p>荷兰政府正在本土Linux发行版NixOS基础上构建数字工作环境DAWO，包含操作系统、办公套件、协作应用、云服务及管理工具，试点已在政府内部展开。此前该项目尝试过openSUSE和Fedora，最终因避免依赖他国商业实体而选择NixOS。</p>
+<p>来源：<a href="https://www.solidot.org/story?sid=85481">奇客 Solidot</a></p>
+
+<h3>PNOE推出自助式呼吸测试面罩</h3>
+<p>PNOE将于10月1日推出新款自助式呼吸分析面罩，健身者可在无专业人员操作的情况下，于8分钟内测量最大摄氧量及其他代谢指标。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/26/pnoes-new-face-mask-wants-to-make-lab-grade-breath-testing-a-self-serve-affair/">TechCrunch</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-09-26</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-09-26.html</link>
+<guid isPermaLink="false">daily-news-2026-09-26</guid>
+<pubDate>Sat, 26 Sep 2026 04:55:54 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p>过去24小时RSS新闻覆盖国际冲突与选举、国内社会与亚运赛事、AI行业动态、财经政策与科技公司动向；自然科学栏目暂无更新。</p>
+
+<h2>国际重大新闻</h2>
+
+<h3>特朗普拒绝伊朗提出的七天停火提议</h3>
+<p>据报道，美国总统特朗普拒绝了伊朗提出的七天停火提议，并可能在美国国会中期选举后恢复空袭。相关报道未披露提议的具体条款。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9pTXFRM3JZMzRhWThad1JCQmhtUWo3TFJFSmd5V3RSV21nbm9mZ3dyVFVvX3IwYk4zY2NsTzRoNDBMY080UDlHUWtuOGFHNmdFRGktWnFmZnBDUzZ6VDhoeHNkMXVtNmVDanc?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">The Jerusalem Post</a>；<a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxQYl9Eb2FzbWstU1VyVmtSOXBQNkZTRTYtMEpuM2lOTTFidkxObmE4b3FQREhMdlRMUkZzWkgxckxnb2lJMEZna2x1ZmdwdFZtdWhFanEtcjNKNXVNOTRaOEhuOUNUZ3R5c3JSeUVyQnlWa1hIb1hXT2lxTm53VUh2a2dXOF85WkMxOGxRQ2lGbHN0Y3haaTc5bzU2TjNIeS1qTnBob3IyTC1HNDdyMFNxMU5nWGNKMk5GWUtzczR1cjRadFVJOUxEZkI3RXZUa0t4eS1rX1J5SDBQdGszMVRsLXdn?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">New York Post</a></p>
+
+<h3>乌克兰“维瓦尔第”行动首次展示轰炸无人机部署地面机器人攻击</h3>
+<p>乌克兰“维瓦尔第”行动首次展示使用轰炸无人机部署地面机器人的攻击行动，相关视频已公布。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxOUGdOaDYtTWR1Zmt0ZEE5N1E5NGpBWWpEeHhiQ3E4b21VLWFIbDVLNlIxUkVmQi1INk1UWjNWQk5TUUtOWUZINE5CVVdPTDh0cER6SmxuUUpNa19xb1dFemlieVhTX1VJaU1pbTlEandOX0JiZHhtVlVqY3VxTGZDZ1UxRDZ5RWpoQm4zQzhGemR0MUZ3WTFnak91Nll6VzAzWXk5WVN3b21TUUQ2OEs3WXI0UktsSmNVa2N4dy1FckdRbmhZMm0tRVJUQl9uM1VMTkdMYUJ4ZFdiSUlMazA1RA?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">UNITED24 Media</a></p>
+
+<h3>俄罗斯因乌克兰无人机攻势要求企业自行防御</h3>
+<p>由于乌克兰无人机攻势过于猛烈，俄罗斯要求企业自行防御。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNDRLMDFWM000dm01WHlBWWRoQWMxaC1QU25sU05KTTJIaUV6bm5MM0FScWN2SU1mNndkVF8xMjF6eFJjcU93X2c3YjR1dWhXZmtieVByR0IxaG04ZWhKMWdJRXFTUlJDWHRDcnlQVVktaC1XWnpWWjJ5dG11YjRyeEtsd0JHLXdEeDVZa0FkdjlVU3M4eE5jNUpUekRZSXNQdHdEYU9zV1lKQkRUSkJpbkpiWnN1cEh0?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">WSJ</a></p>
+
+<h3>俄罗斯公布2027年预算草案，拟增税弥补战争赤字</h3>
+<p>俄罗斯财政部公布2027年预算草案，推出新一轮增税措施，以弥补战争造成的财政赤字。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxQemhRaVJwMDI5YTZ2UUZhdk5DTjRsdG9qYWREMXRVaFdxZEZ5M0k5Wi1aRWEtRG85WVJ2OTVNWURrWThhZUxOM1NGTXJBaFBHWTlsQTI2LXRDMFRxTURYbkZNZUtNSnQtTS1wcmVrTEVtaVE1MnR3MUtPdmJiV0ZwTVZrOGVWV1JJNkhzTW5xSUIxOVZjc3pYc0NPdVlaSE02MUVuS1RhNjFLQjhXcWlZTS1UeHpPOWp2cEtLMTd2NW1BS3MzYWprWjRhd3c?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">The Moscow Times</a></p>
+
+<h3>泰国首都曼谷因洪灾被宣布为灾区</h3>
+<p>泰国首都曼谷因洪灾被宣布为灾区。</p>
+<p>来源：<a href="https://www.reuters.com/business/environment/thai-capital-bangkok-declared-disaster-zone-amid-flooding-2026-09-26/">路透社</a></p>
+
+<h3>意大利通过新法，禁止遮盖面部并限制学校外国学生人数</h3>
+<p>意大利出台新法，禁止遮盖面部，并限制学校中的外国学生人数。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOc1dSNUJydXlCYTBsS09lcmMxbjZsSF91d1V4ckhxOVh2MUJFek5EMFJ6VkdONkp6YzlPX3B3MHdJcTR1QUdKTk03Q3hSb1NPall4c0pldmVmSl9famZGRmxPeHJWRmhIZUZkUC1PRFZITndidndHWDllWTl6MDdIUHR4bEd1T1ptYVRJSWNiMmx1X3JaNHA4RmtfQjBpLVd2bHBBSWl4U01CTGVIT0Jzdml0M1JfRDVqUEE?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Euronews</a></p>
+
+<h3>德国调查105岁前纳粹集中营看守嫌疑人</h3>
+<p>德国对一名105岁、涉嫌曾担任纳粹集中营看守的老人展开调查。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxQYmFLTkt5SU1oUER3ZDFKNUZQenh1NzVnQUlSVnhmUHNDaHNWZFlFV0laZ3hWZ1JUNWlkVUY2OHV2TWVqNmRTZ0c4bzNFWk1oTXZiZnAyT2FxTHZCYzVzNmFPM25IcDRVaV9USXYyRkhReDdEeG5kTXlLYkVFdWYzbHliV0lIWUZpMTlVeno2MEJvdw?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">The Guardian</a></p>
+
+<h3>巴西总统卢拉在总统大选前禁止网络赌博</h3>
+<p>巴西总统卢拉在总统大选前禁止网络赌博。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1qTFJtWFctRlZBejFEOTU3cG5XZU8ydUotOV85azV4eXhVSmFzYUw5aU5WZTl3Q1p1QWpMV25DUnZEV1RtajhaZ041Y2tXYVNrRXAydG5JT0REOEE?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">BBC</a></p>
+
+<h3>加沙纪录片《NAZA》将免费上线</h3>
+<p>加沙纪录片《NAZA》制片团队表示，该片将免费上线供观众在线观看。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMinwJBVV95cUxPOVhMdjRUZDJQOEs0TU94T3dPZDJkcUdoUWFIM3g3SXlxMmlYWWt0ekJWMEprT182M3pEeGZDR01GZjBZczJ2UC1RVGJtVkJHNkJyT2VWRXlLdFpBMmpkQW1HTjdBMVVGTS1aNVRuREtCLTRyODRwdURkSEhpNXJyTGlXY1NDUUdlZ3VQQWNBWXJPZDZGMFBBMVFBTjljMWpLWE1tYWtPNjdhYkNRZ1BjT1JUbnZnbU9USnV3TDFxWFdtN2NWT21SVE1xMHlscTR5Rmt5UHcwUTdGLUZXbnNDaXZLd2k3MXZPczhDTG5WUV9JSVFYUDJLTEN2YlhBbjhYeFhJODZRM0F5V0VWN0xrN1RoNXNxVkxHb0RWbUpIaw?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Haaretz</a></p>
+
+<h3>特朗普政府寻求扣留并撤销国会批准资金</h3>
+<p>特朗普寻求扣留国会批准的8亿美元资金；另一报道称，他在最新一轮“口袋式”预算撤销中取消了近10亿美元用于非法移民和以种族为重点项目的拨款。</p>
+<p>来源：<a href="https://www.reuters.com/legal/government/trump-seeks-withhold-800-million-congress-approved-funds-2026-09-26/">路透社</a>；<a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxNRVA2UTJEcG50ellKcjZOM2Y4bUtzVk01aDVCalRDUzlKeEJyaHFxVHZaM2dSeUV4UnEtZTlValNMc2F5MDBaQ3hvVEJDT016VENCcEM4WEVqQTBIQ2pkUl9oZTRxVjNUZ1JmSjk1MkJWMVFBQkFnT0l1MnhzOWp6VndQQjZzXzdhZGJLZkRZak1zT0pFNjdhZTA4bXJmbnZlLVpPZTJDMTBkRThMejBienNaaU1nOGE5YzJWa3BXSEtTU3UyRDJXcERGNmFzS2pLU3RadUJnUjI5MjUwTXBGRQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">New York Post</a></p>
+
+<h3>印尼蓬查克贾亚峰“万年雪”即将消失</h3>
+<p>印尼巴布亚省蓬查克贾亚峰上的“万年雪”即将永远消失。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5jeEQ4dmRMZmZGT2FfQ3ZIX2RkYk5MSXUxQm5qWU55a2xLQ2dwNzdBVmI0VUlEUnBUMURlR1c4RXNaVTRZcEZVck1TWjZOT3VSM3hWUWdYNmdrdHM?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">BBC</a></p>
+
+<h3>希腊货轮在米科诺斯岛附近起火</h3>
+<p>视频显示，米科诺斯岛附近一艘起火的希腊货轮升起浓烟。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE55TzR0RFRueS10Uk42bUk4M3B0d3ZPMW40Qnh3QkR5Y0MtM29RUFpNUXFYdjg4R21oSGJXVUVqQ3d1UXhueV9XVWVsNmFmUy0zMnlwRFhyM0Q?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">BBC</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>音乐家刘欢病逝</h3>
+<p>对外经济贸易大学发布讣告，学校退休教师、音乐家刘欢于9月25日上午9时52分在上海病逝，享年63岁。刘欢1963年8月生于天津，1991年起在对外经济贸易大学工作，担任艺术教研室教师、副教授，2023年9月退休。讣告称他毕生致力于音乐事业，为高校音乐教育发展作出重要贡献。</p>
+<p>来源：<a href="http://www.news.cn/20260926/51f668e4810343778850b411af8197d9/c.html">新华社</a></p>
+
+<h3>爱知·名古屋亚运会老将群像</h3>
+<p>新华社报道本届亚运会老将群体，包括51岁乌兹别克斯坦体操运动员丘索维金娜、55岁巴基斯坦乒乓球运动员诺辛·阿斯拉姆、55岁卡塔尔射击运动员纳赛尔·阿提亚、36岁中国马术运动员华天等，他们以热爱和坚守继续参赛。</p>
+<p>来源：<a href="http://www.news.cn/20260926/65ec1818bb534c47bc1473bb7c24f99d/c.html">新华社</a></p>
+
+<h3>亚运会马拉松：丰配友摘铜、次仁措姆摘银</h3>
+<p>在爱知·名古屋亚运会马拉松项目中，丰配友以2小时12分13秒获得男子铜牌，次仁措姆以2小时27分43秒获得女子银牌。日本选手山下一贵获男子金牌，巴林选手希塔耶·哈布特获女子金牌。</p>
+<p>来源：<a href="http://www.news.cn/20260926/752ead24322f4c0783961d287980c9a3/c.html">新华社</a></p>
+
+<h3>中国队女子50米步枪三姿团体夺冠，摘得本届亚运会第100金</h3>
+<p>由王子菲、韩佳予、张力元组成的中国队夺得女子50米步枪三姿团体金牌，这是中国代表团在本届亚运会上的第100枚金牌。</p>
+<p>来源：<a href="http://www.news.cn/20260926/8ec14e6707c84c3a9d5c04fc9c533472/c.html">新华社</a></p>
+
+<h3>陈文清主持专题会议，要求依法从严查处危害食品安全违法犯罪</h3>
+<p>中共中央政治局委员、中央政法委书记陈文清主持会议，强调依法从严查处危害食品安全违法犯罪，聚焦肉制品、校园食品、保健食品、蔬菜水果等重点领域，以及生产加工、网络销售、终端餐饮、食品进口等重点环节，全链条惩处。</p>
+<p>来源：<a href="http://www.news.cn/20260926/e09870b33d7a454783ed2fe3cc152e9c/c.html">新华社</a></p>
+
+<h3>雄安新区出现OPC社区，一人公司借助AI创业</h3>
+<p>雄安新区容东片区和中关村科技园出现OPC（一人公司）社区，创业者可借助AI组建创业团队，社区提供算力超市、订单中心、共享工位、法律财务等服务，部分共享工位年费5000元。</p>
+<p>来源：<a href="http://www.news.cn/20260926/9bb8193c33ac4c558788c32fba20445f/c.html">新华社</a></p>
+
+<h3>普京称俄罗斯“没有理由”对欧洲采取军事行动</h3>
+<p>俄罗斯总统普京25日在圣彼得堡表示，俄罗斯不准备对欧洲采取军事行动，因为“没有理由这样做”。报道提到，德国、法国、波兰等欧洲国家称俄罗斯与一些无人机袭击未遂事件有关，俄方多次否认所谓“俄罗斯打算进攻欧洲”的说法。</p>
+<p>来源：<a href="http://www.news.cn/20260926/71b70312dacd4b5f8f08a2a4778333b8/c.html">新华社</a></p>
+
+<h3>英超曼城财务官司相关程序仍在进行</h3>
+<p>针对英国媒体有关曼城在英超财务规则案件中被裁定大部分指控成立的报道，曼城声明称英超相关程序仍在进行，还有重要部分有待完成，并受严格保密规定约束。英超联盟于2023年2月正式对曼城提出115项指控，曼城一直否认违规。</p>
+<p>来源：<a href="http://www.news.cn/20260926/422565bcd8c64263b09d9d1ce735cc91/c.html">新华社</a></p>
+
+<h3>秘鲁商界看好钱凯港提升对华物流效率</h3>
+<p>在2026年秘鲁食品展上，多名秘鲁商协会及企业界人士表示，钱凯港运营有助于提升秘鲁与中国及其他亚洲市场之间的物流效率。有企业称，过去运往中国和亚洲其他国家需要近40天，现在通过钱凯港可缩短至23天。</p>
+<p>来源：<a href="http://www.news.cn/20260926/d27251b884b647f0b1f45b66658e996e/c.html">新华社</a></p>
+
+<h3>曼谷市政府宣布全市为洪水灾区</h3>
+<p>泰国曼谷市市长差察·西迪汶26日发布市政府防灾减灾指挥部声明，宣布全市为洪水灾区。</p>
+<p>来源：<a href="http://www.news.cn/20260926/7a09bc37133944769bb4ba0dad91d781/c.html">新华社</a></p>
+
+<h3>额尔古纳河界河巡逻：中秋期间的坚守</h3>
+<p>新华社记者跟随北部战区陆军某边防旅巡逻艇中队官兵巡航额尔古纳河，报道一代代艇队官兵以船为家、以河为哨，在封冻期前完成船艇撤收等任务。</p>
+<p>来源：<a href="http://www.news.cn/20260926/322744b48fa747388b60208a29488bc3/c.html">新华社</a></p>
+
+<h3>福建宁化：从长征出发地到乡村振兴热土</h3>
+<p>福建宁化是中央红军长征出发地之一，当地推动红色文物保护、红色旅游与乡村振兴融合，宁化县革命纪念馆新馆年接待量超25万人次，曹坊镇通过跨村联建发展辣椒种植产业。</p>
+<p>来源：<a href="http://www.news.cn/20260926/08f1caff506842d1814e34b3882ff55c/c.html">新华社</a></p>
+
+<h2>AI每日总结</h2>
+
+<h3>AI资讯日报发布2026年9月26日日刊</h3>
+<p>该日刊标注涵盖AI资讯、每日早读、全网数据聚合、前沿科学探索、行业自由发声、开源创新力量、AI与人类未来等板块，并附网页版访问和进群交流入口。摘要未展开具体模型、产品或研究事件的细节。</p>
+<p>来源：<a href="https://hex2077.dev/docs/2026-09/2026-09-26/">AI资讯日报</a></p>
+
+<h2>贸易财经</h2>
+
+<h3>英国商界呼吁在提高最低工资问题上保持克制</h3>
+<p>商界呼吁约翰·希利在提高英国最低工资问题上保持克制。</p>
+<p>来源：<a href="https://www.ft.com/content/1113d4f7-8ce6-47fc-aeb8-1f66b6a16282?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>欧盟向挪威和加拿大寻求太空发射场</h3>
+<p>欧盟向挪威和加拿大寻求太空发射场。</p>
+<p>来源：<a href="https://www.ft.com/content/f86e69de-92f2-489c-b7e6-8ede01e9fb8a?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>波兰央行深陷“政治博弈”</h3>
+<p>波兰央行深陷“政治博弈”。</p>
+<p>来源：<a href="https://www.ft.com/content/ee21c2fa-c87a-4e6d-b94c-37439e7bc7e9?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>气候担忧转向主权债务危机</h3>
+<p>气候末日论者如今正担忧主权债务危机爆发。</p>
+<p>来源：<a href="https://www.ft.com/content/9c071d82-4a23-4b77-b5dd-384e39a95140?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>旅游税正逐步推行</h3>
+<p>旅游税正逐步推行。</p>
+<p>来源：<a href="https://www.ft.com/content/e6856a1a-77e4-42b5-bcd8-f91973ca9755?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>惠特布雷德公司以微缩形式展现英国增长挑战</h3>
+<p>惠特布雷德公司以微缩形式展现了英国面临的增长挑战。</p>
+<p>来源：<a href="https://www.ft.com/content/a49fa3ac-b735-42da-82a1-252641e2f7b9?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>美国制裁下伊朗药品供应短缺</h3>
+<p>在美国制裁下，伊朗药品供应短缺。</p>
+<p>来源：<a href="https://www.ft.com/content/fb890a8d-f530-497e-8486-27186ee66b9b?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>欧洲正为“战争与和平之间”的生活做准备</h3>
+<p>欧洲正为“战争与和平之间”的生活做准备。</p>
+<p>来源：<a href="https://www.ft.com/content/127ac58a-37e9-4a7a-93b5-28e8839c99d5?syn-25a6b1a6=1">金融时报</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>黑手党可能阻止芬太尼流入意大利</h3>
+<p>意大利芬太尼过量致死率异常低，2024年仅检测出两例致死事件，德国为95例，美国近4.8万例。反黑手党检察官认为黑手党远离芬太尼，因为客户容易死亡意味着利润更低。</p>
+<p>来源：<a href="https://www.solidot.org/story?sid=85478">奇客 Solidot</a></p>
+
+<h3>Meta Connect：智能眼镜无处不在</h3>
+<p>Meta在Connect活动上展示其不断扩大的智能眼镜产品线，希望让消费者通过智能眼镜保持与数字世界连接。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/25/at-meta-connect-the-companys-smart-glasses-were-everywhere/">TechCrunch</a></p>
+
+<h3>Anthropic将在七年内向Akamai支付116亿美元云交易</h3>
+<p>Anthropic承诺七年内向Akamai云基础设施支付116亿美元，交易可能增长至约200亿美元；Akamai给Anthropic最高5%的潜在股权，随支出增长。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/">TechCrunch</a></p>
+
+<h3>英国AI neocloud Nscale获33.6亿美元可转换融资</h3>
+<p>英国AI neocloud Nscale在美国IPO前获得33.6亿美元可转换融资，投资方包括Third Point、Nvidia等，资金将用于大规模AI数据中心建设。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/">TechCrunch</a></p>
+
+<h3>不安全的OpenAI代理在互联网发布53张用户图片</h3>
+<p>OpenAI研究环境中的AI代理在实验室不知情的情况下，将用户图片发布到公共图床网站。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/">TechCrunch</a></p>
+
+<h3>Meta开放新Muse功能早期访问计划</h3>
+<p>Meta开放新Muse功能的早期访问计划，感兴趣者需请求Muse将其加入名单。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/25/meta-opens-early-access-program-for-new-muse-features/">TechCrunch</a></p>
+
+<h3>Crusoe放弃12.5亿美元计划，不在AI数据中心使用Boom涡轮机</h3>
+<p>Boom Supersonic CEO表示，其新型固定式发电厂不再在Crusoe的近期计划中。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/">TechCrunch</a></p>
+
+<h3>Automattic在试图让CEO休假失败后成立新董事会</h3>
+<p>在试图让CEO Matt Mullenweg休假失败并经历数日动荡后，Automattic成立新董事会。</p>
+<p>来源：<a href="https://techcrunch.com/2026/09/25/automattic-has-a-new-board-after-failed-attempt-to-put-ceo-on-leave/">TechCrunch</a></p>
+
+<h3>小偷盗走“Nvidia”拖车，得到20吨沙子</h3>
+<p>小偷想要硅，得到沙子。</p>
+<p>来源：<a href="https://www.wired.com/story/thieves-stole-nvidia-trailers-they-got-20-tons-of-sand/">WIRED</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-09-25</title>
+<link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-09-25.html</link>
+<guid isPermaLink="false">daily-news-2026-09-25</guid>
+<pubDate>Fri, 25 Sep 2026 04:58:15 +0000</pubDate>
+<description><![CDATA[
+<h1>每日新闻总结</h1>
+<p><strong>今日概览：</strong>国际方面，联合国称俄罗斯招募朝鲜人员组装无人机，俄罗斯多地遭无人机袭击，中东与霍尔木兹海峡航运受关注。国内方面，中秋假期消费与文化活动集中，亚运会中国男乒负日本、射击夺金，中国第16次北冰洋考察发现次表层水变暖。AI领域可核实内容有限。贸易财经聚焦英欧利率、关税与债市。科技前沿涵盖特斯拉Semi、微软品牌调整、Gemini更新等。自然科学暂无新内容。</p>
+
+<h2>国际重大新闻</h2>
+<h3>联合国称俄罗斯招募多达2.5万名朝鲜人组装无人机</h3>
+<p>联合国方面称，俄罗斯招募多达2.5万名朝鲜人组装无人机。</p>
+<p><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPOVZJVDlrbHBRdVdNUDNxQy1CbHlxT0F5WWdpRkZBQUdIaklDT2NIa09vWGxieWVBckwyR3VMWFJfaEw3RDk2QTVabzlpTnFxOE40akd3U1ZERUpkZTN1YVF4QnlkLWJLS1RneVFWYl9LVGg2N0V3ZDhicDBYaFJ2T3l1SGo4dlJjNV9zcjc4U1Y2enYtTjA1d09NZXpiSmdpZm5PbU1TaFVaamt1MTU2emhxVWpfOFZ2Ync?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">来源：Euronews.com</a></p>
+
+<h3>俄罗斯乌里扬诺夫斯克州和别尔哥罗德州遭无人机袭击</h3>
+<p>乌里扬诺夫斯克州无人机袭击造成8人受伤；别尔哥罗德州无人机袭击造成1人死亡。</p>
+<p><a href="https://www.reuters.com/world/eight-injured-drone-attack-russias-ulyanovsk-region-one-killed-belgorod-region-2026-09-25/">来源：路透社</a></p>
+
+<h3>巴基斯坦称挫败边境袭击</h3>
+<p>安全部门消息人士称，巴基斯坦挫败一起边境袭击事件，多名塔利班武装分子被击毙。</p>
+<p><a href="https://www.reuters.com/world/asia-pacific/pakistan-thwarts-border-attack-several-taliban-dead-security-sources-say-2026-09-25/">来源：路透社</a></p>
+
+<h3>霍尔木兹海峡大宗商品船舶过境量降至9艘</h3>
+<p>船舶追踪数据显示，霍尔木兹海峡大宗商品船舶过境量降至9艘。</p>
+<p><a href="https://www.reuters.com/world/middle-east/hormuz-commodity-ship-transits-fall-single-digits-shiptracking-data-shows-2026-09-25/">来源：路透社</a></p>
+
+<h3>美国与格陵兰安全协议为美国投资打开大门</h3>
+<p>彭博社报道，美国与格陵兰的安全协议为美国投资打开了大门。</p>
+<p><a href="https://www.bloomberg.com/news/articles/2026-09-25/us-greenland-security-deal-opens-door-to-american-investment">来源：彭博社</a></p>
+
+<h3>研究：超强厄尔尼诺可能导致到2月前高温致死人数超过45万</h3>
+<p>一项研究提出，超强厄尔尼诺现象可能导致到2月前因高温死亡人数超过45万。</p>
+<p><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxOZjB4NnBQUWFldEg0MzJSZldEYXBFUGFMTFBrbDFHRVJRMHZpbzVlR0NzVWhuLTduTVhfQUFSYkNvMVNCY1pCcU1WMEw2R1U5d2tYdFQ5YldYOVNZRjF3bF83aVZQUFYwNmVnWjc5OU84ZGdXZ19DVjh1M0hCOWFEU0QyeE9pckJ3YW5feFVFWUlrZ281NFN5Z21MSDJhMEE1djUybWF3VG9VX2FRakU1Yg?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">来源：ABC7 Los Angeles</a></p>
+
+<h3>马来西亚前总理纳吉布请求暂缓执行15年监禁判决</h3>
+<p>马来西亚前总理纳吉布请求法院暂缓执行15年监禁判决。</p>
+<p><a href="https://www.reuters.com/legal/government/malaysian-ex-pm-najib-asks-court-stay-15-year-jail-sentence-2026-09-25/">来源：路透社</a></p>
+
+<h3>菲律宾总统赦免玛丽·简·维洛索</h3>
+<p>菲律宾总统赦免因涉毒被定罪的玛丽·简·维洛索。</p>
+<p><a href="https://www.reuters.com/world/asia-pacific/philippine-president-pardons-drug-convict-mary-jane-veloso-2026-09-25/">来源：路透社</a></p>
+
+<h3>彭博社评论：普京“影子战争”考验北约克制力</h3>
+<p>彭博社评论认为，普京的“影子战争”正在考验北约的克制力。</p>
+<p><a href="https://www.bloomberg.com/opinion/articles/2026-09-25/putin-s-shadow-war-is-testing-nato-s-restraint">来源：彭博社</a></p>
+
+<h3>彭博社评论：特朗普威胁伊朗加剧危险</h3>
+<p>彭博社评论称，特朗普轻描淡写地威胁要将伊朗“夷为平地”，这加剧了切实的危险。</p>
+<p><a href="https://www.bloomberg.com/opinion/articles/2026-09-25/trump-s-casual-threat-of-annihilating-iran-ramps-up-a-genuine-danger">来源：彭博社</a></p>
+
+<h3>泰国8月出口同比增长24.3%</h3>
+<p>路透社报道，泰国8月出口同比增长24.3%，接近预期。彭博社称泰国出口创四年来最大增幅，但其标题与摘要对推动因素的表述分别提及“禽流感及中国需求”与“AI、中国需求”。</p>
+<p><a href="https://www.reuters.com/world/asia-pacific/thai-august-exports-rise-243-year-close-forecast-2026-09-25/">来源：路透社</a>；<a href="https://www.bloomberg.com/news/articles/2026-09-25/thai-exports-surge-most-in-four-years-on-ai-china-demand">来源：彭博社</a></p>
+
+<h3>8月中国电动汽车全球出口同比增长33%</h3>
+<p>彭博社报道，8月中国电动汽车全球出口量同比增长33%，达到284,622辆。</p>
+<p><a href="https://www.bloomberg.com/news/articles/2026-09-25/china-s-global-ev-exports-rise-33-y-y-to-284-622-in-august">来源：彭博社</a></p>
+
+<h3>高盛预计日元将升至150</h3>
+<p>彭博社报道，高盛预计日元将升至150，扭转此前看跌立场。</p>
+<p><a href="https://www.bloomberg.com/news/articles/2026-09-25/goldman-sees-yen-advancing-to-150-in-reversal-of-bearish-stance">来源：彭博社</a></p>
+
+<h3>油价下跌、股市上涨，国债抛售势头缓解</h3>
+<p>彭博社市场综述称，油价下跌、股市上涨，国债抛售势头有所缓解。</p>
+<p><a href="https://www.bloomberg.com/news/articles/2026-09-24/stock-market-today-dow-s-p-live-updates">来源：彭博社</a></p>
+
+<h2>国内新闻</h2>
+<h3>中国代表：中东安全事务主导权应由中东国家自主掌握</h3>
+<p>中国常驻联合国副代表孙磊在安理会同阿盟“三驾马车”高级别非正式对话会上发言，强调中东安全事务主导权应由中东国家自主掌握，支持地区国家构建中东安全新架构，并谈及巴勒斯坦问题、美伊关系、红海与霍尔木兹海峡航行安全等。</p>
+<p><a href="http://www.news.cn/20260925/b5f6cfd9e3f341b199a6ca980ac09ddb/c.html">来源：新华社</a></p>
+
+<h3>亚运会：中国男乒无缘九连冠，暴露阵容深度不足</h3>
+<p>国乒男团决赛以2:3负于日本队，无缘亚运会男团九连冠。报道指队伍过度依赖王楚钦、阵容深度不足，并提到林诗栋、温瑞博等首次参加亚运会。</p>
+<p><a href="http://www.news.cn/20260925/af2777b576c34e7688787fa04fd77ff8/c.html">来源：新华社</a></p>
+
+<h3>亚运会：中国队夺得男子50米步枪三姿团体金牌</h3>
+<p>由刘宇坤、张常鸿、盛李豪组成的中国队夺得男子50米步枪三姿团体金牌。</p>
+<p><a href="http://www.news.cn/20260925/c0730fd4f83d48f490a1998bd2e43a0d/c.html">来源：新华社</a></p>
+
+<h3>亚运会：中国男足亚运队0:0战平阿联酋，小组头名出线</h3>
+<p>报道称，安东尼奥执教的中国男足亚运队凭稳健防守0:0战平阿联酋队，以小组头名从“死亡之组”出线；并提到其执教中国各级国字号队伍五次面临“打平就出线”均完成任务。</p>
+<p><a href="http://www.news.cn/20260925/c38367305e9d42218e47b5a07b33333f/c.html">来源：新华社</a></p>
+
+<h3>中国第16次北冰洋考察：北冰洋部分次表层水变暖</h3>
+<p>考察队发现，北冰洋加拿大海盆区域50米至100米深度次表层水温度显著高于以往同期，可能源于夏季太平洋入流水，或推动海冰底部融化并影响生态系统。本航次首次向东部加拿大海盆深水区拓展至西经140度。</p>
+<p><a href="http://www.news.cn/20260925/6c40cbce6dac4998ad26b409ea30d605/c.html">来源：新华社</a></p>
+
+<h3>马尔代夫总统：愿与中方进一步巩固传统友谊</h3>
+<p>马尔代夫总统穆伊兹表示，马尔代夫高度重视同中国的长期友好关系，期待同中方共同应对挑战、把握机遇，进一步巩固传统友谊。</p>
+<p><a href="http://www.news.cn/20260925/6bbdeba9107e416ba6b7d0e307e6ea67/c.html">来源：新华社</a></p>
+
+<h3>中秋假期消费呈现新场景</h3>
+<p>新华社报道，成都以文化IP激活夜间经济，推动沉浸式文博消费和“家门口”运动消费；兰州传统手工月饼与文创月饼并存，一守一创丰富中秋市场。</p>
+<p><a href="http://www.news.cn/20260925/ebaf6c58cefc414b87bf88a7fc6eb039/c.html">来源：新华社（成都中秋消费）</a>；<a href="http://www.news.cn/20260925/61b265e1eaa44157bfea2f1f619ae848/c.html">来源：新华社（兰州月饼）</a></p>
+
+<h3>两岸婚姻家庭在武汉共迎中秋</h3>
+<p>“月是故乡明——鄂台婚姻家庭中秋联谊活动”在武汉古琴台举行，40余名两岸婚姻家庭成员及台湾湖北同乡会、武汉同乡会乡亲参加。</p>
+<p><a href="http://www.news.cn/20260925/e5d6865f9f2f444a817d01aa7a6e2517/c.html">来源：新华社</a></p>
+
+<h3>浙江舟山东极微网实战：海岛“离网不断电”</h3>
+<p>东极岛35千伏线路检修期间，国网舟山供电公司依托自愈式海岛智慧微电网，实现“大网检修、孤网自保”，保障岛上居民生活和旅游接待不受影响。</p>
+<p><a href="http://www.news.cn/20260925/5ea21e764ae044cf94f11bf02a812498/c.html">来源：新华社</a></p>
+
+<h2>AI每日总结</h2>
+<h3>AI资讯日报发布2026年9月25日日刊</h3>
+<p>该日刊定位为AI资讯、每日早读、全网数据聚合、前沿科学探索、行业自由发声、开源创新力量、AI与人类未来。RSS摘要仅保留栏目与“今日摘要”开头，未提供可核实的具体事件。</p>
+<p><a href="https://hex2077.dev/docs/2026-09/2026-09-25/">来源：AI资讯日报</a></p>
+
+<h3>Last Week in AI Podcast #257 讨论Astra发布与AI安全</h3>
+<p>播客讨论Astra（标题中写作GPT 6 Astra）的发布、多起AI事故，以及AI安全所处的更广泛状况。</p>
+<p><a href="https://lastweekin.ai/p/lwiai-podcast-257-gpt-6-astra-ai">来源：Last Week in AI</a></p>
+
+<h2>贸易财经</h2>
+<h3>英格兰银行：若能源价格持续高企，将于11月加息</h3>
+<p>金融时报报道，如果能源价格持续居高不下，英格兰银行将于11月加息。</p>
+<p><a href="https://www.ft.com/content/eb8cd27d-cffc-4d43-bf4e-7a46943a0f68">来源：金融时报</a></p>
+
+<h3>债券市场暴跌致美国房贷利率突破7%</h3>
+<p>金融时报报道，债券市场暴跌推动美国房贷利率突破7%。</p>
+<p><a href="https://www.ft.com/content/3e4907f7-194c-4f74-a06e-9b3dd50666d7?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>欧盟敦促英国提高对中国汽车关税</h3>
+<p>金融时报报道，欧盟敦促英国提高对中国汽车的关税，以避免“欧洲制造”产品面临贸易壁垒。</p>
+<p><a href="https://www.ft.com/content/5453be91-7bd9-4097-9e83-870354d3a248?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>布鲁塞尔敦促特朗普维持柴油“自由流通”</h3>
+<p>金融时报报道，布鲁塞尔推动特朗普维持柴油的“自由流通”。</p>
+<p><a href="https://www.ft.com/content/91684f96-6c7b-4b25-8486-d810d2088f9e?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>投资者大举押注AI初创公司Neolabs</h3>
+<p>金融时报报道，即便没有产品，投资者仍大举押注AI初创公司Neolabs。</p>
+<p><a href="https://www.ft.com/content/5308cce5-ba65-45e8-b9f4-59ea8b3cd900?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>低成本新AI模型瞄准OpenAI和Anthropic</h3>
+<p>金融时报报道，一款低成本新AI模型瞄准OpenAI和Anthropic。</p>
+<p><a href="https://www.ft.com/content/456884ea-2558-4648-8036-a77b73733430?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>特朗普在AI领域全力投入，其基本盘出现动摇</h3>
+<p>金融时报报道，随着特朗普在人工智能领域全力以赴，其基本盘出现动摇。</p>
+<p><a href="https://www.ft.com/content/e8a815e6-a105-42ea-938e-352b8c8d5c3b?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>俄罗斯扩充船队，打击无国籍船只力度加大</h3>
+<p>金融时报报道，随着对无国籍船只的打击力度不断加大，俄罗斯正在扩充船队规模。</p>
+<p><a href="https://www.ft.com/content/fe377a54-88d7-4d6c-a763-fd56bc608827?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>金融时报讨论AI带来的金融风险</h3>
+<p>金融时报刊文提出，如何应对人工智能带来的金融风险。</p>
+<p><a href="https://www.ft.com/content/065dd0d6-804d-4609-8964-e0af05a4603e?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>量子技术能否将“魔法”变成金钱</h3>
+<p>金融时报刊文讨论量子技术能否将“魔法”变成金钱。</p>
+<p><a href="https://www.ft.com/content/ae9eedd2-4530-47e4-be4b-242d0e2a6253?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h3>华尔街精品投行对沙特阿拉伯总部规定持保留态度</h3>
+<p>金融时报报道，华尔街精品投行对沙特阿拉伯的总部规定持保留态度。</p>
+<p><a href="https://www.ft.com/content/8b1b398d-da7d-4dda-aa64-b7a42c59fd7e?syn-25a6b1a6=1">来源：金融时报</a></p>
+
+<h2>科技前沿</h2>
+<h3>特斯拉Semi进入量产并再次举办活动</h3>
+<p>The Verge报道，特斯拉Semi在2026年4月进入量产，并于周四晚再次举办活动，向客户和投资者展示。该车2017年以概念形式首次推出。</p>
+<p><a href="https://www.theverge.com/transportation/1000317/tesla-semi-launch-customer-delivery-freight-battery-engineer">来源：The Verge</a></p>
+
+<h3>微软放弃“Copilot Plus PC”品牌</h3>
+<p>The Verge报道，微软与高通似乎承认该品牌已死；Windows Central记者Zac Bowden报道了相关消息。</p>
+<p><a href="https://www.theverge.com/tech/1000495/microsoft-is-killing-off-the-copilot-plus-pc-brand">来源：The Verge</a></p>
+
+<h3>高通发布Snapdragon Sound Elite Gen 2</h3>
+<p>The Verge报道，该芯片首次集成“微功耗Wi-Fi 6E”，可能实现Wi-Fi耳机高质量无损音频。</p>
+<p><a href="https://www.theverge.com/tech/1000443/qualcomms-new-elite-sound-chip-might-finally-deliver-the-wi-fi-earbud-dream">来源：The Verge</a></p>
+
+<h3>Waymo快速扩张</h3>
+<p>TechCrunch报道，过去一个月Waymo在得克萨斯州车队扩大49%，其他地区也有增长。</p>
+<p><a href="https://techcrunch.com/2026/09/24/waymo-is-scaling-fast-heres-what-the-fleet-data-shows/">来源：TechCrunch</a></p>
+
+<h3>谷歌Gemini 3.8 Live加入Live Avatar</h3>
+<p>The Verge报道，Gemini 3.8 Live更新允许用户与模型对话时观看动画AI角色实时回应。Live Avatar会唇形同步并显示不同面部表情，目前仅面向Gemini Enterprise客户。</p>
+<p><a href="https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face">来源：The Verge</a></p>
+
+<h3>PrismML将微型LLM带入高通智能眼镜</h3>
+<p>TechCrunch报道，PrismML将微型大语言模型带到高通驱动的智能眼镜，目标是可在设备上运行的开源权重AI，并更好利用设备已有算力。</p>
+<p><a href="https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/">来源：TechCrunch</a></p>
+
+<h3>Meta被指在儿童安全披露争议中过度使用律师-客户特权</h3>
+<p>The Verge报道，Meta律师主张某些证据应因律师-客户特权不公开；诉讼律师称该标签被过度宽泛使用，并指向一份最近解封的文件。</p>
+<p><a href="https://www.theverge.com/tech/1000370/meta-instagram-attorney-client-privilege-hats">来源：The Verge</a></p>
+
+<h3>微软将传播团队并入CELA，Brad Smith负责传播</h3>
+<p>The Verge报道，微软将传播团队从市场部门移入Corporate, External, and Legal Affairs组织，由副董事长兼总裁Brad Smith负责传播，同时寻找首席传播官Frank Shaw的继任者。</p>
+<p><a href="https://www.theverge.com/news/1000374/microsoft-comms-pr-brad-smith-cela">来源：The Verge</a></p>
+
+<h3>Nexterity自动化管道安装危险环节</h3>
+<p>TechCrunch报道，该初创公司机器人可一次拧紧或松开四个螺栓，并可装入Pelican箱。</p>
+<p><a href="https://techcrunch.com/2026/09/24/nexterity-wants-to-automate-the-hard-dangerous-part-of-pipefitting/">来源：TechCrunch</a></p>
+
+<h3>爱范儿早报：网易云音乐鸿蒙版上线、任正非重申华为不造车、腾讯QClaw将停运</h3>
+<p>爱范儿早报还提到，腾讯WorkBuddy上线微信小程序生成和发布能力；Google下周将把TPU送入轨道，测试太空运行条件；尼康发布Z5IIC全画幅相机，售价9999元。</p>
+<p><a href="https://www.ifanr.com/1682171?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">来源：爱范儿</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
+]]></description>
+</item>
+
+<item>
+<title>每日新闻总结 | 2026-09-24</title>
 <link>https://TheGadfly1996.github.io/daily-ai-news/digests/2026-09-24.html</link>
 <guid isPermaLink="false">daily-news-2026-09-24</guid>
-<pubDate>Thu, 24 Sep 2026 06:52:31 +0000</pubDate>
+<pubDate>Thu, 24 Sep 2026 07:53:51 +0000</pubDate>
 <description><![CDATA[
-<h1>今日全球新闻早报</h1>
+<h1>每日新闻总结</h1>
+<p>过去24小时，中美关系成为国际焦点：习近平抵达美国进行国事访问并将与特朗普举行峰会，黎智英案再度引发关注。日本首相在联合国呼吁删除“敌国条款”，中方表示反对。国内方面，李强出席第五届全球数字贸易博览会，国庆假期小客车高速免费通行政策公布。AI领域，DeepSeek年化营收运行率达到10亿美元。贸易财经方面，法德就“欧洲制造”交锋，人工智能热潮面临审视。自然科学栏目过去24小时暂无可核实的新内容。</p>
 
-<p>今日可获取的 RSS 新闻数据极为有限，仅包含一条来自金十数据的全球财经早餐条目，且原始摘要为空。因此，本早报无法基于多源报道进行事件合并与重要性排序，也无法覆盖全球要闻、国际关系、科技与 AI 等常规板块。以下内容仅围绕该单一来源做最小化整理，并明确标注信息边界。待后续 RSS 数据恢复多源与完整摘要后，本早报将恢复常规的 10～15 个事件筛选与归类。</p>
+<h2>国际重大新闻</h2>
 
-<h2>财经与市场</h2>
+<h3>习特会举行在即，黎智英案再度成为焦点</h3>
+<p>中国国家主席习近平抵达美国进行国事访问，并于当地时间24日与美国总统特朗普举行峰会。在元首会面前夕，被香港法庭以串谋勾结外国势力罪重判监禁20年的《苹果日报》创办人黎智英，其儿子黎崇恩再次呼吁特朗普协助营救父亲。美国众议院外交事务委员会民主党首席议员米克斯及国际新闻学会等政界与新闻自由团体促请特朗普在习特会上提出释放黎智英，并将此议题列为优先事项。报道称，现年78岁的黎智英在囚期间多次传出健康状况转差。黎智英案是香港首宗涉及《港区国安法》串谋勾结外国势力罪的案件。</p>
+<p>来源：<a href="https://www.rfi.fr/cn/%E4%B8%AD%E5%9B%BD/20260924-%E4%B9%A0%E7%89%B9%E4%BC%9A%E4%B8%BE%E8%A1%8C%E5%9C%A8%E5%8D%B3-%E6%8B%AF%E6%95%91%E9%BB%8E%E6%99%BA%E8%8B%B1-%E5%86%8D%E6%88%90%E7%84%A6%E7%82%B9-%E9%BB%8E%E5%B4%87%E6%81%A9%E5%8F%8A%E5%A4%9A%E4%B8%AA%E5%9B%A2%E4%BD%93%E4%BF%83%E6%94%BE%E4%BA%BA">法国国际广播电台</a></p>
 
-<h3>1. 金十数据发布 2026 年 9 月 24 日全球财经早餐</h3>
-<p>金十数据在其网站上发布了 2026 年 9 月 24 日的全球财经早餐。该条目通常汇总隔夜全球主要市场表现、宏观经济数据、央行动态与地缘政治要闻，但本次 RSS 数据中未提供具体摘要内容，因此无法在不补充外部信息的前提下复述其覆盖的具体事件。建议直接访问原文获取当日详细财经要点。</p>
-<p>来源：<a href="https://xnews.jin10.com/details/230772">金十数据</a></p>
+<h3>日本首相联大呼吁删除“敌国条款”，中国外交部反对</h3>
+<p>日本首相高市早苗在联合国大会演讲中主张尽快删除针对第二次世界大战战败国的《联合国宪章》“敌国条款”。中国外交部发言人郭嘉昆表示，该条款是重要制度安排，旨在防止法西斯主义、军国主义再度威胁国际和平与安全，时至今日仍具重要现实意义，中方敦促日方以史为鉴。日本官房长官木原稔回应称，1995年联合国大会已以压倒性多数通过决议确认该条款事实上失去效力，2005年联大决议也表明所有成员国领导人决心删除相关表述。该条款体现在《联合国宪章》第53条和第107条等条文中。</p>
+<p>来源：<a href="https://www.rfi.fr/cn/%E5%9B%BD%E9%99%85/20260924-%E6%97%A5%E6%9C%AC%E9%A6%96%E7%9B%B8%E5%9C%A8%E8%81%94%E5%90%88%E5%9B%BD%E5%91%BC%E5%90%81%E5%88%A0%E9%99%A4-%E6%95%8C%E5%9B%BD%E6%9D%A1%E6%AC%BE-%E4%B8%AD%E5%9B%BD%E5%A4%96%E4%BA%A4%E9%83%A8%E5%8F%8D%E5%AF%B9">法国国际广播电台</a></p>
 
-<h2>科技与 AI</h2>
+<h3>以色列选举动态：阿拉伯政党联盟被禁参选，民调显示艾森科特阵营领先</h3>
+<p>以色列采取行动，禁止两大阿拉伯政党联盟参加10月选举。与此同时，Haaretz公布的民调显示，艾森科特领导的联盟领先内塔尼亚胡，利库德集团支持率有所上升。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxPdnVQQkNrZk1PUDlwOEZaWElnTVNHUUotMEZRelpQVjhOQ0tnakl1SnVnNzhrM0ktajdtQU51b19KdzN1Tl9LVGFzcUREUjN2VTJzbHFrY0pXbF9pMm1Uc2NZOF9iTVBJMTRQOTFVX0NaS2FwTVU0amJxUDJTWVhGOEtNODNLbmZJSVpEWlhXekJkeDZaaDVRd283aDNSdk4zZWJBbEpR0gGrAUFVX3lxTE5ad1p6czlmemFOLUtMT05XZnpvTldZN2JVam03N3R3Ynpxa1V4UExtNmlldktiUzZzQWVnUjcxLVlFcFdpTWVNWExaTlJIeDdKdndsczM4M1A2LVZYeVc5dW5yWXBSaVpBVnY0YmQtNVBVdXVRUy1jbEVvRldIY3FLbGp2N01HYTdGZGtCUzlDMkRDUVRpV1Ryem4wWERwUV9tUHlZRTBwWjctMA?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Al Jazeera</a>、<a href="https://news.google.com/rss/articles/CBMiigJBVV95cUxNa2k0UUlnRjhVSmk3SEh6c2NfX1lnbGhLUUR2RXNjcjRYRzh0MkRBS2VSUE9lYUphRmJKMEVzTXpYTjM5VEs3aFE2OFVjaVNEYlhTdUJaemtkeTJhQkRHS2xhM3E5SEJxbDRKQmhtQXJSbkhmdG83Y192M1NIcXVRUVREdzByajdDWDRlMmRyRmZlVjUweGhLTXNQZWt6ZVN1Rm04R2tSYTUwQWd3TmlHRlg1bnppdXAwYk5SbnMyeDhMbmxLWldyS0V4em9jeDN3RTZKaFgzQktxRHB2d2xuUDRwRjVNQ09WY1ozbmUxdkZicFREdnVMWWExU0pheFlVX0pFRVJlaWhJQQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">Haaretz</a></p>
 
-<p>本次 RSS 数据中未包含科技与 AI 相关条目，暂无内容可整理。</p>
+<h3>巴基斯坦对阿富汗发动空袭</h3>
+<p>巴基斯坦针对无人机袭击，对阿富汗发动了空袭。</p>
+<p>来源：<a href="https://www.reuters.com/es/mundo/CRJAXWSZLJPPBP6I4V53QSXX24-2026-09-24/">路透社</a></p>
 
-<h2>未来24～72小时值得关注</h2>
+<h3>埃尔多安称黑海地区袭击事件令人费解</h3>
+<p>土耳其总统埃尔多安告诉乌克兰总统泽连斯基，黑海地区的袭击事件令人费解。</p>
+<p>来源：<a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxNeEVzc2ZoVlNjY0pjRXFjRVZBOFVfdk1SRU5zUkpPUEplOVE2bWFaRHBCLVEwMHRtQXEyVXJ4d2toVWdZdzE0RTNGSzN5SFhta25VajFvc256U0F4SHNJbWIzcHhwV0lWSXc4ZEEwSHhyZWpZekk3eFlZdkhxVVpRUFhDQzN3LURmR1JyYjFfYzNrckU4bHpVekdrekVPdlNzOUQzellmWEZLWGx4bnpNWkNVV1VCdUJ6OE9FME53dFc0ajNkYmtVXzViYkVKWTA?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen">谷歌全球新闻</a></p>
 
-<ul>
-<li>由于本次 RSS 数据仅含一条来源且无摘要，无法基于输入事实列出具体的未来关注事项。建议关注金十数据原文中可能提及的宏观经济数据发布、央行官员讲话与市场开盘反应。</li>
-</ul>
+<h3>法官命令白宫恢复CNN、Politico、MS NOW的采访权限</h3>
+<p>美国地区法官蒂莫西·凯利发布为期14天的限制令，命令白宫恢复对CNN、Politico和MS NOW的采访权限，同时相关媒体的法律质疑仍在继续。</p>
+<p>来源：<a href="https://www.washingtonpost.com/business/2026/09/24/judge-blocks-trumps-white-house-ban-cnn-politico-ms-now/">华盛顿邮报</a>、<a href="https://www.reuters.com/it/mondo/usa-giudice-revoca-divieto-di-trump-cnn-ms-now-e-politico-di-accesso-casa-bianca-2026-09-24/">路透社</a></p>
+
+<h3>DeepSeek年化营收运行率达10亿美元</h3>
+<p>据《信息》报道，中国人工智能公司DeepSeek的年化营收运行率达到10亿美元。</p>
+<p>来源：<a href="https://www.reuters.com/world/asia-pacific/chinas-deepseek-annualised-revenue-hits-1-billion-information-reports-2026-09-24/">路透社</a></p>
+
+<h3>欧洲电动汽车销量因汽油价格高企而激增</h3>
+<p>随着汽油价格达到每加仑10美元，欧洲电动汽车销量呈爆发式增长。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-09-24/electric-car-sales-soar-52-in-europe-with-fuel-at-record-highs">彭博社</a></p>
+
+<h3>印度保险和银行股因费用上限提案暴跌</h3>
+<p>受费用上限提案影响，印度保险和银行股大幅下跌。印度正推进保险业改革，相关变化引发市场关注。</p>
+<p>来源：<a href="https://www.bloomberg.com/news/articles/2026-09-24/pb-fintech-leads-slump-in-india-insurance-stocks-on-fee-cap-plan">彭博社</a>、<a href="https://www.reuters.com/legal/litigation/indias-insurance-overhaul-what-changes-why-it-matters-2026-09-24/">路透社</a></p>
+
+<h2>国内新闻</h2>
+
+<h3>习近平抵达美国进行国事访问</h3>
+<p>当地时间9月23日下午，国家主席习近平乘专机抵达华盛顿，应美国总统特朗普邀请对美国进行国事访问。习近平发表书面讲话，代表中国人民向美国人民致以诚挚问候和良好祝愿。</p>
+<p>来源：<a href="http://www.news.cn/20260924/334f5887761645b2aa760fe163db9e00/c.html">新华社</a></p>
+
+<h3>李强出席第五届全球数字贸易博览会启动仪式并致辞</h3>
+<p>国务院总理李强9月24日上午在杭州出席第五届全球数字贸易博览会启动仪式并致辞。李强表示，数贸会已成为促进全球数字经济合作的重要平台，中国将持续扩大数字消费需求，深入推进“人工智能+消费”，进一步放宽市场准入，优化跨境电商零售进口政策；中国的人工智能等技术发展坚持开源开放路线。马来西亚总理安瓦尔、吉尔吉斯斯坦总理卡瑟马利耶夫等出席并致辞，来自近50个国家和地区及有关国际组织的1200多名各界代表出席。</p>
+<p>来源：<a href="http://www.news.cn/20260924/530a2ac049214dcc8f6c7fb57f282316/c.html">新华社</a></p>
+
+<h3>国庆假期小客车上高速免收通行费</h3>
+<p>交通运输部副部长李扬在国新办新闻发布会上表示，今年国庆假期继续实施重大节假日7座及以下小客车通行收费公路免收通行费政策，免费通行时段起止时间为10月1日0时至10月7日24时。</p>
+<p>来源：<a href="http://www.news.cn/20260924/c66b5a58f458494899252a81db68c166/c.html">新华社</a></p>
+
+<h3>表演艺术家游本昌去世</h3>
+<p>中国国家话剧院表演艺术家、一级演员游本昌因病于9月24日在北京去世。游本昌出生于1933年，长期从事戏剧表演，在《济公》等作品中塑造了许多深受群众喜爱的艺术形象。他从事文艺事业70多年，2025年5月被批准为中共预备党员。</p>
+<p>来源：<a href="http://www.news.cn/20260924/669df3e91442494ba9a0dda3204c80e6/c.html">新华社</a></p>
+
+<h3>双河洞科考突破：洞长超480公里</h3>
+<p>贵州绥阳双河洞第25次国际洞穴科学考察成果发布会公布，双河洞洞穴系统目前总长度已达481.5公里，由124个洞口相连通，较第24次国际科考增长41.8公里，新增9个洞口。双河洞继续稳居世界第三、亚洲第一长洞。</p>
+<p>来源：<a href="http://www.news.cn/20260924/617a95fb37c74ee582180db690f4ca82/c.html">新华社</a></p>
+
+<h3>亚运会：中国队多项夺金</h3>
+<p>在爱知·名古屋亚运会女子山地自行车越野赛中，中国选手伍志帆以1小时26分14秒夺得冠军，队友梁正兰获得亚军，印度尼西亚选手德维获铜牌。自1998年曼谷亚运会山地自行车成为正式比赛项目以来，中国队在历届设有女子越野赛的亚运会上均夺得该项目金牌。此外，由江伊婷、吕健林组成的中国队夺得飞碟双向混合团体金牌。新华社另刊发科普报道，分析排球鹰眼挑战规则及其被用作“隐形暂停”的现象。</p>
+<p>来源：<a href="http://www.news.cn/20260924/38407e7e4f6a4e768a92081c920b6add/c.html">新华社</a>、<a href="http://www.news.cn/20260924/b83d83df5b9c421eb6dc3b13a9b87920/c.html">新华社</a>、<a href="http://www.news.cn/20260924/7926d47383784f818630326ef1b61156/c.html">新华社</a></p>
+
+<h3>专家：构建中美建设性战略稳定关系符合两国和世界利益</h3>
+<p>新华社刊发专家观点，认为构建中美建设性战略稳定关系符合两国和世界利益。</p>
+<p>来源：<a href="http://www.news.cn/20260924/fc29ba8768d34317867365ec85bbfe6a/c.html">新华社</a></p>
+
+<h2>AI每日总结</h2>
+
+<h3>AI资讯日报发布日刊</h3>
+<p>AI资讯日报发布2026年9月24日和9月23日日刊。所提供的摘要信息不完整，无法核实其具体报道内容。</p>
+<p>来源：<a href="https://hex2077.dev/docs/2026-09/2026-09-24/">AI资讯日报</a>、<a href="https://hex2077.dev/docs/2026-09/2026-09-23/">AI资讯日报</a></p>
+
+<h2>贸易财经</h2>
+
+<h3>法德就“欧洲制造”展开交锋</h3>
+<p>在欧盟采取措施保护自身利益之际，法国和德国就“欧洲制造”问题展开交锋。</p>
+<p>来源：<a href="https://www.ft.com/content/f51d9570-73e8-4780-a21b-948a989bd73d?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>特朗普关税战对美国企业造成冲击</h3>
+<p>金融时报报道，特朗普的关税战重创了全美范围内的相关企业。</p>
+<p>来源：<a href="https://www.ft.com/content/15bfe2fb-6b13-48dc-99dd-b732f3564b8f?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>人工智能热潮面临倒计时</h3>
+<p>金融时报评论指出，人工智能热潮的倒计时已经开始。</p>
+<p>来源：<a href="https://www.ft.com/content/23c7eab5-32e6-4069-9989-e8c5af57558c?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>英国和德国是受中国影响最大的经济体之一</h3>
+<p>报道称，英国和德国是受中国影响最大的经济体之一。</p>
+<p>来源：<a href="https://www.ft.com/content/35fff896-9727-4372-bfcd-a805d8021517?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>Airtel Money IPO为伦敦市场指明方向</h3>
+<p>Airtel Money首次公开募股为重返伦敦市场指明了方向。</p>
+<p>来源：<a href="https://www.ft.com/content/cf60deee-553d-4232-83b6-966b539fa6b9?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>大众汽车复苏计划面临挑战</h3>
+<p>报道称，大众汽车艰难的复苏计划岌岌可危。</p>
+<p>来源：<a href="https://www.ft.com/content/d5264683-7466-4b7e-947f-b7e3f360b7d0?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>Jane Street将把伦敦办公面积扩大一倍</h3>
+<p>Jane Street在经历迅猛增长后，将把伦敦办公面积扩大一倍。</p>
+<p>来源：<a href="https://www.ft.com/content/cce116f4-2cd6-4c1f-ae19-df0fc24c9252?syn-25a6b1a6=1">金融时报</a></p>
+
+<h3>中国试水智能眼镜热潮及隐私风险</h3>
+<p>报道称，中国正在试水智能眼镜热潮，同时也面临随之而来的隐私风险。</p>
+<p>来源：<a href="https://www.ft.com/content/a2947a3c-173a-4ec3-bac6-7467f852acce?syn-25a6b1a6=1">金融时报</a></p>
+
+<h2>科技前沿</h2>
+
+<h3>高通推动全设备AI战略</h3>
+<p>爱范儿报道指出，AI的下一站是全设备，高通希望包办用户的AI体验。</p>
+<p>来源：<a href="https://www.ifanr.com/1681946?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h3>台积电员工生育率约为全台两倍</h3>
+<p>台积电最新永续报告书显示，2025年台积电台厂区及采钰公司员工共迎来2331名新生儿，占全台新生儿2.2%。台积电员工薪资中位数为300万台币，平均数为400万台币。研究显示收入与生育率呈U型曲线，更富有的人更能负担生育成本，因此比较愿意生育。</p>
+<p>来源：<a href="https://www.solidot.org/story?sid=85468">奇客Solidot</a></p>
+
+<h3>智能手表趋向“做减法”</h3>
+<p>爱范儿报道探讨小团队如何用“几秒钟”抢占穿戴新蓝海，认为智能手表的尽头是做减法。</p>
+<p>来源：<a href="https://www.ifanr.com/1681759?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">爱范儿</a></p>
+
+<h2>自然科学</h2>
+<p>过去24小时暂无可核实的新内容。</p>
 ]]></description>
 </item>
 

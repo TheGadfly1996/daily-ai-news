@@ -391,12 +391,9 @@ def load_history():
     if not HISTORY_FILE.exists():
         return []
 
-    try:
-        return json.loads(
-            HISTORY_FILE.read_text(encoding="utf-8")
-        )
-    except Exception:
-        return []
+    return json.loads(
+        HISTORY_FILE.read_text(encoding="utf-8")
+    )
 
 
 def save_history(history):
