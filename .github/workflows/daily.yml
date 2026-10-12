@@ -2,7 +2,11 @@ name: Daily News Summary
 
 on:
   workflow_dispatch:
-
+    inputs:
+      issue_date:
+        description: "Issue date YYYY-MM-DD (ends at 08:17 Asia/Shanghai); empty = latest completed window"
+        required: false
+        type: string
   schedule:
     - cron: "17 8 * * *"
       timezone: "Asia/Shanghai"
@@ -11,7 +15,6 @@ permissions:
   contents: write
   pages: write
   id-token: write
-  actions: read
 
 concurrency:
   group: daily-news-pages
@@ -20,90 +23,62 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 30
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
+      - uses: actions/checkout@v7
         with:
+          ref: main
           fetch-depth: 0
-
-      - name: Sync latest main
-        run: |
-          git fetch origin main
-          git checkout -B main origin/main
-
-
-      - name: Setup Python
-        uses: actions/setup-python@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
-          cache: "pip"
-
+          cache: pip
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
       - name: Install dependencies
         run: |
+          npm ci
           pip install -r requirements.txt
-
-      - name: Generate daily digest
+      - name: Test generation and RSS handling
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Generate candidate digest
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
-          MIN_ITEMS_PER_CATEGORY: "3"
-          MAX_ARTICLES: "80"
-          MAX_PER_SOURCE: "10"
-          FEED_TIMEOUT: "20"
-        run: |
-          python generate.py
-
-      - name: Save digest history
+          ISSUE_DATE: ${{ inputs.issue_date }}
         shell: bash
         run: |
-          set -euo pipefail
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          # Stage generated files
-          git add data public
-
-          # Skip if nothing changed
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
-          # Commit before rebasing
-          git commit -m "Update daily news $(TZ=Asia/Shanghai date +%F)"
-
-          # Synchronize and push
-          for attempt in 1 2 3; do
-            echo "Push attempt $attempt"
-
-            git fetch origin main
-            git rebase origin/main
-
-            if git push origin HEAD:main; then
-              echo "Push successful"
-              exit 0
-            fi
-
-            sleep 3
-          done
-
-          echo "Push failed after 3 attempts"
-          exit 1
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v6
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
+          args=()
+          if [[ -n "$ISSUE_DATE" ]]; then args+=(--date "$ISSUE_DATE"); fi
+          python generate.py "${args[@]}"
+      - name: Validate candidate and build before committing
+        run: bash scripts/validate-site.sh
+      - name: Save only validated history
+        run: bash scripts/publish-history.sh
+      - uses: actions/configure-pages@v6
+      - name: Verify release still matches main
+        run: bash scripts/check-release.sh
+      - uses: actions/upload-pages-artifact@v5
         with:
-          path: public
-
+          path: dist
+      - name: Recheck main immediately before deployment
+        run: bash scripts/check-release.sh
       - name: Deploy Pages
         id: deployment
         uses: actions/deploy-pages@v5
+      - name: Retain generation diagnostics and candidate data
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: digest-run-${{ github.run_id }}-${{ github.run_attempt }}
+          include-hidden-files: true
+          path: |
+            .runs/
+            data/digests.json
+            data/runs/
+          retention-days: 14

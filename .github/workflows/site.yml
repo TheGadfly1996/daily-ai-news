@@ -1,0 +1,47 @@
+name: Build News Website
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-news-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # A queued run builds latest main, not an older event SHA.
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install frontend dependencies
+        run: npm ci
+      - name: Validate and build website
+        run: bash scripts/validate-site.sh
+      - uses: actions/configure-pages@v6
+      - name: Verify release still matches main
+        run: bash scripts/check-release.sh
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+      - name: Recheck main immediately before deployment
+        run: bash scripts/check-release.sh
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

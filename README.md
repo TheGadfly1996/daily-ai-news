@@ -1,0 +1,133 @@
+# 每日新闻总结
+
+Python 采集 RSS 并生成新闻归档，Astro 构建静态新闻页面与 RSS，Vue 提供九主题切换，
+Tailwind CSS 通过 Vite 编译主题样式。浏览器直接读取完整新闻 HTML；新闻正文不依赖 Vue。
+
+## 本地开发
+
+需要 Node.js 22.12 或更高版本。
+
+~~~sh
+npm ci
+npm run dev
+~~~
+
+默认访问 http://localhost:4321/daily-ai-news。开发时日期页面使用无扩展名路由；
+发布时仍输出 digests/YYYY-MM-DD.html，兼容既有书签与 RSS 链接。
+
+检查、测试和构建：
+
+~~~sh
+npm run check
+npm test
+npm run build
+npm run preview
+~~~
+
+构建结果在 dist/，默认预览地址为 http://localhost:4321/daily-ai-news。
+这些命令使用现有 data/digests.json，不调用 AI，也不需要 API Key。
+
+## 更新新闻
+
+~~~sh
+python3 -m pip install -r requirements.txt
+python3 generate.py
+bash scripts/validate-site.sh
+~~~
+
+Python 需要通过环境变量提供 OPENROUTER_API_KEY，可通过 OPENROUTER_MODEL 选择模型。
+它更新 data/digests.json，并将成功生成的证据记录写入 data/runs/。Astro 从同一份结构化数据构建网页与 feed.xml。
+不要将 API Key 放进前端变量或提交到仓库。
+
+只检查 feeds.txt 中的来源而不生成新闻，可运行 `python3 generate.py --check-feeds`；
+命令会列出本次无法读取的来源与原因，全部可用时退出码为 0，否则为 1。
+每日采集也会先检查来源；若有来源不可用，当期文章和 RSS 条目末尾会列出栏目、名称、链接与原因。
+暂时连不上与永久失效都按“本次未能读取”记录，确认后再修改 feeds.txt。
+
+默认配置统一放在 `config/news.json`，本地与 Actions 使用同一份配置。
+LOOKBACK_HOURS、MAX_ARTICLES、MAX_PER_SOURCE、MIN_ITEMS_PER_CATEGORY 和 FEED_TIMEOUT
+仍可通过环境变量覆盖。默认每栏至少 3 个独立事件；任一栏素材不足时不调用 AI，
+生成后不足时最多尝试 2 次，仍失败则保留原归档并停止发布，不使用占位条目凑数。
+
+每期使用固定北京时间窗口：例如 2026-10-12 期覆盖前一天 08:17（含）至当天 08:17（不含）。
+默认选择最近已经结束的窗口，因此任务延迟不会移动同一期的采集边界。
+在当天 08:17 前手动运行会选择前一期。指定日期补跑：
+
+~~~sh
+python3 generate.py --date 2026-10-12
+~~~
+
+不接受尚未结束的窗口。补跑仍从当前 RSS 抓取，较早内容可能已被上游移除；
+固定窗口不能恢复上游已经删除的素材。修改截止时间时，应同步更新 daily.yml 的定时时间。
+
+## 内容结构与证据
+
+新生成记录使用 `schema_version: 2`，保存概览、六栏事件、实际输入素材及素材 ID。
+模型仅返回标题、摘要与 `source_ids`，程序从素材回填来源名称和链接，转义所有文本。
+不存在的 ID、跨栏引用、重复引用、重复标题、缺少来源和条数不足均会阻止写入。
+HTML 是程序生成的兼容副本，前端以结构化字段为准；旧版 HTML 归档继续可读。
+来源 ID 校验能保证引用存在，不能自动证明摘要的每句话都被来源支持；事实审核仍可依据快照进行。
+
+`data/runs/YYYY-MM-DD/<run_id>.json` 保存实际素材摘要、采集窗口、系统与用户提示词、
+提示词版本及哈希、请求模型、响应模型、原始输出、token 用量、耗时和重试反馈。
+构建时检查证据文件是否存在、输入与提示词哈希是否匹配、最终响应是否与新闻对象一致。
+保存的是实际送入模型的摘要（最多 1200 字符），不代表已抓取完整原文。
+
+生成过程的检查点位于 `.runs/`，不提交到 Git；失败时保留原因和已取得的材料。
+Actions 无论成功或失败都会上传诊断与候选数据，默认保留 14 天。成功证据随新闻数据提交。
+历史归档永久保留，同日期重跑只替换该期；补跑旧期不会改变最新期排序。
+网页生成全部历史日期页，RSS 仅输出最近 60 期（由 `rss_limit` 配置）。
+
+## 目录
+
+~~~text
+generate.py                 RSS 采集、AI 提示词与校验、JSON 归档
+digest_schema.py            结构化事件校验、素材 ID、确定性 HTML 渲染
+config/news.json            本地与自动化共用默认配置
+data/digests.json            永久新闻归档，兼容历史 HTML 与新结构化记录
+data/runs/                  成功生成的输入、提示词、响应与诊断快照
+src/lib/content.ts          结构化内容渲染与历史 HTML 适配
+src/lib/evidence.ts         构建时检查新闻与证据快照的一致性
+src/lib/rss.ts              从同一份新闻数据生成 RSS
+src/layouts/                Astro 文档布局、SEO、主题首次加载
+src/components/             Astro 新闻组件、Vue 主题选择器
+src/pages/                  首页、日期页面、RSS 和 404
+src/styles/                 阅读布局与 Tailwind 九主题
+public/                     原样复制的静态资源
+tests/                      历史内容兼容、HTML 清洗和 RSS 校验
+scripts/                    构建验证、提交与部署版本检查
+dist/                       构建产物，不提交到 Git
+~~~
+
+## 发布
+
+- Daily News Summary：继续按原计划每天北京时间 08:17 执行，
+  生成候选数据，先完成类型检查、测试和 Astro 构建，再提交并推送数据，最后部署 dist/。
+  手动触发可填写 `issue_date` 补跑指定期号。
+- Build News Website：main 有推送时构建并发布，
+  也可手动触发；不运行新闻采集或 AI。
+- 两个工作流共用部署并发组，并在开始执行时检出最新 main，避免排队后构建旧事件版本。
+- 如果 main 在生成或构建期间改变，任务停止，不自动将已验证结果 rebase 到未经验证的新代码上。
+  发布前再次核对 main；已被更新替代的产物不会继续部署。产物包含 revision.txt，记录对应提交。
+  停止后可在最新 main 重跑；若要复用已生成的内容，先从诊断 artifact 取回候选期和其证据目录，
+  按日期合并到最新归档，运行 `bash scripts/validate-site.sh`，再提交；不要用旧 JSON 覆盖新归档。
+- GitHub Pages 的 Source 应设置为 GitHub Actions。
+
+本地完整验证（不访问 AI 或真实 RSS；发布测试只使用临时本地 Git 仓库）：
+
+~~~sh
+python3 -m unittest discover -s tests -p 'test_*.py'
+bash scripts/validate-site.sh
+~~~
+
+默认域名和部署路径取自 GITHUB_REPOSITORY，本地默认使用
+https://TheGadfly1996.github.io/daily-ai-news/。
+自定义域名可通过 SITE_URL 配置；BASE_PATH 可覆盖路径，例如根目录 /。
+Astro 的资源链接、日期链接、canonical 和 RSS 都使用统一部署路径。
+
+## 主题
+
+默认极简扁平。选择器支持九种 StyleKit 风格，偏好保存到浏览器，
+跨页面与标签页同步；浏览器禁用存储时仍可切换当前页面。
+栏目颜色仅用于栏目总标题。侧边导航和回顶按钮保留。
+详细规则和修改位置见 [docs/themes.md](docs/themes.md)。
