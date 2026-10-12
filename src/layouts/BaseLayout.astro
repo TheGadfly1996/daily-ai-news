@@ -1,0 +1,38 @@
+---
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { themes, themeStorageKey } from "../lib/themes.ts";
+import { urlFor } from "../lib/urls.ts";
+import "../styles/layout.css";
+import "../styles/themes.css";
+
+interface Props { title: string; description?: string; canonicalPath?: string }
+const { title, description = "每日新闻总结：国际、国内、AI、贸易财经、科技前沿和自然科学。", canonicalPath } = Astro.props;
+const themeIds = themes.map(theme => theme.id);
+const canonical = new URL(canonicalPath || Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="zh-CN" data-theme="minimalist-flat">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title="每日新闻总结 RSS" href={urlFor("feed.xml")} />
+    <script is:inline define:vars={{ themeIds, themeStorageKey }}>
+      try {
+        const saved = localStorage.getItem(themeStorageKey);
+        document.documentElement.dataset.theme = themeIds.includes(saved) ? saved : "minimalist-flat";
+      } catch {
+        document.documentElement.dataset.theme = "minimalist-flat";
+      }
+    </script>
+  </head>
+  <body id="top" class="antialiased">
+    <SiteHeader />
+    <slot />
+    <SiteFooter />
+  </body>
+</html>

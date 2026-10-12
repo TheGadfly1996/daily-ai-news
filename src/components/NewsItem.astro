@@ -1,0 +1,15 @@
+---
+import type { NewsItem } from "../lib/content.ts";
+interface Props { item: NewsItem }
+const { item } = Astro.props;
+---
+<article class="news-item" aria-labelledby={item.id}>
+  <h3 id={item.id}>{item.title}</h3>
+  <Fragment set:html={item.bodyHtml} />
+  {item.sources.length > 0 && <p class="news-sources">
+    来源：{item.sources.map((source, index) => <Fragment>
+      {index > 0 && "、"}
+      {source.url ? <a href={source.url}>{source.name}</a> : <span>{source.name}</span>}
+    </Fragment>)}
+  </p>}
+</article>

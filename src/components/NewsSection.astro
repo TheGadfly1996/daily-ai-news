@@ -1,0 +1,11 @@
+---
+import type { NewsSection } from "../lib/content.ts";
+import NewsItem from "./NewsItem.astro";
+interface Props { section: NewsSection }
+const { section } = Astro.props;
+---
+<section class={"news-section category-" + section.id} aria-labelledby={section.id}>
+  <h2 id={section.id}>{section.title}</h2>
+  {section.items.map(item => <NewsItem item={item} />)}
+  {section.emptyHtml && <Fragment set:html={section.emptyHtml} />}
+</section>

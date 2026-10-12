@@ -17,7 +17,8 @@ body {
   margin: 0;
   background: var(--white);
   color: var(--black);
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  font-family:
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -57,7 +58,7 @@ a:focus-visible {
   align-items: center;
   font-size: 20px;
   font-weight: 900;
-  letter-spacing: -.06em;
+  letter-spacing: -0.06em;
   line-height: 1.2;
   text-decoration: none;
   white-space: nowrap;
@@ -113,7 +114,7 @@ a:focus-visible {
 .card-label {
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
@@ -126,7 +127,7 @@ a:focus-visible {
   margin: 18px 0 24px;
   font-size: clamp(36px, 6vw, 72px);
   font-weight: 900;
-  letter-spacing: -.08em;
+  letter-spacing: -0.08em;
   line-height: 1.08;
 }
 
@@ -154,7 +155,7 @@ a:focus-visible {
   margin: 0;
   font-size: clamp(28px, 3vw, 38px);
   font-weight: 900;
-  letter-spacing: -.06em;
+  letter-spacing: -0.06em;
   line-height: 1.15;
 }
 
@@ -191,7 +192,7 @@ a:focus-visible {
   max-width: 22ch;
   font-size: clamp(26px, 3vw, 38px);
   font-weight: 900;
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
   line-height: 1.25;
 }
 
@@ -233,13 +234,13 @@ a:focus-visible {
 .archive-card time {
   font-size: 13px;
   font-weight: 800;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
 
 .archive-card > span:nth-child(2) {
   font-size: 22px;
   font-weight: 800;
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
   line-height: 1.35;
 }
 
@@ -263,14 +264,14 @@ a:focus-visible {
   justify-content: space-between;
   gap: 16px;
   padding: 0 0 16px;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
 }
 
 .digest-intro h1 {
   margin: 0 0 24px;
   font-size: clamp(30px, 4vw, 42px);
   font-weight: 800;
-  letter-spacing: -.035em;
+  letter-spacing: -0.035em;
   line-height: 1.25;
 }
 
@@ -299,12 +300,24 @@ a:focus-visible {
   padding: 20px 0 0;
 }
 
-.category-world { --section-color: #b42318; }
-.category-china { --section-color: #175cd3; }
-.category-ai { --section-color: #6941c6; }
-.category-business { --section-color: #8b5e00; }
-.category-technology { --section-color: #006b64; }
-.category-science { --section-color: #2f6b2f; }
+.category-world {
+  --section-color: #b42318;
+}
+.category-china {
+  --section-color: #175cd3;
+}
+.category-ai {
+  --section-color: #6941c6;
+}
+.category-business {
+  --section-color: #8b5e00;
+}
+.category-technology {
+  --section-color: #006b64;
+}
+.category-science {
+  --section-color: #2f6b2f;
+}
 
 .news-section h2 {
   color: var(--section-color, var(--black));
@@ -397,7 +410,7 @@ a:focus-visible {
   margin: 0 0 32px;
   font-size: clamp(30px, 4vw, 42px);
   font-weight: 900;
-  letter-spacing: -.07em;
+  letter-spacing: -0.07em;
   line-height: 1.14;
 }
 
@@ -419,7 +432,7 @@ a:focus-visible {
   padding-top: 20px;
   font-size: clamp(24px, 3vw, 30px);
   font-weight: 800;
-  letter-spacing: -.035em;
+  letter-spacing: -0.035em;
   line-height: 1.2;
 }
 
@@ -444,6 +457,7 @@ a:focus-visible {
   line-height: 1.85;
 }
 
+.digest-body .news-sources,
 .digest-body h3 + p + p {
   margin-top: 12px;
   font-size: 14px;
@@ -462,6 +476,48 @@ a:focus-visible {
 
 .digest-body a:hover,
 .site-footer a:hover {
+  color: var(--accent);
+}
+
+.feed-issues {
+  max-width: 75ch;
+  margin-top: 80px;
+  border-top: 2px solid var(--black);
+  padding-top: 24px;
+}
+
+.feed-issues h2 {
+  margin: 0 0 12px;
+  font-size: clamp(22px, 3vw, 28px);
+  line-height: 1.25;
+}
+
+.feed-issues p {
+  margin: 0 0 24px;
+}
+
+.feed-issues ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.feed-issues li {
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+}
+
+.feed-issues li strong,
+.feed-issues li a,
+.feed-issues li span {
+  display: block;
+}
+
+.feed-issues li a {
+  padding: 8px 0;
+  text-underline-offset: 4px;
+}
+
+.feed-issues li a:hover {
   color: var(--accent);
 }
 

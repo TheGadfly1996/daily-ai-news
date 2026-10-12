@@ -1,0 +1,166 @@
+import assert from "node:assert/strict";
+import { test } from "node:test";
+import { readFileSync, mkdtempSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join, dirname } from "node:path";
+import { createHash } from "node:crypto";
+import { parseFragment } from "parse5";
+import { parseDigest, validateRecords, textContent, type DigestRecord } from "../src/lib/content.ts";
+import { renderFeed } from "../src/lib/rss.ts";
+import { renderFeedIssues } from "../src/lib/feed-issues.ts";
+import { validateEvidence } from "../src/lib/evidence.ts";
+
+const record: DigestRecord = {
+  date: "2026-10-12", title: "每日新闻总结 | 2026-10-12", guid: "daily-news-2026-10-12",
+  created_at: "2026-10-12T00:17:00+00:00", article_count: 2,
+  content: '<h1>每日新闻总结</h1><p>概览 <strong>重点</strong></p><h2>AI每日总结</h2>' +
+    '<h3>模型 A &amp; B 发布</h3><p>公司称完成更新。</p><p>来源：<a href="https://example.com/?a=1&amp;b=2">官方</a>、<a href="https://example.org/">研究机构</a></p>' +
+    '<h3>第二项研究</h3><p>研究摘要。</p><p><a href="https://example.net/">来源：大学</a></p>' +
+    '<h2>自然科学</h2><p>过去24小时暂无可核实的新内容。</p>',
+};
+
+test("adapts legacy HTML into independently rendered stories and source links", () => {
+  const digest = parseDigest(record);
+  assert.equal(digest.storyCount, 2);
+  assert.equal(digest.overviewText, "概览 重点");
+  assert.equal(digest.sections[0].id, "ai");
+  assert.equal(digest.sections[0].items[0].title, "模型 A & B 发布");
+  assert.equal(digest.sections[0].items[0].sources[0].url, "https://example.com/?a=1&b=2");
+  assert.equal(digest.sections[0].items[1].sources[0].name, "大学");
+  assert.equal(digest.sections[1].items.length, 0);
+  assert.match(digest.sections[1].emptyHtml, /暂无可核实/);
+});
+
+test("removes executable HTML, unsafe links, and inline styles before rendering", () => {
+  const digest = parseDigest({ ...record, content: record.content +
+    '<script>alert(1)</script><p onclick="bad()" style="color:red"><a href="javascript:alert(1)">不安全链接</a><img src=x onerror=bad()></p>' });
+  assert.doesNotMatch(digest.content, /<script|onclick|onerror|javascript:|style=|<img/);
+});
+
+test("retains text-only attribution and deduplicates identical source links", () => {
+  const content = '<h2>国内新闻</h2><h3>事件</h3><p>摘要</p><p>来源：新华社</p>' +
+    '<p>来源：<a href="https://example.org/">机构</a>、<a href="https://example.org/">机构</a></p>';
+  const item = parseDigest({ ...record, content }).sections[0].items[0];
+  assert.deepEqual(item.sources, [{ name: "新华社" }, { name: "机构", url: "https://example.org/" }]);
+});
+
+test("rejects duplicate dates, invalid calendar dates and invalid timestamps", () => {
+  assert.throws(() => validateRecords([record, record]), /Duplicate/);
+  assert.throws(() => validateRecords([{ ...record, date: "2026-02-30" }]), /date/);
+  assert.throws(() => validateRecords([{ ...record, created_at: "invalid" }]), /timestamp/);
+  assert.throws(() => validateRecords([]), /empty/);
+});
+
+test("all historical stories survive the build-time content adaptation", () => {
+  const records = validateRecords(JSON.parse(readFileSync("data/digests.json", "utf8")));
+  for (const record of records) {
+    const original = parseFragment(record.content).childNodes
+      .filter(node => "tagName" in node && node.tagName === "h3").map(textContent);
+    const digest = parseDigest(record);
+    assert.deepEqual(digest.sections.flatMap(section => section.items.map(item => item.title)), original, record.date);
+    assert.equal(digest.sections.length, 6, record.date);
+  }
+});
+
+test("RSS preserves existing HTML URLs, escapes XML and splits CDATA delimiters", () => {
+  const digest = parseDigest({ ...record, title: "A & B", content: record.content + "<p>]]></p>" });
+  const feed = renderFeed([digest], "https://example.org/daily-ai-news");
+  assert.match(feed, /A &amp; B/);
+  assert.match(feed, /https:\/\/example.org\/daily-ai-news\/digests\/2026-10-12.html/);
+  // Sanitization encodes angle brackets, preventing a CDATA boundary from becoming executable markup.
+  assert.match(feed, /<description><!\[CDATA\[/);
+  assert.match(feed, /Mon, 12 Oct 2026 00:17:00 GMT/);
+});
+
+test("failed feed details appear at the end of the article and RSS item safely", () => {
+  const issue = { category: "科技前沿", name: "来源 <测试>",
+    url: "https://example.org/rss?a=1&b=2", reason: "HTTP 403 <blocked>" };
+  const digest = parseDigest({ ...record, feed_issues: [issue] });
+  const notice = renderFeedIssues(digest.feed_issues);
+  assert.match(notice, /本次未能读取的 RSS 来源/);
+  assert.match(notice, /来源 &lt;测试&gt;/);
+  assert.match(notice, /href="https:\/\/example.org\/rss\?a=1&amp;b=2"/);
+  assert.doesNotMatch(notice, /<blocked>|<测试>/);
+  const feed = renderFeed([digest], "https://example.org/daily-ai-news");
+  assert.ok(feed.indexOf("本次未能读取的 RSS 来源") > feed.indexOf("自然科学"));
+  assert.throws(() => validateRecords([{ ...record, feed_issues: [{ ...issue, url: "javascript:alert(1)" }] }]), /feed issues/);
+});
+
+const structured: DigestRecord = JSON.parse(readFileSync("tests/fixtures/digest-v2.json", "utf8"));
+
+test("structured content renders identically to Python and ignores a stale HTML cache", () => {
+  const parsed = parseDigest(validateRecords([structured])[0]);
+  assert.equal(parsed.content, structured.content);
+  assert.equal(parsed.storyCount, 18);
+  assert.equal(parsed.sections[0].items[0].sources[0].name, "研究机构 <示例>");
+  const changed = structuredClone(structured);
+  changed.content = "<h1>stale content</h1>";
+  assert.equal(parseDigest(changed).content, structured.content);
+  assert.match(renderFeed([parsed], "https://example.org"), /研究机构 &lt;示例&gt;/);
+});
+
+test("structured records reject forged references, incomplete sections, unsafe URLs and invalid windows", () => {
+  const mutations: ((record: DigestRecord) => void)[] = [
+    record => { record.editorial!.sections[0].items[0].source_ids = []; },
+    record => { record.editorial!.sections[0].items[0].source_ids = ["invented"]; },
+    record => { record.editorial!.sections[0].items[0].source_ids = [record.materials![3].id]; },
+    record => { record.editorial!.sections[0].items[0].source_ids = [record.materials![1].id]; },
+    record => { record.editorial!.sections[0].items.pop(); },
+    record => { record.materials![0].link = "javascript:alert(1)"; },
+    record => { record.materials![0].published = record.generation!.window_end; },
+    record => { record.materials![1].id = record.materials![0].id; },
+    record => { record.generation!.window_start = record.generation!.window_end; },
+    record => { record.generation!.minimum_items = 0; },
+    record => { record.schema_version = 999; },
+  ];
+  for (const mutate of mutations) {
+    const value = structuredClone(structured);
+    mutate(value);
+    assert.throws(() => validateRecords([value]));
+  }
+});
+
+test("legacy attribution preserves text and links in the same paragraph", () => {
+  const digest = parseDigest({ ...record, content: '<h2>国内新闻</h2><h3>事件</h3><p>摘要</p>' +
+    '<p>来源：新华社、<a href="https://example.org/">机构</a>、研究团队</p>' });
+  assert.deepEqual(digest.sections[0].items[0].sources, [
+    { name: "新华社" }, { name: "机构", url: "https://example.org/" }, { name: "研究团队" },
+  ]);
+});
+
+test("all archive dates remain available while RSS includes only recent 60 issues", () => {
+  const records = Array.from({ length: 75 }, (_, index) => ({ ...record,
+    date: new Date(Date.UTC(2026, 0, index + 1)).toISOString().slice(0, 10), guid: "test-" + index,
+  }));
+  const digests = validateRecords(records).map(parseDigest);
+  assert.equal(digests.length, 75);
+  assert.equal(digests.at(-1)!.date, "2026-01-01");
+  const feed = renderFeed(digests, "https://example.org/");
+  assert.equal((feed.match(/<item>/g) || []).length, 60);
+  assert.doesNotMatch(feed, /digests\/2026-01-01.html/);
+});
+
+test("build rejects absent or mismatched evidence for structured issues", () => {
+  const root = mkdtempSync(join(tmpdir(), "digest-evidence-"));
+  try {
+    const value = structuredClone(structured);
+    const prompt = "fixture prompt";
+    value.generation!.prompt_sha256 = createHash("sha256").update(prompt).digest("hex");
+    const path = join(root, value.generation!.evidence_path);
+    assert.throws(() => validateEvidence(value, root));
+    mkdirSync(dirname(path), { recursive: true });
+    const evidence = { ...value.generation, issue_date: value.date, status: "validated", prompt,
+      config: { min_items_per_category: 3 }, materials: value.materials,
+      attempts: [{ status: "valid", finish_reason: "stop", raw_response: JSON.stringify(value.editorial) }],
+    };
+    writeFileSync(path, JSON.stringify(evidence));
+    assert.doesNotThrow(() => validateEvidence(value, root));
+    evidence.materials![0].summary += " changed";
+    writeFileSync(path, JSON.stringify(evidence));
+    // Break object aliasing before comparing against the original snapshot.
+    value.materials = structuredClone(structured.materials);
+    assert.throws(() => validateEvidence(value, root), /Evidence differs/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});

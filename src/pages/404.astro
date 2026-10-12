@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { urlFor } from "../lib/urls.ts";
+---
+<BaseLayout title="页面未找到 | 每日新闻总结">
+  <main class="page">
+    <section class="index-hero">
+      <h1>页面未找到</h1>
+      <p>这篇新闻归档可能已移出保留范围。</p>
+      <a class="back-link inline-flex min-h-11 items-center underline underline-offset-4" href={urlFor()}>返回新闻归档</a>
+    </section>
+  </main>
+</BaseLayout>

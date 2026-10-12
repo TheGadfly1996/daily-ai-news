@@ -1,0 +1,36 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NewsSection from "../../components/NewsSection.astro";
+import SectionNav from "../../components/SectionNav.astro";
+import { getDigests } from "../../lib/data.ts";
+import type { Digest } from "../../lib/content.ts";
+import { urlFor } from "../../lib/urls.ts";
+import { renderFeedIssues } from "../../lib/feed-issues.ts";
+
+export const getStaticPaths = (() => getDigests().map(digest => ({
+  params: { date: digest.date }, props: { digest },
+}))) satisfies GetStaticPaths;
+interface Props { digest: Digest }
+const { digest } = Astro.props;
+---
+<BaseLayout title={digest.title} description={digest.overviewText.slice(0, 180)} canonicalPath={urlFor("digests/" + digest.date + ".html")}>
+  <main id="main-content" class="page digest-page">
+    <header class="digest-intro">
+      <div class="issue-meta"><span>每日简报</span><time datetime={digest.date}>{digest.date}</time></div>
+      <h1>{digest.heading}</h1>
+      {digest.overviewHtml && <div class="digest-overview">
+        <p class="overview-label">今日概览</p>
+        <p set:html={digest.overviewHtml} />
+      </div>}
+    </header>
+    <div class="digest-layout">
+      <SectionNav sections={digest.sections} />
+      <div class="digest-body">
+        {digest.sections.map(section => <NewsSection section={section} />)}
+      </div>
+    </div>
+    <Fragment set:html={renderFeedIssues(digest.feed_issues)} />
+  </main>
+  <a class="back-to-top" href="#top" aria-label="回到页面顶部">回到顶部 ↑</a>
+</BaseLayout>

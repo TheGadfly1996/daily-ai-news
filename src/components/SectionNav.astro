@@ -1,0 +1,9 @@
+---
+import type { NewsSection } from "../lib/content.ts";
+interface Props { sections: NewsSection[] }
+const { sections } = Astro.props;
+---
+<nav class="section-nav" aria-label="跳转到栏目">
+  <span class="sidebar-label">栏目导航</span>
+  {sections.map(section => <a href={"#" + section.id}>{section.title}</a>)}
+</nav>

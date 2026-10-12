@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getDigests } from "../lib/data.ts";
+import { digestUrl } from "../lib/urls.ts";
+const [latest, ...archive] = getDigests();
+---
+<BaseLayout title="每日新闻总结 | 归档">
+  <main id="main-content" class="page">
+    <section class="index-hero" aria-labelledby="site-title">
+      <p class="eyebrow">NEWS / DAILY / RSS</p>
+      <h1 id="site-title">每日新闻总结<span class="accent-dot">.</span></h1>
+      <p class="hero-copy">国际、国内、AI、贸易财经、科技前沿与自然科学。每天一页，保留来源，方便追溯。</p>
+    </section>
+    <section class="latest-section" aria-labelledby="latest-heading">
+      <div class="section-heading"><h2 id="latest-heading">最新一期</h2><span>01 / LATEST</span></div>
+      <a class="latest-card" href={digestUrl(latest.date)}>
+        <span class="card-label">READ THE LATEST</span>
+        <strong>{latest.title}</strong>
+        <span class="latest-card-bottom"><time datetime={latest.date}>{latest.date}</time><span aria-hidden="true">↗</span></span>
+      </a>
+    </section>
+    <section class="archive-section" aria-labelledby="archive-heading">
+      <div class="section-heading"><h2 id="archive-heading">往期归档</h2><span>{String(archive.length).padStart(2, "0")} ISSUES</span></div>
+      {archive.length ? <ol class="archive-list">
+        {archive.map(digest => <li><a class="archive-card" href={digestUrl(digest.date)}>
+          <time datetime={digest.date}>{digest.date}</time>
+          <span>{digest.title}</span>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </a></li>)}
+      </ol> : <p>暂无往期归档。</p>}
+    </section>
+  </main>
+</BaseLayout>

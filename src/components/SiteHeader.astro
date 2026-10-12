@@ -1,0 +1,17 @@
+---
+import ThemePicker from "./ThemePicker.vue";
+import { urlFor } from "../lib/urls.ts";
+---
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href={urlFor()} aria-label="每日新闻总结首页">每日新闻<span class="brand-mark">.</span></a>
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="主导航">
+        <a href={urlFor()}>归档</a>
+        <a href={urlFor("feed.xml")}>RSS 订阅</a>
+      </nav>
+      <ThemePicker client:load />
+      <noscript>启用 JavaScript 后可切换主题。</noscript>
+    </div>
+  </div>
+</header>
