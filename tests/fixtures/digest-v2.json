@@ -1,0 +1,381 @@
+{
+  "schema_version": 2,
+  "date": "2026-10-12",
+  "title": "每日新闻总结 | 2026-10-12",
+  "guid": "daily-news-2026-10-12",
+  "created_at": "2026-10-12T01:00:00+00:00",
+  "article_count": 18,
+  "materials": [
+    {
+      "category": "国际重大新闻",
+      "title": "国际重大新闻素材0",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/0/0?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/0/rss",
+      "id": "src-2c3f0bb7734db73da51d4312"
+    },
+    {
+      "category": "国际重大新闻",
+      "title": "国际重大新闻素材1",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/0/1?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/0/rss",
+      "id": "src-3bbabf6d5925c0b93ba10ad8"
+    },
+    {
+      "category": "国际重大新闻",
+      "title": "国际重大新闻素材2",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/0/2?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/0/rss",
+      "id": "src-9725df6dccbfda77461b6345"
+    },
+    {
+      "category": "国内新闻",
+      "title": "国内新闻素材0",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/1/0?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/1/rss",
+      "id": "src-b1a032c4a42a8f2e60b42557"
+    },
+    {
+      "category": "国内新闻",
+      "title": "国内新闻素材1",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/1/1?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/1/rss",
+      "id": "src-33dd20cc661f32b6441035db"
+    },
+    {
+      "category": "国内新闻",
+      "title": "国内新闻素材2",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/1/2?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/1/rss",
+      "id": "src-666f3c92cf5052e0b27c2a66"
+    },
+    {
+      "category": "AI每日总结",
+      "title": "AI每日总结素材0",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/2/0?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/2/rss",
+      "id": "src-2d2e74498632e2bbc91627d6"
+    },
+    {
+      "category": "AI每日总结",
+      "title": "AI每日总结素材1",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/2/1?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/2/rss",
+      "id": "src-e4993b747bd13b593ab7b397"
+    },
+    {
+      "category": "AI每日总结",
+      "title": "AI每日总结素材2",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/2/2?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/2/rss",
+      "id": "src-a4abd955ecf5f591c1f3c16c"
+    },
+    {
+      "category": "贸易财经",
+      "title": "贸易财经素材0",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/3/0?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/3/rss",
+      "id": "src-6f57a09280a09f1df0c46457"
+    },
+    {
+      "category": "贸易财经",
+      "title": "贸易财经素材1",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/3/1?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/3/rss",
+      "id": "src-6e44e15cb3c81dca16336a48"
+    },
+    {
+      "category": "贸易财经",
+      "title": "贸易财经素材2",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/3/2?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/3/rss",
+      "id": "src-89084fc0a6232883379c15fe"
+    },
+    {
+      "category": "科技前沿",
+      "title": "科技前沿素材0",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/4/0?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/4/rss",
+      "id": "src-9e66ccf3d8d3701510be21ed"
+    },
+    {
+      "category": "科技前沿",
+      "title": "科技前沿素材1",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/4/1?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/4/rss",
+      "id": "src-9b2f40460984f52c99f56003"
+    },
+    {
+      "category": "科技前沿",
+      "title": "科技前沿素材2",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/4/2?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/4/rss",
+      "id": "src-85e173349558857a02e3cdff"
+    },
+    {
+      "category": "自然科学",
+      "title": "自然科学素材0",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/5/0?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/5/rss",
+      "id": "src-5cd89dce18fceb2f019d3f3d"
+    },
+    {
+      "category": "自然科学",
+      "title": "自然科学素材1",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/5/1?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/5/rss",
+      "id": "src-118c81ddf35525754900c416"
+    },
+    {
+      "category": "自然科学",
+      "title": "自然科学素材2",
+      "summary": "机构发布研究结果，证据仅限本次实验。",
+      "source": "研究机构 <示例>",
+      "link": "https://example.org/5/2?a=1&b=2",
+      "published": "2026-10-11T12:00:00+00:00",
+      "fetched_at": "2026-10-12T01:00:00+00:00",
+      "feed_url": "https://example.org/5/rss",
+      "id": "src-522f4fe217186212263472b0"
+    }
+  ],
+  "editorial": {
+    "overview": "机构发布 A & B 实验结果。",
+    "sections": [
+      {
+        "category": "国际重大新闻",
+        "items": [
+          {
+            "title": "国际重大新闻事件0",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-2c3f0bb7734db73da51d4312"
+            ]
+          },
+          {
+            "title": "国际重大新闻事件1",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-3bbabf6d5925c0b93ba10ad8"
+            ]
+          },
+          {
+            "title": "国际重大新闻事件2",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-9725df6dccbfda77461b6345"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "国内新闻",
+        "items": [
+          {
+            "title": "国内新闻事件0",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-b1a032c4a42a8f2e60b42557"
+            ]
+          },
+          {
+            "title": "国内新闻事件1",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-33dd20cc661f32b6441035db"
+            ]
+          },
+          {
+            "title": "国内新闻事件2",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-666f3c92cf5052e0b27c2a66"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "AI每日总结",
+        "items": [
+          {
+            "title": "AI每日总结事件0",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-2d2e74498632e2bbc91627d6"
+            ]
+          },
+          {
+            "title": "AI每日总结事件1",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-e4993b747bd13b593ab7b397"
+            ]
+          },
+          {
+            "title": "AI每日总结事件2",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-a4abd955ecf5f591c1f3c16c"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "贸易财经",
+        "items": [
+          {
+            "title": "贸易财经事件0",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-6f57a09280a09f1df0c46457"
+            ]
+          },
+          {
+            "title": "贸易财经事件1",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-6e44e15cb3c81dca16336a48"
+            ]
+          },
+          {
+            "title": "贸易财经事件2",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-89084fc0a6232883379c15fe"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "科技前沿",
+        "items": [
+          {
+            "title": "科技前沿事件0",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-9e66ccf3d8d3701510be21ed"
+            ]
+          },
+          {
+            "title": "科技前沿事件1",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-9b2f40460984f52c99f56003"
+            ]
+          },
+          {
+            "title": "科技前沿事件2",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-85e173349558857a02e3cdff"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "自然科学",
+        "items": [
+          {
+            "title": "自然科学事件0",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-5cd89dce18fceb2f019d3f3d"
+            ]
+          },
+          {
+            "title": "自然科学事件1",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-118c81ddf35525754900c416"
+            ]
+          },
+          {
+            "title": "自然科学事件2",
+            "summary": "机构称完成 A & B 实验，不能推断因果。",
+            "source_ids": [
+              "src-522f4fe217186212263472b0"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "content": "<h1>每日新闻总结</h1>\n<p>机构发布 A &amp; B 实验结果。</p>\n<h2>国际重大新闻</h2>\n<h3>国际重大新闻事件0</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/0/0?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>国际重大新闻事件1</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/0/1?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>国际重大新闻事件2</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/0/2?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h2>国内新闻</h2>\n<h3>国内新闻事件0</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/1/0?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>国内新闻事件1</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/1/1?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>国内新闻事件2</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/1/2?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h2>AI每日总结</h2>\n<h3>AI每日总结事件0</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/2/0?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>AI每日总结事件1</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/2/1?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>AI每日总结事件2</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/2/2?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h2>贸易财经</h2>\n<h3>贸易财经事件0</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/3/0?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>贸易财经事件1</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/3/1?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>贸易财经事件2</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/3/2?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h2>科技前沿</h2>\n<h3>科技前沿事件0</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/4/0?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>科技前沿事件1</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/4/1?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>科技前沿事件2</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/4/2?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h2>自然科学</h2>\n<h3>自然科学事件0</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/5/0?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>自然科学事件1</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/5/1?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>\n<h3>自然科学事件2</h3>\n<p>机构称完成 A &amp; B 实验，不能推断因果。</p>\n<p>来源：<a href=\"https://example.org/5/2?a=1&amp;b=2\">研究机构 &lt;示例&gt;</a></p>",
+  "feed_issues": [],
+  "generation": {
+    "run_id": "fixture",
+    "model": "mock",
+    "prompt_version": "2026-10-12.structured-v1",
+    "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "window_start": "2026-10-11T00:17:00+00:00",
+    "window_end": "2026-10-12T00:17:00+00:00",
+    "minimum_items": 3,
+    "evidence_path": "data/runs/2026-10-12/fixture.json"
+  }
+}

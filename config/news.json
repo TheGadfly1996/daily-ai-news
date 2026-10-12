@@ -1,0 +1,12 @@
+{
+  "lookback_hours": 24,
+  "max_articles": 80,
+  "max_per_source": 10,
+  "min_items_per_category": 3,
+  "feed_timeout": 20,
+  "issue_cutoff": "08:17",
+  "api_timeout": 90,
+  "max_output_tokens": 16000,
+  "generation_attempts": 2,
+  "rss_limit": 60
+}
