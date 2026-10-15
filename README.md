@@ -25,7 +25,7 @@ npm run preview
 ~~~
 
 构建结果在 dist/，默认预览地址为 http://localhost:4321/daily-ai-news。
-这些命令使用现有 data/digests.json，不调用 AI，也不需要 API Key。
+这些命令使用现有 data/digests/，不调用 AI，也不需要 API Key。
 
 ## 更新新闻
 
@@ -36,18 +36,20 @@ bash scripts/validate-site.sh
 ~~~
 
 Python 需要通过环境变量提供 OPENROUTER_API_KEY，可通过 OPENROUTER_MODEL 选择模型。
-它更新 data/digests.json，并将成功生成的证据记录写入 data/runs/。Astro 从同一份结构化数据构建网页与 feed.xml。
+它写入 data/digests/YYYY-MM-DD.json（只改当期文件），并将成功生成的证据记录写入 data/runs/。Astro 从同一份结构化数据构建网页与 feed.xml。
 不要将 API Key 放进前端变量或提交到仓库。
 
 只检查 feeds.txt 中的来源而不生成新闻，可运行 `python3 generate.py --check-feeds`；
 命令会列出本次无法读取的来源与原因，全部可用时退出码为 0，否则为 1。
 每日采集也会先检查来源；若有来源不可用，当期文章和 RSS 条目末尾会列出栏目、名称、链接与原因。
 暂时连不上与永久失效都按“本次未能读取”记录，确认后再修改 feeds.txt。
+网络错误、超时、HTTP 429/5xx 会重试一次；403/404 与内容无效不重试。
+同一链接只会出现在先列出的栏目（按 feeds.txt 顺序），避免跨栏重复。
 
 默认配置统一放在 `config/news.json`，本地与 Actions 使用同一份配置。
 LOOKBACK_HOURS、MAX_ARTICLES、MAX_PER_SOURCE、MIN_ITEMS_PER_CATEGORY 和 FEED_TIMEOUT
 仍可通过环境变量覆盖。默认每栏至少 3 个独立事件；任一栏素材不足时不调用 AI，
-生成后不足时最多尝试 2 次，仍失败则保留原归档并停止发布，不使用占位条目凑数。
+每个栏目独立校验，最多尝试 2 次；仍失败则保留原归档并停止发布，不使用占位条目凑数。
 
 每期使用固定北京时间窗口：例如 2026-10-12 期覆盖前一天 08:17（含）至当天 08:17（不含）。
 默认选择最近已经结束的窗口，因此任务延迟不会移动同一期的采集边界。
@@ -57,7 +59,8 @@ LOOKBACK_HOURS、MAX_ARTICLES、MAX_PER_SOURCE、MIN_ITEMS_PER_CATEGORY 和 FEED
 python3 generate.py --date 2026-10-12
 ~~~
 
-不接受尚未结束的窗口。补跑仍从当前 RSS 抓取，较早内容可能已被上游移除；
+某期已存在时 `generate.py` 直接跳过（所以每天 08:17 与 09:47 两次定时是安全的，后者只在前者失败时补跑）；
+需要覆盖已有期号时加 `--force`。不接受尚未结束的窗口。补跑仍从当前 RSS 抓取，较早内容可能已被上游移除；
 固定窗口不能恢复上游已经删除的素材。修改截止时间时，应同步更新 daily.yml 的定时时间。
 
 ## 内容结构与证据
@@ -68,9 +71,27 @@ python3 generate.py --date 2026-10-12
 HTML 是程序生成的兼容副本，前端以结构化字段为准；旧版 HTML 归档继续可读。
 来源 ID 校验能保证引用存在，不能自动证明摘要的每句话都被来源支持；事实审核仍可依据快照进行。
 
+生成按六个栏目逐一进行，默认每栏 3–6 个事件，摘要最多 160 字符，然后仅根据已通过校验的事件生成概览。
+正常情况共 7 次请求；重试只针对失败的栏目或概览，已接受的栏目不会在同一次运行中重新生成。
+遇到 `finish_reason: length` 时丢弃截断响应，将该请求输出预算翻倍，并将栏目收紧到最低条数、
+摘要最多 100 字符；概览截断时缩短到最多 100 字符。预算不会超过配置上限，连续失败仍停止发布。
+`generation_attempts` 表示每个部分的尝试上限，并非整期请求次数。
+
+`section_output_tokens` 默认 6000，`overview_output_tokens` 默认 1500，
+`max_output_tokens` 为单次请求最高上限（16000）。`model`、`temperature`（默认 0.3）和
+`response_format`（默认 `json_object`，设为 `null` 则不发送）也在 `config/news.json` 中；`OPENROUTER_MODEL` 仍可覆盖模型。
+发给模型的素材只含 id、来源、标题、北京时间发布时间和最多 600 字摘要；id 是每次请求内的短别名（A1、A2…），
+程序在校验前映射回真实素材 ID，别名表随每次尝试写入证据。稳定的编辑规则放在提示词最前面，便于供应商复用前缀缓存。
+摘要提示建议 120 字符以内，校验硬上限仍为 160。`max_items_per_category` 默认 6，
+如果环境变量提高了最低条数，则至少满足该最低值。`reasoning_effort` 默认 `low`，通过 OpenRouter
+统一参数请求较低推理强度，避免过多推理挤占正文预算；可设为 `null` 不发送该参数。
+具体推理控制取决于模型和供应商支持情况。
+
 `data/runs/YYYY-MM-DD/<run_id>.json` 保存实际素材摘要、采集窗口、系统与用户提示词、
 提示词版本及哈希、请求模型、响应模型、原始输出、token 用量、耗时和重试反馈。
-构建时检查证据文件是否存在、输入与提示词哈希是否匹配、最终响应是否与新闻对象一致。
+分栏生成的证据包含每个请求及重试的提示词、参数和结果；提示词哈希覆盖整个请求清单。
+构建时检查证据文件是否存在、输入与提示词哈希是否匹配，以及每个栏目的有效响应和概览能否组成新闻对象。
+旧版整期生成的证据仍兼容读取。截断的原始响应和 token 使用量也会保留，方便判断正文或推理预算耗尽。
 保存的是实际送入模型的摘要（最多 1200 字符），不代表已抓取完整原文。
 
 生成过程的检查点位于 `.runs/`，不提交到 Git；失败时保留原因和已取得的材料。
@@ -78,13 +99,28 @@ Actions 无论成功或失败都会上传诊断与候选数据，默认保留 14
 历史归档永久保留，同日期重跑只替换该期；补跑旧期不会改变最新期排序。
 网页生成全部历史日期页，RSS 仅输出最近 60 期（由 `rss_limit` 配置）。
 
+## 提示词评测
+
+改提示词或换模型前，可用已保存的 v2 素材回放并对比重试、截断与 token 数（需要 API Key，不写入 data/）：
+
+~~~sh
+python3 -m newsgen.evaluate 2026-10-14
+python3 -m newsgen.evaluate --materials sample.json
+~~~
+
+旧版记录没有保存素材，无法回放。指标不判断事实准确性，仍需对照来源抽查标题。
+
+分类与长度上限（`categories`、`title_max_chars`、`summary_max_chars`）在 `config/news.json` 中，
+Python 与 Astro 共用；标题归一化用 `tests/fixtures/normalize-cases.json` 同时验证两端一致。
+
 ## 目录
 
 ~~~text
-generate.py                 RSS 采集、AI 提示词与校验、JSON 归档
+generate.py                 命令行入口：采集窗口、调度各阶段、保存归档
+newsgen/                    settings 配置、feeds 采集、prompts 提示词、llm 调用与重试、storage 归档、evaluate 回放评测
 digest_schema.py            结构化事件校验、素材 ID、确定性 HTML 渲染
 config/news.json            本地与自动化共用默认配置
-data/digests.json            永久新闻归档，兼容历史 HTML 与新结构化记录
+data/digests/              永久新闻归档，每期一个 YYYY-MM-DD.json，兼容历史 HTML 与新结构化记录
 data/runs/                  成功生成的输入、提示词、响应与诊断快照
 src/lib/content.ts          结构化内容渲染与历史 HTML 适配
 src/lib/evidence.ts         构建时检查新闻与证据快照的一致性
@@ -104,6 +140,10 @@ dist/                       构建产物，不提交到 Git
 - Daily News Summary：继续按原计划每天北京时间 08:17 执行，
   生成候选数据，先完成类型检查、测试和 Astro 构建，再提交并推送数据，最后部署 dist/。
   手动触发可填写 `issue_date` 补跑指定期号。
+- CI：非 main 分支推送与 Pull Request 运行 Python 测试和 `scripts/validate-site.sh`。
+- 每日任务失败、Pages 部署失败时会自动创建 Issue（含运行链接）。
+- daily.yml 拆成两个 job：build 持有 API Key 并可推送数据，但无 Pages 权限；deploy 只有 Pages/OIDC 权限。
+  定时补跑发现该期已存在时不产生新提交，也不会重复部署。手动触发可勾选 `force` 覆盖已有期号。
 - Build News Website：main 有推送时构建并发布，
   也可手动触发；不运行新闻采集或 AI。
 - 两个工作流共用部署并发组，并在开始执行时检出最新 main，避免排队后构建旧事件版本。
