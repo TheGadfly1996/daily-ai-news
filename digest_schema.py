@@ -1,4 +1,7 @@
-"""Versioned editorial data; source names and links are never supplied by the model."""
+"""结构化新闻数据的版本、校验与确定性渲染。
+
+核心原则：来源名称与链接永远由程序根据素材回填，模型只能引用素材 ID，不能自己提供。
+"""
 import hashlib
 import html
 import json
@@ -6,7 +9,7 @@ import re
 from pathlib import Path
 from urllib.parse import urlsplit
 
-# Categories and length limits live in config/news.json so Python and the Astro build share one definition.
+# 栏目与长度上限定义在 config/news.json，Python 与 Astro 构建共用同一份。
 _SHARED = json.loads((Path(__file__).parent / "config/news.json").read_text(encoding="utf-8"))
 CATEGORIES = tuple(item["title"] for item in _SHARED["categories"])
 TITLE_MAX = _SHARED["title_max_chars"]
@@ -16,6 +19,7 @@ SCHEMA_VERSION = 2
 
 
 def safe_url(value):
+    """只接受 http/https、有主机名、不含空白/控制字符与账号密码的链接。"""
     if not isinstance(value, str) or re.search(r"[\s\x00-\x1f]", value):
         return False
     try:
@@ -26,15 +30,18 @@ def safe_url(value):
 
 
 def material_id(article):
+    """由素材的栏目、来源、链接、标题、发布时间哈希得到稳定 ID，同一素材每次生成都一致。"""
     identity = "\0".join(article.get(key, "") for key in ("category", "source", "link", "title", "published"))
     return "src-" + hashlib.sha256(identity.encode()).hexdigest()[:24]
 
 
 def normalized_title(value):
+    """标题归一化（小写、去标点与空白），用于判断重复；规则需与前端 normalizeTitle 保持一致。"""
     return re.sub(r"[^\w\u4e00-\u9fff]", "", value.lower())
 
 
 def text(value, field, limit):
+    """校验为非空字符串且不超过 limit 字符，返回去除首尾空白后的文本。"""
     if not isinstance(value, str) or not value.strip() or len(value) > limit:
         raise ValueError(f"{field} 必须是非空文本，最多 {limit} 字符")
     return value.strip()
@@ -42,6 +49,7 @@ def text(value, field, limit):
 
 def validate_section(section, category, articles, minimum, titles=None, used_sources=None,
                      maximum=None, summary_limit=SUMMARY_MAX):
+    """校验单个栏目：条数范围、字段集合、标题不重复、来源 ID 存在且属于本栏、同一素材只用一次。"""
     sources = {}
     for article in articles:
         source_id = article.get("id")
@@ -82,6 +90,7 @@ def validate_section(section, category, articles, minimum, titles=None, used_sou
 
 
 def validate_editorial(value, articles, minimum):
+    """校验整期：概览 + 六个栏目按固定顺序，标题与来源跨栏不重复。"""
     if not isinstance(value, dict) or set(value) != {"overview", "sections"}:
         raise ValueError("输出必须仅包含 overview 和 sections")
     text(value["overview"], "overview", SUMMARY_MAX)
@@ -95,6 +104,7 @@ def validate_editorial(value, articles, minimum):
 
 
 def render_editorial(value, articles):
+    """把结构化内容渲染为兼容 HTML（全部转义，来源名称与链接取自素材）。"""
     sources = {article["id"]: article for article in articles}
     escape = html.escape
     parts = ["<h1>每日新闻总结</h1>", f"<p>{escape(value['overview'])}</p>"]

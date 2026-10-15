@@ -1,3 +1,8 @@
+"""命令行入口：确定采集窗口 → 生成最新一期 → 补齐缺失期号。
+
+用法：python3 generate.py [--date YYYY-MM-DD] [--force] [--no-backfill] [--check-feeds] [--check-gaps]
+具体逻辑在 newsgen/ 包：settings 配置、feeds 采集、prompts 提示词、llm 模型调用、storage 归档。
+"""
 import argparse
 import sys
 import time
@@ -14,11 +19,16 @@ from newsgen.settings import validate_config
 from newsgen.storage import archived_dates, atomic_json, issue_exists, save_record
 
 ROOT = settings.ROOT
-DATA_DIR = ROOT / "data"
-RUN_DIR = ROOT / ".runs"
+DATA_DIR = ROOT / "data"      # 成功生成的证据写入 data/runs/，随新闻一起提交
+RUN_DIR = ROOT / ".runs"       # 生成过程的检查点，失败时用于排查，不提交到 Git
 
 
 def issue_window(issue_date=None, now=None):
+    """返回 (期号日期, 窗口起点, 窗口终点)。
+
+    窗口固定为北京时间 issue_cutoff 之前的 lookback_hours 小时，左闭右开。不指定日期时取最近一个
+    已结束的窗口，因此任务延迟不会移动同一期的边界；尚未结束的窗口会被拒绝。
+    """
     now = now or datetime.now(timezone.utc)
     local = now.astimezone(settings.CHINA)
     hour, minute = map(int, settings.CONFIG["issue_cutoff"].split(":"))
@@ -38,10 +48,10 @@ def issue_window(issue_date=None, now=None):
 
 
 def missing_issue_dates(target_date, days=None, archived=None):
-    """Dates in the `days` before `target_date` with no archived issue, oldest first.
+    """返回 target_date 之前 days 天内尚未归档的期号，从旧到新排列。
 
-    Never reaches before the first archived issue, and never looks further back than `days`:
-    RSS feeds only keep recent entries, so older windows cannot be rebuilt."""
+    不会早于第一期存档，也不会回溯超过 days 天：RSS 只保留较新的条目，更早的窗口无法重建。
+    """
     days = settings.CONFIG["backfill_days"] if days is None else days
     archived = archived_dates() if archived is None else archived
     if not archived:
@@ -52,7 +62,10 @@ def missing_issue_dates(target_date, days=None, archived=None):
 
 
 def generate_issue(today, start, end, backfill=False):
-    """Collect, generate, validate and save one issue; raises on any failure and leaves the archive unchanged."""
+    """采集、生成、校验并保存一期。任何一步失败都会抛出异常，且不改动已有归档。
+
+    backfill=True 表示这是补齐的期号，记录与证据里会带 backfilled 标记。
+    """
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + uuid.uuid4().hex[:8]
     journal = RUN_DIR / f"{run_id}.json"
     run = {
@@ -67,6 +80,7 @@ def generate_issue(today, start, end, backfill=False):
     checkpoint = lambda: atomic_json(journal, run)
     checkpoint()
     try:
+        # 1. 采集：固定窗口内的素材；任一栏素材不足时不调用模型
         print(f"Collecting RSS for {today}: [{start.isoformat()}, {end.isoformat()})")
         articles, issues = collect_articles(start, end)
         run.update(materials=articles, feed_issues=issues, category_counts=dict(Counter(a["category"] for a in articles)))
@@ -75,10 +89,12 @@ def generate_issue(today, start, end, backfill=False):
                  if run["category_counts"].get(category, 0) < settings.MIN_ITEMS_PER_CATEGORY}
         if short:
             raise RuntimeError(f"栏目素材不足，保留原归档且不调用 AI：{short}")
+        # 2. 生成：六栏逐一生成并校验，再生成概览
         run["status"] = "generating"
         editorial = generate_digest(articles, run, checkpoint)
         now = datetime.now(timezone.utc).isoformat()
         run.update(status="validated", completed_at=now)
+        # 3. 保存：先写证据（素材、提示词、原始输出），再写当期记录；构建时会核对两者一致
         evidence_path = DATA_DIR / "runs" / today / f"{run_id}.json"
         atomic_json(evidence_path, run)
         record = {
@@ -130,7 +146,7 @@ def main(argv=None):
             print(f"缺失期号：{date}")
         return 1 if gaps else 0
 
-    # The latest issue goes first and is fatal on failure; backfill never puts it at risk.
+    # 最新一期优先，失败即整体失败；补齐不会危及它。
     if not args.force and issue_exists(today):
         print(f"{today} 期已存在，跳过生成（使用 --force 可重新生成并替换）")
     else:
@@ -140,7 +156,7 @@ def main(argv=None):
         return 0
     failed = []
     for date in missing_issue_dates(today):
-        # Bound total runtime so a slow backfill cannot get the whole step killed after the latest issue succeeded.
+        # 限制总耗时：避免补齐拖太久，导致整个步骤超时被杀、已成功的最新一期也丢失。
         if time.monotonic() - started > settings.CONFIG["backfill_start_deadline_seconds"]:
             failed.append(date)
             print(f"::warning::已超过补齐开工截止时间，未尝试 {date}")

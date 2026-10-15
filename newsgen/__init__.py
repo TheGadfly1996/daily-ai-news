@@ -1,1 +1,1 @@
-"""RSS collection, prompting and archiving for the daily digest."""
+"""每日新闻生成流程：采集 RSS、构造提示词、调用模型、校验并归档。"""

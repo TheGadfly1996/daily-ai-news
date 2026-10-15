@@ -1,4 +1,4 @@
-"""OpenRouter calls with per-stage retries, and the section-by-section digest generation."""
+"""调用 OpenRouter：每个阶段独立重试，并按栏目逐一生成整期新闻。"""
 import hashlib
 import json
 import os
@@ -14,11 +14,16 @@ from newsgen.prompts import (SYSTEM_PROMPT, build_overview_prompt, build_section
 
 
 class TruncatedResponse(ValueError):
+    """模型输出因长度限制被截断（finish_reason=length）。"""
     pass
 
 
 def request_json(client, request, run, prompt_builder, validator, output_tokens, checkpoint=None, aliases=None):
-    """Retry only this stage. On length, raise its budget and ask for less visible output."""
+    """请求一次模型并校验，只重试当前阶段。
+
+    校验失败时把错误反馈给模型重试；遇到截断则把输出预算翻倍（不超过上限），并要求更少、更短的输出。
+    每次尝试的提示词、参数、原始输出与 token 用量都写入 run，作为证据。
+    """
     feedback = ""
     compact = False
     for attempt in range(settings.CONFIG["generation_attempts"]):
@@ -33,7 +38,7 @@ def request_json(client, request, run, prompt_builder, validator, output_tokens,
             detail["source_aliases"] = aliases
         request["attempts"].append(detail)
         run["attempts"].append(detail)
-        # Hash a manifest of the exact user prompts and request controls, including retries.
+        # 对“实际发送的提示词与请求参数清单（含重试）”计算哈希，构建时据此核对证据没有被改动
         run["prompt"] = json.dumps([
             {"stage": r["stage"], "category": r.get("category"), "system_prompt": SYSTEM_PROMPT,
              "attempts": [{key: a[key] for key in ("prompt", "feedback", "max_tokens", "reasoning_effort")} for a in r["attempts"]]}
@@ -98,6 +103,10 @@ def request_json(client, request, run, prompt_builder, validator, output_tokens,
 
 
 def generate_digest(articles, run=None, checkpoint=None):
+    """按六个栏目逐一生成（每栏独立校验与重试），最后根据已接受的事件生成概览。
+
+    正常共 7 次请求；已通过的栏目不会因后面的失败而重新生成。
+    """
     if not articles:
         raise RuntimeError("指定窗口没有抓到任何文章")
     run = run if run is not None else {}

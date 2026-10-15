@@ -1,10 +1,10 @@
-"""Replay saved issues' materials through the current prompts/model and report quality counters.
+"""用已保存的素材回放当前提示词与模型，输出质量计数，便于改提示词或换模型前后对比。
 
-    python -m newsgen.evaluate 2026-10-13 2026-10-14      # issues stored in data/digests/
-    python -m newsgen.evaluate --materials sample.json    # a JSON list of materials (each with an id)
+    python -m newsgen.evaluate 2026-10-13 2026-10-14      # data/digests/ 中已有的期号
+    python -m newsgen.evaluate --materials sample.json    # 素材 JSON 列表（每条需有 id）
 
-Needs OPENROUTER_API_KEY. Nothing is written to data/. Compare the reports before changing a prompt or model;
-the numbers do not judge factual accuracy, so spot-check the printed titles against their sources.
+需要 OPENROUTER_API_KEY；不会写入 data/。数字只反映重试、截断与 token，不判断事实是否准确，
+请对照来源抽查打印出的标题。
 """
 import argparse
 import json
@@ -24,7 +24,7 @@ def load_materials(date):
 
 
 def evaluate(materials, label, generate=generate_digest):
-    """Return one report row; a failed generation is reported instead of raised."""
+    """返回一行评测结果；生成失败时记录错误而不是抛出。"""
     run = {}
     row = {"label": label, "materials": len(materials), "model": settings.MODEL}
     try:

@@ -1,4 +1,7 @@
-"""Paths, tunables and config validation. Other modules read these as `settings.X` at call time."""
+"""路径、可调参数与配置校验。
+
+其他模块以 `settings.X` 的方式在调用时读取，测试可以直接 patch 这里的值。
+"""
 import json
 import os
 from pathlib import Path
@@ -9,17 +12,19 @@ from digest_schema import CATEGORIES
 ROOT = Path(__file__).resolve().parent.parent
 FEEDS_FILE = ROOT / "feeds.txt"
 
+# 默认配置来自 config/news.json（含义见 docs/config.md）；下面几项可用同名环境变量覆盖
 CONFIG = json.loads((ROOT / "config/news.json").read_text(encoding="utf-8"))
 LOOKBACK_HOURS = int(os.getenv("LOOKBACK_HOURS", CONFIG["lookback_hours"]))
 MAX_ARTICLES = int(os.getenv("MAX_ARTICLES", CONFIG["max_articles"]))
 MAX_PER_SOURCE = int(os.getenv("MAX_PER_SOURCE", CONFIG["max_per_source"]))
 MIN_ITEMS_PER_CATEGORY = int(os.getenv("MIN_ITEMS_PER_CATEGORY", CONFIG["min_items_per_category"]))
 FEED_TIMEOUT = int(os.getenv("FEED_TIMEOUT", CONFIG["feed_timeout"]))
-MODEL = os.getenv("OPENROUTER_MODEL") or CONFIG["model"]
+MODEL = os.getenv("OPENROUTER_MODEL") or CONFIG["model"]   # 模型：环境变量优先，其次配置文件
 CHINA = ZoneInfo("Asia/Shanghai")
 
 
 def validate_config():
+    """启动时校验配置，错误尽早暴露，避免跑到一半才失败。"""
     if any(value <= 0 for value in (LOOKBACK_HOURS, MAX_ARTICLES, MAX_PER_SOURCE, MIN_ITEMS_PER_CATEGORY, FEED_TIMEOUT)):
         raise ValueError("采集配置必须为正整数")
     if MAX_ARTICLES < len(CATEGORIES) * MIN_ITEMS_PER_CATEGORY:

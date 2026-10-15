@@ -1,4 +1,4 @@
-"""Feed loading, fetching, selection and per-window collection."""
+"""RSS 来源的读取、抓取、挑选，以及按窗口采集素材。"""
 import calendar
 import html
 import json
@@ -17,6 +17,7 @@ from newsgen import settings
 
 
 def load_feeds():
+    """读取 feeds.txt（格式：栏目 | 名称 | 链接，# 开头为注释），同栏目内相同链接只保留一个。"""
     feeds = []
     seen = set()
     for line_number, line in enumerate(settings.FEEDS_FILE.read_text(encoding="utf-8").splitlines(), 1):
@@ -34,6 +35,7 @@ def load_feeds():
 
 
 def clean_text(value):
+    """去掉 HTML 标签与实体，压缩空白，得到纯文本摘要。"""
     if not value:
         return ""
 
@@ -45,6 +47,7 @@ def clean_text(value):
 
 
 def entry_datetime(entry):
+    """条目的发布（或更新）时间，统一为 UTC；没有时间的条目返回 None，会被丢弃。"""
     for key in ("published_parsed", "updated_parsed"):
 
         value = entry.get(key)
@@ -60,7 +63,7 @@ def entry_datetime(entry):
 
 
 def fetch_feed(feed_config, attempts=2, pause=1.0):
-    """Retry once on transient failures (network, timeout, 429/5xx); 4xx and bad content fail at once."""
+    """抓取来源；网络错误、超时、HTTP 429/5xx 视为暂时故障，重试一次；403/404 与内容无效不重试。"""
     for attempt in range(attempts):
         feed = _fetch_feed_once(feed_config)
         if not feed.error or attempt == attempts - 1 or not feed.transient:
@@ -70,6 +73,7 @@ def fetch_feed(feed_config, attempts=2, pause=1.0):
 
 
 def _fetch_feed_once(feed_config):
+    """抓取一次，支持 RSS/Atom/JSON Feed；失败不抛异常，而是返回带 error 与 transient 的结果。"""
     url = feed_config["url"]
     transient = False
     try:
@@ -125,7 +129,7 @@ def _fetch_feed_once(feed_config):
 
 
 def select_articles(articles):
-    """Give each category and source room before filling by recency."""
+    """挑选送给模型的素材：先保证每个栏目、每个来源都有名额，再按时间从新到旧补满。"""
     if settings.MAX_ARTICLES <= 0 or settings.MAX_PER_SOURCE <= 0:
         return []
     ordered = sorted(articles, key=lambda item: item["published"], reverse=True)
@@ -164,6 +168,10 @@ def select_articles(articles):
 
 
 def collect_articles(window_start=None, window_end=None):
+    """并发抓取所有来源，保留窗口 [起点, 终点) 内的条目，去重后挑选素材。
+
+    返回 (素材列表, 无法读取的来源列表)。
+    """
     now = window_end or datetime.now(timezone.utc)
     cutoff = window_start or now - timedelta(hours=settings.LOOKBACK_HOURS)
     fetched_at = datetime.now(timezone.utc).isoformat()
@@ -204,7 +212,7 @@ def collect_articles(window_start=None, window_end=None):
                 if not title:
                     continue
                 normalized = normalized_title(title)
-                # Links are unique across categories (first feed in feeds.txt wins); titles only within one.
+                # 链接跨栏目唯一（feeds.txt 中靠前的来源优先）；标题只在同一栏目内去重
                 key_title = (category, normalized)
                 if (link and link in seen_links) or key_title in seen_titles:
                     continue
