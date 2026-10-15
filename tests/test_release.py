@@ -22,8 +22,8 @@ class ReleaseTests(unittest.TestCase):
                     'GIT_COMMITTER_NAME': 'test', 'GIT_COMMITTER_EMAIL': 'test@example.org'}
         self.run_command(['git', 'init', '--bare', '--initial-branch=main', str(self.remote)], root)
         self.run_command(['git', 'clone', str(self.remote), str(self.repo)], root)
-        (self.repo / 'data').mkdir()
-        (self.repo / 'data/digests.json').write_text('[]')
+        (self.repo / 'data/digests').mkdir(parents=True)
+        (self.repo / 'data/digests/.gitkeep').write_text('')
         (self.repo / 'src').mkdir()
         (self.repo / 'src/example.txt').write_text('base')
         self.git(self.repo, 'add', '.')
@@ -39,7 +39,7 @@ class ReleaseTests(unittest.TestCase):
         return self.run_command(['git', *args], cwd).stdout.strip()
 
     def candidate(self):
-        (self.repo / 'data/digests.json').write_text(json.dumps([{'date': '2026-10-12'}]))
+        (self.repo / 'data/digests/2026-10-12.json').write_text(json.dumps({'date': '2026-10-12'}))
         (self.repo / 'data/runs').mkdir()
         (self.repo / 'data/runs/example.json').write_text('{}')
 

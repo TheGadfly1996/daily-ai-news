@@ -1,11 +1,11 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { readFileSync, mkdtempSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
+import { readFileSync, readdirSync, mkdtempSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, dirname } from "node:path";
 import { createHash } from "node:crypto";
 import { parseFragment } from "parse5";
-import { parseDigest, validateRecords, textContent, type DigestRecord } from "../src/lib/content.ts";
+import { parseDigest, validateRecords, textContent, normalizeTitle, categories, type DigestRecord } from "../src/lib/content.ts";
 import { renderFeed } from "../src/lib/rss.ts";
 import { renderFeedIssues } from "../src/lib/feed-issues.ts";
 import { validateEvidence } from "../src/lib/evidence.ts";
@@ -52,7 +52,7 @@ test("rejects duplicate dates, invalid calendar dates and invalid timestamps", (
 });
 
 test("all historical stories survive the build-time content adaptation", () => {
-  const records = validateRecords(JSON.parse(readFileSync("data/digests.json", "utf8")));
+  const records = validateRecords(JSON.parse("[" + readdirSync("data/digests").sort().map(name => readFileSync("data/digests/" + name, "utf8")).join(",") + "]"));
   for (const record of records) {
     const original = parseFragment(record.content).childNodes
       .filter(node => "tagName" in node && node.tagName === "h3").map(textContent);
@@ -163,4 +163,65 @@ test("build rejects absent or mismatched evidence for structured issues", () => 
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
+});
+
+test("section evidence accepts a truncated retry and rejects lost or modified stage outputs", () => {
+  const root = mkdtempSync(join(tmpdir(), "section-evidence-"));
+  try {
+    const value = structuredClone(structured);
+    value.generation!.strategy = "sections-v1";
+    const system = "fixture system prompt";
+    const requests = [...value.editorial!.sections, { overview: value.editorial!.overview }].map((result, index) => {
+      const stage = index < 6 ? "section" : "overview";
+      const category = index < 6 ? value.editorial!.sections[index].category : undefined;
+      return { stage, category, result, attempts: [{ stage, category: category ?? null,
+        prompt: "fixture prompt " + index, feedback: "", max_tokens: 6000, reasoning_effort: "low",
+        status: "valid", finish_reason: "stop", raw_response: JSON.stringify(result) }],
+      };
+    });
+    const failed = { ...requests[1].attempts[0], status: "invalid", finish_reason: "length", raw_response: "{" };
+    requests[1].attempts.unshift(failed);
+    requests[1].attempts[1].max_tokens = 12000;
+    requests[1].attempts[1].feedback = "retry compactly";
+    const prompt = JSON.stringify(requests.map(request => ({ stage: request.stage, category: request.category ?? null,
+      system_prompt: system, attempts: request.attempts.map(attempt => ({ prompt: attempt.prompt, feedback: attempt.feedback,
+        max_tokens: attempt.max_tokens, reasoning_effort: attempt.reasoning_effort })),
+    })));
+    value.generation!.prompt_sha256 = createHash("sha256").update(prompt).digest("hex");
+    const evidence = { ...value.generation, issue_date: value.date, status: "validated", prompt,
+      system_prompt: system, config: { min_items_per_category: 3 }, materials: value.materials,
+      editorial: value.editorial, requests, attempts: requests.flatMap(request => request.attempts),
+    };
+    const path = join(root, value.generation!.evidence_path);
+    mkdirSync(dirname(path), { recursive: true });
+    writeFileSync(path, JSON.stringify(evidence));
+    assert.doesNotThrow(() => validateEvidence(value, root));
+    const invalidCases = [
+      (copy: typeof evidence) => { copy.requests.pop(); },
+      (copy: typeof evidence) => { copy.requests[0].attempts[0].raw_response = "{}"; },
+      (copy: typeof evidence) => { copy.requests[0].attempts[0].finish_reason = "length"; },
+      (copy: typeof evidence) => { copy.requests[0].attempts[0].prompt += " tampered"; },
+      (copy: typeof evidence) => { copy.attempts.pop(); },
+      (copy: typeof evidence) => { copy.requests[6].category = "国内新闻"; },
+    ];
+    for (const mutate of invalidCases) {
+      const copy = structuredClone(evidence);
+      mutate(copy);
+      writeFileSync(path, JSON.stringify(copy));
+      assert.throws(() => validateEvidence(value, root));
+    }
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("title normalization matches the vectors shared with Python", () => {
+  const cases: [string, string][] = JSON.parse(readFileSync("tests/fixtures/normalize-cases.json", "utf8"));
+  for (const [raw, expected] of cases) assert.equal(normalizeTitle(raw), expected, raw);
+});
+
+test("categories come from the shared config in a fixed order", () => {
+  const config = JSON.parse(readFileSync("config/news.json", "utf8"));
+  assert.deepEqual(categories, config.categories);
+  assert.equal(categories.length, 6);
 });

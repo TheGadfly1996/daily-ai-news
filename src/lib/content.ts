@@ -1,15 +1,14 @@
 import { parseFragment, serialize, serializeOuter, type DefaultTreeAdapterMap } from "parse5";
 import sanitizeHtml from "sanitize-html";
+import config from "../../config/news.json" with { type: "json" };
 
 type Node = DefaultTreeAdapterMap["node"];
-export const categories = [
-  { id: "world", title: "国际重大新闻" },
-  { id: "china", title: "国内新闻" },
-  { id: "ai", title: "AI每日总结" },
-  { id: "business", title: "贸易财经" },
-  { id: "technology", title: "科技前沿" },
-  { id: "science", title: "自然科学" },
-] as const;
+export const categories: readonly { id: string; title: string }[] = config.categories;
+const titleMax: number = config.title_max_chars;
+const summaryMax: number = config.summary_max_chars;
+export function normalizeTitle(value: string): string {
+  return value.toLowerCase().replace(/[^\p{L}\p{N}_]/gu, "");
+}
 
 export interface Source { name: string; url?: string }
 export interface NewsItem { id: string; title: string; bodyHtml: string; sources: Source[] }
@@ -26,6 +25,7 @@ export interface Editorial {
 export interface Generation {
   run_id: string; model: string; prompt_version: string; prompt_sha256: string;
   window_start: string; window_end: string; minimum_items: number; evidence_path: string;
+  strategy?: "sections-v1";
 }
 export interface DigestRecord {
   date: string; title: string; guid: string; created_at: string; content: string; article_count: number;
@@ -82,12 +82,13 @@ function timestamp(value: unknown): number {
 export function validateStructured(record: DigestRecord): void {
   const editorial = object(record.editorial);
   const generation = object(record.generation);
+  if (generation.strategy !== undefined && generation.strategy !== "sections-v1") throw new Error("Unsupported generation strategy");
   for (const key of ["run_id", "model", "prompt_version", "prompt_sha256", "evidence_path"]) requiredText(generation[key], key);
   if (!Number.isInteger(generation.minimum_items) || (generation.minimum_items as number) < 1) throw new Error("Invalid minimum_items");
   const start = timestamp(generation.window_start), end = timestamp(generation.window_end);
   if (start >= end) throw new Error("Invalid collection window");
   if (new Date(end + 8 * 3600_000).toISOString().slice(0, 10) !== record.date) throw new Error("Issue date differs from window");
-  requiredText(editorial.overview, "overview");
+  requiredText(editorial.overview, "overview", summaryMax);
   if (!Array.isArray(record.materials) || record.materials.length !== record.article_count) throw new Error("Invalid materials");
   const sources = new Map<string, Material>();
   for (const value of record.materials) {
@@ -107,9 +108,9 @@ export function validateStructured(record: DigestRecord): void {
     if (section.category !== categories[index].title || !Array.isArray(section.items) || section.items.length < (generation.minimum_items as number)) throw new Error("Invalid section or insufficient items");
     for (const value of section.items) {
       const item = object(value);
-      requiredText(item.title, "title", 200);
-      requiredText(item.summary, "summary");
-      const title = item.title.toLowerCase().replace(/[^\p{L}\p{N}_]/gu, "");
+      requiredText(item.title, "title", titleMax);
+      requiredText(item.summary, "summary", summaryMax);
+      const title = normalizeTitle(item.title);
       if (!title || titles.has(title)) throw new Error("Duplicate or empty event title");
       titles.add(title);
       if (!Array.isArray(item.source_ids) || !item.source_ids.length) throw new Error("Missing source IDs");

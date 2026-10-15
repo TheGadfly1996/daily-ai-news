@@ -9,7 +9,7 @@ if [[ "$(git rev-parse origin/main)" != "$validated_sha" ]]; then
 fi
 git config user.name "github-actions[bot]"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-git add data/digests.json data/runs
+git add data/digests data/runs
 if ! git diff --cached --quiet; then
   git commit -m "Update validated daily news"
 fi
