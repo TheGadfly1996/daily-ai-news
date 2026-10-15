@@ -46,7 +46,7 @@ Python 需要通过环境变量提供 OPENROUTER_API_KEY，可通过 OPENROUTER_
 网络错误、超时、HTTP 429/5xx 会重试一次；403/404 与内容无效不重试。
 同一链接只会出现在先列出的栏目（按 feeds.txt 顺序），避免跨栏重复。
 
-默认配置统一放在 `config/news.json`，本地与 Actions 使用同一份配置。
+默认配置统一放在 `config/news.json`（每一项的含义见 [docs/config.md](docs/config.md)），本地与 Actions 使用同一份配置。
 LOOKBACK_HOURS、MAX_ARTICLES、MAX_PER_SOURCE、MIN_ITEMS_PER_CATEGORY 和 FEED_TIMEOUT
 仍可通过环境变量覆盖。默认每栏至少 3 个独立事件；任一栏素材不足时不调用 AI，
 每个栏目独立校验，最多尝试 2 次；仍失败则保留原归档并停止发布，不使用占位条目凑数。

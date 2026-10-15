@@ -1,13 +1,15 @@
+# 每日新闻：生成当期（并补齐缺失期号）→ 验证 → 提交数据 → 部署 Pages。
+# build job 持有 API Key 并可推送数据，deploy job 只有 Pages 权限。
 name: Daily News Summary
 
 on:
   workflow_dispatch:
     inputs:
-      issue_date:
+      issue_date:   # 手动补跑指定期号；留空则生成最近已结束的窗口
         description: "Issue date YYYY-MM-DD (ends at 08:17 Asia/Shanghai); empty = latest completed window"
         required: false
         type: string
-      force:
+      force:        # 该期已存在时仍重新生成并替换
         description: "Regenerate and replace the issue even if it already exists"
         required: false
         type: boolean
@@ -15,11 +17,11 @@ on:
   schedule:
     - cron: "17 8 * * *"
       timezone: "Asia/Shanghai"
-    # Retry slot: generate.py skips an issue that already exists, so this is a no-op after a good run.
+    # 补跑时段：generate.py 遇到已存在的期号会跳过，所以第一次成功后这次不会产生新提交，也不会重复部署
     - cron: "47 9 * * *"
       timezone: "Asia/Shanghai"
 
-# Least privilege by default; each job asks for what it needs.
+# 默认只读，各 job 按需申请权限（最小权限原则）
 permissions:
   contents: read
 
@@ -29,7 +31,7 @@ concurrency:
 
 jobs:
   build:
-    # Holds the API key and may push data to main, but cannot publish to Pages.
+    # 持有 API Key 并可向 main 推送数据，但不能发布到 Pages
     runs-on: ubuntu-latest
     timeout-minutes: 75
     permissions:
@@ -43,6 +45,7 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+      # 记下起始提交，用于判断本次运行是否产生了新数据
       - name: Record starting commit
         id: start
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
@@ -58,11 +61,12 @@ jobs:
         run: |
           npm ci
           pip install -r requirements.txt
+      # 先跑 Python 测试，再调用模型，避免带着坏代码消耗 API 额度
       - name: Test generation and RSS handling
         run: python -m unittest discover -s tests -p 'test_*.py'
       - name: Generate candidate digest
-        # Latest issue: 7 requests x 2 attempts x 2 SDK tries x 90s is ~42 min worst case.
-        # Backfill of missed issues only starts within the first 15 min (backfill_start_deadline_seconds).
+        # 最新一期最坏约 42 分钟：7 次请求 × 2 次尝试 × SDK 2 次调用 × 90 秒。
+        # 补齐缺失期号只在开始后 15 分钟内启动（backfill_start_deadline_seconds）。
         timeout-minutes: 60
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -75,8 +79,10 @@ jobs:
           if [[ -n "$ISSUE_DATE" ]]; then args+=(--date "$ISSUE_DATE"); fi
           if [[ "$FORCE" == "true" ]]; then args+=(--force); fi
           python generate.py "${args[@]}"
+      # 先验证再提交：类型检查、测试、构建全部通过才会写入 main
       - name: Validate candidate and build before committing
         run: bash scripts/validate-site.sh
+      # 仅在 main 没有被他人更新时推送；冲突则失败，候选数据保留在 artifact 中
       - name: Save only validated history
         run: bash scripts/publish-history.sh
       - name: Decide whether to deploy
@@ -86,7 +92,7 @@ jobs:
           START_SHA: ${{ steps.start.outputs.sha }}
           EVENT: ${{ github.event_name }}
         run: |
-          # A scheduled retry that found the issue already published adds no commit: skip the redeploy.
+          # 定时补跑发现该期已发布、没有新提交时，跳过重复部署
           if [[ "$EVENT" == "schedule" && "$(git rev-parse HEAD)" == "$START_SHA" ]]; then
             echo "deploy=false" >> "$GITHUB_OUTPUT"
           else
@@ -102,6 +108,7 @@ jobs:
         if: steps.release.outputs.deploy == 'true'
         with:
           path: dist
+      # 无论成败都保留诊断信息与候选数据 14 天
       - name: Retain generation diagnostics and candidate data
         if: always()
         uses: actions/upload-artifact@v7
@@ -113,6 +120,7 @@ jobs:
             data/digests/
             data/runs/
           retention-days: 14
+      # 失败时自动开 Issue（需要 issues: write 权限）
       - name: Report failed run
         if: failure()
         env:
@@ -124,7 +132,7 @@ jobs:
             || echo "::warning::Could not open a failure issue"
 
   deploy:
-    # Only Pages/OIDC permissions; no repository write access and no API key.
+    # 只有 Pages/OIDC 权限：没有仓库写权限，也拿不到 API Key
     needs: build
     if: needs.build.outputs.deploy == 'true'
     runs-on: ubuntu-latest
@@ -142,6 +150,7 @@ jobs:
         with:
           ref: ${{ needs.build.outputs.sha }}
           fetch-depth: 0
+      # 检出构建时的提交，部署前最后核对一次 main 是否已被更新
       - name: Recheck main immediately before deployment
         run: bash scripts/check-release.sh --check-only
       - name: Deploy Pages

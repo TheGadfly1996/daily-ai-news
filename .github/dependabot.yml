@@ -1,3 +1,4 @@
+# 每周检查 Actions、npm、pip 依赖更新并自动开 PR（PR 会触发 CI）
 version: 2
 updates:
   - package-ecosystem: github-actions

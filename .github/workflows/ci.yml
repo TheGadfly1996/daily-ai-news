@@ -1,3 +1,4 @@
+# 合并前检查：Pull Request 与非 main 分支推送时运行；只测试与构建，不提交、不部署。
 name: CI
 
 on:

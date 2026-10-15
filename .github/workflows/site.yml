@@ -1,3 +1,4 @@
+# 仅构建并部署网站：main 有推送时触发，不采集、不调用 AI，也不跑 Python 测试。
 name: Build News Website
 
 on:
@@ -19,11 +20,12 @@ jobs:
     outputs:
       sha: ${{ steps.revision.outputs.sha }}
     steps:
-      # A queued run builds latest main, not an older event SHA.
+      # 排队的任务构建的是最新 main，而不是触发事件当时的旧提交
       - uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 0
+      # 记下构建所用的提交，部署 job 据此核对
       - name: Record built commit
         id: revision
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
