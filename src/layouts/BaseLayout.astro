@@ -20,6 +20,10 @@ const canonical = new URL(canonicalPath || Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <title>{title}</title>
     <link rel="canonical" href={canonical} />
+    <!-- 图标：现代浏览器用 SVG（随深浅色切换），ico 兜底旧浏览器，PNG 给 iOS 主屏幕 -->
+    <link rel="icon" href={urlFor("favicon.ico")} sizes="32x32" />
+    <link rel="icon" href={urlFor("favicon.svg")} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={urlFor("apple-touch-icon.png")} />
     <link rel="alternate" type="application/rss+xml" title="每日新闻总结 RSS" href={urlFor("feed.xml")} />
     <script is:inline define:vars={{ themeIds, themeStorageKey }}>
       try {

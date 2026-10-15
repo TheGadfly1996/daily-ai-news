@@ -245,3 +245,18 @@ test("navigation highlights the section that crossed the reading line", () => {
   assert.equal(activeSectionId(tops(-2000, -900, -50), 800, false), "s2");
   assert.equal(activeSectionId(tops(-900, -300, 600), 800, true), "s2");
 });
+
+test("site icons exist and are valid image files", () => {
+  const svg = readFileSync("public/favicon.svg", "utf8");
+  assert.match(svg, /^<svg[^>]+viewBox="0 0 64 64"/);
+  assert.doesNotMatch(svg, /<script|onload|href=/i);
+  const png = readFileSync("public/apple-touch-icon.png");
+  assert.deepEqual([...png.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+  assert.equal(png.readUInt32BE(16), 180);
+  assert.equal(png.readUInt32BE(20), 180);
+  const ico = readFileSync("public/favicon.ico");
+  assert.equal(ico.readUInt16LE(2), 1);                       // 图标类型
+  assert.equal(ico.readUInt16LE(4), 1);                       // 一张图
+  assert.equal(ico.readUInt32LE(14), ico.length - ico.readUInt32LE(18));  // 数据长度与偏移一致
+  assert.deepEqual([...ico.subarray(22, 30)], [137, 80, 78, 71, 13, 10, 26, 10]);
+});

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="每日新闻">
+  <!-- 报纸版面：标题横杠 + 两行正文，末尾的句点沿用站点品牌的强调色 -->
+  <style>
+    .bg { fill: #000; }
+    .ink { fill: #fff; }
+    /* 深色标签栏下反相，避免黑色图标看不见 */
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #fff; }
+      .ink { fill: #000; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14"/>
+  <rect class="ink" x="13" y="14" width="38" height="9" rx="2"/>
+  <rect class="ink" x="13" y="29" width="38" height="5" rx="2"/>
+  <rect class="ink" x="13" y="40" width="24" height="5" rx="2"/>
+  <circle cx="47" cy="45.5" r="6.5" fill="#e31958"/>
+</svg>
