@@ -59,7 +59,6 @@ AI每日总结 | Google DeepMind Blog | https://deepmind.google/blog/rss.xml
 # 自然科学
 
 自然科学 | Nature · Latest Research | https://www.nature.com/nature.rss
-自然科学 | Nature | https://www.nature.com/nature.rss
 自然科学 | ScienceDaily · 科学 | https://www.sciencedaily.com/rss/top/science.xml
 自然科学 | Phys.org | https://phys.org/rss-feed/
 自然科学 | NASA · 新闻 | https://www.nasa.gov/news-release/feed/
