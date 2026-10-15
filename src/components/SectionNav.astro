@@ -3,7 +3,43 @@ import type { NewsSection } from "../lib/content.ts";
 interface Props { sections: NewsSection[] }
 const { sections } = Astro.props;
 ---
-<nav class="section-nav" aria-label="跳转到栏目">
+<nav class="section-nav" aria-label="跳转到栏目" data-section-nav>
   <span class="sidebar-label">栏目导航</span>
   {sections.map(section => <a href={"#" + section.id}>{section.title}</a>)}
 </nav>
+<script>
+  import { activeSectionId } from "../lib/section-spy.ts";
+
+  const nav = document.querySelector<HTMLElement>("[data-section-nav]");
+  const links = new Map<string, HTMLAnchorElement>();
+  nav?.querySelectorAll<HTMLAnchorElement>("a[href^='#']").forEach(link => links.set(link.hash.slice(1), link));
+  const headings = [...links.keys()].map(id => document.getElementById(id)).filter((el): el is HTMLElement => !!el);
+
+  let current: string | undefined;
+  function show(id: string | undefined) {
+    if (id === current) return;
+    current = id;
+    links.forEach((link, key) => {
+      if (key === id) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  }
+  function update() {
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    show(activeSectionId(headings.map(el => ({ id: el.id, top: el.getBoundingClientRect().top })), window.innerHeight, atBottom));
+  }
+
+  let queued = false;
+  function schedule() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(() => { queued = false; update(); });
+  }
+
+  if (links.size && headings.length) {
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    window.addEventListener("hashchange", schedule);
+    update();
+  }
+</script>

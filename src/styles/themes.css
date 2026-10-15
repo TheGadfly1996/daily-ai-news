@@ -265,6 +265,7 @@ h2,
 .archive-card:hover,
 .site-nav a:hover,
 .section-nav a:hover,
+.section-nav a[aria-current='location'],
 .back-to-top:hover {
   background: var(--theme-hover);
   color: var(--theme-hover-ink);

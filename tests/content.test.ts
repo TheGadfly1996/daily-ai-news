@@ -9,6 +9,7 @@ import { parseDigest, validateRecords, textContent, normalizeTitle, categories, 
 import { renderFeed } from "../src/lib/rss.ts";
 import { renderFeedIssues } from "../src/lib/feed-issues.ts";
 import { validateEvidence } from "../src/lib/evidence.ts";
+import { activeSectionId } from "../src/lib/section-spy.ts";
 
 const record: DigestRecord = {
   date: "2026-10-12", title: "每日新闻总结 | 2026-10-12", guid: "daily-news-2026-10-12",
@@ -233,4 +234,14 @@ test("archived issues generated under older, looser length limits stay valid", (
   assert.doesNotThrow(() => validateRecords([fixture]));
   fixture.editorial.overview = "概".repeat(2001);
   assert.throws(() => validateRecords([fixture]));
+});
+
+test("navigation highlights the section that crossed the reading line", () => {
+  const tops = (...values: number[]) => values.map((top, index) => ({ id: "s" + index, top }));
+  assert.equal(activeSectionId([], 800, false), undefined);
+  assert.equal(activeSectionId(tops(500, 1200, 1900), 800, false), undefined);
+  assert.equal(activeSectionId(tops(200, 1200, 1900), 800, false), "s0");
+  assert.equal(activeSectionId(tops(-900, 100, 900), 800, false), "s1");
+  assert.equal(activeSectionId(tops(-2000, -900, -50), 800, false), "s2");
+  assert.equal(activeSectionId(tops(-900, -300, 600), 800, true), "s2");
 });
