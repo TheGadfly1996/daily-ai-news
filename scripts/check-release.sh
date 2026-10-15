@@ -9,4 +9,7 @@ if ! git diff --quiet HEAD -- src public data config astro.config.mjs package.js
   echo "::error::Build inputs changed after validation."
   exit 1
 fi
-git rev-parse HEAD > dist/revision.txt
+# --check-only: re-verify without touching dist/ (used after the Pages artifact is already uploaded).
+if [[ "${1:-}" != "--check-only" ]]; then
+  git rev-parse HEAD > dist/revision.txt
+fi

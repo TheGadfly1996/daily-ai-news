@@ -7,14 +7,21 @@ on:
         description: "Issue date YYYY-MM-DD (ends at 08:17 Asia/Shanghai); empty = latest completed window"
         required: false
         type: string
+      force:
+        description: "Regenerate and replace the issue even if it already exists"
+        required: false
+        type: boolean
+        default: false
   schedule:
     - cron: "17 8 * * *"
       timezone: "Asia/Shanghai"
+    # Retry slot: generate.py skips an issue that already exists, so this is a no-op after a good run.
+    - cron: "47 9 * * *"
+      timezone: "Asia/Shanghai"
 
+# Least privilege by default; each job asks for what it needs.
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read
 
 concurrency:
   group: daily-news-pages
@@ -22,16 +29,23 @@ concurrency:
 
 jobs:
   build:
+    # Holds the API key and may push data to main, but cannot publish to Pages.
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    timeout-minutes: 60
+    permissions:
+      contents: write
+      issues: write
+    outputs:
+      deploy: ${{ steps.release.outputs.deploy }}
+      sha: ${{ steps.release.outputs.sha }}
     steps:
       - uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 0
+      - name: Record starting commit
+        id: start
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
@@ -47,30 +61,46 @@ jobs:
       - name: Test generation and RSS handling
         run: python -m unittest discover -s tests -p 'test_*.py'
       - name: Generate candidate digest
+        # 7 requests x 2 attempts x 2 SDK tries x 90s is ~42 min worst case; fail fast rather than hang.
+        timeout-minutes: 45
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
           ISSUE_DATE: ${{ inputs.issue_date }}
+          FORCE: ${{ inputs.force }}
         shell: bash
         run: |
           args=()
           if [[ -n "$ISSUE_DATE" ]]; then args+=(--date "$ISSUE_DATE"); fi
+          if [[ "$FORCE" == "true" ]]; then args+=(--force); fi
           python generate.py "${args[@]}"
       - name: Validate candidate and build before committing
         run: bash scripts/validate-site.sh
       - name: Save only validated history
         run: bash scripts/publish-history.sh
-      - uses: actions/configure-pages@v6
+      - name: Decide whether to deploy
+        id: release
+        shell: bash
+        env:
+          START_SHA: ${{ steps.start.outputs.sha }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          # A scheduled retry that found the issue already published adds no commit: skip the redeploy.
+          if [[ "$EVENT" == "schedule" && "$(git rev-parse HEAD)" == "$START_SHA" ]]; then
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - name: Verify release still matches main
+        if: steps.release.outputs.deploy == 'true'
         run: bash scripts/check-release.sh
+      - uses: actions/configure-pages@v6
+        if: steps.release.outputs.deploy == 'true'
       - uses: actions/upload-pages-artifact@v5
+        if: steps.release.outputs.deploy == 'true'
         with:
           path: dist
-      - name: Recheck main immediately before deployment
-        run: bash scripts/check-release.sh
-      - name: Deploy Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
       - name: Retain generation diagnostics and candidate data
         if: always()
         uses: actions/upload-artifact@v7
@@ -79,6 +109,49 @@ jobs:
           include-hidden-files: true
           path: |
             .runs/
-            data/digests.json
+            data/digests/
             data/runs/
           retention-days: 14
+      - name: Report failed run
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh issue create --title "Daily news failed: $(date -u +%F)" \
+            --body "Run failed: $RUN_URL. Diagnostics are in the run artifact. Re-run with the issue_date input after fixing." \
+            || echo "::warning::Could not open a failure issue"
+
+  deploy:
+    # Only Pages/OIDC permissions; no repository write access and no API key.
+    needs: build
+    if: needs.build.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+      issues: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.build.outputs.sha }}
+          fetch-depth: 0
+      - name: Recheck main immediately before deployment
+        run: bash scripts/check-release.sh --check-only
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+      - name: Report failed deployment
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh issue create --title "Pages deployment failed: $(date -u +%F)" \
+            --body "Deployment failed or was superseded: $RUN_URL. Data may already be on main; rerun this workflow." \
+            || echo "::warning::Could not open a failure issue"

@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: daily-news-pages
@@ -18,14 +16,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      sha: ${{ steps.revision.outputs.sha }}
     steps:
       # A queued run builds latest main, not an older event SHA.
       - uses: actions/checkout@v7
         with:
           ref: main
+          fetch-depth: 0
+      - name: Record built commit
+        id: revision
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-node@v7
         with:
           node-version: "22"
@@ -40,8 +41,35 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+      issues: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.build.outputs.sha }}
+          fetch-depth: 0
       - name: Recheck main immediately before deployment
-        run: bash scripts/check-release.sh
+        run: bash scripts/check-release.sh --check-only
       - name: Deploy Pages
         id: deployment
         uses: actions/deploy-pages@v5
+      - name: Report failed deployment
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh issue create --title "Site deployment failed: $(date -u +%F)" \
+            --body "Deployment failed or was superseded: $RUN_URL." \
+            || echo "::warning::Could not open a failure issue"
