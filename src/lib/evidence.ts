@@ -15,7 +15,7 @@ function responseValue(attempt: Attempt): unknown {
     throw new Error("Response did not finish successfully");
   }
   const value = JSON.parse(attempt.raw_response.trim().replace(/^```(?:json)?\s*|\s*```$/gi, ""));
-  // The model cites short per-request aliases; map them back to material IDs before comparing.
+  // 模型引用的是每次请求内的短别名，比较前先映射回真实素材 ID
   const aliases = attempt.source_aliases;
   if (aliases && Array.isArray(value?.items)) {
     for (const item of value.items) {
@@ -25,7 +25,10 @@ function responseValue(attempt: Attempt): unknown {
   return value;
 }
 
-/** Fail the build if a new issue loses its input snapshot or points at a different run. */
+/**
+ * 核对新记录与证据文件一致，不一致则让构建失败：证据存在、运行 ID/模型/窗口/素材相同、
+ * 提示词哈希匹配，并且每个栏目与概览的有效响应能还原出当期内容。旧版记录无证据，直接跳过。
+ */
 export function validateEvidence(record: DigestRecord, root = process.cwd()): void {
   if (record.schema_version !== 2) return;
   const generation = record.generation!;

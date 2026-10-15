@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Only publish data built against the current main. Never silently rebase onto untested code.
+# 只发布基于当前 main 构建并验证过的数据；绝不悄悄 rebase 到未经验证的新代码上。
 set -euo pipefail
 validated_sha="$(git rev-parse HEAD)"
 git fetch origin main
@@ -13,5 +13,5 @@ git add data/digests data/runs
 if ! git diff --cached --quiet; then
   git commit -m "Update validated daily news"
 fi
-# A concurrent push is rejected by Git; it must not trigger a rebase of already built content.
+# 并发推送会被 Git 拒绝；不能因此对已构建的内容做 rebase。
 git push origin HEAD:main

@@ -8,6 +8,7 @@ const { sections } = Astro.props;
   {sections.map(section => <a href={"#" + section.id}>{section.title}</a>)}
 </nav>
 <script>
+  // 滚动时高亮当前栏目：用 aria-current 标记，样式见 layout.css / themes.css
   import { activeSectionId } from "../lib/section-spy.ts";
 
   const nav = document.querySelector<HTMLElement>("[data-section-nav]");
@@ -29,6 +30,7 @@ const { sections } = Astro.props;
     show(activeSectionId(headings.map(el => ({ id: el.id, top: el.getBoundingClientRect().top })), window.innerHeight, atBottom));
   }
 
+  // 用 requestAnimationFrame 合并滚动事件，每帧最多计算一次
   let queued = false;
   function schedule() {
     if (queued) return;

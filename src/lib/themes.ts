@@ -1,3 +1,4 @@
+// 九种主题：id 对应 themes.css 中的 data-theme，name 是选择器里显示的名称
 export const themes = [
   { id: "minimalist-flat", name: "极简扁平" },
   { id: "corporate-clean", name: "专业企业" },
@@ -11,7 +12,9 @@ export const themes = [
 ] as const;
 export type ThemeId = typeof themes[number]["id"];
 export const defaultTheme: ThemeId = "minimalist-flat";
+// 主题偏好保存在浏览器 localStorage 的键名
 export const themeStorageKey = "daily-news.theme";
+/** 未知或被篡改的主题值一律回退到默认主题。 */
 export function validTheme(value: unknown): ThemeId {
   return themes.some(theme => theme.id === value) ? value as ThemeId : defaultTheme;
 }

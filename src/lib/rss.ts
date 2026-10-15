@@ -5,9 +5,11 @@ function xml(value: string): string {
   return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;").replace(/'/g, "&apos;");
 }
+// CDATA 中不能出现 "]]>"，需要拆开
 function cdata(value: string): string {
   return value.replace(/]]>/g, "]]]]><![CDATA[>");
 }
+/** 生成 RSS：只输出最近 rss_limit 期，正文取自同一份结构化数据，末尾附带无法读取的来源。 */
 export function renderFeed(digests: Digest[], siteUrl: string): string {
   const base = siteUrl.replace(/\/?$/, "/");
   const items = digests.slice(0, config.rss_limit).map(digest => [

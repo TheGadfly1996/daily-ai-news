@@ -5,6 +5,7 @@ function escapeHtml(value: string): string {
     .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 }
 
+/** 渲染“本次未能读取的 RSS 来源”提示，用于网页与 RSS 条目末尾；没有异常时返回空串。 */
 export function renderFeedIssues(issues: FeedIssue[] | undefined): string {
   if (!issues?.length) return "";
   const items = issues.map(issue =>

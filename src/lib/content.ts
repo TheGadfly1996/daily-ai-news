@@ -1,3 +1,6 @@
+// 新闻内容的类型、校验与渲染：
+// - 新记录（schema_version 2）：结构化数据，构建时校验后渲染，来源由素材回填；
+// - 旧记录：历史 HTML，构建时清洗并拆分为栏目与条目，浏览器端不再请求归档。
 import { parseFragment, serialize, serializeOuter, type DefaultTreeAdapterMap } from "parse5";
 import sanitizeHtml from "sanitize-html";
 import config from "../../config/news.json" with { type: "json" };
@@ -5,8 +8,9 @@ import config from "../../config/news.json" with { type: "json" };
 type Node = DefaultTreeAdapterMap["node"];
 export const categories: readonly { id: string; title: string }[] = config.categories;
 const titleMax: number = config.title_max_chars;
-// Stored issues are validated leniently: older prompts allowed longer text than new generation does.
+// 读取已归档数据时校验较宽松：旧提示词允许的文本比现在新生成的更长，不能因此拒绝历史内容
 const archiveMax: number = config.archive_text_max_chars;
+/** 标题归一化，用于判断重复；规则需与 Python 的 normalized_title 一致（共用 tests/fixtures/normalize-cases.json 验证）。 */
 export function normalizeTitle(value: string): string {
   return value.toLowerCase().replace(/[^\p{L}\p{N}_]/gu, "");
 }
@@ -15,28 +19,34 @@ export interface Source { name: string; url?: string }
 export interface NewsItem { id: string; title: string; bodyHtml: string; sources: Source[] }
 export interface NewsSection { id: string; title: string; items: NewsItem[]; emptyHtml: string }
 export interface FeedIssue { category: string; name: string; url: string; reason: string }
+/** 实际送入模型的素材快照（摘要最多 1200 字符），用于事后核对来源。 */
 export interface Material {
   id: string; category: string; title: string; summary: string; source: string; link: string;
   published: string; fetched_at: string; feed_url: string;
 }
+/** 模型生成的结构化内容：概览 + 六栏事件；事件只引用素材 ID，来源名称与链接由程序回填。 */
 export interface Editorial {
   overview: string;
   sections: { category: string; items: { title: string; summary: string; source_ids: string[] }[] }[];
 }
+/** 生成元数据：运行 ID、模型、提示词版本与哈希、采集窗口、证据文件路径。 */
 export interface Generation {
   run_id: string; model: string; prompt_version: string; prompt_sha256: string;
   window_start: string; window_end: string; minimum_items: number; evidence_path: string;
   strategy?: "sections-v1";
   backfilled?: boolean;
 }
+/** data/digests/YYYY-MM-DD.json 中一期的原始记录。 */
 export interface DigestRecord {
   date: string; title: string; guid: string; created_at: string; content: string; article_count: number;
   feed_issues?: FeedIssue[];
   schema_version?: number; editorial?: Editorial; materials?: Material[]; generation?: Generation;
 }
+/** 构建时解析后的一期，供页面直接渲染。 */
 export interface Digest extends DigestRecord {
   heading: string; overviewHtml: string; overviewText: string; sections: NewsSection[]; storyCount: number;
 }
+// 旧版 HTML 的清洗规则：只保留文本结构标签与 http/https 链接，去掉脚本、样式与事件属性
 const sanitization = {
   allowedTags: ["h1", "h2", "h3", "p", "ul", "li", "strong", "em", "a", "blockquote", "br"],
   allowedAttributes: { a: ["href"] },
@@ -81,6 +91,10 @@ function timestamp(value: unknown): number {
   return Date.parse(value);
 }
 
+/**
+ * 校验结构化记录：生成元数据、采集窗口与期号一致、素材合法且落在窗口内、
+ * 六栏顺序与条数、标题不重复，以及来源 ID 存在、属于本栏且不被重复引用。
+ */
 export function validateStructured(record: DigestRecord): void {
   const editorial = object(record.editorial);
   const generation = object(record.generation);
@@ -124,6 +138,7 @@ export function validateStructured(record: DigestRecord): void {
   });
 }
 
+/** 把结构化记录渲染为页面数据：摘要转义，来源按素材回填并去重，同时生成兼容 HTML。 */
 function parseStructured(record: DigestRecord): Digest {
   validateStructured(record);
   const editorial = record.editorial!;
@@ -152,7 +167,7 @@ function parseStructured(record: DigestRecord): Digest {
     sections, storyCount: sections.reduce((count, section) => count + section.items.length, 0) };
 }
 
-/** Adapt and sanitize legacy HTML at build time, without fetching archives in the browser. */
+/** 构建时把一期解析为页面数据：新记录走结构化渲染，旧版 HTML 先清洗再按 h1/h2/h3/来源行拆分。 */
 export function parseDigest(record: DigestRecord): Digest {
   if (record.schema_version === 2) return parseStructured(record);
   const content = sanitizeHtml(record.content, sanitization);
@@ -205,6 +220,7 @@ export function parseDigest(record: DigestRecord): Digest {
     storyCount: sections.reduce((count, section) => count + section.items.length, 0) };
 }
 
+/** 校验整个归档：字段、日期、时间戳、条数、来源异常列表、日期不重复；按日期从新到旧排序。 */
 export function validateRecords(input: unknown): DigestRecord[] {
   if (!Array.isArray(input) || input.length === 0) throw new Error("News history is empty or is not an array");
   const dates = new Set<string>();
