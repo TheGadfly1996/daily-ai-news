@@ -27,6 +27,7 @@ export interface Generation {
   run_id: string; model: string; prompt_version: string; prompt_sha256: string;
   window_start: string; window_end: string; minimum_items: number; evidence_path: string;
   strategy?: "sections-v1";
+  backfilled?: boolean;
 }
 export interface DigestRecord {
   date: string; title: string; guid: string; created_at: string; content: string; article_count: number;

@@ -30,6 +30,9 @@ def validate_config():
             raise ValueError(f"{key} 必须为正整数")
     if CONFIG.get("reasoning_effort") not in (None, "low", "minimal", "medium", "high"):
         raise ValueError("reasoning_effort 必须为 low、minimal、medium、high 或 null")
+    for key in ("backfill_days", "backfill_start_deadline_seconds"):
+        if not isinstance(CONFIG.get(key), int) or CONFIG[key] < 0:
+            raise ValueError(f"{key} 必须为非负整数（backfill_days 为 0 表示不补齐）")
     if CONFIG.get("response_format") not in (None, "json_object"):
         raise ValueError("response_format 必须为 json_object 或 null")
     temperature = CONFIG.get("temperature")

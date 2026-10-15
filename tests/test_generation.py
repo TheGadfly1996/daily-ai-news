@@ -292,6 +292,69 @@ class GenerationTests(unittest.TestCase):
             self.assertEqual(json.loads((digests/'2026-01-01.json').read_text())['title'], 'replaced')
             self.assertEqual(sorted(p.name for p in digests.iterdir()), ['2026-01-01.json', '2026-10-12.json'])
 
+    def test_missing_dates_are_bounded_by_window_and_first_archive(self):
+        missing = generate.missing_issue_dates
+        self.assertEqual(missing('2026-10-14', 3, ['2026-10-08', '2026-10-10', '2026-10-13']), ['2026-10-11', '2026-10-12'])
+        self.assertEqual(missing('2026-10-14', 3, ['2026-10-12']), ['2026-10-13'])
+        self.assertEqual(missing('2026-10-14', 3, ['2026-10-11', '2026-10-12', '2026-10-13']), [])
+        self.assertEqual(missing('2026-10-14', 0, ['2026-10-01']), [])
+        self.assertEqual(missing('2026-10-14', 3, []), [])
+
+    def run_backfill_main(self, archived, argv=(), failing=(), existing=()):
+        calls = []
+
+        def fake_generate(date, start, end, backfill=False):
+            calls.append((date, backfill))
+            if date in failing:
+                raise RuntimeError('no material')
+
+        def window(date=None, now=None):
+            date = date or '2026-10-14'
+            end = datetime.strptime(date, '%Y-%m-%d').replace(tzinfo=timezone.utc)
+            return date, end - timedelta(hours=24), end
+
+        with patch.object(generate, 'generate_issue', side_effect=fake_generate), \
+             patch.object(generate, 'issue_window', side_effect=window), \
+             patch.object(generate, 'archived_dates', return_value=archived), \
+             patch.object(generate, 'issue_exists', side_effect=lambda d: d in existing):
+            code = generate.main(list(argv))
+        return code, calls
+
+    def test_latest_issue_first_then_missing_oldest_first_marked_as_backfill(self):
+        code, calls = self.run_backfill_main(['2026-10-10', '2026-10-13'])
+        self.assertEqual(code, 0)
+        self.assertEqual(calls, [('2026-10-14', False), ('2026-10-11', True), ('2026-10-12', True)])
+
+    def test_backfill_runs_even_when_latest_issue_already_exists(self):
+        code, calls = self.run_backfill_main(['2026-10-10', '2026-10-13', '2026-10-14'], existing={'2026-10-14'})
+        self.assertEqual(calls, [('2026-10-11', True), ('2026-10-12', True)])
+
+    def test_backfill_failure_is_a_warning_and_does_not_stop_later_dates(self):
+        code, calls = self.run_backfill_main(['2026-10-10', '2026-10-13'], failing={'2026-10-11'})
+        self.assertEqual(code, 0)
+        self.assertEqual([c[0] for c in calls], ['2026-10-14', '2026-10-11', '2026-10-12'])
+
+    def test_backfill_is_not_started_after_the_deadline(self):
+        config = {**settings.CONFIG, 'backfill_start_deadline_seconds': 0}
+        with patch.object(settings, 'CONFIG', config), patch.object(generate.time, 'monotonic', side_effect=[0, 5, 6, 7, 8]):
+            code, calls = self.run_backfill_main(['2026-10-10', '2026-10-13'])
+        self.assertEqual((code, calls), (0, [('2026-10-14', False)]))
+
+    def test_latest_issue_failure_is_fatal_and_skips_backfill(self):
+        with self.assertRaises(RuntimeError):
+            self.run_backfill_main(['2026-10-10', '2026-10-13'], failing={'2026-10-14'})
+
+    def test_explicit_date_or_no_backfill_never_scans_for_gaps(self):
+        for argv in (['--date', '2026-10-14'], ['--no-backfill']):
+            code, calls = self.run_backfill_main(['2026-10-10', '2026-10-13'], argv)
+            self.assertEqual(calls, [('2026-10-14', False)])
+
+    def test_check_gaps_reports_without_generating(self):
+        code, calls = self.run_backfill_main(['2026-10-10', '2026-10-13'], ['--check-gaps'])
+        self.assertEqual((code, calls), (1, []))
+        code, calls = self.run_backfill_main(['2026-10-11', '2026-10-12', '2026-10-13'], ['--check-gaps'])
+        self.assertEqual((code, calls), (0, []))
+
     def test_atomic_write_failure_preserves_original(self):
         with tempfile.TemporaryDirectory() as root:
             path = Path(root) / 'history.json'
@@ -328,6 +391,21 @@ class GenerationTests(unittest.TestCase):
             self.assertEqual(evidence['attempts'][0]['source_aliases']["A1"], self.editorial['sections'][0]['items'][0]['source_ids'][0])
             self.assertIn(self.articles[0]['summary'], evidence['prompt'])
             self.assertEqual(record['content'], render_editorial(self.editorial, self.articles))
+
+    def test_backfilled_issue_is_marked_in_record_and_evidence(self):
+        with tempfile.TemporaryDirectory() as root:
+            path = Path(root)
+            create, mock = self.mocked_client(editorial_responses(self.editorial))
+            start, end = datetime(2026, 10, 11, 0, 17, tzinfo=timezone.utc), datetime(2026, 10, 12, 0, 17, tzinfo=timezone.utc)
+            with patch.multiple(generate, ROOT=path, DATA_DIR=path/'data', RUN_DIR=path/'.runs'), \
+                 patch.object(storage, 'DIGEST_DIR', path/'data/digests'), \
+                 patch.object(generate, 'collect_articles', return_value=(self.articles, [])), \
+                 mock, patch.dict(os.environ, {'OPENROUTER_API_KEY': 'mock'}):
+                generate.generate_issue('2026-10-12', start, end, backfill=True)
+            record = json.loads((path/'data/digests/2026-10-12.json').read_text())
+            evidence = json.loads((path/record['generation']['evidence_path']).read_text())
+            self.assertTrue(record['generation']['backfilled'])
+            self.assertTrue(evidence['backfill'])
 
     def test_shortage_or_generation_failure_preserves_history_and_journals(self):
         for articles, responses in [([], []), (self.articles, [response('{}'), response('{}')]),

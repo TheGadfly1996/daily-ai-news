@@ -36,3 +36,7 @@ def issue_exists(date):
 def save_record(record):
     """One file per issue: a daily run touches only its own date and never rewrites the archive."""
     atomic_json(digest_path(record["date"]), record)
+
+
+def archived_dates():
+    return sorted(path.stem for path in DIGEST_DIR.glob("????-??-??.json"))

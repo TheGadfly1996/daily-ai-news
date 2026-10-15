@@ -31,7 +31,7 @@ jobs:
   build:
     # Holds the API key and may push data to main, but cannot publish to Pages.
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 75
     permissions:
       contents: write
       issues: write
@@ -61,8 +61,9 @@ jobs:
       - name: Test generation and RSS handling
         run: python -m unittest discover -s tests -p 'test_*.py'
       - name: Generate candidate digest
-        # 7 requests x 2 attempts x 2 SDK tries x 90s is ~42 min worst case; fail fast rather than hang.
-        timeout-minutes: 45
+        # Latest issue: 7 requests x 2 attempts x 2 SDK tries x 90s is ~42 min worst case.
+        # Backfill of missed issues only starts within the first 15 min (backfill_start_deadline_seconds).
+        timeout-minutes: 60
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
