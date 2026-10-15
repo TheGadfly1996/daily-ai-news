@@ -13,6 +13,11 @@ from newsgen.prompts import (SYSTEM_PROMPT, build_overview_prompt, build_section
                              model_view, resolve_aliases)
 
 
+def compact_limit(maximum):
+    """输出被截断后重试时的条数上限：减半但不低于最少条数，保住大部分条数，主要靠缩短文字来省 token。"""
+    return max(settings.MIN_ITEMS_PER_CATEGORY, maximum // 2)
+
+
 class TruncatedResponse(ValueError):
     """模型输出因长度限制被截断（finish_reason=length）。"""
     pass
@@ -128,14 +133,14 @@ def generate_digest(articles, run=None, checkpoint=None):
             value = resolve_aliases(value, aliases)
             validate_section(value, category, candidates, settings.MIN_ITEMS_PER_CATEGORY,
                              titles={normalized_title(title) for title in previous_titles},
-                             maximum=settings.MIN_ITEMS_PER_CATEGORY if compact else maximum,
+                             maximum=compact_limit(maximum) if compact else maximum,
                              summary_limit=100 if compact else 160)
             return value
 
         section = request_json(
             client, request, run,
             lambda compact, view=view, category=category, maximum=maximum: build_section_prompt(
-                view, category, settings.MIN_ITEMS_PER_CATEGORY if compact else maximum,
+                view, category, compact_limit(maximum) if compact else maximum,
                 100 if compact else 120, run, previous_titles, compact),
             validate, min(settings.CONFIG["section_output_tokens"], settings.CONFIG["max_output_tokens"]), checkpoint, aliases,
         )

@@ -81,7 +81,13 @@ class GenerationTests(unittest.TestCase):
         retry = create.call_args_list[2].kwargs
         self.assertEqual(retry['max_tokens'], 12000)
         self.assertEqual(create.call_args_list[1].kwargs['max_tokens'], 6000)
-        self.assertIn('最多 3 个独立事件', retry['messages'][1]['content'])
+        # 截断重试：条数上限减半（不低于最少条数），摘要缩短
+        compact = max(3, settings.CONFIG['max_items_per_category'] // 2)
+        self.assertIn(f'最多 {compact} 个独立事件', retry['messages'][1]['content'])
+        first_prompt = create.call_args_list[0].kwargs['messages'][1]['content']
+        maximum = settings.CONFIG['max_items_per_category']
+        self.assertIn(f'最多 {maximum} 个独立事件', first_prompt)
+        self.assertIn(f'尽量写满 {maximum} 个', first_prompt)
         self.assertIn('最多 100 字符', retry['messages'][1]['content'])
         self.assertEqual(retry['extra_body']['reasoning']['effort'], 'low')
         self.assertEqual(run['requests'][1]['attempts'][0]['usage']['completion_tokens_details']['reasoning_tokens'], 5900)

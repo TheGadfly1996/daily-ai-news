@@ -14,7 +14,7 @@ _SHARED = json.loads((Path(__file__).parent / "config/news.json").read_text(enco
 CATEGORIES = tuple(item["title"] for item in _SHARED["categories"])
 TITLE_MAX = _SHARED["title_max_chars"]
 SUMMARY_MAX = _SHARED["summary_max_chars"]
-PROMPT_VERSION = "2026-10-15.sections-v1.1"
+PROMPT_VERSION = "2026-10-15.sections-v1.2"
 SCHEMA_VERSION = 2
 
 

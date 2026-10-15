@@ -69,6 +69,7 @@ def build_section_prompt(view, category, maximum, summary_limit, run, previous_t
     return f"""{EDITORIAL_RULES}
 请编辑中文每日新闻的“{category}”栏目，素材窗口为 {window}。
 本次只输出此栏目，至少 {settings.MIN_ITEMS_PER_CATEGORY}、最多 {maximum} 个独立事件。
+独立事件足够时尽量写满 {maximum} 个；素材不足时只写真实事件，宁少勿凑。
 每条摘要{length}，不强行扩写。优先最重要且证据充分的事件。
 对象只有 category 和 items，category 必须为“{category}”。
 items 每项只有 title、summary、source_ids，后者是非空字符串数组，元素为素材 id（如 "A1"）。
