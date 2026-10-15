@@ -4,6 +4,27 @@ import { createHash } from "node:crypto";
 import { isDeepStrictEqual } from "node:util";
 import type { DigestRecord } from "./content.ts";
 
+type Attempt = {
+  stage: string; category: string | null; prompt: string; feedback: string; max_tokens: number;
+  reasoning_effort: string | null; status: string; finish_reason: string; raw_response: string;
+  source_aliases?: Record<string, string>;
+};
+type Request = { stage: string; category?: string; attempts: Attempt[]; result: unknown };
+function responseValue(attempt: Attempt): unknown {
+  if (attempt?.status !== "valid" || attempt.finish_reason !== "stop" || typeof attempt.raw_response !== "string") {
+    throw new Error("Response did not finish successfully");
+  }
+  const value = JSON.parse(attempt.raw_response.trim().replace(/^```(?:json)?\s*|\s*```$/gi, ""));
+  // The model cites short per-request aliases; map them back to material IDs before comparing.
+  const aliases = attempt.source_aliases;
+  if (aliases && Array.isArray(value?.items)) {
+    for (const item of value.items) {
+      if (Array.isArray(item?.source_ids)) item.source_ids = item.source_ids.map((ref: string) => aliases[ref] ?? ref);
+    }
+  }
+  return value;
+}
+
 /** Fail the build if a new issue loses its input snapshot or points at a different run. */
 export function validateEvidence(record: DigestRecord, root = process.cwd()): void {
   if (record.schema_version !== 2) return;
@@ -22,9 +43,38 @@ export function validateEvidence(record: DigestRecord, root = process.cwd()): vo
       evidence.prompt_sha256 !== generation.prompt_sha256) {
     throw new Error("Evidence differs from digest: " + record.date);
   }
-  const last = evidence.attempts?.at(-1);
-  if (last?.status !== "valid" || last.finish_reason !== "stop" || typeof last.raw_response !== "string" ||
-      !isDeepStrictEqual(JSON.parse(last.raw_response.trim().replace(/^```(?:json)?\s*|\s*```$/gi, "")), record.editorial)) {
+  if (generation.strategy === "sections-v1") {
+    if (evidence.strategy !== generation.strategy || !Array.isArray(evidence.requests) || evidence.requests.length !== 7 ||
+        typeof evidence.system_prompt !== "string" || !isDeepStrictEqual(evidence.editorial, record.editorial)) {
+      throw new Error("Invalid section generation evidence: " + record.date);
+    }
+    const requests = evidence.requests as Request[];
+    requests.forEach((request, index) => {
+      const section = record.editorial!.sections[index];
+      if (!Array.isArray(request.attempts) || !request.attempts.length ||
+          request.stage !== (index < 6 ? "section" : "overview") ||
+          request.category !== section?.category) throw new Error("Invalid request stage");
+      const expected = index < 6 ? section : { overview: record.editorial!.overview };
+      if (!isDeepStrictEqual(responseValue(request.attempts.at(-1)!), expected) ||
+          !isDeepStrictEqual(request.result, expected)) throw new Error("Section response differs from digest");
+      for (const attempt of request.attempts) {
+        if (attempt.stage !== request.stage || attempt.category !== (request.category ?? null) ||
+            typeof attempt.prompt !== "string" || typeof attempt.feedback !== "string" ||
+            !Number.isInteger(attempt.max_tokens) || attempt.max_tokens <= 0) throw new Error("Invalid attempt evidence");
+      }
+    });
+    const manifest = requests.map(request => ({ stage: request.stage, category: request.category ?? null,
+      system_prompt: evidence.system_prompt,
+      attempts: request.attempts.map(attempt => ({ prompt: attempt.prompt, feedback: attempt.feedback,
+        max_tokens: attempt.max_tokens, reasoning_effort: attempt.reasoning_effort })),
+    }));
+    if (!isDeepStrictEqual(JSON.parse(evidence.prompt), manifest) ||
+        !isDeepStrictEqual(evidence.attempts, requests.flatMap(request => request.attempts))) {
+      throw new Error("Request manifest differs from evidence");
+    }
+    return;
+  }
+  if (evidence.strategy !== undefined || !isDeepStrictEqual(responseValue(evidence.attempts?.at(-1)), record.editorial)) {
     throw new Error("Validated response differs from digest: " + record.date);
   }
 }

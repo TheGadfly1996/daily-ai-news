@@ -7,6 +7,41 @@
   "issue_cutoff": "08:17",
   "api_timeout": 90,
   "max_output_tokens": 16000,
+  "section_output_tokens": 6000,
+  "overview_output_tokens": 1500,
+  "max_items_per_category": 6,
+  "reasoning_effort": "low",
   "generation_attempts": 2,
-  "rss_limit": 60
+  "rss_limit": 60,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "temperature": 0.3,
+  "response_format": "json_object",
+  "categories": [
+    {
+      "id": "world",
+      "title": "国际重大新闻"
+    },
+    {
+      "id": "china",
+      "title": "国内新闻"
+    },
+    {
+      "id": "ai",
+      "title": "AI每日总结"
+    },
+    {
+      "id": "business",
+      "title": "贸易财经"
+    },
+    {
+      "id": "technology",
+      "title": "科技前沿"
+    },
+    {
+      "id": "science",
+      "title": "自然科学"
+    }
+  ],
+  "title_max_chars": 200,
+  "summary_max_chars": 160
 }

@@ -5,7 +5,7 @@ from types import SimpleNamespace
 from unittest.mock import patch
 from urllib.error import HTTPError
 
-import generate
+from newsgen import feeds
 
 
 class Response:
@@ -28,8 +28,8 @@ class FeedValidationTests(unittest.TestCase):
         self.config = {"category": "科技前沿", "name": "示例来源", "url": "https://example.com/feed"}
 
     def fetch(self, payload, content_type="application/rss+xml"):
-        with patch.object(generate, "urlopen", return_value=Response(payload, content_type)):
-            return generate.fetch_feed(self.config)
+        with patch.object(feeds, "urlopen", return_value=Response(payload, content_type)):
+            return feeds.fetch_feed(self.config)
 
     def test_valid_and_empty_rss_are_available(self):
         valid = self.fetch(b'<rss version="2.0"><channel><title>News</title><item><title>Story</title></item></channel></rss>')
@@ -53,17 +53,33 @@ class FeedValidationTests(unittest.TestCase):
             "published_parsed": datetime.fromisoformat(recent).timetuple(),
         }])
         bad = SimpleNamespace(error="HTTP 404", entries=[])
-        with patch.object(generate, "load_feeds", return_value=configs), patch.object(
-            generate, "fetch_feed", side_effect=[good, bad]
+        with patch.object(feeds, "load_feeds", return_value=configs), patch.object(
+            feeds, "fetch_feed", side_effect=[good, bad]
         ):
-            articles, issues = generate.collect_articles()
+            articles, issues = feeds.collect_articles()
         self.assertEqual(len(articles), 1)
         self.assertEqual(issues, [{"category": "科技前沿", "name": "故障来源",
                                    "url": "https://example.org/broken", "reason": "HTTP 404"}])
 
         error = HTTPError(self.config["url"], 403, "Forbidden", {}, io.BytesIO())
-        with patch.object(generate, "urlopen", side_effect=error):
-            self.assertEqual(generate.fetch_feed(self.config).error, "HTTP 403")
+        with patch.object(feeds, "urlopen", side_effect=error):
+            self.assertEqual(feeds.fetch_feed(self.config).error, "HTTP 403")
+
+    def test_transient_failures_retry_once_but_client_errors_do_not(self):
+        timeout = TimeoutError("timed out")
+        with patch.object(feeds, "urlopen", side_effect=[timeout, Response(
+                b'<rss version="2.0"><channel><title>N</title></channel></rss>')]) as opened, \
+             patch.object(feeds.time, "sleep"):
+            self.assertIsNone(feeds.fetch_feed(self.config).error)
+        self.assertEqual(opened.call_count, 2)
+        forbidden = HTTPError(self.config["url"], 403, "Forbidden", {}, io.BytesIO())
+        with patch.object(feeds, "urlopen", side_effect=forbidden) as opened:
+            self.assertEqual(feeds.fetch_feed(self.config).error, "HTTP 403")
+        self.assertEqual(opened.call_count, 1)
+        unavailable = HTTPError(self.config["url"], 503, "Unavailable", {}, io.BytesIO())
+        with patch.object(feeds, "urlopen", side_effect=unavailable) as opened, patch.object(feeds.time, "sleep"):
+            self.assertEqual(feeds.fetch_feed(self.config).error, "HTTP 503")
+        self.assertEqual(opened.call_count, 2)
 
 
 if __name__ == "__main__":
