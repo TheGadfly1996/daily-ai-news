@@ -225,3 +225,12 @@ test("categories come from the shared config in a fixed order", () => {
   assert.deepEqual(categories, config.categories);
   assert.equal(categories.length, 6);
 });
+
+test("archived issues generated under older, looser length limits stay valid", () => {
+  const fixture = JSON.parse(readFileSync("tests/fixtures/digest-v2.json", "utf8"));
+  fixture.editorial.overview = "概".repeat(168);
+  fixture.editorial.sections[0].items[0].summary = "摘".repeat(300);
+  assert.doesNotThrow(() => validateRecords([fixture]));
+  fixture.editorial.overview = "概".repeat(2001);
+  assert.throws(() => validateRecords([fixture]));
+});

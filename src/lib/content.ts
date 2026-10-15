@@ -5,7 +5,8 @@ import config from "../../config/news.json" with { type: "json" };
 type Node = DefaultTreeAdapterMap["node"];
 export const categories: readonly { id: string; title: string }[] = config.categories;
 const titleMax: number = config.title_max_chars;
-const summaryMax: number = config.summary_max_chars;
+// Stored issues are validated leniently: older prompts allowed longer text than new generation does.
+const archiveMax: number = config.archive_text_max_chars;
 export function normalizeTitle(value: string): string {
   return value.toLowerCase().replace(/[^\p{L}\p{N}_]/gu, "");
 }
@@ -88,7 +89,7 @@ export function validateStructured(record: DigestRecord): void {
   const start = timestamp(generation.window_start), end = timestamp(generation.window_end);
   if (start >= end) throw new Error("Invalid collection window");
   if (new Date(end + 8 * 3600_000).toISOString().slice(0, 10) !== record.date) throw new Error("Issue date differs from window");
-  requiredText(editorial.overview, "overview", summaryMax);
+  requiredText(editorial.overview, "overview", archiveMax);
   if (!Array.isArray(record.materials) || record.materials.length !== record.article_count) throw new Error("Invalid materials");
   const sources = new Map<string, Material>();
   for (const value of record.materials) {
@@ -109,7 +110,7 @@ export function validateStructured(record: DigestRecord): void {
     for (const value of section.items) {
       const item = object(value);
       requiredText(item.title, "title", titleMax);
-      requiredText(item.summary, "summary", summaryMax);
+      requiredText(item.summary, "summary", archiveMax);
       const title = normalizeTitle(item.title);
       if (!title || titles.has(title)) throw new Error("Duplicate or empty event title");
       titles.add(title);

@@ -111,7 +111,8 @@ python3 -m newsgen.evaluate --materials sample.json
 旧版记录没有保存素材，无法回放。指标不判断事实准确性，仍需对照来源抽查标题。
 
 分类与长度上限（`categories`、`title_max_chars`、`summary_max_chars`）在 `config/news.json` 中，
-Python 与 Astro 共用；标题归一化用 `tests/fixtures/normalize-cases.json` 同时验证两端一致。
+Python 与 Astro 共用；新生成按这些上限校验，读取已归档数据时用较宽的 `archive_text_max_chars`，
+避免旧提示词生成的内容（如概览超过 160 字符）被拒绝；标题归一化用 `tests/fixtures/normalize-cases.json` 同时验证两端一致。
 
 ## 目录
 

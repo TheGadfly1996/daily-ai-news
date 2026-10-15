@@ -43,5 +43,6 @@
     }
   ],
   "title_max_chars": 200,
-  "summary_max_chars": 160
+  "summary_max_chars": 160,
+  "archive_text_max_chars": 2000
 }
