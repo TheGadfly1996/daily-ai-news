@@ -130,7 +130,7 @@ def main(argv=None):
     parser.add_argument("--check-gaps", action="store_true", help="只列出缺失的期号，有缺失则退出码为 1")
     parser.add_argument("--no-backfill", action="store_true", help="不补齐缺失的期号")
     parser.add_argument("--force", action="store_true", help="该期已存在时仍重新生成并替换")
-    parser.add_argument("--date", help="期号日期 YYYY-MM-DD，窗口截至当日北京时间 08:17；默认最近结束的窗口。指定日期时只生成该期")
+    parser.add_argument("--date", help=f"期号日期 YYYY-MM-DD，窗口截至当日北京时间 {settings.CONFIG['issue_cutoff']}；默认最近结束的窗口。指定日期时只生成该期")
     args = parser.parse_args(argv)
     validate_config()
     started = time.monotonic()

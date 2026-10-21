@@ -258,12 +258,13 @@ class GenerationTests(unittest.TestCase):
             validate_editorial(self.editorial, self.articles, 3)
 
     def test_window_is_stable_when_execution_delayed(self):
-        early = generate.issue_window(now=datetime(2026, 10, 12, 0, 17, tzinfo=timezone.utc))
+        early = generate.issue_window(now=datetime(2026, 10, 11, 22, 0, tzinfo=timezone.utc))
         delayed = generate.issue_window(now=datetime(2026, 10, 12, 3, 17, tzinfo=timezone.utc))
         self.assertEqual(early, delayed)
         self.assertEqual(early[0], '2026-10-12')
         self.assertEqual(early[2] - early[1], timedelta(hours=settings.LOOKBACK_HOURS))
-        previous = generate.issue_window(now=datetime(2026, 10, 12, 0, 16, tzinfo=timezone.utc))
+        self.assertEqual(early[2], datetime(2026, 10, 11, 22, 0, tzinfo=timezone.utc))
+        previous = generate.issue_window(now=datetime(2026, 10, 11, 21, 59, tzinfo=timezone.utc))
         self.assertEqual(previous[0], '2026-10-11')
         self.assertEqual(generate.issue_window('2026-10-12', now=datetime(2026, 10, 14, tzinfo=timezone.utc)), early)
         with self.assertRaises(ValueError):

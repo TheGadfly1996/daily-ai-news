@@ -4,7 +4,7 @@
   "max_per_source": 10,
   "min_items_per_category": 3,
   "feed_timeout": 20,
-  "issue_cutoff": "08:17",
+  "issue_cutoff": "06:00",
   "api_timeout": 90,
   "max_output_tokens": 16000,
   "section_output_tokens": 6000,

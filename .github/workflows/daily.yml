@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       issue_date:   # 手动补跑指定期号；留空则生成最近已结束的窗口
-        description: "Issue date YYYY-MM-DD (ends at 08:17 Asia/Shanghai); empty = latest completed window"
+        description: "Issue date YYYY-MM-DD (ends at 06:00 Asia/Shanghai); empty = latest completed window"
         required: false
         type: string
       force:        # 该期已存在时仍重新生成并替换
@@ -15,12 +15,12 @@ on:
         type: boolean
         default: false
   schedule:
-    # 使用默认 UTC：00:17 UTC = 北京时间 08:17。
+    # 使用默认 UTC：前一天 22:00 UTC = 北京时间当天 06:00。
     # schedule 可能被 GitHub 延迟；固定采集窗口不随实际启动时间移动。
-    - cron: "17 0 * * *"
+    - cron: "0 22 * * *"
     # 补跑时段：generate.py 遇到已存在的期号会跳过，所以第一次成功后这次不会产生新提交，也不会重复部署
-    # 01:47 UTC = 北京时间 09:47。
-    - cron: "47 1 * * *"
+    # 前一天 23:00 UTC = 北京时间当天 07:00，检查并补跑缺失期号。
+    - cron: "0 23 * * *"
 
 # 默认只读，各 job 按需申请权限（最小权限原则）
 permissions:
