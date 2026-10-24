@@ -1,2 +1,2 @@
 feedparser==6.0.14
-openai==3.29.0
+openai==3.35.1
