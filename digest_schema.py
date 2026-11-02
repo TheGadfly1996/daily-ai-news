@@ -14,7 +14,7 @@ _SHARED = json.loads((Path(__file__).parent / "config/news.json").read_text(enco
 CATEGORIES = tuple(item["title"] for item in _SHARED["categories"])
 TITLE_MAX = _SHARED["title_max_chars"]
 SUMMARY_MAX = _SHARED["summary_max_chars"]
-PROMPT_VERSION = "2026-10-15.sections-v1.2"
+PROMPT_VERSION = "2026-11-02.sections-v1.3"
 SCHEMA_VERSION = 2
 
 
@@ -49,7 +49,7 @@ def text(value, field, limit):
 
 def validate_section(section, category, articles, minimum, titles=None, used_sources=None,
                      maximum=None, summary_limit=SUMMARY_MAX):
-    """校验单个栏目：条数范围、字段集合、标题不重复、来源 ID 存在且属于本栏、同一素材只用一次。"""
+    """校验单个栏目：条数上限、字段集合、标题不重复、来源 ID 存在且属于本栏、同一素材只用一次。"""
     sources = {}
     for article in articles:
         source_id = article.get("id")
@@ -63,8 +63,8 @@ def validate_section(section, category, articles, minimum, titles=None, used_sou
     if not isinstance(section, dict) or set(section) != {"category", "items"} or section["category"] != category:
         raise ValueError("栏目不完整或顺序错误")
     items = section["items"]
-    if not isinstance(items, list) or len(items) < minimum:
-        raise ValueError(f"栏目条目不足：{category}，需要至少 {minimum} 个独立事件；不得凑数")
+    if not isinstance(items, list):
+        raise ValueError("栏目 items 必须是数组")
     if maximum is not None and len(items) > maximum:
         raise ValueError(f"栏目事件最多 {maximum} 条")
     for item in items:
@@ -103,7 +103,7 @@ def validate_editorial(value, articles, minimum):
     return value
 
 
-def render_editorial(value, articles):
+def render_editorial(value, articles, minimum=_SHARED["min_items_per_category"]):
     """把结构化内容渲染为兼容 HTML（全部转义，来源名称与链接取自素材）。"""
     sources = {article["id"]: article for article in articles}
     escape = html.escape
@@ -122,4 +122,6 @@ def render_editorial(value, articles):
                 if link not in links:
                     links.append(link)
             parts.append("<p>来源：" + "、".join(links) + "</p>")
+        if len(section["items"]) < minimum:
+            parts.append(f"<p>提示：本栏新闻不足 {minimum} 条。</p>")
     return "\n".join(parts)

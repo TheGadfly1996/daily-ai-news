@@ -8,4 +8,5 @@ const { section } = Astro.props;
   <h2 id={section.id}>{section.title}</h2>
   {section.items.map(item => <NewsItem item={item} />)}
   {section.emptyHtml && <Fragment set:html={section.emptyHtml} />}
+  {section.warning && <p>{section.warning}</p>}
 </section>

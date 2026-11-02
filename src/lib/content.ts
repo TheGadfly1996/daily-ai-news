@@ -17,7 +17,7 @@ export function normalizeTitle(value: string): string {
 
 export interface Source { name: string; url?: string }
 export interface NewsItem { id: string; title: string; bodyHtml: string; sources: Source[] }
-export interface NewsSection { id: string; title: string; items: NewsItem[]; emptyHtml: string }
+export interface NewsSection { id: string; title: string; items: NewsItem[]; emptyHtml: string; warning?: string }
 export interface FeedIssue { category: string; name: string; url: string; reason: string }
 /** 实际送入模型的素材快照（摘要最多 1200 字符），用于事后核对来源。 */
 export interface Material {
@@ -121,7 +121,7 @@ export function validateStructured(record: DigestRecord): void {
   const titles = new Set<string>(), used = new Set<string>();
   editorial.sections.forEach((value, index) => {
     const section = object(value);
-    if (section.category !== categories[index].title || !Array.isArray(section.items) || section.items.length < (generation.minimum_items as number)) throw new Error("Invalid section or insufficient items");
+    if (section.category !== categories[index].title || !Array.isArray(section.items)) throw new Error("Invalid section");
     for (const value of section.items) {
       const item = object(value);
       requiredText(item.title, "title", titleMax);
@@ -145,6 +145,8 @@ function parseStructured(record: DigestRecord): Digest {
   const materials = new Map(record.materials!.map(source => [source.id, source]));
   const sections: NewsSection[] = editorial.sections.map((section, index) => ({
     id: categories[index].id, title: section.category, emptyHtml: "",
+    warning: section.items.length < record.generation!.minimum_items
+      ? `提示：本栏新闻不足 ${record.generation!.minimum_items} 条。` : undefined,
     items: section.items.map((item, itemIndex) => {
       const sources: Source[] = [];
       for (const ref of item.source_ids) {
@@ -161,7 +163,7 @@ function parseStructured(record: DigestRecord): Digest {
     "<h2>" + escape(section.title) + "</h2>", ...section.items.flatMap(item => [
       "<h3>" + escape(item.title) + "</h3>", item.bodyHtml,
       "<p>来源：" + item.sources.map(source => source.url ? `<a href="${escape(source.url)}">${escape(source.name)}</a>` : escape(source.name)).join("、") + "</p>",
-    ]),
+    ]), ...(section.warning ? ["<p>" + escape(section.warning) + "</p>"] : []),
   ])].join("\n");
   return { ...record, content, heading: "每日新闻总结", overviewHtml, overviewText: editorial.overview,
     sections, storyCount: sections.reduce((count, section) => count + section.items.length, 0) };

@@ -80,15 +80,11 @@ def generate_issue(today, start, end, backfill=False):
     checkpoint = lambda: atomic_json(journal, run)
     checkpoint()
     try:
-        # 1. 采集：固定窗口内的素材；任一栏素材不足时不调用模型
+        # 1. 采集：固定窗口内的素材；栏目素材不足仍继续生成
         print(f"Collecting RSS for {today}: [{start.isoformat()}, {end.isoformat()})")
         articles, issues = collect_articles(start, end)
         run.update(materials=articles, feed_issues=issues, category_counts=dict(Counter(a["category"] for a in articles)))
         checkpoint()
-        short = {category: run["category_counts"].get(category, 0) for category in CATEGORIES
-                 if run["category_counts"].get(category, 0) < settings.MIN_ITEMS_PER_CATEGORY}
-        if short:
-            raise RuntimeError(f"栏目素材不足，保留原归档且不调用 AI：{short}")
         # 2. 生成：六栏逐一生成并校验，再生成概览
         run["status"] = "generating"
         editorial = generate_digest(articles, run, checkpoint)
@@ -100,7 +96,7 @@ def generate_issue(today, start, end, backfill=False):
         record = {
             "schema_version": SCHEMA_VERSION, "date": today,
             "title": f"每日新闻总结 | {today}", "guid": f"daily-news-{today}",
-            "created_at": now, "content": render_editorial(editorial, articles),
+            "created_at": now, "content": render_editorial(editorial, articles, settings.MIN_ITEMS_PER_CATEGORY),
             "editorial": editorial, "materials": articles,
             "article_count": len(articles), "feed_issues": issues,
             "generation": {

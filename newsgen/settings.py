@@ -27,8 +27,6 @@ def validate_config():
     """启动时校验配置，错误尽早暴露，避免跑到一半才失败。"""
     if any(value <= 0 for value in (LOOKBACK_HOURS, MAX_ARTICLES, MAX_PER_SOURCE, MIN_ITEMS_PER_CATEGORY, FEED_TIMEOUT)):
         raise ValueError("采集配置必须为正整数")
-    if MAX_ARTICLES < len(CATEGORIES) * MIN_ITEMS_PER_CATEGORY:
-        raise ValueError("MAX_ARTICLES 不足以满足六栏最低条数")
     for key in ("api_timeout", "max_output_tokens", "section_output_tokens", "overview_output_tokens",
                 "generation_attempts", "max_items_per_category"):
         if not isinstance(CONFIG[key], int) or CONFIG[key] <= 0:

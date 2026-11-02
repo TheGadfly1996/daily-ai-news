@@ -100,13 +100,31 @@ test("structured content renders identically to Python and ignores a stale HTML 
   assert.match(renderFeed([parsed], "https://example.org"), /研究机构 &lt;示例&gt;/);
 });
 
+test("short and empty sections render footer warnings in page data and RSS", () => {
+  const value = structuredClone(structured);
+  value.editorial!.sections[0].items = value.editorial!.sections[0].items.slice(0, 2);
+  value.editorial!.sections[1].items = [];
+  const digest = parseDigest(validateRecords([value])[0]);
+  const warning = "提示：本栏新闻不足 3 条。";
+  assert.equal(digest.sections[0].warning, warning);
+  assert.equal(digest.sections[1].warning, warning);
+  assert.equal(digest.sections[2].warning, undefined);
+  assert.equal(digest.storyCount, 14);
+  assert.equal(digest.content.split(warning).length - 1, 2);
+  assert.ok(digest.content.indexOf(warning) > digest.content.indexOf(value.editorial!.sections[0].items[1].title));
+  assert.ok(digest.content.indexOf(warning) < digest.content.indexOf("<h2>国内新闻</h2>"));
+  assert.ok(renderFeed([digest], "https://example.org").includes(warning));
+  value.generation!.minimum_items = 4;
+  assert.equal(parseDigest(value).sections.filter(section => section.warning).length, 6);
+});
+
 test("structured records reject forged references, incomplete sections, unsafe URLs and invalid windows", () => {
   const mutations: ((record: DigestRecord) => void)[] = [
     record => { record.editorial!.sections[0].items[0].source_ids = []; },
     record => { record.editorial!.sections[0].items[0].source_ids = ["invented"]; },
     record => { record.editorial!.sections[0].items[0].source_ids = [record.materials![3].id]; },
     record => { record.editorial!.sections[0].items[0].source_ids = [record.materials![1].id]; },
-    record => { record.editorial!.sections[0].items.pop(); },
+    record => { record.editorial!.sections.pop(); },
     record => { record.materials![0].link = "javascript:alert(1)"; },
     record => { record.materials![0].published = record.generation!.window_end; },
     record => { record.materials![1].id = record.materials![0].id; },

@@ -172,9 +172,8 @@ class GenerationTests(unittest.TestCase):
         self.assertEqual(create.call_args_list[1].kwargs['max_tokens'], 7000)
         self.assertTrue(all('extra_body' not in call.kwargs for call in create.call_args_list))
 
-    def test_section_retry_rejects_shortages_oversized_output_and_cross_section_duplicates(self):
-        for mutate in [lambda section: section['items'].pop(),
-                       lambda section: section['items'][0].update(summary='长' * 161),
+    def test_section_retry_rejects_oversized_output_and_cross_section_duplicates(self):
+        for mutate in [lambda section: section['items'][0].update(summary='长' * 161),
                        lambda section: section['items'][0].update(title=self.editorial['sections'][0]['items'][0]['title'])]:
             invalid = copy.deepcopy(self.editorial['sections'][1])
             mutate(invalid)
@@ -236,15 +235,33 @@ class GenerationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate_editorial(self.editorial, self.articles, 3)
 
-    def test_duplicate_events_wrong_order_and_short_sections_rejected(self):
+    def test_duplicate_events_and_wrong_order_rejected(self):
         mutations = [lambda v: v['sections'].reverse(),
-                     lambda v: v['sections'][0]['items'].pop(),
+                     lambda v: v['sections'][0].update(items=None),
                      lambda v: v['sections'][0]['items'][1].update(title=v['sections'][0]['items'][0]['title'])]
         for mutate in mutations:
             value = copy.deepcopy(self.editorial)
             mutate(value)
             with self.assertRaises(ValueError):
                 validate_editorial(value, self.articles, 3)
+
+    def test_short_and_empty_sections_publish_with_footer_warnings(self):
+        self.editorial['sections'][0]['items'] = self.editorial['sections'][0]['items'][:2]
+        self.editorial['sections'][1]['items'] = []
+        empty_category = self.editorial['sections'][1]['category']
+        articles = [a for a in self.articles if a['category'] != empty_category]
+        first_category = self.editorial['sections'][0]['category']
+        kept_ids = {ref for item in self.editorial['sections'][0]['items'] for ref in item['source_ids']}
+        articles = [a for a in articles if a['category'] != first_category or a['id'] in kept_ids]
+        with tempfile.TemporaryDirectory() as root:
+            create = self.run_main(root, articles, editorial_responses(self.editorial, articles))
+            self.assertEqual(create.call_count, 7)
+            record = json.loads((Path(root)/'data/digests/2026-10-12.json').read_text())
+            self.assertEqual(record['editorial'], self.editorial)
+            html = record['content']
+            self.assertEqual(html.count('提示：本栏新闻不足 3 条。'), 2)
+            self.assertIn('<h2>' + empty_category + '</h2>\n<p>提示：本栏新闻不足 3 条。</p>\n<h2>', html)
+            self.assertEqual(render_editorial(self.editorial, articles, 4).count('不足 4 条'), 6)
 
     def test_rendering_escapes_content_and_uses_material_sources(self):
         self.assertEqual(render_editorial(self.editorial, self.articles), self.record['content'])

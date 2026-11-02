@@ -121,8 +121,6 @@ def generate_digest(articles, run=None, checkpoint=None):
     sections, previous_titles = [], []
     for category in CATEGORIES:
         candidates = [a for a in articles if a["category"] == category]
-        if len(candidates) < settings.MIN_ITEMS_PER_CATEGORY:
-            raise RuntimeError(f"栏目素材不足：{category}")
         request = {"stage": "section", "category": category, "attempts": []}
         run["requests"].append(request)
         maximum = max(settings.MIN_ITEMS_PER_CATEGORY, settings.CONFIG["max_items_per_category"])

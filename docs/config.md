@@ -13,7 +13,7 @@ JSON 不支持注释，各项含义集中写在这里。本地与 GitHub Actions
 | `max_articles` | `100` | 送给模型的素材总数上限；均分到六栏，每栏配额约为该值 ÷ 6。 |
 | `max_per_source` | `10` | 同一栏目内单个来源最多入选的素材数，避免被某一来源占满。 |
 | `feed_timeout` | `20` | 抓取单个 RSS 来源的超时（秒）。 |
-| `min_items_per_category` | `3` | 每栏最少事件数；任一栏素材少于该值时不调用模型、当期失败。环境变量 `MIN_ITEMS_PER_CATEGORY` 可覆盖。 |
+| `min_items_per_category` | `3` | 每栏目标最少事件数；素材或事件不足仍可生成，仅在对应栏目末尾显示简短提示。环境变量 `MIN_ITEMS_PER_CATEGORY` 可覆盖。 |
 | `max_items_per_category` | `10` | 每栏最多事件数（提示词与校验都会强制）；若小于最少条数，则取最少条数。 |
 
 ## 模型调用
