@@ -1,3 +1,4 @@
+import gzip
 import io
 import unittest
 from datetime import datetime, timezone
@@ -9,9 +10,9 @@ from newsgen import feeds
 
 
 class Response:
-    def __init__(self, payload, content_type="application/rss+xml"):
+    def __init__(self, payload, content_type="application/rss+xml", content_encoding=""):
         self.payload = payload
-        self.headers = {"Content-Type": content_type}
+        self.headers = {"Content-Type": content_type, "Content-Encoding": content_encoding}
 
     def __enter__(self):
         return self
@@ -27,9 +28,27 @@ class FeedValidationTests(unittest.TestCase):
     def setUp(self):
         self.config = {"category": "科技前沿", "name": "示例来源", "url": "https://example.com/feed"}
 
-    def fetch(self, payload, content_type="application/rss+xml"):
-        with patch.object(feeds, "urlopen", return_value=Response(payload, content_type)):
+    def fetch(self, payload, content_type="application/rss+xml", content_encoding=""):
+        with patch.object(feeds, "urlopen", return_value=Response(payload, content_type, content_encoding)):
             return feeds.fetch_feed(self.config)
+
+    def test_gzip_rss_is_decompressed_before_parsing(self):
+        payload = b'<rss version="2.0"><channel><title>News</title><item><title>Story</title></item></channel></rss>'
+        result = self.fetch(gzip.compress(payload), content_encoding="GZip")
+        self.assertIsNone(result.error)
+        self.assertEqual(result.entries[0].title, "Story")
+
+    def test_gzip_json_feed_is_decompressed_before_parsing(self):
+        payload = b'{"items": [{"title": "Story", "date_published": "2026-11-16T00:00:00Z"}]}'
+        result = self.fetch(gzip.compress(payload), "application/feed+json", "gzip")
+        self.assertIsNone(result.error)
+        self.assertEqual(result.entries[0]["title"], "Story")
+
+    def test_gzip_invalid_or_oversized_content_is_reported(self):
+        invalid = self.fetch(b"not gzip", content_encoding="gzip")
+        self.assertIn("BadGzipFile", invalid.error)
+        oversized = self.fetch(gzip.compress(b"x" * 5_000_001), content_encoding="gzip")
+        self.assertIn("解压后的响应超过 5 MB", oversized.error)
 
     def test_valid_and_empty_rss_are_available(self):
         valid = self.fetch(b'<rss version="2.0"><channel><title>News</title><item><title>Story</title></item></channel></rss>')

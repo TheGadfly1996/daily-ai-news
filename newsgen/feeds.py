@@ -1,6 +1,8 @@
 """RSS 来源的读取、抓取、挑选，以及按窗口采集素材。"""
 import calendar
+import gzip
 import html
+import io
 import json
 import re
 import time
@@ -81,8 +83,14 @@ def _fetch_feed_once(feed_config):
         with urlopen(request, timeout=settings.FEED_TIMEOUT) as response:
             payload = response.read(5_000_001)
             content_type = response.headers.get("Content-Type", "")
+            content_encoding = response.headers.get("Content-Encoding", "").strip().lower()
         if len(payload) > 5_000_000:
             raise ValueError("响应超过 5 MB")
+        if content_encoding == "gzip":
+            with gzip.GzipFile(fileobj=io.BytesIO(payload)) as compressed:
+                payload = compressed.read(5_000_001)
+            if len(payload) > 5_000_000:
+                raise ValueError("解压后的响应超过 5 MB")
         if "json" in content_type or url.endswith(".json"):
             data = json.loads(payload)
             if not isinstance(data, dict) or not isinstance(data.get("items"), list):

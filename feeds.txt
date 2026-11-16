@@ -5,7 +5,7 @@
 
 # 国际重大新闻
 
-国际重大新闻 | 联合早报 · 国际即时 | https://rsshub.rssforever.com/zaobao/realtime/world
+国际重大新闻 | 联合早报 · 国际即时 | https://plink.anyfeeder.com/zaobao/realtime/world
 国际重大新闻 | 谷歌全球新闻 | https://news.google.com/rss/headlines/section/topic/WORLD?hl=zh-CN&gl=CN&ceid=CN:zh-Hans
 国际重大新闻 | 美联社 AP | https://news.google.com/rss/search?q=site:apnews.com&hl=en-US&gl=US&ceid=US:en
 国际重大新闻 | 路透社 Reuters | https://news.google.com/rss/search?q=site:reuters.com&hl=en-US&gl=US&ceid=US:en
